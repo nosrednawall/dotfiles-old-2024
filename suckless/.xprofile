@@ -1,0 +1,12 @@
+#!/bin/bash
+#$./.screenlayout/note_casa.sh
+if_monitor.sh
+xfce4-power-manager &
+xautolock -time 10 -locker slock &
+redshift -P -O 4500 &
+nitrogen --restore &
+compton --unredir-if-possible &
+dunst &
+nm-applet &
+pasystray &
+dwmblocks &
