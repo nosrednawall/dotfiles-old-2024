@@ -118,7 +118,7 @@ static const Layout layouts[] = {
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
-/* helper for spawning shell commands in the pre dwm-5.0 fashion */
+/*  for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
@@ -126,10 +126,13 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
+/* helper for spawning shell commands in the pre dwm-5.0 fashion */
+//#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
+
 /*Dmenus personalizados*/
-static const char *dmenupower[] = {"dmenu-power"};
+//static const char *dmenupower[] = {"dmenu-power"};
 // static const char *dmenumonitor[] = {"dmenu-monitor"};
-static const char *dmenupass[] = {"dmenu-pass"};
+//static const char *dmenupass[] = {"dmenu-pass"};
 
 /*scratch pad*/
 static const char scratchpadname[] = "scratchpad";
@@ -217,9 +220,9 @@ static const Key keys[] = {
         { 0,                            XK_Print,                       spawn,          {.v = printscreensavecmd } },
         { 0,                            XF86XK_MonBrightnessDown,       spawn,          {.v = dimmer } },
         { 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = brighter } },
-	{ MODKEY,                       XK_q,                           spawn,          {.v = dmenupower } },
-	{ MODKEY|ShiftMask,             XK_p,                           spawn,          {.v = dmenupass } },
-	//{ MODKEY|AltMask,              	XK_p,				spawn,		{.v = dmenumonitor } },
+	{ MODKEY,                       XK_q,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-power" ) },
+	{ MODKEY,       	        XK_w,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
+	{ MODKEY,	                XK_e,				spawn,		SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
 };
 
 

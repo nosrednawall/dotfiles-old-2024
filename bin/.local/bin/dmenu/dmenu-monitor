@@ -1,0 +1,34 @@
+#!/bin/bash
+
+casa="Casa"
+notebook="Notebook"
+noite="Noite"
+dia="Dia"
+tabletwaconhdmi="Tablet Wacon HDMI"
+tabletwaconnotebook="Tablet Wacon Notebook"
+
+# Variable passed to dmenu
+options="$casa\n$notebook\n$dia\n$noite\n$tabletwaconhdmi\n$tabletwaconnotebook"
+
+chosen="$(echo -e "$options" | dmenu -p "Scripts de monitor " )"
+case $chosen in
+    $casa)
+        xrandr --output HDMI-0 --primary --mode 3440x1440 --pos 1920x0 --rotate normal --output eDP-1-1 --mode 1920x1080 --pos 0x360 --rotate normal
+        ;;
+    $notebook)
+        xrandr --output HDMI-0 --off --output eDP-1-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+        ;;
+    $dia)
+        redshift -P -O 6500
+        ;;
+    $noite)
+        redshift -P -O 4500
+        ;;
+    $tabletwaconhdmi)
+        mapwacon.sh -d "Wacom Intuos S Pen stylus" -s "HDMI-0"
+        ;;
+    $tabletwaconnotebook)
+	mapwacon.sh -d "Wacom Intuos S Pen stylus" -s "eDP-1-1"
+	;;
+esac
+

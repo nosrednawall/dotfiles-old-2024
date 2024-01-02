@@ -1,5 +1,6 @@
 #!/bin/bash
 #$./.screenlayout/note_casa.sh
+xrandr --setprovideroutputsource modesetting NVIDIA-0
 if_monitor.sh
 xfce4-power-manager &
 xautolock -time 10 -locker slock &
@@ -7,6 +8,11 @@ redshift -P -O 4500 &
 nitrogen --restore &
 compton --unredir-if-possible &
 dunst &
-nm-applet &
+nm-tray &
+copyq &
+# nm-applet &
 pasystray &
 dwmblocks &
+export _JAVA_AWT_WM_NONREPARENTING=1
+export QT_QPA_PLATFORMTHEME=qt5ct
+exec dbus-launch --sh-syntax --exit-with-session dwm
