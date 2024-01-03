@@ -2,6 +2,7 @@
 #$./.screenlayout/note_casa.sh
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 if_monitor.sh
+pulseaudio --daemonize
 xfce4-power-manager &
 xautolock -time 10 -locker slock &
 redshift -P -O 4500 &
@@ -12,6 +13,7 @@ nm-tray &
 copyq &
 # nm-applet &
 pasystray &
+mpd ~/.config/mpd/mpd.conf
 dwmblocks &
 export _JAVA_AWT_WM_NONREPARENTING=1
 export QT_QPA_PLATFORMTHEME=qt5ct
