@@ -103,14 +103,19 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
-
+#include "tatami.c"
+#include "tcl.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
+        { "|+|",      tatami },
+	{ "|||",      tcl },
+	{NULL,NULL},
+
 };
 
 /* key definitions */
@@ -129,14 +134,6 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *roficmd[] = { "/bin/sh", "-c", "rofi -show drun -theme $HOME/.config/rofi/rofi-collection/gruvbox/gruvbox.rasi", NULL };
 static const char *termcmd[]  = { "st", NULL };
-
-/* helper for spawning shell commands in the pre dwm-5.0 fashion */
-//#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
-
-/*Dmenus personalizados*/
-//static const char *dmenupower[] = {"dmenu-power"};
-// static const char *dmenumonitor[] = {"dmenu-monitor"};
-//static const char *dmenupass[] = {"dmenu-pass"};
 
 /*scratch pad*/
 static const char scratchpadname[] = "scratchpad";
@@ -194,6 +191,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[3]} },
+	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[4]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
