@@ -1,6 +1,9 @@
 /* See LICENSE file for copyright and license details. */
 /*imports*/
 #include <X11/XF86keysym.h>
+#include "tatami.c"
+#include "tcl.c"
+
 /* appearance */
 static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int gappx     = 10;        /* gaps between windows */
@@ -14,61 +17,6 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
-
-/*tema padrão*/
-/*
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
-*/
-
-/*gruvbox claro*/
-//static const char col_gray1[]       = "#262220"; /* #222222; background colour */
-//static const char col_gray2[]       = "#262220"; /* #444444; inactive window border colour */
-//static const char col_gray3[]       = "#f9f6e8"; /* #BBBBBB; font colour */
-//static const char col_gray4[]       = "#383838"; /* #EEEEEE; current tag and current window colour */
-//static const char col_cyan[]        = "#f9f0c2"; /* #005577; second bar colour and active window border colour */
-
-/*night*/
-/*
-static const char col_gray1[]            = "#121212";
-static const char col_gray2[]            = "#dbdbdb";
-static const char col_gray3[]            = "#dbdbdb";
-static const char col_gray4[]            = "#030303";
-static const char col_cyan[]             = "#4d4d4d";
-*/
-
-/*tokyo night*/
-/*
-static const char col_gray1[]       = "#16161E";
-static const char col_gray2[]       = "#000000";
-static const char col_gray3[]       = "#54596d";
-static const char col_gray4[]       = "#FFFFFF";
-static const char col_gray5[]       = "#2e334b";
-static const char col_gray6[]       = "#374654";
-static const char col_cyan[]       = "#24283b";
-*/
-
-/*gruvbox gold*/
-/*
-static const char col_gray1[]       = "#fdf1c7";
-static const char col_gray2[]       = "#ebdbb2";
-static const char col_gray3[]       = "#3c3836";
-static const char col_gray4[]       = "#282828";
-static const char col_cyan[]        = "#fabd2f";
-*/
-
-/*gruvbox fraco*/
-/*
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#282828";
-static const char col_gray3[]       = "#ebdbb2";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]      = "#3c3836";
-//static const char col_cyan[]        = "#282828";
-*/
 
 /*gruvbox*/
 static const char col_gray1[]	    = "#282828";
@@ -105,8 +53,6 @@ static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] 
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
-#include "tatami.c"
-#include "tcl.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
@@ -135,7 +81,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *roficmd[] = { "/bin/sh", "-c", "rofi -show drun -theme $HOME/.config/rofi/rofi-collection/gruvbox/gruvbox.rasi", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
-/*scratch pad*/
+/* scratch pad */
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
@@ -143,20 +89,21 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
 static const char *upvol[] = { "amixer", "set", "Master", "5%+", NULL };
 static const char *downvol[] = { "amixer", "set", "Master", "5%-", NULL };
 
-// for muting/unmuting //
+/* for muting/unmuting */
 static const char *mute[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 
-// lockscreen
+/* lockscreen */
 static const char *lockscreencmd[] = {"slock",NULL};
 
-//printscreen
+/* printscreen */
 static const char *printscreencopycmd[] = { "/bin/sh", "-c", "maim -s | xclip -selection clipboard -t image/png", NULL};
 static const char *printscreensavecmd[] = { "/bin/sh", "-c", "maim -s $HOME/Imagens/Screenshoots/`date +%Y-%m-%d_%H:%M:%S`.png", NULL};
 
-// brilho da tela
+/* brilho da tela */
 static const char *brighter[] = { "brightnessctl", "set", "10%+", NULL };
 static const char *dimmer[]   = { "brightnessctl", "set", "10%-", NULL };
 
+/* atalhos teclado */
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
