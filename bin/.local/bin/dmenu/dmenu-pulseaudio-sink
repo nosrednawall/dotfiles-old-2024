@@ -2,9 +2,12 @@
 
 integrado="Integrado"
 hdmi="Hdmi"
+headset_redragon="Headset Redragon"
+microfone_integrado="Mic Notebook"
+microfone_headset_redragon="Mic Redragon"
 
 # Variable passed to dmenu
-options="$hdmi\n$integrado"
+options="$hdmi\n$integrado\n$headset_redragon\n$microfone_integrado\n$microfone_headset_redragon"
 
 chosen="$(echo -e "$options" | dmenu -p "Scripts de monitor " )"
 case $chosen in
@@ -14,4 +17,14 @@ case $chosen in
     $hdmi)
         pactl set-default-sink alsa_output.pci-0000_01_00.1.hdmi-stereo
 	    ;;
+    $headset_redragon)
+        pactl set-default-sink alsa_output.usb-C-Media_Electronics_Inc._Redragon_Gaming_Headset-00.analog-stereo
+        pactl set-default-source alsa_input.usb-C-Media_Electronics_Inc._Redragon_Gaming_Headset-00.mono-fallback
+        ;;
+    $microfone_integrado)
+        pactl set-default-source alsa_input.pci-0000_06_00.6.analog-stereo
+        ;;
+    $microfone_headset_redragon)
+        pactl set-default-source alsa_input.usb-C-Media_Electronics_Inc._Redragon_Gaming_Headset-00.mono-fallback
+        ;;
 esac
