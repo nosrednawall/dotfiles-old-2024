@@ -1,0 +1,17 @@
+#!/bin/bash
+
+integrado="Integrado"
+hdmi="Hdmi"
+
+# Variable passed to dmenu
+options="$hdmi\n$integrado"
+
+chosen="$(echo -e "$options" | dmenu -p "Scripts de monitor " )"
+case $chosen in
+    $integrado)
+        pactl set-default-sink 1
+        ;;
+    $hdmi)
+        pactl set-default-OOOOOIOIOIsink 4
+	    ;;
+esac

@@ -43,12 +43,12 @@ static const Rule rules[] = {
 	{ "Gimp",     	NULL,       	NULL,       	0,            	1,           	-1 },
 	//{ "Firefox",  NULL,       	NULL,       	1 << 8,       	0,           	-1 },
 	{ "copyq",    	NULL,       	NULL,       	0,            	1,           	-1 },
-	{ "openboard", 	NULL,      	NULL,       	0,            	1,		-1 }, 
-	{ "mpv", 	NULL, 		NULL,		0,		1,		-1 },
+	{ "openboard", 	NULL,      	    NULL,       	0,            	1,		        -1 },
+	{ "mpv", 	    NULL, 		    NULL,		    0,		        1,		        -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -57,9 +57,9 @@ static const Layout layouts[] = {
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
-        { "|+|",      tatami },
+    { "|+|",      tatami },
 	{ "|||",      tcl },
-	{NULL,NULL},
+    {  NULL,      NULL},
 
 };
 
@@ -160,19 +160,20 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY|ShiftMask, 		XK_r,      quit,           {1} }, 
+	{ MODKEY|ShiftMask, 		    XK_r,      quit,           {1} },
         /*Meus atalhos*/
-        { MODKEY|ShiftMask,             XK_l,                           spawn,          {.v = lockscreencmd } },
-        { 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = upvol } },
-        { 0,                            XF86XK_AudioLowerVolume,        spawn,          {.v = downvol } },
-        { 0,                            XF86XK_AudioMute,               spawn,          {.v = mute } },
-        { MODKEY|ShiftMask,             XK_s,                           spawn,          {.v = printscreencopycmd } },
-        { 0,                            XK_Print,                       spawn,          {.v = printscreensavecmd } },
-        { 0,                            XF86XK_MonBrightnessDown,       spawn,          {.v = dimmer } },
-        { 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = brighter } },
+    { MODKEY|ShiftMask,             XK_l,                           spawn,          {.v = lockscreencmd } },
+    { 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = upvol } },
+    { 0,                            XF86XK_AudioLowerVolume,        spawn,          {.v = downvol } },
+    { 0,                            XF86XK_AudioMute,               spawn,          {.v = mute } },
+    { MODKEY|ShiftMask,             XK_s,                           spawn,          {.v = printscreencopycmd } },
+    { 0,                            XK_Print,                       spawn,          {.v = printscreensavecmd } },
+    { 0,                            XF86XK_MonBrightnessDown,       spawn,          {.v = dimmer } },
+    { 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = brighter } },
 	{ MODKEY,                       XK_q,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-power" ) },
-	{ MODKEY,       	        XK_w,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
-	{ MODKEY,	                XK_e,				spawn,		SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
+	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
+	{ MODKEY,	                    XK_e,				            spawn,		    SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
+    { MODKEY,                       XK_w,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pulseaudio-sink") }
 };
 
 
@@ -192,4 +193,3 @@ static const Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
