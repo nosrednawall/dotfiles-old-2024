@@ -85,11 +85,11 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
 /* Volume */
-static const char *upvol[] = { "amixer", "set", "Master", "5%+", NULL };
-static const char *downvol[] = { "amixer", "set", "Master", "5%-", NULL };
+//static const char *upvol[] = { "amixer", "set", "Master", "5%+", NULL };
+//static const char *downvol[] = { "amixer", "set", "Master", "5%-", NULL };
 
 /* for muting/unmuting */
-static const char *mute[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
+//static const char *mute[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 
 /* lockscreen */
 static const char *lockscreencmd[] = {"slock",NULL};
@@ -106,20 +106,20 @@ static const char *dimmer[]   = { "brightnessctl", "set", "10%-", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,			XK_r,	   spawn,	   {.v = roficmd } },
+	{ MODKEY,            			XK_r,	   spawn,	       {.v = roficmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_s,      togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 
 	/*Padrao*/
-        { MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
-        { MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
-        { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-        { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-        { MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-        { MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-        { MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-        { MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+    { MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
+    { MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
+    { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
+    { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+    { MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
+    { MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+    { MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
+    { MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 
 	/*minhas alterações*/
 	{ MODKEY|ShiftMask,             XK_Right,  rotatestack,    {.i = +1 } },
@@ -163,16 +163,27 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask, 		    XK_r,      quit,           {1} },
         /*Meus atalhos*/
     { MODKEY|ShiftMask,             XK_l,                           spawn,          {.v = lockscreencmd } },
-    { 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = upvol } },
-    { 0,                            XF86XK_AudioLowerVolume,        spawn,          {.v = downvol } },
-    { 0,                            XF86XK_AudioMute,               spawn,          {.v = mute } },
+    /*volume alsa*/
+    //    { 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = upvol } },
+    //    { 0,                            XF86XK_AudioLowerVolume,        spawn,          {.v = downvol } },
+    //    { 0,                            XF86XK_AudioMute,               spawn,          {.v = mute } },
+    /*volume pulseaudio*/
+    { 0,                            XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume") },
+    { 0,                            XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/aumenta_volume") },
+    { 0,                            XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/muta_volume") },
+
+    /*Volume Microfone Pulseaudio*/
+    { ControlMask,                       XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/aumenta_volume_microfone") },
+    { ControlMask,                       XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume_microfone") },
+    { ControlMask,                       XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/muta_microfone") },
+
     { MODKEY|ShiftMask,             XK_s,                           spawn,          {.v = printscreencopycmd } },
     { 0,                            XK_Print,                       spawn,          {.v = printscreensavecmd } },
     { 0,                            XF86XK_MonBrightnessDown,       spawn,          {.v = dimmer } },
     { 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = brighter } },
 	{ MODKEY,                       XK_q,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-power" ) },
 	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
-	{ MODKEY,	                    XK_e,				            spawn,		    SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
+    { MODKEY,	                    XK_e,				            spawn,		    SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
     { MODKEY,                       XK_w,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pulseaudio-sink") }
 };
 

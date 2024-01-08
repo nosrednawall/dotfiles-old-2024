@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pactl set-sink-mute @DEFAULT_SINK@ toggle
+is_mute=$(pactl get-sink-mute @DEFAULT_SINK@)
+notify-send -t 3000 "Volume mute" "$is_mute"

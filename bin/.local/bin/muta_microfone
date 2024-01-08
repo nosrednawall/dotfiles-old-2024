@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pactl set-source-mute @DEFAULT_SOURCE@ toggle
+volume=$(pactl get-source-mute @DEFAULT_SOURCE@)
+notify-send -t 3000 "Microfone" "$volume"

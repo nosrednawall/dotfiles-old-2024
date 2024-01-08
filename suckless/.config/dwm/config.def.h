@@ -85,11 +85,11 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
 /* Volume */
-static const char *upvol[] = { "amixer", "set", "Master", "5%+", NULL };
-static const char *downvol[] = { "amixer", "set", "Master", "5%-", NULL };
+//static const char *upvol[] = { "amixer", "set", "Master", "5%+", NULL };
+//static const char *downvol[] = { "amixer", "set", "Master", "5%-", NULL };
 
 /* for muting/unmuting */
-static const char *mute[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
+//static const char *mute[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 
 /* lockscreen */
 static const char *lockscreencmd[] = {"slock",NULL};
@@ -163,9 +163,20 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask, 		    XK_r,      quit,           {1} },
         /*Meus atalhos*/
     { MODKEY|ShiftMask,             XK_l,                           spawn,          {.v = lockscreencmd } },
-    { 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = upvol } },
-    { 0,                            XF86XK_AudioLowerVolume,        spawn,          {.v = downvol } },
-    { 0,                            XF86XK_AudioMute,               spawn,          {.v = mute } },
+    /*volume alsa*/
+    //    { 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = upvol } },
+    //    { 0,                            XF86XK_AudioLowerVolume,        spawn,          {.v = downvol } },
+    //    { 0,                            XF86XK_AudioMute,               spawn,          {.v = mute } },
+    /*volume pulseaudio*/
+    { 0,                            XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume") },
+    { 0,                            XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/aumenta_volume") },
+    { 0,                            XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/muta_volume") },
+
+    /*Volume Microfone Pulseaudio*/
+    { ControlMask,                       XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/aumenta_volume_microfone") },
+    { ControlMask,                       XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume_microfone") },
+    { ControlMask,                       XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/muta_microfone") },
+
     { MODKEY|ShiftMask,             XK_s,                           spawn,          {.v = printscreencopycmd } },
     { 0,                            XK_Print,                       spawn,          {.v = printscreensavecmd } },
     { 0,                            XF86XK_MonBrightnessDown,       spawn,          {.v = dimmer } },

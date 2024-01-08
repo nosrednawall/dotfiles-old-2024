@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pactl set-source-volume @DEFAULT_SOURCE@ +5%
+volume=$(pactl get-source-volume @DEFAULT_SOURCE@)
+notify-send -t 3000 "Volume +5%" "Aumentado o volume microfone:\n$volume"

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pactl set-sink-volume @DEFAULT_SINK@ +5%
+volume=$(pactl get-sink-volume @DEFAULT_SINK@)
+notify-send -t 3000 "Volume +5%" "Aumentado o volume:\n$volume"

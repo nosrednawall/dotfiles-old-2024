@@ -30,6 +30,6 @@ case $chosen in
         ;;
     $microfone_headset_redragon)
         pactl set-default-source alsa_input.usb-C-Media_Electronics_Inc._Redragon_Gaming_Headset-00.mono-fallback
-        notify-send -t 3000 "Microfone ReDragon" "Alterado o microfone padrão para o Headset ReDragon"
+        notify-send -t 3000 "Microfone ReDragon" "Alterado o microfone padrão para o Headset ReDr"
         ;;
 esac
