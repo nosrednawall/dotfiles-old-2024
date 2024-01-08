@@ -106,20 +106,20 @@ static const char *dimmer[]   = { "brightnessctl", "set", "10%-", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,			XK_r,	   spawn,	   {.v = roficmd } },
+	{ MODKEY,            			XK_r,	   spawn,	       {.v = roficmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_s,      togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 
 	/*Padrao*/
-        { MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
-        { MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
-        { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-        { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-        { MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-        { MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-        { MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-        { MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+    { MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
+    { MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
+    { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
+    { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+    { MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
+    { MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+    { MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
+    { MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 
 	/*minhas alterações*/
 	{ MODKEY|ShiftMask,             XK_Right,  rotatestack,    {.i = +1 } },
@@ -172,7 +172,7 @@ static const Key keys[] = {
     { 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = brighter } },
 	{ MODKEY,                       XK_q,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-power" ) },
 	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
-	{ MODKEY,	                    XK_e,				            spawn,		    SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
+    { MODKEY,	                    XK_e,				            spawn,		    SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
     { MODKEY,                       XK_w,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pulseaudio-sink") }
 };
 

@@ -9,9 +9,9 @@ options="$hdmi\n$integrado"
 chosen="$(echo -e "$options" | dmenu -p "Scripts de monitor " )"
 case $chosen in
     $integrado)
-        pactl set-default-sink 1
+        pactl set-default-sink alsa_output.pci-0000_06_00.6.analog-stereo
         ;;
     $hdmi)
-        pactl set-default-OOOOOIOIOIsink 4
+        pactl set-default-sink alsa_output.pci-0000_01_00.1.hdmi-stereo
 	    ;;
 esac
