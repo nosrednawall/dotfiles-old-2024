@@ -1,6 +1,7 @@
 #!/bin/bash
 #$./.screenlayout/note_casa.sh
 xrandr --setprovideroutputsource modesetting NVIDIA-0
+systemctl --user import-environment DISPLAY
 if_monitor.sh
 pulseaudio --daemonize
 xfce4-power-manager &
