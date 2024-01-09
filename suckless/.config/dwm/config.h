@@ -5,18 +5,18 @@
 #include "tcl.c"
 
 /* appearance */
-static const unsigned int borderpx  = 4;        /* border pixel of windows */
-static const unsigned int gappx     = 10;        /* gaps between windows */
-static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
-static const unsigned int systrayonleft = 0;    /* 0: systray in the right corner, >0: systray on left of status text */
-static const unsigned int systrayspacing = 1;   /* systray spacing */
-static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
-static const int showsystray        = 1;        /* 0 means no systray */
-static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const unsigned int borderpx         = 4;        /* border pixel of windows */
+static const unsigned int gappx            = 10;        /* gaps between windows */
+static const unsigned int snap             = 32;       /* snap pixel */
+static const unsigned int systraypinning   = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
+static const unsigned int systrayonleft    = 0;    /* 0: systray in the right corner, >0: systray on left of status text */
+static const unsigned int systrayspacing   = 1;   /* systray spacing */
+static const int systraypinningfailfirst   = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
+static const int showsystray               = 1;        /* 0 means no systray */
+static const int showbar                   = 1;        /* 0 means no bar */
+static const int topbar                    = 1;        /* 0 means bottom bar */
+static const char *fonts[]                 = { "monospace:size=10" };
+static const char dmenufont[]              = "monospace:size=10";
 
 /*gruvbox*/
 static const char col_gray1[]	    = "#282828";
@@ -43,8 +43,10 @@ static const Rule rules[] = {
 	{ "Gimp",     	NULL,       	NULL,       	0,            	1,           	-1 },
 	//{ "Firefox",  NULL,       	NULL,       	1 << 8,       	0,           	-1 },
 	{ "copyq",    	NULL,       	NULL,       	0,            	1,           	-1 },
-	{ "openboard", 	NULL,      	    NULL,       	0,            	1,		        -1 },
-	{ "mpv", 	    NULL, 		    NULL,		    0,		        1,		        -1 },
+	{ "openboard", 	NULL,      	NULL,       	0,            	1,		-1 },
+	{ "mpv", 	NULL, 		NULL,		0,		1,		-1 },
+	{ "Spotube", 	"spotube",	NULL,		1 << 8,		0,		-1 },
+//	{ "mpv", 	NULL, 		NULL,		0,		1,		-1 },	
 };
 
 /* layout(s) */
@@ -163,19 +165,21 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask, 		    XK_r,      quit,           {1} },
         /*Meus atalhos*/
     { MODKEY|ShiftMask,             XK_l,                           spawn,          {.v = lockscreencmd } },
+
     /*volume alsa*/
     //    { 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = upvol } },
     //    { 0,                            XF86XK_AudioLowerVolume,        spawn,          {.v = downvol } },
     //    { 0,                            XF86XK_AudioMute,               spawn,          {.v = mute } },
+
     /*volume pulseaudio*/
     { 0,                            XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume") },
     { 0,                            XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/aumenta_volume") },
     { 0,                            XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/muta_volume") },
 
     /*Volume Microfone Pulseaudio*/
-    { ControlMask,                       XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/aumenta_volume_microfone") },
-    { ControlMask,                       XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume_microfone") },
-    { ControlMask,                       XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/muta_microfone") },
+    { ControlMask,                  XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/aumenta_volume_microfone") },
+    { ControlMask,                  XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume_microfone") },
+    { ControlMask,                  XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/muta_microfone") },
 
     { MODKEY|ShiftMask,             XK_s,                           spawn,          {.v = printscreencopycmd } },
     { 0,                            XK_Print,                       spawn,          {.v = printscreensavecmd } },
