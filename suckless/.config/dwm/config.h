@@ -15,8 +15,8 @@ static const int systraypinningfailfirst   = 1;   /* 1: if pinning fails, displa
 static const int showsystray               = 1;        /* 0 means no systray */
 static const int showbar                   = 1;        /* 0 means no bar */
 static const int topbar                    = 1;        /* 0 means bottom bar */
-static const char *fonts[]                 = { "monospace:size=15" };
-static const char dmenufont[]              = "monospace:size=15";
+static const char *fonts[]                 = { "Hack Nerd Font:size=10","monospace:size=10" };
+static const char dmenufont[]              = "Hack Nerd Font:size=10";
 
 /*gruvbox*/
 static const char col_gray1[]	    = "#282828";
@@ -52,7 +52,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -81,6 +81,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *roficmd[] = { "/bin/sh", "-c", "rofi -show drun -theme $HOME/.config/rofi/rofi-collection/gruvbox/gruvbox.rasi", NULL };
 static const char *termcmd[]  = { "st", NULL };
+//static const char *termcmd[] = { "alacritty", NULL };
+
 
 /* scratch pad */
 static const char scratchpadname[] = "scratchpad";
@@ -108,20 +110,20 @@ static const char *dimmer[]   = { "brightnessctl", "set", "10%-", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,            			XK_r,	   spawn,	       {.v = roficmd } },
+	{ MODKEY,            	        XK_r,	   spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_s,      togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 
 	/*Padrao*/
-    { MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
-    { MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
-    { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-    { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-    { MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-    { MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-    { MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-    { MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
+	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
+	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
+	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 
 	/*minhas alterações*/
 	{ MODKEY|ShiftMask,             XK_Right,  rotatestack,    {.i = +1 } },
@@ -162,9 +164,9 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY|ShiftMask, 		    XK_r,      quit,           {1} },
+	{ MODKEY|ShiftMask, 		XK_r,      quit,           {1} },
         /*Meus atalhos*/
-    { MODKEY|ShiftMask,             XK_l,                           spawn,          {.v = lockscreencmd } },
+	{ MODKEY|ShiftMask,             XK_l,                           spawn,          {.v = lockscreencmd } },
 
     /*volume alsa*/
     //    { 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = upvol } },
@@ -172,23 +174,22 @@ static const Key keys[] = {
     //    { 0,                            XF86XK_AudioMute,               spawn,          {.v = mute } },
 
     /*volume pulseaudio*/
-    { 0,                            XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume") },
-    { 0,                            XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/aumenta_volume") },
-    { 0,                            XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/muta_volume") },
+	{ 0,                            XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume") },
+	{ 0,                            XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/aumenta_volume") },
+	{ 0,                            XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/muta_volume") },
 
     /*Volume Microfone Pulseaudio*/
-    { ControlMask,                  XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/aumenta_volume_microfone") },
-    { ControlMask,                  XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume_microfone") },
-    { ControlMask,                  XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/muta_microfone") },
-
-    { MODKEY|ShiftMask,             XK_s,                           spawn,          {.v = printscreencopycmd } },
-    { 0,                            XK_Print,                       spawn,          {.v = printscreensavecmd } },
-    { 0,                            XF86XK_MonBrightnessDown,       spawn,          {.v = dimmer } },
-    { 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = brighter } },
+	{ ControlMask,                  XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/aumenta_volume_microfone") },
+	{ ControlMask,                  XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume_microfone") },
+	{ ControlMask,                  XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/muta_microfone") },
+	{ MODKEY|ShiftMask,             XK_s,                           spawn,          {.v = printscreencopycmd } },
+	{ 0,                            XK_Print,                       spawn,          {.v = printscreensavecmd } },
+	{ 0,                            XF86XK_MonBrightnessDown,       spawn,          {.v = dimmer } },
+	{ 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = brighter } },
 	{ MODKEY,                       XK_q,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-power" ) },
 	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
-    { MODKEY,	                    XK_e,				            spawn,		    SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
-    { MODKEY,                       XK_w,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pulseaudio-sink") }
+	{ MODKEY,	                XK_e,				spawn,	        SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
+	{ MODKEY,                       XK_w,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pulseaudio-sink") }
 };
 
 
