@@ -46,7 +46,9 @@ static const Rule rules[] = {
 	{ "openboard", 	NULL,      	NULL,       	0,            	1,		-1 },
 	{ "mpv", 	NULL, 		NULL,		0,		1,		-1 },
 	{ "Spotube", 	"spotube",	NULL,		1 << 8,		0,		-1 },
-//	{ "mpv", 	NULL, 		NULL,		0,		1,		-1 },	
+//	{ "mpv", 	NULL, 		NULL,		0,		1,		-1 },
+	{ "Qalculate", "qalculate",     NULL,           0,              1,              -1 },
+	{ "Calculadora","calculadora",  NULL,           0,              1,              -1 },
 };
 
 /* layout(s) */
