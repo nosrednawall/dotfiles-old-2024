@@ -329,7 +329,6 @@ static Key key[] = {
 	{ XK_KP_Home,       ShiftMask,      "\033[1;2H",     0,   +1},
 	{ XK_KP_Home,       XK_ANY_MOD,     "\033[H",        0,   -1},
 	{ XK_KP_Home,       XK_ANY_MOD,     "\033[1~",       0,   +1},
-	
 	{ XK_KP_Up,         XK_ANY_MOD,     "\033Ox",       +1,    0},
 	{ XK_KP_Up,         XK_ANY_MOD,     "\033[A",        0,   -1},
 	{ XK_KP_Up,         XK_ANY_MOD,     "\033OA",        0,   +1},
