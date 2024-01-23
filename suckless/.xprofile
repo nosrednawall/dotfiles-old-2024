@@ -15,6 +15,7 @@ copyq &
 pasystray &
 mpd ~/.config/mpd/mpd.conf
 dwmblocks &
+# devmon &
 export _JAVA_AWT_WM_NONREPARENTING=1
-export QT_QPA_PLATFORMTHEME=qt5ct
+ck-launch-session &
 exec dbus-launch --sh-syntax --exit-with-session dwm

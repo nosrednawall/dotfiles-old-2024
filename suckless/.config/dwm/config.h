@@ -10,7 +10,7 @@ static const unsigned int gappx            = 10;        /* gaps between windows 
 static const unsigned int snap             = 32;       /* snap pixel */
 static const unsigned int systraypinning   = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft    = 0;    /* 0: systray in the right corner, >0: systray on left of status text */
-static const unsigned int systrayspacing   = 1;   /* systray spacing */
+static const unsigned int systrayspacing   = 2;   /* systray spacing */
 static const int systraypinningfailfirst   = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray               = 1;        /* 0 means no systray */
 static const int showbar                   = 1;        /* 0 means no bar */
@@ -101,7 +101,7 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
 static const char *lockscreencmd[] = {"slock",NULL};
 
 /* printscreen */
-static const char *printscreencopycmd[] = { "/bin/sh", "-c", "maim -s | xclip -selection clipboard -t image/png", NULL};
+static const char *printscreencopycmd[] = { "/bin/sh", "-c", "maim -s $HOME/Imagens/Screenshoots/`date +%Y-%m-%d_%H:%M:%S`.png | xclip -selection clipboard -t image/png", NULL};
 static const char *printscreensavecmd[] = { "/bin/sh", "-c", "maim -s $HOME/Imagens/Screenshoots/`date +%Y-%m-%d_%H:%M:%S`.png", NULL};
 
 /* brilho da tela */
@@ -166,7 +166,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY|ShiftMask, 		XK_r,      quit,           {1} },
+	{ MODKEY|ShiftMask, 		    XK_r,      quit,           {1} },
         /*Meus atalhos*/
 	{ MODKEY|ShiftMask,             XK_l,                           spawn,          {.v = lockscreencmd } },
 
@@ -184,13 +184,22 @@ static const Key keys[] = {
 	{ ControlMask,                  XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/aumenta_volume_microfone") },
 	{ ControlMask,                  XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume_microfone") },
 	{ ControlMask,                  XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/muta_microfone") },
+    { 0,                            XF86XK_AudioPlay,               spawn,          SHCMD("~/.local/bin/playerctl_play") },
+    { 0,                            XF86XK_AudioStop,               spawn,          SHCMD("~/.local/bin/playerctl_stop") },
+    { 0,                            XF86XK_AudioPrev,               spawn,          SHCMD("~/.local/bin/playerctl_prev") },
+    { 0,                            XF86XK_AudioNext,               spawn,          SHCMD("~/.local/bin/playerctl_next") },
+    { 0,                            XF86XK_HomePage,                spawn,          SHCMD("~/.local/bin/homepage_program") },
+    { 0,                            XF86XK_Mail,                    spawn,          SHCMD("~/.local/bin/mail_program") },
+    { 0,                            XF86XK_Search,                  spawn,          SHCMD("~/.local/bin/search_program") },
+    { 0,                            XF86XK_Calculator,              spawn,          SHCMD("~/.local/bin/calculator_program") },    
+    
 	{ MODKEY|ShiftMask,             XK_s,                           spawn,          {.v = printscreencopycmd } },
 	{ 0,                            XK_Print,                       spawn,          {.v = printscreensavecmd } },
 	{ 0,                            XF86XK_MonBrightnessDown,       spawn,          {.v = dimmer } },
 	{ 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = brighter } },
 	{ MODKEY,                       XK_q,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-power" ) },
 	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
-	{ MODKEY,	                XK_e,				spawn,	        SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
+	{ MODKEY,	                    XK_e,				            spawn,	        SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
 	{ MODKEY,                       XK_w,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pulseaudio-sink") }
 };
 
