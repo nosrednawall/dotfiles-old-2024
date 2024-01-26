@@ -1,0 +1,26 @@
+#!/bin/bash
+# Dependencias
+# sudo apt-get install jq yt-dlp mpv
+
+tempfile=$(mktemp)
+youtube_dl_log=$(mktemp)
+
+yt-dlp -j "ytsearch8:$*" > $tempfile
+
+while IFS= read -r line
+do
+    youtube_urls+=("$line")
+done < <(cat $tempfile | jq '.webpage_url' | tr -d '"' )
+
+cat $tempfile | jq '.fulltitle, .webpage_url'
+
+while :
+do
+    echo "Digite o número do vídeo escolhido."
+    read i
+    if [ ! x"$i" == x"" ]
+    then
+        # fazer a numeracao mais intuitiva (iniciar do 1 não 0)
+        mpv ${youtube_urls[$i - 1]} &
+    fi
+done

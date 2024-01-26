@@ -27,7 +27,7 @@ static const char col_cyan[] 	    = "#ebdbb2";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },  
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
 
@@ -39,16 +39,17 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    	title       tags mask     isfloating   monitor */
-	{ "Gimp",     	NULL,       	NULL,       	0,            	1,           	-1 },
-	//{ "Firefox",  NULL,       	NULL,       	1 << 8,       	0,           	-1 },
-	{ "copyq",    	NULL,       	NULL,       	0,            	1,           	-1 },
-	{ "openboard", 	NULL,      	NULL,       	0,            	1,		-1 },
-	{ "mpv", 	NULL, 		NULL,		0,		1,		-1 },
-	{ "Spotube", 	"spotube",	NULL,		1 << 8,		0,		-1 },
-//	{ "mpv", 	NULL, 		NULL,		0,		1,		-1 },
-	{ "Qalculate", "qalculate",     NULL,           0,              1,              -1 },
-	{ "Calculadora","calculadora",  NULL,           0,              1,              -1 },
+	/* class                       instance    	title       tags mask     isfloating   monitor */
+	{ "Gimp",     	                 NULL,       	NULL,       	0,            	1,           	-1 },
+	//{ "Firefox",                   NULL,       	NULL,       	1 << 8,       	0,           	-1 },
+	{ "copyq",    	                 NULL,       	NULL,       	0,            	1,           	-1 },
+	{ "openboard", 	                 NULL,      	NULL,       	0,            	1,		        -1 },
+	{ "mpv", 	                     NULL, 		    NULL,		    0,		        1,		        -1 },
+	{ "Spotube", 	              "spotube",    	NULL,		  1 << 8,		    0,		        -1 },
+    { "Blueman-manager",       "blueman-manager", 	NULL,	    	0,		        1,       		-1 },
+	{ "Qalculate",               "qalculate",       NULL,           0,              1,              -1 },
+	{ "Calculadora",            "calculadora",      NULL,           0,              1,              -1 },
+	{ "Sonata",                    "sonata",        NULL,           0,              1,              -1 },    
 };
 
 /* layout(s) */
@@ -82,8 +83,8 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *roficmd[] = { "/bin/sh", "-c", "rofi -show drun -theme $HOME/.config/rofi/rofi-collection/gruvbox/gruvbox.rasi", NULL };
-static const char *termcmd[]  = { "st", NULL };
-//static const char *termcmd[] = { "alacritty", NULL };
+//static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[] = { "alacritty", NULL };
 
 
 /* scratch pad */
@@ -99,10 +100,6 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
 
 /* lockscreen */
 static const char *lockscreencmd[] = {"slock",NULL};
-
-/* printscreen */
-static const char *printscreencopycmd[] = { "/bin/sh", "-c", "maim -s $HOME/Imagens/Screenshoots/`date +%Y-%m-%d_%H:%M:%S`.png | xclip -selection clipboard -t image/png", NULL};
-static const char *printscreensavecmd[] = { "/bin/sh", "-c", "maim -s $HOME/Imagens/Screenshoots/`date +%Y-%m-%d_%H:%M:%S`.png", NULL};
 
 /* brilho da tela */
 static const char *brighter[] = { "brightnessctl", "set", "10%+", NULL };
@@ -168,7 +165,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ShiftMask, 		    XK_r,      quit,           {1} },
         /*Meus atalhos*/
-	{ MODKEY|ShiftMask,             XK_l,                           spawn,          {.v = lockscreencmd } },
+	{ ControlMask|Mod1Mask,         XK_l,      spawn,          {.v = lockscreencmd } },
 
     /*volume alsa*/
     //    { 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = upvol } },
@@ -193,8 +190,8 @@ static const Key keys[] = {
     { 0,                            XF86XK_Search,                  spawn,          SHCMD("~/.local/bin/search_program") },
     { 0,                            XF86XK_Calculator,              spawn,          SHCMD("~/.local/bin/calculator_program") },    
     
-	{ MODKEY|ShiftMask,             XK_s,                           spawn,          {.v = printscreencopycmd } },
-	{ 0,                            XK_Print,                       spawn,          {.v = printscreensavecmd } },
+	{ MODKEY|ShiftMask,             XK_s,                           spawn,          SHCMD("~/.local/bin/print_edita") },
+	{ 0,                            XK_Print,                       spawn,          SHCMD("~/.local/bin/print_copia") },
 	{ 0,                            XF86XK_MonBrightnessDown,       spawn,          {.v = dimmer } },
 	{ 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = brighter } },
 	{ MODKEY,                       XK_q,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-power" ) },

@@ -1,2 +1,11 @@
 #!/bin/bash
-playerctl play-pause
+
+mpc_status=$(mpc | grep "volume" | cut -c 9-11)
+mpc_nao_funcionando="n/a"
+
+if [[ $mpc_nao_funcionando == $mpc_status ]]
+then
+    playerctl play-pause
+else
+    mpc stop
+fi
