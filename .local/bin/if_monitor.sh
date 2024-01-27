@@ -1,0 +1,16 @@
+#!/bin/bash
+monitor=$(xrandr | grep "HDMI-0 connected" | cut -c 1-16 )
+string="HDMI-0 connected"
+#conectado=$(cut -c 1-16 $monitor)
+#conectado2=$(expr substr $monitor 1 16)
+
+if [[ $monitor == $string ]]
+then
+	echo "monitor conectado"
+	xrandr --output HDMI-0 --primary --mode 3440x1440 --pos 1920x0 --rotate normal --dpi 120 --output eDP-1-1 --mode 1920x1080 --pos 0x360 --rotate normal --dpi 120
+
+else
+	echo "monitor não conectado"
+	xrandr --output HDMI-0 --off --output eDP-1-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --dpi 100
+
+fi

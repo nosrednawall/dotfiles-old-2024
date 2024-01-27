@@ -1,0 +1,15 @@
+#!/bin/bash
+mpc_status=$(mpc | grep "volume" | cut -c 9-11)
+playerctl_status=$(playerctl status | grep "No players found")
+
+if [[ "" == $playerctl_status ]]
+then
+    if [[ "n/a" != $mpc_status ]]
+    then
+        mpc toggle
+    else
+        mpc play
+    fi        
+else
+    playerctl play-pause
+fi
