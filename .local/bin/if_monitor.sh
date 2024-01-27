@@ -7,7 +7,7 @@ string="HDMI-0 connected"
 if [[ $monitor == $string ]]
 then
 	echo "monitor conectado"
-	xrandr --output HDMI-0 --primary --mode 3440x1440 --pos 1920x0 --rotate normal --dpi 120 --output eDP-1-1 --mode 1920x1080 --pos 0x360 --rotate normal --dpi 120
+	xrandr --output HDMI-0 --primary --mode 3440x1440 --pos 1920x0 --rotate normal --dpi 100 --output eDP-1-1 --mode 1920x1080 --pos 0x360 --rotate normal --dpi 100
 
 else
 	echo "monitor não conectado"
