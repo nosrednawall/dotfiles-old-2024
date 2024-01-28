@@ -35,13 +35,12 @@
  #+END_SRC
 
 * Configurações gerais dos Buffers
-#+BEGIN_SCR emacs-lisp
+#+BEGIN_SRC emacs-lisp
   (setq ido-enable-flex-matching t)  ; flexibilita a procura de buffers
   (setq ido-everywhere t) ; busca qualquer coisa
   (ido-mode 1) ; inicia no modo 1 - com um buffer apenas
   (defalias 'list-buffers 'ibuffer) ; make ibuffer default
-  (windmove-default-keybindings t)  ; navega entre as janelas com o Shift+teclas de setas
-#+END_SCR
+#+END_SRC
 
 * Instala Try, que serve para testar pacotes sem instalá-los
 #+BEGIN_SRC emacs-lisp
