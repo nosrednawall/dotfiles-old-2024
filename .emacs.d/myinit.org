@@ -12,26 +12,23 @@
  #+END_SRC
 * Alteraões e ajustes na interface
 #+BEGIN_SRC emacs-lisp
-		  (global-set-key (kbd "<f5>") 'revert-buffer)
-		  ;(global-auto-revert-mode t) ;; Auto atualiza os buffers
-		  (setq visible-bell 1)  ;; tira o barulho chato de beep
-		  (setq inhibiy-startup-message t)  ;; tira a mensagem padrão de inicio do emacs
-		  (tool-bar-mode -1)  ;; tira a barra de ferramentas
-		  (menu-bar-mode -1)  ;; tira a barra de ferramentas
-		  (scroll-bar-mode -1)  ; Remover barra de rolagem
-
+  (global-set-key (kbd "<f5>") 'revert-buffer)
+  ;;(global-auto-revert-mode t) ;; Auto atualiza os buffers
+  (setq visible-bell 1)  ;; tira o barulho chato de beep
+  (setq inhibiy-startup-message t)  ;; tira a mensagem padrão de inicio do emacs
+  (tool-bar-mode -1)  ;; tira a barra de ferramentas
+  (menu-bar-mode -1)  ;; tira a barra de ferramentas
+  (scroll-bar-mode -1)  ; Remover barra de rolagem
   ;; Adiciona navegação entre os buffers, com as teclas Alt+Setas
   (when (fboundp 'windmove-default-keybindings)
 	(windmove-default-keybindings))
-
-  
-	(add-hook 'text-mode-hook 'linum-mode)
-	(add-hook 'prog-mode-hook 'linum-mode)
-
-		  (fset 'yes-or-no-p 'y-or-n-p)
-		  (setq-default c-basic-offset 4
-						tab-width 4
-						indent-tabs-mode t)  ;; identação
+  ;
+  (add-hook 'text-mode-hook 'linum-mode)
+  (add-hook 'prog-mode-hook 'linum-mode)
+  (fset 'yes-or-no-p 'y-or-n-p)
+  (electric-indent-mode 0)
+  (setq-default c-basic-offset 4
+				tab-width 4)  ;; identação
  #+END_SRC
 
 * Configurações gerais dos Buffers
