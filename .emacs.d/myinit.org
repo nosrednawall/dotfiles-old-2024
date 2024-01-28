@@ -12,22 +12,26 @@
  #+END_SRC
 * Alteraões e ajustes na interface
 #+BEGIN_SRC emacs-lisp
-		(global-set-key (kbd "<f5>") 'revert-buffer)
-		;(global-auto-revert-mode t) ;; Auto atualiza os buffers
-		(setq visible-bell 1)  ;; tira o barulho chato de beep
-		(setq inhibiy-startup-message t)  ;; tira a mensagem padrão de inicio do emacs
-		(tool-bar-mode -1)  ;; tira a barra de ferramentas
-		(menu-bar-mode -1)  ;; tira a barra de ferramentas
-		(scroll-bar-mode -1)  ; Remover barra de rolagem
-	  ; (global-linum-mode t)  ; Adicionar linhas no código
+		  (global-set-key (kbd "<f5>") 'revert-buffer)
+		  ;(global-auto-revert-mode t) ;; Auto atualiza os buffers
+		  (setq visible-bell 1)  ;; tira o barulho chato de beep
+		  (setq inhibiy-startup-message t)  ;; tira a mensagem padrão de inicio do emacs
+		  (tool-bar-mode -1)  ;; tira a barra de ferramentas
+		  (menu-bar-mode -1)  ;; tira a barra de ferramentas
+		  (scroll-bar-mode -1)  ; Remover barra de rolagem
 
-  (add-hook 'text-mode-hook 'linum-mode)
-  (add-hook 'prog-mode-hook 'linum-mode)
+  ;; Adiciona navegação entre os buffers, com as teclas Alt+Setas
+  (when (fboundp 'windmove-default-keybindings)
+	(windmove-default-keybindings))
 
-		(fset 'yes-or-no-p 'y-or-n-p)
-		(setq-default c-basic-offset 4
-					  tab-width 4
-					  indent-tabs-mode t)  ;; identação
+  
+	(add-hook 'text-mode-hook 'linum-mode)
+	(add-hook 'prog-mode-hook 'linum-mode)
+
+		  (fset 'yes-or-no-p 'y-or-n-p)
+		  (setq-default c-basic-offset 4
+						tab-width 4
+						indent-tabs-mode t)  ;; identação
  #+END_SRC
 
 * Configurações gerais dos Buffers
@@ -36,7 +40,7 @@
   (setq ido-everywhere t) ; busca qualquer coisa
   (ido-mode 1) ; inicia no modo 1 - com um buffer apenas
   (defalias 'list-buffers 'ibuffer) ; make ibuffer default
-  (windmove-default-keybindings)  ; navega entre as janelas com o Shift+teclas de setas
+  (windmove-default-keybindings t)  ; navega entre as janelas com o Shift+teclas de setas
 #+END_SCR
 
 * Instala Try, que serve para testar pacotes sem instalá-los
@@ -61,40 +65,41 @@
 
 * Alt Tab Entre os Buffers e Buffers com Tabs
 #+BEGIN_SRC emacs-lisp
-(use-package buffer-flip
-  :ensure t
-  :bind  (("M-<tab>" . buffer-flip)
-          :map buffer-flip-map
-          ( "M-<tab>" .   buffer-flip-forward) 
-          ( "M-S-<tab>" . buffer-flip-backward) 
-          ( "M-ESC" .     buffer-flip-abort))
-  :config
-  (setq buffer-flip-skip-patterns
-        '("^\\*helm\\b"
-          "^\\*swiper\\*$")))
+  (use-package buffer-flip
+	:ensure t
+	:bind  (("M-<tab>" . buffer-flip)
+			:map buffer-flip-map
+			( "M-<tab>" .   buffer-flip-forward) 
+			( "M-S-<tab>" . buffer-flip-backward) 
+			( "M-ESC" .     buffer-flip-abort))
+	:config
+	(setq buffer-flip-skip-patterns
+		  '("^\\*helm\\b"
+			"^\\*swiper\\*$")))
 
-;; Buffer tabs
-(global-unset-key (kbd "C-x <prior>"))
-(global-unset-key (kbd "C-x <next>"))
-(use-package centaur-tabs
-  :ensure t
-  :demand
-  :config
-  (setq centaur-tabs-style "box"
-	centaur-tabs-set-bar 'over
-	centaur-tabs-set-modified-marker t
-	centaur-tabs-modified-marker "*"
-	centaur-tabs-set-icons t
-	centaur-tabs-height 32)
-  (centaur-tabs-change-fonts (face-attribute 'default :font) 120)
-  (centaur-tabs-headline-match)
-  (centaur-tabs-mode t)
-  :bind
-  ("C-x <prior>" . centaur-tabs-backward)
-  ("C-x <next>" . centaur-tabs-forward)
-  :hook
-  (dashboard-mode . centaur-tabs-local-mode)
-  (vterm-mode . centaur-tabs-local-mode))
+  ;; Buffer tabs
+  (global-unset-key (kbd "C-x <prior>"))
+  (global-unset-key (kbd "C-x <next>"))
+
+  (use-package centaur-tabs
+	:ensure t
+	:demand
+	:config
+	(setq centaur-tabs-style "box"
+	  centaur-tabs-set-bar 'over
+	  centaur-tabs-set-modified-marker t
+	  centaur-tabs-modified-marker "*"
+	  centaur-tabs-set-icons t
+	  centaur-tabs-height 32)
+	(centaur-tabs-change-fonts (face-attribute 'default :font) 120)
+	(centaur-tabs-headline-match)
+	(centaur-tabs-mode t)
+	:bind
+	("C-x <prior>" . centaur-tabs-backward)
+	("C-x <next>" . centaur-tabs-forward)
+	:hook
+	(dashboard-mode . centaur-tabs-local-mode)
+	(vterm-mode . centaur-tabs-local-mode))
 #+END_SRC
 
 * Neotree, All the Icons e SpaceLine
