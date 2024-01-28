@@ -15,8 +15,8 @@ static const int systraypinningfailfirst   = 1;   /* 1: if pinning fails, displa
 static const int showsystray               = 1;        /* 0 means no systray */
 static const int showbar                   = 1;        /* 0 means no bar */
 static const int topbar                    = 1;        /* 0 means bottom bar */
-static const char *fonts[]                 = { "Hack Nerd Font:size=10","monospace:size=10" };
-static const char dmenufont[]              = "Hack Nerd Font:size=10";
+static const char *fonts[]                 = { "Comic code:size=15","Hack Nerd Font:size=15","monospace:size=15" };
+static const char dmenufont[]              = "Comic code:size=15";
 
 /*gruvbox*/
 static const char col_gray1[]	    = "#282828";
@@ -47,9 +47,9 @@ static const Rule rules[] = {
 	{ "mpv", 	                     NULL, 		    NULL,		    0,		        1,		        -1 },
 	{ "Spotube", 	              "spotube",    	NULL,		  1 << 8,		    0,		        -1 },
     { "Blueman-manager",       "blueman-manager", 	NULL,	    	0,		        1,       		-1 },
-	{ "Qalculate",               "qalculate",       NULL,           0,              1,              -1 },
-	{ "Calculadora",            "calculadora",      NULL,           0,              1,              -1 },
-	{ "Sonata",                    "sonata",        NULL,           0,              1,              -1 },    
+	//{ "Qalculate",               "qalculate",       NULL,           0,              1,              -1 },
+	//{ "Calculadora",            "calculadora",      NULL,           0,              1,              -1 },
+	//{ "Sonata",                    "sonata",        NULL,           0,              1,              -1 },    
 };
 
 /* layout(s) */
@@ -82,21 +82,13 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *roficmd[] = { "/bin/sh", "-c", "rofi -modi 'window,drun,ssh,combi' -font 'hack 15' -show drun -icon-theme 'Gruvbox' -show-icons -theme 'gruvbox-dark' ", NULL };
+static const char *roficmd[] = { "/bin/sh", "-c", "rofi -modi 'window,drun,ssh,combi' -font 'Comic code 15' -show drun -icon-theme 'Gruvbox' -show-icons -theme 'gruvbox-dark' ", NULL };
 //static const char *termcmd[]  = { "st", NULL };
 static const char *termcmd[] = { "alacritty", NULL };
-
 
 /* scratch pad */
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
-
-/* Volume */
-//static const char *upvol[] = { "amixer", "set", "Master", "5%+", NULL };
-//static const char *downvol[] = { "amixer", "set", "Master", "5%-", NULL };
-
-/* for muting/unmuting */
-//static const char *mute[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 
 /* lockscreen */
 static const char *lockscreencmd[] = {"slock",NULL};
