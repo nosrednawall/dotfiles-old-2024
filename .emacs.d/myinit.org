@@ -1,5 +1,10 @@
 #+STARTUP: overview 
 #+PROPERTY: header-args :comments yes :results silent
+* Fonte padrão
+#+BEGIN_SRC emacs-lisp
+(set-face-attribute 'default nil :font "Comic code" :height 130)
+#+END_SRC
+
 * Declaração de variáveis
 #+BEGIN_SCR emacs-lisp
 (eval-when-compile (defvar inhibiy-startup-message)

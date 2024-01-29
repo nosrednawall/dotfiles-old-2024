@@ -45,6 +45,5 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
-(set-face-attribute 'default nil :font "Comic code" :height 100)
 ;; Carrega os pacotes que estão no arquivo ORG
 (org-babel-load-file (expand-file-name "~/.emacs.d/myinit.org"))
