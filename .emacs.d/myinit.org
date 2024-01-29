@@ -3,6 +3,7 @@
 * Fonte padrão
 #+BEGIN_SRC emacs-lisp
 (set-face-attribute 'default nil :font "Comic code" :height 130)
+(add-to-list 'default-frame-alist '(font . "Comic code-15"))
 #+END_SRC
 
 * Declaração de variáveis
