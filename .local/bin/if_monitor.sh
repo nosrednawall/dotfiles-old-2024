@@ -8,9 +8,13 @@ if [[ $monitor == $string ]]
 then
 	echo "monitor conectado"
 	xrandr --output HDMI-0 --primary --mode 3440x1440 --pos 1920x0 --rotate normal --output eDP-1-1 --mode 1920x1080 --pos 0x360 --rotate normal
+	sleep 2
+	nitrogen --restore
 
 else
 	echo "monitor não conectado"
 	xrandr --output HDMI-0 --off --output eDP-1-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+	sleep 3
+	nitrogen --restore
 
 fi
