@@ -5,22 +5,3 @@
 # global xinitrc file, used by all X sessions started by xinit (startx)
 
 # invoke global X session script
-numlockx
-xrandr --setprovideroutputsource modesetting NVIDIA-0
-systemctl --user import-environment DISPLAY
-/bin/bash if_monitor.sh
-pulseaudio --daemonize
-xfce4-power-manager --daemon
-xautolock -time 10 -locker slock &
-redshift -P -O 4500 &
-nitrogen --restore &
-compton --backend glx --vsync drm --unredir-if-possible --paint-on-overlay -b
-dunst &
-nm-tray &
-copyq &
-pasystray &
-mpd ~/.config/mpd/mpd.conf
-dwmblocks &
-export _JAVA_AWT_WM_NONREPARENTING=1
-#exec ck-launch-session dbus-launch --sh-syntax --exit-with-session dwm
-#exec dwm
