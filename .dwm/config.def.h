@@ -15,7 +15,7 @@ static const int systraypinningfailfirst   = 1;   /* 1: if pinning fails, displa
 static const int showsystray               = 1;        /* 0 means no systray */
 static const int showbar                   = 1;        /* 0 means no bar */
 static const int topbar                    = 1;        /* 0 means bottom bar */
-static const char *fonts[]                 = { "Comic code:size=12","Hack Nerd Font:size=12","monospace:size=12","Font Awesome 6 Brands:size=12"  };
+static const char *fonts[]                 = { "Comic code:size=10","Hack Nerd Font:size=10","monospace:size=10","Font Awesome 6 Brands:size=10"  };
 static const char dmenufont[]              = "Comic code:size=12";
 
 /*gruvbox*/

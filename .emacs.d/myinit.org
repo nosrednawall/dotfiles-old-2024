@@ -2,8 +2,8 @@
 #+PROPERTY: header-args :comments yes :results silent
 * Fonte padrão
 #+BEGIN_SRC emacs-lisp
-(set-face-attribute 'default nil :font "Comic code" :height 100)
-(add-to-list 'default-frame-alist '(font . "Comic code-12"))
+(set-face-attribute 'default nil :font "Comic code" :height 90)
+(add-to-list 'default-frame-alist '(font . "Comic code-10"))
 #+END_SRC
 
 * Declaração de variáveis
