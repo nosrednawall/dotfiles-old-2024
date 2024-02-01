@@ -8,4 +8,5 @@ then
     playerctl previous
 else
     mpc prev
+	~/.local/bin/songinfo 
 fi

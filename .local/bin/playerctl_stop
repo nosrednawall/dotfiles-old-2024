@@ -7,5 +7,5 @@ if [[ $mpc_nao_funcionando == $mpc_status ]]
 then
     playerctl play-pause
 else
-    mpc stop
+    mpc stop 
 fi

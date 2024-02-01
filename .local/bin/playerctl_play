@@ -7,9 +7,11 @@ then
     if [[ "n/a" != $mpc_status ]]
     then
         mpc toggle
-    else
+		~/.local/bin/songinfo 
+	else
         mpc play
-    fi        
+		~/.local/bin/songinfo 
+	fi        
 else
     playerctl play-pause
 fi

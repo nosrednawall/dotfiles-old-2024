@@ -7,4 +7,5 @@ then
     playerctl next
 else
     mpc next
+	~/.local/bin/songinfo 
 fi
