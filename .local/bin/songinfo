@@ -1,7 +1,7 @@
 #!/bin/sh
 
 music_dir="$HOME/Músicas"
-previewdir="$XDG_CONFIG_HOME/ncmpcpp/previews"
+previewdir="$HOME/.ncmpcpp/previews"
 filename="$(mpc --format "$music_dir"/%file% current)"
 previewname="$previewdir/$(mpc --format %album% current | base64).png"
 
