@@ -1,0 +1,2 @@
+#!/bin/bash
+slock -m "$(fortune | cowthink -f dragon | lolcat -ft)"

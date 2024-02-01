@@ -34,6 +34,8 @@ static const char *colors[][3]      = {
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 //static const char *tags[] = { "❶", "❷", "❸", "❹", "❺", "❻", "❼", "❽", "❾" };
+//static const char *tags[] = { "Term", }
+
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -90,9 +92,6 @@ static const char *termcmd[] = { "alacritty", NULL };
 /* scratch pad */
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
-
-/* lockscreen */
-static const char *lockscreencmd[] = {"slock",NULL};
 
 /* brilho da tela */
 static const char *brighter[] = { "brightnessctl", "set", "10%+", NULL };
@@ -158,7 +157,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ShiftMask, 		    XK_r,      quit,           {1} },
         /*Meus atalhos*/
-	{ ControlMask|Mod1Mask,         XK_l,      spawn,          {.v = lockscreencmd } },
+	{ ControlMask|Mod1Mask,         XK_l,      spawn,          SHCMD("~/.local/bin/slock_personalizado") },
 
     /*volume alsa*/
     //    { 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = upvol } },

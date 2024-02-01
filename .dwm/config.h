@@ -91,9 +91,6 @@ static const char *termcmd[] = { "alacritty", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
-/* lockscreen */
-static const char *lockscreencmd[] = {"slock",NULL};
-
 /* brilho da tela */
 static const char *brighter[] = { "brightnessctl", "set", "10%+", NULL };
 static const char *dimmer[]   = { "brightnessctl", "set", "10%-", NULL };
@@ -158,7 +155,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ShiftMask, 		    XK_r,      quit,           {1} },
         /*Meus atalhos*/
-	{ ControlMask|Mod1Mask,         XK_l,      spawn,          {.v = lockscreencmd } },
+	{ ControlMask|Mod1Mask,         XK_l,      spawn,          SHCMD("~/.local/bin/slock_personalizado") },
 
     /*volume alsa*/
     //    { 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = upvol } },
