@@ -4,6 +4,7 @@
 #+BEGIN_SRC emacs-lisp
 (set-face-attribute 'default nil :font "Comic code" :height 90)
 (add-to-list 'default-frame-alist '(font . "Comic code-10"))
+(add-to-list 'default-frame-alist '(font . "Mononoki Nerd Font-10"))
 #+END_SRC
 
 * Declaração de variáveis
@@ -133,12 +134,12 @@
   :init (advice-add 'python-mode :before 'elpy-enable))
 #+END_SRC
 
-** Flychek
+** Poetry
 #+BEGIN_SRC emacs-lisp
-(use-package flycheck
-  :ensure t)
-(setq global-flycheck-mode t)
+;  (use-package poetry
+; :ensure t)
 #+END_SRC
+
 * Swiper
 #+BEGIN_SRC emacs-lisp
 ;; it looks like counsel is a requirement for swiper
@@ -225,7 +226,7 @@
   :ensure t)
 #+END_SRC
 * Dicionários - Corretor ortográfico
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC
 ;; Spell
 (setq
     ispell-program-name "/usr/bin/hunspell"

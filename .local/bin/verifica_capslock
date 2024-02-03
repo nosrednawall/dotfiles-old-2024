@@ -1,0 +1,11 @@
+#!/bin/bash
+caps_off=$(xset q | grep -i caps | cut -b 22,23,24)
+nunlock_off=$(xset q | grep -i caps | cut -b 46,47,48)
+scroll_off=$(xset q | grep -i caps | cut -b 70,71,72)
+
+if [[ "off" == $caps_off ]]
+then
+	notify-send -t 3000 -r 27041 "CapsLock OFF" "Caps Lock Desativado"
+else
+	notify-send -t 3000 -r 27040 "CapsLock ON" "Caps Lock Ativado"
+fi

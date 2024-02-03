@@ -77,7 +77,8 @@ lit(){
 
 # Memory :
 mem(){
-	mem="$(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
+	#mem="$(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
+	mem="$(/home/anderson/.local/bin/block-ram used)"
 	echo -e "^c$magenta^^b$magenta^^c$black^^b$magenta^  $mem "
 }
 
@@ -161,5 +162,5 @@ while true; do
   # xsetroot -name "$(cpu)$(mem)$(vol)$(lit)$(bat)$(key)$(dat)$(net)"
   # xsetroot -name "$updates$(cpu)$(mem)$(lit)$(bat)$(dat)$(net)"
   xsetroot -name "$(cpu)$(tmp)$(mem)$(lit)$(hd_root)$(bat)$(dat)^c#282828^^b#282828^"
-  sleep 1.0
+  sleep 30
 done &
