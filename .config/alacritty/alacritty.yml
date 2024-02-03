@@ -32,7 +32,11 @@ colors:
 
 font:
   # The size to use.
-  size: 11
+  size: 8
+
+  offset:
+    x : 0
+    y : 0
 
   normal:
     family: Comic code
@@ -46,7 +50,7 @@ font:
     family: Comic code
 # Colors
 window:
-  opacity: 0.95
+#  opacity: 0
 
   padding:
    x: 2
