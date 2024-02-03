@@ -4,9 +4,8 @@ pulseaudio --daemonize
 xfce4-power-manager --daemon
 pgrep -x xautolock > /dev/null || xautolock -time 5 -locker ~/.local/bin/slock_personalizado &
 redshift -P -O 4500 &
-compton --backend glx --vsync drm --unredir-if-possible --paint-on-overlay -b
-#picom --animations -b --conf ~/.config/picom.conf
-#picom -b
+#compton --backend glx --vsync drm --unredir-if-possible --paint-on-overlay -b
+picom -b
 pgrep -x dunst > /dev/null || dunst &
 pgrep -x nm-tray > /dev/null || nm-tray &
 copyq &

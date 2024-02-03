@@ -15,27 +15,48 @@ static const int systraypinningfailfirst   = 1;   /* 1: if pinning fails, displa
 static const int showsystray               = 1;        /* 0 means no systray */
 static const int showbar                   = 1;        /* 0 means no bar */
 static const int topbar                    = 1;        /* 0 means bottom bar */
-static const char *fonts[]                 = { "Comic code:size=10","Hack Nerd Font:size=10","monospace:size=10","Font Awesome 6 Brands:size=10"  };
+static const int user_bh                   = 0;        /* 2 is the default spacing around the bar's font */
+static const char *fonts[]                 = { 
+	"Mononoki Nerd Font:style=Bold:size=12:antialias=true:autohint=true",
+	"Comic code:size=12:antialias=true:autohint=true",	
+
+};
 static const char dmenufont[]              = "Comic code:size=12";
 
 /*gruvbox*/
-static const char col_gray1[]	    = "#282828";
-static const char col_gray2[]       = "#282828";
-static const char col_gray3[] 	    = "#ebdbb2";
-static const char col_gray4[] 	    = "#282828";
-static const char col_cyan[] 	    = "#ebdbb2";
+/*
+static const char col_1[]	    = "#282828";
+static const char col_2[]       = "#282828";
+static const char col_3[] 	    = "#ebdbb2";
+static const char col_4[] 	    = "#282828";
+static const char col_5[] 	    = "#ebdbb2";
+*/
+
+/*gruvbox2*/
+static const char col_1[]       = "#282828";
+static const char col_2[]       = "#282828";
+static const char col_3[]       = "#dfbf8e";
+static const char col_4[]       = "#ebdbb2";//"#ea6962";
+static const char col_5[]       = "#282828";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },  
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm]       = { col_3, col_1, col_2 },
+	[SchemeSel]        = { col_4, col_1, col_4 },
+	[SchemeStatus]     = { col_3, col_1, col_1 }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeTagsSel]    = { col_1, col_4, col_4 }, // Tagbar left selected {text,background,not used but cannot be empty}
+    [SchemeTagsNorm]   = { col_3, col_1, col_1 }, // Tagbar left unselected {text,background,not used but cannot be empty}
+    [SchemeInfoSel]    = { col_4, col_1, col_4 }, // infobar middle  selected {text,background,not used but cannot be empty}
+    [SchemeInfoNorm]   = { col_3, col_1, col_1 }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-//static const char *tags[] = { "❶", "❷", "❸", "❹", "❺", "❻", "❼", "❽", "❾" };
-//static const char *tags[] = { "Term", }
 
+static const unsigned int ulinepad	= 5;	/* horizontal padding between the underline and tag */
+static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
+static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the bar the line should appear */
+static const int ulineall 		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -44,15 +65,11 @@ static const Rule rules[] = {
 	 */
 	/* class                       instance    	title       tags mask     isfloating   monitor */
 	{ "Gimp",     	                 NULL,       	NULL,       	0,            	1,           	-1 },
-	//{ "Firefox",                   NULL,       	NULL,       	1 << 8,       	0,           	-1 },
 	{ "copyq",    	                 NULL,       	NULL,       	0,            	1,           	-1 },
 	{ "openboard", 	                 NULL,      	NULL,       	0,            	1,		        -1 },
 	{ "mpv", 	                     NULL, 		    NULL,		    0,		        1,		        -1 },
 	{ "Spotube", 	              "spotube",    	NULL,		  1 << 8,		    0,		        -1 },
     { "Blueman-manager",       "blueman-manager", 	NULL,	    	0,		        1,       		-1 },
-	//{ "Qalculate",               "qalculate",       NULL,           0,              1,              -1 },
-	//{ "Calculadora",            "calculadora",      NULL,           0,              1,              -1 },
-	//{ "Sonata",                    "sonata",        NULL,           0,              1,              -1 },    
 };
 
 /* layout(s) */
@@ -84,9 +101,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *roficmd[] = { "/bin/sh", "-c", "rofi -modi 'window,drun,ssh,combi' -font 'Comic code 15' -show drun -icon-theme 'Gruvbox' -show-icons -theme 'gruvbox-dark' ", NULL };
-//static const char *termcmd[]  = { "st", NULL };
 static const char *termcmd[] = { "alacritty", NULL };
 
 /* scratch pad */
@@ -156,15 +172,11 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ShiftMask, 		    XK_r,      quit,           {1} },
-        /*Meus atalhos*/
-	{ ControlMask|Mod1Mask,         XK_l,      spawn,          SHCMD("~/.local/bin/slock_personalizado") },
-
-    /*volume alsa*/
-    //    { 0,                            XF86XK_AudioRaiseVolume,        spawn,          {.v = upvol } },
-    //    { 0,                            XF86XK_AudioLowerVolume,        spawn,          {.v = downvol } },
-    //    { 0,                            XF86XK_AudioMute,               spawn,          {.v = mute } },
-
-    /*volume pulseaudio*/
+    
+	/*Meus atalhos*/
+	{ ControlMask|Mod1Mask,         XK_l,                           spawn,          SHCMD("~/.local/bin/slock_personalizado") },
+    
+	/*volume pulseaudio*/
 	{ 0,                            XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume") },
 	{ 0,                            XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/aumenta_volume") },
 	{ 0,                            XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/muta_volume") },
