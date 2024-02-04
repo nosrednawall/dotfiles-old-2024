@@ -1,10 +1,10 @@
 #!/bin/bash
 
-integrado="Integrado"
-hdmi="Hdmi"
-headset_redragon="Headset Redragon"
-microfone_integrado="Mic Notebook"
-microfone_headset_redragon="Mic Redragon"
+integrado=" Integrado"
+hdmi="󰡁 Hdmi"
+headset_redragon="󰋎 Headset Redragon"
+microfone_integrado=" Mic Notebook"
+microfone_headset_redragon=" Mic Redragon"
 
 # Variable passed to dmenu
 options="$hdmi\n$integrado\n$headset_redragon\n$microfone_integrado\n$microfone_headset_redragon"

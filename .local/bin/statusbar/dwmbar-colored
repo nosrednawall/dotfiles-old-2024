@@ -44,7 +44,8 @@ dat(){
 # Cpu Temp :
 tmp(){
 	ctmp=$(sensors | awk '/edge/ {print$2}' | sed 's/+//')
-	echo -e "^c$red^^c$black^^b$red^  $ctmp "
+#	echo -e "^c$red^^c$black^^b$red^  $ctmp "
+	echo -e "^c$red^^c$black^^b$red^ 󰏈  $ctmp "
 }
 
 # Cpu Usage :
@@ -57,6 +58,7 @@ cpu(){
 	cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
 	#echo -e " $cpu%"
 	echo -e "^c$cyan^^c$black^^b$cyan^  $cpu% "
+	#echo -e "^c$cyan^^c$black^^b$cyan^ 󰻠 $cpu% "
 }
 
 # Keybord Layout :
@@ -85,7 +87,8 @@ mem(){
 # HD:
 hd_root(){
 	hd_inodes="$(df -i | grep '/dev/md0' |awk '{print$5}')"
-	echo -e "^c$cyan^^b$cyan^^c$black^^b$cyan^  $hd_inodes "
+#	echo -e "^c$cyan^^b$cyan^^c$black^^b$cyan^  $hd_inodes "
+	echo -e "^c$cyan^^b$cyan^^c$black^^b$cyan^ 󰋊 $hd_inodes "
 }
 # Volume :
 vol(){

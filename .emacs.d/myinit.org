@@ -1,13 +1,15 @@
+
 #+STARTUP: overview 
 #+PROPERTY: header-args :comments yes :results silent
-* Fonte padrão
+* Configurações Gerais
+** Fonte padrão
 #+BEGIN_SRC emacs-lisp
 (set-face-attribute 'default nil :font "Comic code" :height 90)
-(add-to-list 'default-frame-alist '(font . "Comic code-10"))
-(add-to-list 'default-frame-alist '(font . "Mononoki Nerd Font-10"))
+(add-to-list 'default-frame-alist '(font . "Comic code-12"))
+(add-to-list 'default-frame-alist '(font . "Mononoki Nerd Font-12"))
 #+END_SRC
 
-* Declaração de variáveis
+** Declaração de variáveis
 #+BEGIN_SCR emacs-lisp
 (eval-when-compile (defvar inhibiy-startup-message)
                    (defvar ido-enable-flex-matching)
@@ -17,7 +19,8 @@
                    (defvar ispell-program-name)
                    (defvar ispell-dictionary))
  #+END_SRC
-* Alteraões e ajustes na interface
+
+** Alteraões e ajustes na interface
 #+BEGIN_SRC emacs-lisp
   (global-set-key (kbd "<f5>") 'revert-buffer)
   ;;(global-auto-revert-mode t) ;; Auto atualiza os buffers
@@ -38,7 +41,14 @@
 				tab-width 4)  ;; identação
  #+END_SRC
 
-* Configurações gerais dos Buffers
+** Navegador Padrão
+#+BEGIN_SRC emacs-lisp
+(setq browse-url-browser-display nil
+      browse-url-browser-function 'browse-url-default-browser
+      browse-url-firefox-program "firefox")
+#+END_SRC
+
+** Buffers
 #+BEGIN_SRC emacs-lisp
   (setq ido-enable-flex-matching t)  ; flexibilita a procura de buffers
   (setq ido-everywhere t) ; busca qualquer coisa
@@ -46,27 +56,28 @@
   (defalias 'list-buffers 'ibuffer) ; make ibuffer default
 #+END_SRC
 
-* Instala Try, que serve para testar pacotes sem instalá-los
+* Interface
+** Instala Try, que serve para testar pacotes sem instalá-los
 #+BEGIN_SRC emacs-lisp
 (use-package try
   :ensure t)
 #+END_SRC
 	
-* theme gruvbox
+** theme gruvbox
 #+BEGIN_SRC emacs-lisp
 (use-package gruvbox-theme
   :ensure t)
 (load-theme 'gruvbox-dark-medium t)
 #+END_SRC
 
-* Help key combinations
+** Help key combinations
 #+BEGIN_SRC emacs-lisp
 (use-package which-key
   :ensure t
   :config (which-key-mode))
 #+END_SRC
 
-* Alt Tab Entre os Buffers e Buffers com Tabs
+** Alt Tab Entre os Buffers e Buffers com Tabs
 #+BEGIN_SRC emacs-lisp
   (use-package buffer-flip
 	:ensure t
@@ -105,7 +116,7 @@
 	(vterm-mode . centaur-tabs-local-mode))
 #+END_SRC
 
-* Neotree, All the Icons e SpaceLine
+** Neotree, All the Icons e SpaceLine
 #+BEGIN_SRC emacs-lisp
 (use-package all-the-icons
   :ensure t)
@@ -125,22 +136,22 @@
   )
 #+END_SRC
 
-* Python Ferramentas
-** Elpy
+* Programação
+** Configuração Geral
+*** Customização Manual
+#+BEGIN_SRC emacs-lisp
+
+#+END_SRC
+** Python Ferramentas
+*** Elpy
 #+BEGIN_SRC emacs-lisp
 (use-package elpy
   :ensure t
-  :defer t
-  :init (advice-add 'python-mode :before 'elpy-enable))
+  :defer t)
+
 #+END_SRC
 
-** Poetry
-#+BEGIN_SRC emacs-lisp
-;  (use-package poetry
-; :ensure t)
-#+END_SRC
-
-* Swiper
+** Swiper
 #+BEGIN_SRC emacs-lisp
 ;; it looks like counsel is a requirement for swiper
 (use-package counsel
@@ -172,7 +183,7 @@
     ))
 #+END_SRC
 
-* Auto complete
+** Auto complete
 #+BEGIN_SRC emacs-lisp
 (use-package company
   :ensure t
@@ -213,19 +224,19 @@
 
 #+END_SRC
 
-* Org Mode
+** Org Mode
 #+BEGIN_SRC emacs-lisp
 (use-package org-bullets
   :ensure t
   :config
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 #+END_SRC
-* Musica - FrontEnd MPD
+** Musica - FrontEnd MPD
 #+BEGIN_SRC emacs-lisp
 (use-package mingus
   :ensure t)
 #+END_SRC
-* Dicionários - Corretor ortográfico
+** Dicionários - Corretor ortográfico
 #+BEGIN_SRC
 ;; Spell
 (setq
@@ -248,7 +259,7 @@
 	  ;; I tried putting (flyspell-buffer) here but it didn't seem to work
 	  )))
 #+END_SRC
-* Dashboard
+** Dashboard
 #+BEGIN_SRC emacs-lisp
 (use-package dashboard
   :ensure t
@@ -265,7 +276,7 @@
   (dashboard-setup-startup-hook))
 (provide 'dashboard-config)
 #+END_SRC
-* PDFs
+** PDFs
 #+BEGIN_SRC emacs-lisp
 
 #+END_SRC
