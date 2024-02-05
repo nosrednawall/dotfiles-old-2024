@@ -44,8 +44,8 @@ dat(){
 # Cpu Temp :
 tmp(){
 	ctmp=$(sensors | awk '/edge/ {print$2}' | sed 's/+//')
-#	echo -e "^c$red^^c$black^^b$red^  $ctmp "
-	echo -e "^c$red^^c$black^^b$red^ 󰏈  $ctmp "
+	echo -e "^c$red^^c$black^^b$red^  $ctmp "
+#	echo -e "^c$red^^c$black^^b$red^ 󰏈  $ctmp "
 }
 
 # Cpu Usage :

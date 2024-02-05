@@ -132,3 +132,4 @@ def print_result(pkgs):
 if __name__ == '__main__':
     pkgs = get_update_packages()
     print(print_result(pkgs))
+    print("Olá mundo")
