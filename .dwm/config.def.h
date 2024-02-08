@@ -3,6 +3,8 @@
 #include <X11/XF86keysym.h>
 #include "tatami.c"
 #include "tcl.c"
+#include "layouts.c"
+#include "fibonacci.c"
 
 /* appearance */
 static const unsigned int borderpx         = 5;        /* border pixel of windows */
@@ -23,17 +25,17 @@ static const char *fonts[]                 = {
 
 /*gruvbox2*/
 static const char col_1[]       = "#32302f";
-static const char col_2[]       = "#98971A";
+static const char col_2[]       = "#73675c";
 static const char col_3[]       = "#dfbf8e";
 static const char col_4[]       = "#fbf1c7";
-static const char col_5[]       = "#689d64";
+static const char col_5[]       = "#B8bb26";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm]       = { col_3, col_1, col_1 },
-	[SchemeSel]        = { col_3, col_2, col_4 },
+	[SchemeSel]        = { col_3, col_2, col_5 },
 	[SchemeStatus]     = { col_3, col_1, col_1 }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]    = { col_1, col_4, col_5 }, // Tagbar left selected {text,background,not used but cannot be empty}
+	[SchemeTagsSel]    = { col_1, col_5, col_5 }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm]   = { col_3, col_1, col_1 }, // Tagbar left unselected {text,background,not used but cannot be empty}
 	[SchemeInfoSel]    = { col_3, col_1, col_3 }, // infobar middle  selected {text,background,not used but cannot be empty}
 	[SchemeInfoNorm]   = { col_3, col_1, col_1 }, // infobar middle  unselected {text,background,not used but cannot be empty}
@@ -59,19 +61,20 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class                       instance		title       tags mask     isfloating   monitor */
-	{ "Gimp",			 NULL,		NULL,		0,		1,		-1 },
-	{ "copyq",			 NULL,		NULL,		0,		1,		-1 },
-	{ "openboard",			 NULL,		NULL,	   1 << 8,		1,		-1 },
-	{ "mpv",			 NULL,          NULL,           0,              1,		-1 },
-	{ "Spotube",		    "spotube",		NULL,	   1 << 6,              0,              -1 },
-	{ "Spotify",		    "spotify",		NULL,	   1 << 6,              0,              -1 },
-	{ "discord",		    "discord",		NULL,	   1 << 4,              0,              -1 },
+	{ "Gimp",			  NULL,		NULL,		0,		1,		-1 },
+	{ "copyq",			  NULL,		NULL,		0,		1,		-1 },
+	{ "openboard",			  NULL,		NULL,	   1 << 8,		1,		-1 },
+	{ "mpv",			  NULL,          NULL,           0,              1,		-1 },
+	{ "Spotube",		     "spotube",		NULL,	   1 << 6,              0,              -1 },
+	{ "Spotify",		     "spotify",		NULL,	   1 << 6,              0,              -1 },
+	{ "discord",		     "discord",		NULL,	   1 << 4,              0,              -1 },
 	{ "TelegramDesktop","telegram-desktop",		NULL,	   1 << 4,              0,              -1 },
-	{ "QtPass",                  "qtpass",		NULL,	   1 << 5,              0,              -1 },
-	{ "Blueman-manager","blueman-manager",		NULL,		0,		1,		-1 },
-	{ "Emacs",		      "emacs",		NULL,	   1 << 1,		0,		-1 },
+	{ "QtPass",                   "qtpass",		NULL,	   1 << 5,              0,              -1 },
+	{ "Bitwarden",             "bitwarden",		NULL,	   1 << 5,              0,              -1 },
+	{ "Blueman-manager", "blueman-manager",		NULL,		0,		1,		-1 },
+	{ "Emacs",		       "emacs",		NULL,	   1 << 1,		0,		-1 },
 	{ "Thunar",		      "thunar",		NULL,	   1 << 3,		0,		-1 },
-	{ "Firefox-esr",		 NULL,		NULL,	   1 << 2,		0,		-1 },
+	{ "Firefox-esr",		  NULL,		NULL,	   1 << 2,		0,		-1 },
 };
 
 /* layout(s) */
@@ -86,6 +89,10 @@ static const Layout layouts[]     = {
 	{ "[M]",      monocle   },
 	{ "|+|",      tatami    },
 	{ "|||",      tcl       },
+	{ "[D]",      deck      },
+	{ "HHH",      grid      },
+	{ "[@]",      spiral    },
+	{ "[\\]",      dwindle  },
 	{  NULL,      NULL      },
 
 };
@@ -152,6 +159,10 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[4]} },
+	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[5]} },
+	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[6]} },
+	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[7]} },
+	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[8]} },
 	{ MODKEY|ControlMask,		XK_comma,  cyclelayout,    {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
