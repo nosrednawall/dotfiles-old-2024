@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# TODO: FAZER ALGO
 # JAVA Bug
 if which wmname; then
   wmname LG3D

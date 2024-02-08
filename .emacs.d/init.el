@@ -53,10 +53,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(rainbow-mode poetry magit ess which-key virtualenv use-package try tab-bar-groups spaceline projectile pdf-tools org-bullets neotree mingus lsp-ui lsp-pyright jedi irony-eldoc gruvbox-theme flyspell-correct-popup flyspell-correct-ivy flyspell-correct-helm flycheck-inline elpy diff-hl dashboard counsel company-jedi company-irony centaur-tabs buffer-flip better-defaults all-the-icons)))
+   '(editorconfig treemacs rainbow-mode poetry magit ess which-key virtualenv use-package try tab-bar-groups spaceline projectile pdf-tools org-bullets neotree mingus lsp-ui lsp-pyright jedi irony-eldoc gruvbox-theme flyspell-correct-popup flyspell-correct-ivy flyspell-correct-helm flycheck-inline elpy diff-hl dashboard counsel company-jedi company-irony centaur-tabs buffer-flip better-defaults all-the-icons)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)

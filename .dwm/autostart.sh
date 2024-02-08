@@ -1,7 +1,7 @@
 #!/bin/bash
 pulseaudio --daemonize
 xfce4-power-manager --daemon
-pgrep -x xautolock > /dev/null || xautolock -time 5 -locker ~/.local/bin/slock_personalizado &
+pgrep -x xautolock > /dev/null || xautolock -time 10 -locker ~/.local/bin/slock_personalizado &
 redshift -P -O 4500 &
 picom -b
 pgrep -x dunst > /dev/null || dunst &

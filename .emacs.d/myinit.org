@@ -1,44 +1,108 @@
-
-#+STARTUP: overview 
+#+STARTUP: overview
 #+PROPERTY: header-args :comments yes :results silent
 * Configurações Gerais
-** Fonte padrão
+** Environment e Fonte padrão
 #+BEGIN_SRC emacs-lisp
-(set-face-attribute 'default nil :font "Comic code" :height 90)
-(add-to-list 'default-frame-alist '(font . "Comic code-12"))
-(add-to-list 'default-frame-alist '(font . "Mononoki Nerd Font-12"))
+  ;; Set locale to Brazilian Portuguese
+  (set-locale-environment "pt_BR.UTF-8")
+
+  ;; Add frame margins. This makes things more pleasant to read.
+ ;; (setq default-frame-alist '((internal-border-width . 20)))
+
+  ;; Starts the Emacs server for emacsclient only if it's not started already
+  (load "server")
+  (unless (server-running-p) (server-start))
+
+  ;; Clean whitespace before saving a file
+  (add-hook 'before-save-hook 'whitespace-cleanup)
+
+
+  (add-to-list 'default-frame-alist '(font . "Comic code-12"))
+  (add-to-list 'default-frame-alist '(font . "Mononoki Nerd Font-12"))
+
+  (setq org-babel-sh-command "/bin/bash")
+
+
+#+END_SRC
+** Coletor de Lixo
+#+BEGIN_SRC emacs-lisp
+  (defvar file-name-handler-alist-old file-name-handler-alist)
+
+;; https://lists.gnu.org/archive/html/bug-gnu-emacs/2017-12/msg01088.html
+;; Long-story short, use select-active-regions 'only to make visual selection faster.
+(setq-default gc-cons-threshold 800000
+	  select-active-regions 'only
+	  file-name-handler-alist nil
+	  gc-cons-percentage 0.6
+	  auto-window-vscroll nil
+	  message-log-max 16384)
+
+(add-hook 'after-init-hook
+      `(lambda ()
+     (setq file-name-handler-alist file-name-handler-alist-old
+       gc-cons-threshold 80000
+       select-active-regions 'only
+       gc-cons-percentage 0.1)
+     (garbage-collect)) t)
+
+(setq inhibit-compacting-font-caches t)
+
+;; Optimize garbage collection
+(use-package gcmh
+  :ensure t
+  :disabled t
+  :init
+  (setq gcmh-verbose nil)
+  :config
+  (gcmh-mode 1))
+
 #+END_SRC
 
-** Declaração de variáveis
-#+BEGIN_SCR emacs-lisp
-(eval-when-compile (defvar inhibiy-startup-message)
-                   (defvar ido-enable-flex-matching)
-                   (defvar ido-everywhere)
-                   (defvar spaceline-emacs-theme)
-                   (defvar global-flycheck-mode)
-                   (defvar ispell-program-name)
-                   (defvar ispell-dictionary))
- #+END_SRC
-
-** Alteraões e ajustes na interface
+** Histórico de comandos
 #+BEGIN_SRC emacs-lisp
-  (global-set-key (kbd "<f5>") 'revert-buffer)
-  ;;(global-auto-revert-mode t) ;; Auto atualiza os buffers
-  (setq visible-bell 1)  ;; tira o barulho chato de beep
-  (setq inhibiy-startup-message t)  ;; tira a mensagem padrão de inicio do emacs
+  (setq savehist-file "~/.emacs.d/emacs-savehist")
+  (setq savehist-additional-variables '(kill-ring search-ring regexp-search-ring))
+  (setq history-length 10000)
+  (setq history-delete-duplicates t)
+  (setq history-length 1024)
+  (add-hook 'after-init-hook 'savehist-mode)
+#+END_SRC
+
+** Bookmarks
+#+BEGIN_SRC emacs-lisp
+  (setq bookmark-default-file "~/.emacs.d/emacs-bookmarks")
+  ;; Every time bookmarks are changed, save them
+  (setq bookmark-save-flag 1)
+#+END_SRC
+
+** Identação
+#+BEGIN_SRC  emacs-lisp
+  (setq tab-width 4) ; or any other preferred value
+  (defvaralias 'c-basic-offset 'tab-width)
+  (defvaralias 'cperl-indent-level 'tab-width)
+  ;;(setq-default c-basic-offset 4
+  ;;				  tab-width 4)  ;; identação
+#+END_SRC
+
+** Definições de Interface
+#+BEGIN_SRC emacs-lisp
+  ;; tira o barulho chato de beep
+  (setq visible-bell 1)
+
+  ;; tira a mensagem padrão de inicio do emacs
+  (setq inhibiy-startup-message t)
+
+
   (tool-bar-mode -1)  ;; tira a barra de ferramentas
   (menu-bar-mode -1)  ;; tira a barra de ferramentas
   (scroll-bar-mode -1)  ; Remover barra de rolagem
-  ;; Adiciona navegação entre os buffers, com as teclas Alt+Setas
-  (when (fboundp 'windmove-default-keybindings)
-	(windmove-default-keybindings))
-  ;
+
+  ;; Adiciona um gancho? para entrar em linum-mode quando for texto e programação
   (add-hook 'text-mode-hook 'linum-mode)
   (add-hook 'prog-mode-hook 'linum-mode)
+
+  ;; Remove a necessidade de escrever 'yes' ou 'no'
   (fset 'yes-or-no-p 'y-or-n-p)
-  (electric-indent-mode 0)
-  (setq-default c-basic-offset 4
-				tab-width 4)  ;; identação
  #+END_SRC
 
 ** Navegador Padrão
@@ -54,16 +118,41 @@
   (setq ido-everywhere t) ; busca qualquer coisa
   (ido-mode 1) ; inicia no modo 1 - com um buffer apenas
   (defalias 'list-buffers 'ibuffer) ; make ibuffer default
+  (global-set-key (kbd "<f5>") 'revert-buffer)  ; Configura a tecla f5 para atualizar o buffer
+  ;;(global-auto-revert-mode t) ;; Auto atualiza os buffers
+
+  ;; Adiciona navegação entre os buffers, com as teclas Alt+Setas
+  (when (fboundp 'windmove-default-keybindings)
+	(windmove-default-keybindings))
+
 #+END_SRC
 
-* Interface
+* Pacotes
+** Dashboard
+#+BEGIN_SRC emacs-lisp
+  (use-package dashboard
+    :ensure t
+    :init
+    (setq dashboard-items '((recents . 15)
+			    (projects . 5))
+	  dashboard-banner-logo-title "Hello!"
+	  dashboard-startup-banner 'logo
+	  dashboard-set-file-icons t
+	  dashboard-heading-icons t
+	  dashboard-set-init-info nil
+	  dashboard-center-content t)
+    :config
+    (dashboard-setup-startup-hook))
+  (provide 'dashboard-config)
+#+END_SRC
+
 ** Instala Try, que serve para testar pacotes sem instalá-los
 #+BEGIN_SRC emacs-lisp
-(use-package try
-  :ensure t)
+  (use-package try
+    :ensure t)
 #+END_SRC
-	
-** theme gruvbox
+
+** Theme Gruvbox
 #+BEGIN_SRC emacs-lisp
 (use-package gruvbox-theme
   :ensure t)
@@ -77,14 +166,15 @@
   :config (which-key-mode))
 #+END_SRC
 
-** Alt Tab Entre os Buffers e Buffers com Tabs
+** Buffer-Flip e Centaur-tabs
+Aplica um Alt Tab Entre os Buffers e Buffers com Tabs
 #+BEGIN_SRC emacs-lisp
   (use-package buffer-flip
 	:ensure t
 	:bind  (("M-<tab>" . buffer-flip)
 			:map buffer-flip-map
-			( "M-<tab>" .   buffer-flip-forward) 
-			( "M-S-<tab>" . buffer-flip-backward) 
+			( "M-<tab>" .   buffer-flip-forward)
+			( "M-S-<tab>" . buffer-flip-backward)
 			( "M-ESC" .     buffer-flip-abort))
 	:config
 	(setq buffer-flip-skip-patterns
@@ -118,40 +208,28 @@
 
 ** Neotree, All the Icons e SpaceLine
 #+BEGIN_SRC emacs-lisp
-(use-package all-the-icons
-  :ensure t)
+  (use-package all-the-icons
+    :ensure t)
 
-(use-package spaceline
-  :ensure t)
+  (use-package spaceline
+    :ensure t)
 
-(use-package spaceline-config
-  :config (spaceline-emacs-theme))
 
-;; neotree
-(use-package neotree
-  :ensure t
-  :config
-  (setq neo-theme (if (display-graphic-p) 'icons 'ascii))
-  :bind (("C-\\". 'neotree-toggle))
+  (use-package spaceline-config
+    :config (spaceline-emacs-theme))
+
+  ;; neotree
+  (use-package neotree
+    :ensure t
+    :config
+    (setq neo-theme (if (display-graphic-p) 'icons 'ascii))
+    :bind (("C-\\". 'neotree-toggle))
   )
-#+END_SRC
-
-* Programação
-** Configuração Geral
-*** Customização Manual
-#+BEGIN_SRC emacs-lisp
-
-#+END_SRC
-** Python Ferramentas
-*** Elpy
-#+BEGIN_SRC emacs-lisp
-(use-package elpy
-  :ensure t
-  :defer t)
 
 #+END_SRC
 
 ** Swiper
+Pesquisa dentro do código
 #+BEGIN_SRC emacs-lisp
 ;; it looks like counsel is a requirement for swiper
 (use-package counsel
@@ -182,48 +260,6 @@
     (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
     ))
 #+END_SRC
-
-** Auto complete
-#+BEGIN_SRC emacs-lisp
-(use-package company
-  :ensure t
-  :config
-(setq company-idle-delay 0)
-(setq company-minimum-prefix-length 3)
-(global-company-mode t))
-
-(use-package company-irony
-  :ensure t
-  :config
-(add-to-list 'company-backends 'company-irony))
-
-(use-package irony
-  :ensure t
-  :config
-(add-hook 'c++-mode-hook 'irony-mode)
-(add-hook 'c-mode-hook 'irony-mode)
-(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
-
-(use-package irony-eldoc
-  :ensure t
-  :config
-(add-hook 'irony-mode-hook #'irony-eldoc))
-
-(use-package company-jedi
-  :ensure t
-  :config
-(add-hook 'python-mode-hook 'jedi:setup))
-
-(defun my/python-mode-hook ()
-(add-to-list 'company-backends 'company-jedi))
-
-(add-hook 'python-mode-hook 'my/python-mode-hook)
-;; Show diff inline
-(use-package diff-hl
-  :ensure t)
-
-#+END_SRC
-
 ** Org Mode
 #+BEGIN_SRC emacs-lisp
 (use-package org-bullets
@@ -231,52 +267,33 @@
   :config
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 #+END_SRC
-** Musica - FrontEnd MPD
+** Git e Magit
 #+BEGIN_SRC emacs-lisp
-(use-package mingus
-  :ensure t)
-#+END_SRC
-** Dicionários - Corretor ortográfico
-#+BEGIN_SRC
-;; Spell
-(setq
-    ispell-program-name "/usr/bin/hunspell"
-    ispell-dictionary "pt_BR")
+  (use-package magit
+    :defer t
+    :config
+    ;; Highlight what changed in diffs.
+    (setq magit-diff-refine-hunk t))
 
-    (defun flyspell-on-for-buffer-type ()
-      "Enable Flyspell appropriately for the major mode of the current buffer.  Uses `flyspell-prog-mode' for modes derived from `prog-mode', so only strings and comments get checked.  All other buffers get `flyspell-mode' to check all text.  If flyspell is already enabled, does nothing."
-      (interactive)
-      (if (not (symbol-value flyspell-mode)) ; if not already on
-	(progn
-	  (if (derived-mode-p 'prog-mode)
-	    (progn
-	      (message "Flyspell on (code)")
-	      (flyspell-prog-mode))
-	    ;; else
-	    (progn
-	      (message "Flyspell on (text)")
-	      (flyspell-mode 1)))
-	  ;; I tried putting (flyspell-buffer) here but it didn't seem to work
-	  )))
 #+END_SRC
-** Dashboard
+** Programação
+*** Definições
 #+BEGIN_SRC emacs-lisp
-(use-package dashboard
-  :ensure t
-  :init
-  (setq dashboard-items '((recents . 5)
-                          (projects . 5))
-	dashboard-banner-logo-title "Hello!"
-	dashboard-startup-banner 'logo
-	dashboard-set-file-icons t
-	dashboard-heading-icons t
-	dashboard-set-init-info nil
-        dashboard-center-content t)
-  :config
-  (dashboard-setup-startup-hook))
-(provide 'dashboard-config)
-#+END_SRC
-** PDFs
-#+BEGIN_SRC emacs-lisp
+  ;; Salva automaticamente quando abre um arquivo no modo de programacao
+  (add-hook 'prog-mode-hook #'(lambda () (auto-save-visited-mode 1)))
 
+
+#+END_SRC
+*** Python
+**** Elpy
+#+BEGIN_SRC emacs-lisp
+  (use-package elpy
+	:ensure t
+	:defer t)
+
+  (defun elpy-mode-tweaks ()
+	;; Enable Flycheck
+	(flycheck-mode 1))
+
+  (add-hook 'python-mode-hook 'elpy-mode-tweaks)
 #+END_SRC
