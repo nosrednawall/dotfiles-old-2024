@@ -12,4 +12,4 @@ pgrep -x pasystray > /dev/null || pasystray &
 pgrep -x mpd > /dev/null || mpd ~/.config/mpd/mpd.conf
 bash ~/.local/bin/if_monitor.sh
 nitrogen --restore &
-pgrep -x /home/anderson/.local/bin/statusbar/dwmbar-colored > /dev/null || /home/anderson/.local/bin/statusbar/dwmbar-colored &
+pgrep -x slstatus > /dev/null || slstatus &

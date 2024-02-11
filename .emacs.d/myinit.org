@@ -149,6 +149,10 @@
     (provide 'dashboard-config)
 #+END_SRC
 
+** Rainbow colors
+#+BEGIN_SRC
+  M-x package-install RET rainbow-mode RET
+#+END_SRC
 ** Instala Try, que serve para testar pacotes sem instalá-los
 #+BEGIN_SRC emacs-lisp
   (use-package try

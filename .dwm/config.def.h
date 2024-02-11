@@ -14,7 +14,7 @@ static const unsigned int systraypinning   = 0;        /* 0: sloppy systray foll
 static const unsigned int systrayonleft    = 0;        /* 0: systray in the right corner, >0: systray on left of status text */
 static const unsigned int systrayspacing   = 4;        /* systray spacing */
 static const int systraypinningfailfirst   = 1;        /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
-static const int showsystray               = 1;        /* 0 means no systray */
+static const int showsystray               = 0;        /* 0 means no systray */
 static const int showbar                   = 1;        /* 0 means no bar */
 static const int topbar                    = 1;        /* 0 means bottom bar */
 static const int user_bh                   = 10;        /* 2 is the default spacing around the bar's font */
@@ -24,8 +24,8 @@ static const char *fonts[]                 = {
 	"DejaVu Sans Mono for Powerline:size=12:pixelsize=16"
 };
 /*gruvbox2*/
-static const char col_1[]       = "#32302f";
-static const char col_2[]       = "#73675c";
+static const char col_1[]       = "#282727";
+static const char col_2[]       = "#695F55";
 static const char col_3[]       = "#dfbf8e";
 static const char col_4[]       = "#fbf1c7";
 static const char col_5[]       = "#B8bb26";
@@ -38,7 +38,7 @@ static const char *colors[][3]      = {
 	[SchemeStatus]     = { col_3, col_1, col_1 }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeTagsSel]    = { col_1, col_3, col_5 }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm]   = { col_3, col_1, col_1 }, // Tagbar left unselected {text,background,not used but cannot be empty}
-	[SchemeInfoSel]    = { col_3, col_1, col_3 }, // infobar middle  selected {text,background,not used but cannot be empty}
+	[SchemeInfoSel]    = { col_1, col_3, col_1 }, // infobar middle  selected {text,background,not used but cannot be empty}
 	[SchemeInfoNorm]   = { col_3, col_1, col_1 }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
@@ -59,7 +59,7 @@ static const Rule rules[] = {
 	{ "Gimp",			  NULL,		NULL,		0,		1,		-1 },
 	{ "copyq",			  NULL,		NULL,		0,		1,		-1 },
 	{ "openboard",			  NULL,		NULL,	   1 << 8,		1,		-1 },
-	{ "mpv",			  NULL,          NULL,           0,              1,		-1 },
+	{ "mpv",			  NULL,         NULL,           0,              1,		-1 },
       /*{ "Spotube",		     "spotube",		NULL,	   1 << 6,              0,              -1 },
 	{ "Spotify",		     "spotify",		NULL,	   1 << 6,              0,              -1 },
 	{ "discord",		     "discord",		NULL,	   1 << 4,              0,              -1 },
@@ -110,7 +110,7 @@ static const Layout layouts[]     = {
 static char dmenumon[2]        = "0";
 static const char *dmenucmd[]  = { "dmenu_run", NULL };
 static const char *roficmd[]   = { "/bin/sh", "-c", "rofi -modi 'window,drun,ssh,combi' -font 'Comic code 15' -show drun -icon-theme 'Gruvbox' -show-icons -theme 'gruvbox-dark' ", NULL };
-static const char *termcmd[]   = { "kitty", "--single-instance", NULL };
+static const char *termcmd[]   = { "st", NULL };
 
 /* scratch pad */
 static const char scratchpadname[] = "scratchpad";

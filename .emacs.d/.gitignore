@@ -10,20 +10,6 @@
 # Undo-tree save-files
 *.~undo-tree
 
-*#
-
-# Compiled
-*.elc
-
-# Packaging
-.cask
-
-# Backup files
-*~
-
-# Undo-tree save-files
-*.~undo-tree
-
 ac-comphist.dat  
 backups    
 eln-cache  
