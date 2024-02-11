@@ -44,6 +44,12 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] =   { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+//static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+//static const char *tags[] = { "󰞷","","","","","","","",""};
+//static const char *tags[] = { "Term", "Emacs", "Firefox", "Config", "Chat", "Tools", "Music", "Misc", "Misc"};
+//static const char *tags[] = { "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
+//static const char *tags[] = { "Um", "Dois", "Treis", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove" };
+//static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
 
 static const unsigned int ulinepad      = 5;	/* horizontal padding between the underline and tag */
 static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */

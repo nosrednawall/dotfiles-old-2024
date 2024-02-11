@@ -1,3 +1,4 @@
 ;;; -*- lisp-data -*-
-(("~/git/slstatus/")
+(("~/git/dwm/")
+ ("~/git/slstatus/")
  ("~/.dotfiles/"))
