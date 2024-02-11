@@ -17,7 +17,7 @@ static const int systraypinningfailfirst   = 1;        /* 1: if pinning fails, d
 static const int showsystray               = 1;        /* 0 means no systray */
 static const int showbar                   = 1;        /* 0 means no bar */
 static const int topbar                    = 1;        /* 0 means bottom bar */
-static const int user_bh                   = 0;        /* 2 is the default spacing around the bar's font */
+static const int user_bh                   = 10;        /* 2 is the default spacing around the bar's font */
 static const char *fonts[]                 = {
 	"Comic code:size=12:antialias=true:autohint=true:pixelsize=16",
 	"Mononoki Nerd Font:style=Bold:size=12:antialias=true:autohint=true:pixelsize=16",
@@ -44,12 +44,6 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] =   { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-//static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
-//static const char *tags[] = { "󰞷","","","","","","","",""};
-//static const char *tags[] = { "Term", "Emacs", "Firefox", "Config", "Chat", "Tools", "Music", "Misc", "Misc"};
-//static const char *tags[] = { "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
-//static const char *tags[] = { "Um", "Dois", "Treis", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove" };
-//static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
 
 static const unsigned int ulinepad      = 5;	/* horizontal padding between the underline and tag */
 static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */

@@ -30,7 +30,7 @@ bat(){
 		# Will make a warn variable if discharging and low
 		[ "$status" = " " ] && [ "$capacity" -le 25 ] && warn=" "
 		# Prints the info
-		printf "%s%s%d%%" "^c$orange^^c$black^^b$orange^ $status" "^c$black^^b$orange^ $warn" "$capacity"; unset warn
+		printf "%s%s%d%%" "^c$orange^^c$black^^b$orange^ $status" "^c$black^^b$orange^ $warn" "$capacity"; unset warn
 	done && printf " \\n"
 }
 
@@ -38,13 +38,13 @@ bat(){
 dat(){
 	date="$(date +"%a %d %b %H:%M"| sed 's/  / /g')"
 	#echo -e " $date"
-	echo -e "^c$blue^^c$black^^b$blue^  $date "
+	echo -e "^c$blue^^c$black^^b$blue^  $date "
 }
 
 # Cpu Temp :
 tmp(){
 	ctmp=$(sensors | awk '/edge/ {print$2}' | sed 's/+//')
-	echo -e "^c$red^^c$black^^b$red^  $ctmp "
+	echo -e "^c$red^^c$black^^b$red^  $ctmp "
 #	echo -e "^c$red^^c$black^^b$red^ 󰏈  $ctmp "
 }
 
@@ -57,7 +57,7 @@ cpu(){
 	total=$((a+b+c+idle))
 	cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
 	#echo -e " $cpu%"
-	echo -e "^c$cyan^^c$black^^b$cyan^  $cpu% "
+	printf "^c$cyan^^c$black^^b$cyan^  $cpu% "
 	#echo -e "^c$cyan^^c$black^^b$cyan^ 󰻠 $cpu% "
 }
 
@@ -65,7 +65,7 @@ cpu(){
 key(){
 	kb="$(xkb-switch)" || exit 1
 	#echo " $kb"
-	echo -e "^c$green^^b$green^^c$black^^b$green^  $kb "
+	echo -e "^c$green^^b$green^^c$black^^b$green^  $kb "
 }
 
 # Screen Light :
@@ -74,21 +74,21 @@ lit(){
 	#echo " $lit%"
 	lit="$(brightnessctl | grep -oP '[^()]+%')"
 	#echo " $lit"
-	echo -e "^c$yellow^^b$yellow^^c$black^^b$yellow^  $lit "
+	echo -e "^c$yellow^^b$yellow^^c$black^^b$yellow^  $lit "
 }
 
 # Memory :
 mem(){
 	#mem="$(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
 	mem="$(/home/anderson/.local/bin/block-ram used)"
-	echo -e "^c$magenta^^b$magenta^^c$black^^b$magenta^  $mem "
+	echo -e "^c$magenta^^b$magenta^^c$black^^b$magenta^  $mem "
 }
 
 # HD:
 hd_root(){
 	hd_inodes="$(df -i | grep '/dev/md0' |awk '{print$5}')"
 #	echo -e "^c$cyan^^b$cyan^^c$black^^b$cyan^  $hd_inodes "
-	echo -e "^c$cyan^^b$cyan^^c$black^^b$cyan^ 󰋊 $hd_inodes "
+	echo -e "^c$cyan^^b$cyan^^c$black^^b$cyan^ 󰋊 $hd_inodes "
 }
 # Volume :
 vol(){
@@ -105,20 +105,20 @@ vol(){
 	else
 		echo "" && exit
 	fi
-	echo "^c$magenta^^b$magenta^^c$black^^b$magenta^ $icon $vol% "
+	echo "^c$magenta^^b$magenta^^c$black^^b$magenta^ $icon $vol% "
 }
 
 
 net() {
 	connected=$(cat /sys/class/net/e*/operstate 2>/dev/null)
 	if [[ "$connected" =~ "up" ]]; then
-		printf "^c$green^^b$green^^c$black^  %s"
+		printf "^c$green^^b$green^^c$black^  %s"
 	elif [[ "$connected" =~ "down" ]]; then
 		check_wifi=$(cat /sys/class/net/wl*/operstate 2>/dev/null)
 		if [[ "$check_wifi" =~ "up" ]]; then
-			printf "^c$green^^b$green^^c$black^  %s"
+			printf "^c$green^^b$green^^c$black^  %s"
 		elif [[ "$check_wifi" =~ "down" ]]; then
-			printf "^c$green^^b$green^^c$black^ 睊 %s"
+			printf "^c$green^^b$green^^c$black^ 睊 %s"
 		fi
 	fi
 }
@@ -140,7 +140,7 @@ nettrf(){
 	rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
 	tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
 
-	printf "^c$magenta^^b$magenta^^c$black^ ^c$black^^b$magenta^ %4sB ^b$magenta^^c$black^ ^c$black^^b$magenta^ %4sB \\n" $(numfmt --to=iec $rx) $(numfmt --to=iec $tx)
+	printf "^c$magenta^^b$magenta^^c$black^ ^c$black^^b$magenta^ %4sB ^b$magenta^^c$black^ ^c$black^^b$magenta^ %4sB \\n" $(numfmt --to=iec $rx) $(numfmt --to=iec $tx)
 }
 
 # Updates
@@ -151,19 +151,19 @@ pkg_updates() {
 	updates=$(aptitude search '~U' | wc -l)  # apt (ubuntu,debian etc)
 
 	if [ "$updates" == "0" ]; then
-		printf "^c$green^^b$green^^c$black^  ^c$green^^b$black^Fully Updated^d^"
+		printf "^c$green^^b$green^^c$black^  ^c$green^^b$black^Fully Updated^d^"
 	else
-		printf "^c$green^^b$green^^c$black^  $updates " "^c$green^^b$black^updates ^d^"
+		printf "^c$green^^b$green^^c$black^  $updates " "^c$green^^b$black^updates ^d^"
 	fi
 }
 while true; do
  [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && updates=$(pkg_updates)
   interval=$((interval + 1))
-  space="  "
-  range="| "
+  space=" "
+  range="|"
   #xsetroot -name "$updates$(nettrf)$(tmp)$(cpu)$(mem)$(vol)$(lit)$(bat)$(key)$(dat)$(net)"
   # xsetroot -name "$(cpu)$(mem)$(vol)$(lit)$(bat)$(key)$(dat)$(net)"
   # xsetroot -name "$updates$(cpu)$(mem)$(lit)$(bat)$(dat)$(net)"
-  xsetroot -name "$(cpu)$(tmp)$(mem)$(lit)$(hd_root)$(bat)$(dat)^c#282828^^b#282828^"
+  xsetroot -name "$(cpu)$(tmp)$(mem)$(lit)$(hd_root)$(bat)$(dat)^c#282828^^b#282828^"
   sleep 30
 done &

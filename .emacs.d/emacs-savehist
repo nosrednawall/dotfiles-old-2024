@@ -8,9 +8,178 @@
 (setq ivy-history '(#("./" 0 2 (ivy-index 0)) #("... (choose a dir)" 0 18 (ivy-index 0)) #("powerline." 0 10 (ivy-index 0)) "powerline.el"))
 (setq file-name-history '(#("/home/anderson/.dwm/config.def.h" 0 32 (ivy-index 0)) #("/home/anderson/git/dwm/config.def.h" 0 35 (ivy-index 0)) #("/home/anderson/git/dwm/" 0 23 (ivy-index 1)) #("/home/anderson/git/slstatus/config.def.h" 0 40 (ivy-index 8)) #("/home/anderson/.dotfiles/.local/bin/statusbar/dwmbar-colored" 0 60 (ivy-index 4)) #("/home/anderson/.dotfiles/teste.html" 0 35 (ivy-index 0)) #("/home/anderson/.emacs.d/elpa/powerline-2.4/powerline.el" 0 55 (ivy-index 0)) "~/.dotfiles/.emacs.d/init.el" "~/.dotfiles/.emacs.d/myinit.org" "~/.emacs.d/myinit.org" "~/.emacs.d/init.el"))
 (setq swiper-history '(#("/*variables" 0 11 (ivy-index 0)) #(" /* variables */" 0 1 (display "287  " swiper-line-number 287) 1 2 (c-is-sws t c-in-sws t face font-lock-comment-delimiter-face fontified t) 2 4 (c-in-sws t face font-lock-comment-delimiter-face fontified t) 4 13 (c-in-sws t face font-lock-comment-face fontified t) 13 16 (c-in-sws t face font-lock-comment-delimiter-face fontified t)) #("updatebars" 0 10 (ivy-index 3)) #(" updatebars(void)" 0 1 (display "2316 " swiper-line-number 2316) 1 11 (face font-lock-function-name-face fontified t) 11 12 (c-type c-decl-arg-start fontified t) 12 16 (face font-lock-type-face fontified t) 16 17 (fontified t)) #("togglebar" 0 9 (ivy-index 1)) #(" togglebar(const Arg *arg)" 0 1 (display "2196 " swiper-line-number 2196) 1 10 (face font-lock-function-name-face fontified t) 10 11 (c-type c-decl-arg-start fontified t) 11 16 (face font-lock-keyword-face fontified t) 16 17 (fontified t) 17 20 (face font-lock-type-face fontified t) 20 22 (fontified t) 22 25 (face font-lock-variable-name-face fontified t) 25 26 (fontified t)) #("drawbar" 0 7 (ivy-index 2)) #(" drawbar(Monitor *m)" 0 1 (display "927  " swiper-line-number 927) 1 8 (face font-lock-function-name-face fontified t) 8 9 (c-type c-decl-arg-start fontified t) 9 16 (face font-lock-type-face fontified t) 16 18 (fontified t) 18 19 (face font-lock-variable-name-face fontified t) 19 20 (fontified t)) #("configurenoti" 0 13 (ivy-index 3)) #(" configurenotify(XEvent *e)" 0 1 (display "663  " swiper-line-number 663) 1 16 (face font-lock-function-name-face fontified t) 16 17 (c-type c-decl-arg-start fontified t) 17 23 (face font-lock-type-face fontified t) 23 25 (fontified t) 25 26 (face font-lock-variable-name-face fontified t) 26 27 (fontified t)) #("drawba" 0 6 (ivy-index 2)) #("tile(" 0 5 (ivy-index 1)) #(" tile(Monitor *m)" 0 1 (swiper-line-number 1851 display "1851 ") 1 5 (fontified t face font-lock-function-name-face) 5 6 (fontified t c-type c-decl-arg-start) 6 13 (fontified t face font-lock-type-face) 13 15 (fontified t) 15 16 (fontified t face font-lock-variable-name-face) 16 17 (fontified t)) #("setup" 0 5 (ivy-index 1)) #(" setup(void)" 0 1 (display "2149 " swiper-line-number 2149) 1 6 (face font-lock-function-name-face fontified t) 6 7 (c-type c-decl-arg-start fontified t) 7 11 (face font-lock-type-face fontified t) 11 12 (fontified t)) #("drawbar(Mo" 0 10 (ivy-index 1)) #("static int bh," 0 14 (ivy-index 0)) #(" static int drawstatusbar(Monitor *m, int bh, char* text);" 0 1 (display "196  " swiper-line-number 196) 1 7 (face font-lock-keyword-face fontified t) 7 8 (fontified t) 8 10 (face font-lock-type-face fontified t) 10 11 (face font-lock-type-face c-type c-decl-id-start fontified t) 11 12 (fontified t) 12 25 (face font-lock-function-name-face fontified t) 25 26 (c-type c-decl-arg-start fontified t) 26 33 (face font-lock-type-face fontified t) 33 35 (fontified t) 35 36 (face font-lock-variable-name-face fontified t) 36 37 (c-type c-decl-arg-start fontified t) 37 38 (fontified t) 38 41 (face font-lock-type-face fontified t) 41 42 (fontified t) 42 44 (face font-lock-variable-name-face fontified t) 44 45 (c-type c-decl-arg-start fontified t) 45 46 (fontified t) 46 50 (face font-lock-type-face fontified t) 50 52 (fontified t) 52 56 (face font-lock-variable-name-face fontified t) 56 58 (fontified t)) #(" " 0 1 (ivy-index 3)) #(" ** Environment e Fonte padrão" 0 1 (display "4   " swiper-line-number 4) 1 2 (keymap (keymap (mouse-1 . org-cycle) (mouse-2 lambda (e) (interactive "e") (mouse-set-point e) (org-cycle))) face (:foreground "#282828") fontified t) 2 3 (face org-level-2 keymap (keymap (mouse-1 . org-cycle) (mouse-2 lambda (e) (interactive "e") (mouse-set-point e) (org-cycle))) composition (1 1 [9675]) fontified t) 3 4 (face org-level-2 keymap (keymap (mouse-1 . org-cycle) (mouse-2 lambda (e) (interactive "e") (mouse-set-point e) (org-cycle))) fontified t) 4 30 (face org-level-2 fontified t))))
-(setq ido-file-history '("statusbar.sh" "." "main.cpp" "init.el"))
+(setq ido-file-history '("dwmbar-powerline" "statusbar.sh" "." "main.cpp" "init.el"))
 (setq projectile-project-command-history '#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ()))
-(setq kill-ring '(#("
+(setq kill-ring '(#("#!/bin/bash
+# colors
+#source ~/.local/bin/statusbar/themes/sweetmars
+#source ~/.local/bin/statusbar/themes/dracula
+#source ~/.local/bin/statusbar/themes/sweetdracula
+#source ~/.local/bin/statusbar/themes/tomorrow-night
+# source ~/.local/bin/statusbar/themes/tomorrow-dark
+#source ~/.local/bin/statusbar/themes/tomorrow
+source ~/.local/bin/statusbar/themes/gruvbox
+#source ~/.local/bin/statusbar/themes/doom
+
+export TERM=ansi
+interval=0
+
+# Battery :
+bat(){
+	for battery in /sys/class/power_supply/BAT?*; do
+		# If non-first battery, print a space separator.
+		[ -n \"${capacity+x}\" ] && printf \" \"
+		# Sets up the status and capacity
+		case \"$(cat \"$battery/status\" 2>&1)\" in
+			\"Full\") status=\" \" ;;
+			\"Discharging\") status=\" \" ;;
+			\"Charging\") status=\" \" ;;
+			\"Not charging\") status=\" \" ;;
+			\"Unknown\") status=\" \" ;;
+			*) exit 1 ;;
+		esac
+		capacity=\"$(cat \"$battery/capacity\" 2>&1)\"
+		# Will make a warn variable if discharging and low
+		[ \"$status\" = \" \" ] && [ \"$capacity\" -le 25 ] && warn=\" \"
+		# Prints the info
+		printf \"%s%s%d%%\" \"^c$orange^^c$black^^b$orange^ $status\" \"^c$black^^b$orange^ $warn\" \"$capacity\"; unset warn
+	done && printf \" \\\\n\"
+}
+
+# Date && clock :
+dat(){
+	date=\"$(date +\"%a %d %b %H:%M\"| sed 's/  / /g')\"
+	#echo -e \" $date\"
+	echo -e \"^c$blue^^c$black^^b$blue^  $date \"
+}
+
+# Cpu Temp :
+tmp(){
+	ctmp=$(sensors | awk '/edge/ {print$2}' | sed 's/+//')
+	echo -e \"^c$red^^c$black^^b$red^  $ctmp \"
+#	echo -e \"^c$red^^c$black^^b$red^ 󰏈  $ctmp \"
+}
+
+# Cpu Usage :
+cpu(){
+	read cpu a b c previdle rest < /proc/stat
+	prevtotal=$((a+b+c+previdle))
+	sleep 0.5
+	read cpu a b c idle rest < /proc/stat
+	total=$((a+b+c+idle))
+	cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
+	#echo -e \" $cpu%\"
+	printf \"^c$cyan^^c$black^^b$cyan^  $cpu% \"
+	#echo -e \"^c$cyan^^c$black^^b$cyan^ 󰻠 $cpu% \"
+}
+
+# Keybord Layout :
+key(){
+	kb=\"$(xkb-switch)\" || exit 1
+	#echo \" $kb\"
+	echo -e \"^c$green^^b$green^^c$black^^b$green^  $kb \"
+}
+
+# Screen Light :
+lit(){
+	#lit=\"$(xbacklight | sed 's/\\..*//g')\"
+	#echo \" $lit%\"
+	lit=\"$(brightnessctl | grep -oP '[^()]+%')\"
+	#echo \" $lit\"
+	echo -e \"^c$yellow^^b$yellow^^c$black^^b$yellow^  $lit \"
+}
+
+# Memory :
+mem(){
+	#mem=\"$(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)\"
+	mem=\"$(/home/anderson/.local/bin/block-ram used)\"
+	echo -e \"^c$magenta^^b$magenta^^c$black^^b$magenta^  $mem \"
+}
+
+# HD:
+hd_root(){
+	hd_inodes=\"$(df -i | grep '/dev/md0' |awk '{print$5}')\"
+#	echo -e \"^c$cyan^^b$cyan^^c$black^^b$cyan^  $hd_inodes \"
+	echo -e \"^c$cyan^^b$cyan^^c$black^^b$cyan^ 󰋊 $hd_inodes \"
+}
+# Volume :
+vol(){
+	[ $(pamixer --get-mute) = true ] && echo  && exit
+
+	vol=\"$(pamixer --get-volume)\"
+
+	if [ \"$vol\" -gt \"70\" ]; then
+		icon=\"\"
+	elif [ \"$vol\" -gt \"30\" ]; then
+		icon=\"\"
+	elif [ \"$vol\" -gt \"0\" ]; then
+		icon=\"\"
+	else
+		echo \"\" && exit
+	fi
+	echo \"^c$magenta^^b$magenta^^c$black^^b$magenta^ $icon $vol% \"
+}
+
+
+net() {
+	connected=$(cat /sys/class/net/e*/operstate 2>/dev/null)
+	if [[ \"$connected\" =~ \"up\" ]]; then
+		printf \"^c$green^^b$green^^c$black^  %s\"
+	elif [[ \"$connected\" =~ \"down\" ]]; then
+		check_wifi=$(cat /sys/class/net/wl*/operstate 2>/dev/null)
+		if [[ \"$check_wifi\" =~ \"up\" ]]; then
+			printf \"^c$green^^b$green^^c$black^  %s\"
+		elif [[ \"$check_wifi\" =~ \"down\" ]]; then
+			printf \"^c$green^^b$green^^c$black^ 睊 %s\"
+		fi
+	fi
+}
+
+# Network traffic
+nettrf(){
+	update() {
+		sum=0
+		for arg; do
+			read -r i < \"$arg\"
+			sum=$(( sum + i ))
+		done
+		cache=${XDG_CACHE_HOME:-$HOME/.cache}/${1##*/}
+		[ -f \"$cache\" ] && read -r old < \"$cache\" || old=0
+		printf %d\\\\n \"$sum\" > \"$cache\"
+		printf %d\\\\n $(( sum - old ))
+	}
+
+	rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
+	tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
+
+	printf \"^c$magenta^^b$magenta^^c$black^ ^c$black^^b$magenta^ %4sB ^b$magenta^^c$black^ ^c$black^^b$magenta^ %4sB \\\\n\" $(numfmt --to=iec $rx) $(numfmt --to=iec $tx)
+}
+
+# Updates
+pkg_updates() {
+	#updates=$(xbps-install -un | wc -l) # void
+	#updates=$(eix --installed --upgrade | tail -1 | awk '{ print $2 }')
+	# updates=$(pacman -Qu | grep -Fcv \"[ignored]\" | sed \"s/^//;s/^0$//g\")   # arch , needs pacman contrib
+	updates=$(aptitude search '~U' | wc -l)  # apt (ubuntu,debian etc)
+
+	if [ \"$updates\" == \"0\" ]; then
+		printf \"^c$green^^b$green^^c$black^  ^c$green^^b$black^Fully Updated^d^\"
+	else
+		printf \"^c$green^^b$green^^c$black^  $updates \" \"^c$green^^b$black^updates ^d^\"
+	fi
+}
+while true; do
+ [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && updates=$(pkg_updates)
+  interval=$((interval + 1))
+  space=\" \"
+  range=\"|\"
+  #xsetroot -name \"$updates$(nettrf)$(tmp)$(cpu)$(mem)$(vol)$(lit)$(bat)$(key)$(dat)$(net)\"
+  # xsetroot -name \"$(cpu)$(mem)$(vol)$(lit)$(bat)$(key)$(dat)$(net)\"
+  # xsetroot -name \"$updates$(cpu)$(mem)$(lit)$(bat)$(dat)$(net)\"
+  xsetroot -name \"$(cpu)$(tmp)$(mem)$(lit)$(hd_root)$(bat)$(dat)^c#282828^^b#282828^\"
+  sleep 30
+done &
+" 0 1 (fontified t face font-lock-comment-delimiter-face) 1 7 (fontified t face font-lock-comment-face) 7 11 (fontified t face font-lock-keyword-face) 11 12 (fontified t face font-lock-comment-face) 12 14 (fontified t face font-lock-comment-delimiter-face) 14 21 (fontified t face font-lock-comment-face) 21 22 (fontified t face font-lock-comment-delimiter-face) 22 69 (fontified t face font-lock-comment-face) 69 70 (fontified t face font-lock-comment-delimiter-face) 70 115 (fontified t face font-lock-comment-face) 115 116 (fontified t face font-lock-comment-delimiter-face) 116 166 (fontified t face font-lock-comment-face) 166 167 (fontified t face font-lock-comment-delimiter-face) 167 219 (fontified t face font-lock-comment-face) 219 221 (fontified t face font-lock-comment-delimiter-face) 221 272 (fontified t face font-lock-comment-face) 272 273 (fontified t face font-lock-comment-delimiter-face) 273 319 (fontified t face font-lock-comment-face) 319 325 (fontified t face font-lock-builtin-face) 325 364 (fontified t) 364 365 (fontified t face font-lock-comment-delimiter-face) 365 407 (fontified t face font-lock-comment-face) 407 408 (fontified t) 408 414 (fontified t face font-lock-builtin-face) 414 415 (fontified t) 415 419 (fontified t face font-lock-variable-name-face) 419 425 (fontified t) 425 433 (fontified t face font-lock-variable-name-face) 433 437 (fontified t) 437 439 (fontified t face font-lock-comment-delimiter-face) 439 449 (fontified t face font-lock-comment-face) 449 452 (fontified t face font-lock-function-name-face) 452 457 (fontified t) 457 460 (fontified t face font-lock-keyword-face) 460 468 (fontified t) 468 471 (fontified t face font-lock-keyword-face) 471 503 (fontified t) 503 505 (fontified t face font-lock-keyword-face) 505 508 (fontified t) 508 510 (fontified t face font-lock-comment-delimiter-face) 510 557 (fontified t face font-lock-comment-face) 557 564 (fontified t) 564 579 (fontified t face font-lock-string-face) 579 585 (fontified t) 585 591 (fontified t face font-lock-builtin-face) 591 592 (fontified t) 592 595 (fontified t face font-lock-string-face) 595 598 (fontified t) 598 600 (fontified t face font-lock-comment-delimiter-face) 600 632 (fontified t face font-lock-comment-face) 632 634 (fontified t) 634 638 (fontified t face font-lock-keyword-face) 638 639 (fontified t) 639 642 (fontified t face font-lock-string-face) 642 646 (fontified t face sh-quoted-exec) 646 647 (fontified t syntax-table (1) face sh-quoted-exec) 647 662 (fontified t face sh-quoted-exec) 662 663 (fontified t syntax-table (1) face sh-quoted-exec) 663 668 (fontified t face sh-quoted-exec) 668 670 (fontified t face font-lock-string-face) 670 671 (fontified t face font-lock-keyword-face) 671 673 (fontified t syntax-multiline t face font-lock-keyword-face) 673 677 (fontified t syntax-multiline t) 677 683 (fontified t syntax-multiline t face font-lock-string-face) 683 684 (fontified t syntax-multiline t syntax-table (1)) 684 685 (fontified t) 685 691 (fontified t face font-lock-variable-name-face) 691 692 (fontified t) 692 696 (fontified t face font-lock-string-face) 696 697 (fontified t) 697 703 (fontified t syntax-multiline t) 703 716 (fontified t syntax-multiline t face font-lock-string-face) 716 717 (fontified t syntax-multiline t syntax-table (1)) 717 718 (fontified t) 718 724 (fontified t face font-lock-variable-name-face) 724 725 (fontified t) 725 729 (fontified t face font-lock-string-face) 729 730 (fontified t) 730 736 (fontified t syntax-multiline t) 736 746 (fontified t syntax-multiline t face font-lock-string-face) 746 747 (fontified t syntax-multiline t syntax-table (1)) 747 748 (fontified t) 748 754 (fontified t face font-lock-variable-name-face) 754 755 (fontified t) 755 759 (fontified t face font-lock-string-face) 759 760 (fontified t) 760 766 (fontified t syntax-multiline t) 766 780 (fontified t syntax-multiline t face font-lock-string-face) 780 781 (fontified t syntax-multiline t syntax-table (1)) 781 782 (fontified t) 782 788 (fontified t face font-lock-variable-name-face) 788 789 (fontified t) 789 793 (fontified t face font-lock-string-face) 793 794 (fontified t) 794 800 (fontified t syntax-multiline t) 800 809 (fontified t syntax-multiline t face font-lock-string-face) 809 810 (fontified t syntax-multiline t syntax-table (1)) 810 811 (fontified t) 811 817 (fontified t face font-lock-variable-name-face) 817 818 (fontified t) 818 822 (fontified t face font-lock-string-face) 822 823 (fontified t) 823 830 (fontified t syntax-multiline t) 830 831 (fontified t syntax-multiline t syntax-table (1)) 831 832 (fontified t) 832 836 (fontified t face font-lock-keyword-face) 836 844 (fontified t) 844 848 (fontified t face font-lock-keyword-face) 848 851 (fontified t) 851 859 (fontified t face font-lock-variable-name-face) 859 860 (fontified t) 860 863 (fontified t face font-lock-string-face) 863 867 (fontified t face sh-quoted-exec) 867 868 (fontified t syntax-table (1) face sh-quoted-exec) 868 885 (fontified t face sh-quoted-exec) 885 886 (fontified t syntax-table (1) face sh-quoted-exec) 886 891 (fontified t face sh-quoted-exec) 891 893 (fontified t face font-lock-string-face) 893 896 (fontified t) 896 898 (fontified t face font-lock-comment-delimiter-face) 898 947 (fontified t face font-lock-comment-face) 947 951 (fontified t) 951 960 (fontified t face font-lock-string-face) 960 963 (fontified t) 963 967 (fontified t face font-lock-string-face) 967 975 (fontified t) 975 986 (fontified t face font-lock-string-face) 986 999 (fontified t) 999 1003 (fontified t face font-lock-variable-name-face) 1003 1004 (fontified t) 1004 1008 (fontified t face font-lock-string-face) 1008 1011 (fontified t) 1011 1013 (fontified t face font-lock-comment-delimiter-face) 1013 1029 (fontified t face font-lock-comment-face) 1029 1031 (fontified t) 1031 1037 (fontified t face font-lock-builtin-face) 1037 1038 (fontified t) 1038 1048 (fontified t face font-lock-string-face) 1048 1049 (fontified t) 1049 1089 (fontified t face font-lock-string-face) 1089 1090 (fontified t) 1090 1117 (fontified t face font-lock-string-face) 1117 1118 (fontified t) 1118 1129 (fontified t face font-lock-string-face) 1129 1131 (fontified t) 1131 1136 (fontified t face font-lock-builtin-face) 1136 1143 (fontified t) 1143 1147 (fontified t face font-lock-keyword-face) 1147 1151 (fontified t) 1151 1157 (fontified t face font-lock-builtin-face) 1157 1158 (fontified t) 1158 1164 (fontified t face font-lock-string-face) 1164 1168 (fontified t) 1168 1170 (fontified t face font-lock-comment-delimiter-face) 1170 1186 (fontified t face font-lock-comment-face) 1186 1189 (fontified t face font-lock-function-name-face) 1189 1194 (fontified t) 1194 1198 (fontified t face font-lock-variable-name-face) 1198 1199 (fontified t) 1199 1202 (fontified t face font-lock-string-face) 1202 1208 (fontified t face sh-quoted-exec) 1208 1209 (fontified t syntax-table (1) face sh-quoted-exec) 1209 1223 (fontified t face sh-quoted-exec) 1223 1224 (fontified t syntax-table (1) face sh-quoted-exec) 1224 1240 (fontified t face sh-quoted-exec) 1240 1242 (fontified t face font-lock-string-face) 1242 1244 (fontified t) 1244 1245 (fontified t face font-lock-comment-delimiter-face) 1245 1263 (fontified t face font-lock-comment-face) 1263 1264 (fontified t) 1264 1268 (fontified t face font-lock-builtin-face) 1268 1272 (fontified t) 1272 1309 (fontified t face font-lock-string-face) 1309 1313 (fontified t) 1313 1315 (fontified t face font-lock-comment-delimiter-face) 1315 1326 (fontified t face font-lock-comment-face) 1326 1329 (fontified t face font-lock-function-name-face) 1329 1334 (fontified t) 1334 1338 (fontified t face font-lock-variable-name-face) 1338 1341 (fontified t) 1341 1355 (fontified t face sh-quoted-exec) 1355 1373 (fontified t face sh-quoted-exec) 1373 1380 (fontified t face sh-quoted-exec) 1380 1387 (fontified t face sh-quoted-exec) 1387 1390 (fontified t) 1390 1394 (fontified t face font-lock-builtin-face) 1394 1398 (fontified t) 1398 1433 (fontified t face font-lock-string-face) 1433 1434 (fontified t) 1434 1436 (fontified t face font-lock-comment-delimiter-face) 1436 1481 (fontified t face font-lock-comment-face) 1481 1484 (fontified t) 1484 1486 (fontified t face font-lock-comment-delimiter-face) 1486 1498 (fontified t face font-lock-comment-face) 1498 1500 (fontified t face font-lock-function-name-face) 1500 1501 (fontified t face font-lock-function-name-face) 1501 1505 (fontified t) 1505 1506 (fontified t) 1506 1510 (fontified t face font-lock-builtin-face) 1510 1549 (fontified t) 1549 1558 (fontified t face font-lock-variable-name-face) 1558 1561 (fontified t) 1561 1576 (fontified t face sh-quoted-exec) 1576 1591 (fontified t) 1591 1595 (fontified t face font-lock-builtin-face) 1595 1630 (fontified t) 1630 1635 (fontified t face font-lock-variable-name-face) 1635 1638 (fontified t) 1638 1649 (fontified t face sh-quoted-exec) 1649 1653 (fontified t) 1653 1656 (fontified t face font-lock-variable-name-face) 1656 1659 (fontified t) 1659 1682 (fontified t face sh-quoted-exec) 1682 1728 (fontified t) 1728 1729 (fontified t face font-lock-comment-delimiter-face) 1729 1747 (fontified t face font-lock-comment-face) 1747 1748 (fontified t) 1748 1754 (fontified t face font-lock-builtin-face) 1754 1755 (fontified t) 1755 1792 (fontified t face font-lock-string-face) 1792 1793 (fontified t) 1793 1794 (fontified t) 1794 1795 (fontified t face font-lock-comment-delimiter-face) 1795 1841 (fontified t face font-lock-comment-face) 1841 1844 (fontified t) 1844 1846 (fontified t face font-lock-comment-delimiter-face) 1846 1863 (fontified t face font-lock-comment-face) 1863 1866 (fontified t face font-lock-function-name-face) 1866 1871 (fontified t) 1871 1873 (fontified t face font-lock-variable-name-face) 1873 1874 (fontified t) 1874 1877 (fontified t face font-lock-string-face) 1877 1887 (fontified t face sh-quoted-exec) 1887 1889 (fontified t face font-lock-string-face) 1889 1893 (fontified t) 1893 1897 (fontified t face font-lock-keyword-face) 1897 1901 (fontified t) 1901 1902 (fontified t face font-lock-comment-delimiter-face) 1902 1915 (fontified t face font-lock-comment-face) 1915 1916 (fontified t) 1916 1920 (fontified t face font-lock-builtin-face) 1920 1924 (fontified t) 1924 1970 (fontified t face font-lock-string-face) 1970 1974 (fontified t) 1974 1976 (fontified t face font-lock-comment-delimiter-face) 1976 1991 (fontified t face font-lock-comment-face) 1991 1994 (fontified t face font-lock-function-name-face) 1994 1999 (fontified t) 1999 2000 (fontified t face font-lock-comment-delimiter-face) 2000 2007 (fontified t face font-lock-comment-face) 2007 2035 (fontified t face sh-quoted-exec) 2035 2038 (fontified t face font-lock-comment-face) 2038 2039 (fontified t) 2039 2040 (fontified t face font-lock-comment-delimiter-face) 2040 2055 (fontified t face font-lock-comment-face) 2055 2056 (fontified t) 2056 2059 (fontified t face font-lock-variable-name-face) 2059 2060 (fontified t) 2060 2063 (fontified t face font-lock-string-face) 2063 2092 (fontified t face sh-quoted-exec) 2092 2099 (fontified t face font-lock-string-face) 2099 2101 (fontified t) 2101 2102 (fontified t face font-lock-comment-delimiter-face) 2102 2116 (fontified t face font-lock-comment-face) 2116 2117 (fontified t) 2117 2121 (fontified t face font-lock-builtin-face) 2121 2125 (fontified t) 2125 2175 (fontified t face font-lock-string-face) 2175 2179 (fontified t) 2179 2181 (fontified t face font-lock-comment-delimiter-face) 2181 2190 (fontified t face font-lock-comment-face) 2190 2193 (fontified t face font-lock-function-name-face) 2193 2198 (fontified t) 2198 2199 (fontified t face font-lock-comment-delimiter-face) 2199 2206 (fontified t face font-lock-comment-face) 2206 2254 (fontified t face sh-quoted-exec) 2254 2257 (fontified t face font-lock-comment-face) 2257 2258 (fontified t) 2258 2261 (fontified t face font-lock-variable-name-face) 2261 2262 (fontified t) 2262 2265 (fontified t face font-lock-string-face) 2265 2305 (fontified t face sh-quoted-exec) 2305 2307 (fontified t face font-lock-string-face) 2307 2309 (fontified t) 2309 2313 (fontified t face font-lock-builtin-face) 2313 2317 (fontified t) 2317 2370 (fontified t face font-lock-string-face) 2370 2374 (fontified t) 2374 2376 (fontified t face font-lock-comment-delimiter-face) 2376 2380 (fontified t face font-lock-comment-face) 2380 2387 (fontified t face font-lock-function-name-face) 2387 2392 (fontified t) 2392 2401 (fontified t face font-lock-variable-name-face) 2401 2402 (fontified t) 2402 2405 (fontified t face font-lock-string-face) 2405 2445 (fontified t face sh-quoted-exec) 2445 2447 (fontified t face font-lock-string-face) 2447 2448 (fontified t) 2448 2450 (fontified t face font-lock-comment-delimiter-face) 2450 2509 (fontified t face font-lock-comment-face) 2509 2510 (fontified t) 2510 2514 (fontified t face font-lock-builtin-face) 2514 2518 (fontified t) 2518 2568 (fontified t face font-lock-string-face) 2568 2571 (fontified t) 2571 2573 (fontified t face font-lock-comment-delimiter-face) 2573 2582 (fontified t face font-lock-comment-face) 2582 2585 (fontified t face font-lock-function-name-face) 2585 2594 (fontified t) 2594 2612 (fontified t face sh-quoted-exec) 2612 2626 (fontified t) 2626 2630 (fontified t face font-lock-builtin-face) 2630 2636 (fontified t) 2636 2640 (fontified t face font-lock-keyword-face) 2640 2643 (fontified t) 2643 2646 (fontified t face font-lock-variable-name-face) 2646 2647 (fontified t) 2647 2650 (fontified t face font-lock-string-face) 2650 2670 (fontified t face sh-quoted-exec) 2670 2672 (fontified t face font-lock-string-face) 2672 2675 (fontified t) 2675 2677 (fontified t face font-lock-keyword-face) 2677 2680 (fontified t) 2680 2686 (fontified t face font-lock-string-face) 2686 2691 (fontified t) 2691 2695 (fontified t face font-lock-string-face) 2695 2699 (fontified t) 2699 2703 (fontified t face font-lock-keyword-face) 2703 2706 (fontified t) 2706 2710 (fontified t face font-lock-variable-name-face) 2710 2711 (fontified t) 2711 2714 (fontified t face font-lock-string-face) 2714 2716 (fontified t) 2716 2720 (fontified t face font-lock-keyword-face) 2720 2723 (fontified t) 2723 2729 (fontified t face font-lock-string-face) 2729 2734 (fontified t) 2734 2738 (fontified t face font-lock-string-face) 2738 2742 (fontified t) 2742 2746 (fontified t face font-lock-keyword-face) 2746 2749 (fontified t) 2749 2753 (fontified t face font-lock-variable-name-face) 2753 2754 (fontified t) 2754 2757 (fontified t face font-lock-string-face) 2757 2759 (fontified t) 2759 2763 (fontified t face font-lock-keyword-face) 2763 2766 (fontified t) 2766 2772 (fontified t face font-lock-string-face) 2772 2777 (fontified t) 2777 2780 (fontified t face font-lock-string-face) 2780 2784 (fontified t) 2784 2788 (fontified t face font-lock-keyword-face) 2788 2791 (fontified t) 2791 2795 (fontified t face font-lock-variable-name-face) 2795 2796 (fontified t) 2796 2799 (fontified t face font-lock-string-face) 2799 2801 (fontified t) 2801 2805 (fontified t face font-lock-keyword-face) 2805 2808 (fontified t) 2808 2812 (fontified t face font-lock-builtin-face) 2812 2813 (fontified t) 2813 2816 (fontified t face font-lock-string-face) 2816 2820 (fontified t) 2820 2824 (fontified t face font-lock-keyword-face) 2824 2826 (fontified t) 2826 2828 (fontified t face font-lock-keyword-face) 2828 2830 (fontified t) 2830 2834 (fontified t face font-lock-builtin-face) 2834 2835 (fontified t) 2835 2893 (fontified t face font-lock-string-face) 2893 2898 (fontified t) 2898 2901 (fontified t face font-lock-function-name-face) 2901 2907 (fontified t) 2907 2916 (fontified t face font-lock-variable-name-face) 2916 2919 (fontified t) 2919 2962 (fontified t face sh-quoted-exec) 2962 2965 (fontified t) 2965 2967 (fontified t face font-lock-keyword-face) 2967 2971 (fontified t) 2971 2983 (fontified t face font-lock-string-face) 2983 2987 (fontified t) 2987 2991 (fontified t face font-lock-string-face) 2991 2996 (fontified t) 2996 3000 (fontified t face font-lock-keyword-face) 3000 3003 (fontified t) 3003 3005 (fontified t face font-lock-builtin-face) 3005 3009 (fontified t face font-lock-builtin-face) 3009 3010 (fontified t) 3010 3045 (fontified t face font-lock-string-face) 3045 3046 (fontified t) 3046 3047 (fontified t) 3047 3051 (fontified t face font-lock-keyword-face) 3051 3055 (fontified t) 3055 3067 (fontified t face font-lock-string-face) 3067 3071 (fontified t) 3071 3077 (fontified t face font-lock-string-face) 3077 3082 (fontified t) 3082 3086 (fontified t face font-lock-keyword-face) 3086 3089 (fontified t) 3089 3099 (fontified t face font-lock-variable-name-face) 3099 3102 (fontified t) 3102 3146 (fontified t face sh-quoted-exec) 3146 3150 (fontified t) 3150 3152 (fontified t face font-lock-keyword-face) 3152 3156 (fontified t) 3156 3169 (fontified t face font-lock-string-face) 3169 3173 (fontified t) 3173 3177 (fontified t face font-lock-string-face) 3177 3182 (fontified t) 3182 3186 (fontified t face font-lock-keyword-face) 3186 3190 (fontified t) 3190 3196 (fontified t face font-lock-builtin-face) 3196 3197 (fontified t) 3197 3232 (fontified t face font-lock-string-face) 3232 3235 (fontified t) 3235 3239 (fontified t face font-lock-keyword-face) 3239 3243 (fontified t) 3243 3246 (fontified t face font-lock-string-face) 3246 3256 (fontified t face font-lock-string-face) 3256 3260 (fontified t) 3260 3266 (fontified t face font-lock-string-face) 3266 3271 (fontified t) 3271 3275 (fontified t face font-lock-keyword-face) 3275 3276 (fontified t) 3276 3279 (fontified t) 3279 3285 (fontified t face font-lock-builtin-face) 3285 3286 (fontified t) 3286 3293 (fontified t face font-lock-string-face) 3293 3321 (face font-lock-string-face fontified t) 3321 3322 (fontified t) 3322 3324 (fontified t) 3324 3326 (fontified t face font-lock-keyword-face) 3326 3328 (fontified t) 3328 3330 (fontified t face font-lock-keyword-face) 3330 3334 (fontified t) 3334 3336 (fontified t face font-lock-comment-delimiter-face) 3336 3352 (fontified t face font-lock-comment-face) 3352 3358 (fontified t face font-lock-function-name-face) 3358 3376 (fontified t) 3376 3379 (fontified t face font-lock-variable-name-face) 3379 3384 (fontified t) 3384 3387 (fontified t face font-lock-keyword-face) 3387 3393 (fontified t) 3393 3395 (fontified t face font-lock-keyword-face) 3395 3399 (fontified t) 3399 3403 (fontified t face font-lock-builtin-face) 3403 3411 (fontified t) 3411 3417 (fontified t face font-lock-string-face) 3417 3421 (fontified t) 3421 3424 (fontified t face font-lock-variable-name-face) 3424 3427 (fontified t) 3427 3437 (fontified t face sh-quoted-exec) 3437 3442 (fontified t) 3442 3446 (fontified t face font-lock-keyword-face) 3446 3449 (fontified t) 3449 3454 (fontified t face font-lock-variable-name-face) 3454 3457 (fontified t) 3457 3471 (fontified t face font-lock-variable-name-face) 3471 3474 (fontified t) 3474 3478 (fontified t face font-lock-variable-name-face) 3478 3489 (fontified t) 3489 3490 (fontified t face font-lock-variable-name-face) 3490 3492 (syntax-table (3) fontified t) 3492 3503 (fontified t) 3503 3511 (fontified t face font-lock-string-face) 3511 3517 (fontified t) 3517 3521 (fontified t face font-lock-builtin-face) 3521 3531 (fontified t) 3531 3539 (fontified t face font-lock-string-face) 3539 3543 (fontified t) 3543 3546 (fontified t face font-lock-variable-name-face) 3546 3551 (fontified t) 3551 3557 (fontified t face font-lock-builtin-face) 3557 3560 (fontified t) 3560 3562 (fontified t face font-lock-string-face) 3562 3564 (fontified t) 3564 3570 (fontified t face font-lock-string-face) 3570 3573 (fontified t) 3573 3581 (fontified t face font-lock-string-face) 3581 3584 (fontified t) 3584 3590 (fontified t face font-lock-builtin-face) 3590 3593 (fontified t) 3593 3595 (fontified t face font-lock-string-face) 3595 3599 (fontified t) 3599 3611 (fontified t face sh-quoted-exec) 3611 3619 (fontified t) 3619 3621 (fontified t face font-lock-variable-name-face) 3621 3624 (fontified t) 3624 3671 (fontified t face sh-quoted-exec) 3671 3674 (fontified t) 3674 3676 (fontified t face font-lock-variable-name-face) 3676 3679 (fontified t) 3679 3726 (fontified t face sh-quoted-exec) 3726 3730 (fontified t) 3730 3736 (fontified t face font-lock-builtin-face) 3736 3737 (fontified t) 3737 3850 (fontified t face font-lock-string-face) 3850 3853 (fontified t) 3853 3872 (fontified t face sh-quoted-exec) 3872 3876 (fontified t) 3876 3895 (fontified t face sh-quoted-exec) 3895 3900 (fontified t) 3900 3902 (fontified t face font-lock-comment-delimiter-face) 3902 3910 (fontified t face font-lock-comment-face) 3910 3921 (fontified t face font-lock-function-name-face) 3921 3927 (fontified t) 3927 3928 (fontified t face font-lock-comment-delimiter-face) 3928 3938 (fontified t face font-lock-comment-face) 3938 3962 (fontified t face sh-quoted-exec) 3962 3971 (fontified t face font-lock-comment-face) 3971 3972 (fontified t) 3972 3973 (fontified t face font-lock-comment-delimiter-face) 3973 3983 (fontified t face font-lock-comment-face) 3983 4039 (fontified t face sh-quoted-exec) 4039 4041 (fontified t face font-lock-comment-face) 4041 4042 (fontified t) 4042 4044 (fontified t face font-lock-comment-delimiter-face) 4044 4054 (fontified t face font-lock-comment-face) 4054 4111 (fontified t face sh-quoted-exec) 4111 4145 (fontified t face font-lock-comment-face) 4145 4146 (fontified t) 4146 4153 (fontified t face font-lock-variable-name-face) 4153 4156 (fontified t) 4156 4172 (fontified t face sh-quoted-exec) 4172 4176 (fontified t face sh-quoted-exec) 4176 4184 (fontified t face sh-quoted-exec) 4184 4187 (fontified t) 4187 4189 (fontified t face font-lock-comment-delimiter-face) 4189 4213 (fontified t face font-lock-comment-face) 4213 4215 (fontified t) 4215 4217 (fontified t face font-lock-keyword-face) 4217 4220 (fontified t) 4220 4230 (fontified t face font-lock-string-face) 4230 4234 (fontified t) 4234 4237 (fontified t face font-lock-string-face) 4237 4241 (fontified t) 4241 4245 (fontified t face font-lock-keyword-face) 4245 4248 (fontified t) 4248 4254 (fontified t face font-lock-builtin-face) 4254 4255 (fontified t) 4255 4322 (fontified t face font-lock-string-face) 4322 4324 (fontified t) 4324 4328 (fontified t face font-lock-keyword-face) 4328 4331 (fontified t) 4331 4337 (fontified t face font-lock-builtin-face) 4337 4338 (fontified t) 4338 4380 (fontified t face font-lock-string-face) 4380 4381 (fontified t) 4381 4412 (fontified t face font-lock-string-face) 4412 4414 (fontified t) 4414 4416 (fontified t face font-lock-keyword-face) 4416 4419 (fontified t) 4419 4424 (fontified t face font-lock-keyword-face) 4424 4431 (fontified t) 4431 4433 (fontified t face font-lock-keyword-face) 4433 4438 (fontified t) 4438 4446 (fontified t face font-lock-variable-name-face) 4446 4460 (fontified t) 4460 4477 (fontified t face sh-quoted-exec) 4477 4489 (fontified t) 4489 4496 (fontified t face font-lock-variable-name-face) 4496 4499 (fontified t) 4499 4510 (fontified t face sh-quoted-exec) 4510 4514 (fontified t) 4514 4522 (fontified t face font-lock-variable-name-face) 4522 4525 (fontified t) 4525 4538 (fontified t face sh-quoted-exec) 4538 4543 (fontified t) 4543 4548 (fontified t face font-lock-variable-name-face) 4548 4549 (fontified t) 4549 4552 (fontified t face font-lock-string-face) 4552 4555 (fontified t) 4555 4560 (fontified t face font-lock-variable-name-face) 4560 4561 (fontified t) 4561 4564 (fontified t face font-lock-string-face) 4564 4567 (fontified t) 4567 4568 (fontified t face font-lock-comment-delimiter-face) 4568 4594 (fontified t face font-lock-comment-face) 4594 4600 (fontified t face sh-quoted-exec) 4600 4603 (fontified t face font-lock-comment-face) 4603 4606 (fontified t face sh-quoted-exec) 4606 4609 (fontified t face font-lock-comment-face) 4609 4612 (fontified t face sh-quoted-exec) 4612 4615 (fontified t face font-lock-comment-face) 4615 4618 (fontified t face sh-quoted-exec) 4618 4621 (fontified t face font-lock-comment-face) 4621 4624 (fontified t face sh-quoted-exec) 4624 4627 (fontified t face font-lock-comment-face) 4627 4630 (fontified t face sh-quoted-exec) 4630 4633 (fontified t face font-lock-comment-face) 4633 4636 (fontified t face sh-quoted-exec) 4636 4639 (fontified t face font-lock-comment-face) 4639 4642 (fontified t face sh-quoted-exec) 4642 4645 (fontified t face font-lock-comment-face) 4645 4648 (fontified t face sh-quoted-exec) 4648 4651 (fontified t face font-lock-comment-face) 4651 4654 (fontified t face sh-quoted-exec) 4654 4657 (fontified t face font-lock-comment-face) 4657 4659 (fontified t) 4659 4661 (fontified t face font-lock-comment-delimiter-face) 4661 4679 (fontified t face font-lock-comment-face) 4679 4682 (fontified t face sh-quoted-exec) 4682 4685 (fontified t face font-lock-comment-face) 4685 4688 (fontified t face sh-quoted-exec) 4688 4691 (fontified t face font-lock-comment-face) 4691 4694 (fontified t face sh-quoted-exec) 4694 4697 (fontified t face font-lock-comment-face) 4697 4700 (fontified t face sh-quoted-exec) 4700 4703 (fontified t face font-lock-comment-face) 4703 4706 (fontified t face sh-quoted-exec) 4706 4709 (fontified t face font-lock-comment-face) 4709 4712 (fontified t face sh-quoted-exec) 4712 4715 (fontified t face font-lock-comment-face) 4715 4718 (fontified t face sh-quoted-exec) 4718 4721 (fontified t face font-lock-comment-face) 4721 4724 (fontified t face sh-quoted-exec) 4724 4727 (fontified t face font-lock-comment-face) 4727 4729 (fontified t) 4729 4731 (fontified t face font-lock-comment-delimiter-face) 4731 4757 (fontified t face font-lock-comment-face) 4757 4760 (fontified t face sh-quoted-exec) 4760 4763 (fontified t face font-lock-comment-face) 4763 4766 (fontified t face sh-quoted-exec) 4766 4769 (fontified t face font-lock-comment-face) 4769 4772 (fontified t face sh-quoted-exec) 4772 4775 (fontified t face font-lock-comment-face) 4775 4778 (fontified t face sh-quoted-exec) 4778 4781 (fontified t face font-lock-comment-face) 4781 4784 (fontified t face sh-quoted-exec) 4784 4787 (fontified t face font-lock-comment-face) 4787 4790 (fontified t face sh-quoted-exec) 4790 4793 (fontified t face font-lock-comment-face) 4793 4810 (fontified t) 4810 4813 (fontified t face font-lock-string-face) 4813 4816 (fontified t face sh-quoted-exec) 4816 4819 (fontified t face font-lock-string-face) 4819 4822 (fontified t face sh-quoted-exec) 4822 4825 (face font-lock-string-face fontified t) 4825 4828 (face sh-quoted-exec fontified t) 4828 4831 (face font-lock-string-face fontified t) 4831 4834 (face sh-quoted-exec fontified t) 4834 4837 (face font-lock-string-face fontified t) 4837 4844 (face sh-quoted-exec fontified t) 4844 4847 (face font-lock-string-face fontified t) 4847 4850 (face sh-quoted-exec fontified t) 4850 4853 (face font-lock-string-face fontified t) 4853 4856 (face sh-quoted-exec fontified t) 4856 4859 (face font-lock-string-face fontified t) 4859 4860 (syntax-table (3) face font-lock-string-face fontified t) 4860 4870 (face font-lock-string-face fontified t) 4870 4871 (syntax-table (3) face font-lock-string-face fontified t) 4871 4879 (face font-lock-string-face fontified t) 4879 4880 (fontified t) 4880 4891 (fontified t) 4891 4895 (fontified t face font-lock-keyword-face) 4895 4898 (fontified t)) #("
 	/*Meus atalhos*/
 	//	{ MODKEY,                       XK_a,                           spawn,          SHCMD(\"~/.local/bin/dmenu/dmenu-atalhos-programas\") },
 	{ ControlMask|Mod1Mask,         XK_l,                           spawn,          SHCMD(\"~/.local/bin/slock_personalizado\") },
@@ -173,20 +342,6 @@ static const char localshare[] = \".local/share\";" 0 6 (face font-lock-keyword-
 +	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[4]} }," "+	{ \"TTT\",      bstack },
 +	{ \"===\",      bstackhoriz }," "netatom[NetWMIcon] = XInternAtom(dpy, \"_NET_WM_ICON\", False);" "+			drw_text(drw, x, 0, w, bh, lrpad / 2 + (m->sel->icon ? m->sel->icw + ICONSPACING : 0), m->sel->name, 0);
 +			if (m->sel->icon) drw_pic(drw, x + lrpad / 2, (bh - m->sel->ich) / 2, m->sel->icw, m->sel->ich, m->sel->icon);" "NetWMIcon" "+#define ICONSIZE 16   /* icon size */
-+#define ICONSPACING 5 /* space between icon and title */" #("" 0 1 (face font-lock-comment-face fontified t)) "\\uE0B0" "u'\\uE0A2'" "" #("\\" 0 2 (fontified t face font-lock-string-face)) #("" 0 1 (fontified t face font-lock-string-face)) "#!/usr/bin/bash
-
-while true :; do
-
-	ARROW_A=$'\\x1b[0m\\x1b[38;2;104;122;196m\\x1b[0m\\x1b[48;2;104;122;196m'
-	ARROW_B=$'\\x1b[38;2;113;151;231m\\x1b[0m\\x1b[48;2;113;151;231m'
-	ARROW_C=$'\\x1b[38;2;104;122;196m\\x1b[0m\\x1b[48;2;104;122;196m'
-
-	status=\"${ARROW_A} ${ARROW_B}  $(uptime -p) ${ARROW_C} : $(acpi | awk '{print $4}' | sed s/,//) ${ARROW_B}  $(date '+%Y-%m-%d %H:%M') ${ARROW_C} $(free -h | awk '/^Mem:/ {print \":\" $3 \"/\" $2}') ${ARROW_B} 摒 $(curl -s wttr.in/\"Tampa,Florida?format=3\") ${ARROW_C}\"
-	xsetroot -name \"$status\"
-	echo \"$status\"
-
-	sleep 60
-
-done"))
++#define ICONSPACING 5 /* space between icon and title */" #("" 0 1 (face font-lock-comment-face fontified t)) "\\uE0B0" "u'\\uE0A2'" "" #("\\" 0 2 (fontified t face font-lock-string-face)) #("" 0 1 (fontified t face font-lock-string-face))))
 (setq search-ring 'nil)
 (setq regexp-search-ring '("/*variables" "updatebars" "togglebar" "drawbar" "configurenoti" "drawba" "tile(" "setup" "drawbar(Mo" "\\(static\\).*?\\(int\\).*?\\(bh,\\)"))
