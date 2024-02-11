@@ -1,0 +1,44 @@
+#!/bin/bash
+
+firefox=" Firefox"
+thunar=" Thunar"
+emacs=" Emacs"
+spotify=" Spotify"
+spotube=" Spotube"
+telegram=" Telegram"
+discord="󰙯 Discord"
+obsidian=" Obsidian"
+openboard="󰢐 OpenBoard"
+rstudio=" R-Studio"
+drawio="󰽉 Draw.io"
+
+# Variable passed to dmenu
+options="$firefox\n$thunar\n$emacs\n$spotify\n$spotube\n$telegram\n$discord\n$obsidian\n$openboard\n$rstudio\n$drawio"
+
+chosen="$(echo -e "$options" | dmenu -p "Scripts de monitor " )"
+case $chosen in
+     $firefox)
+	firefox
+	;;
+     $thunar)
+	thunar
+	;;
+     $emacs)
+	;;
+     $spotify)
+	;;
+     $spotube)
+	;;
+     $telegram)
+	;;
+     $discord)
+	;;
+     $obsidian)
+	;;
+     $openboard)
+	;;
+     $rstudio)
+	;;
+     $drawio)
+	;;
+esac

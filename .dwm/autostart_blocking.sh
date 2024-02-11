@@ -6,10 +6,3 @@ if which wmname; then
 fi
 export AWT_TOOLKIT="MToolkit"
 export _JAVA_AWT_WM_NONREPARENTING="1"
-
-# load keys
-if [ -e "~/.Xmodmap" ]; then
-  xmodmap ~/.Xmodmap
-fi
-
-pgrep -x dwmbar-colored > /dev/null || dwmbar-colored &

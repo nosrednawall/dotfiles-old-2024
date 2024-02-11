@@ -1,4 +1,5 @@
 #!/bin/bash
+xrdb ~/.Xresources
 pulseaudio --daemonize
 xfce4-power-manager --daemon
 pgrep -x xautolock > /dev/null || xautolock -time 10 -locker ~/.local/bin/slock_personalizado &

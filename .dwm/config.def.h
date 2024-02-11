@@ -20,31 +20,32 @@ static const int topbar                    = 1;        /* 0 means bottom bar */
 static const int user_bh                   = 0;        /* 2 is the default spacing around the bar's font */
 static const char *fonts[]                 = {
 	"Comic code:size=12:antialias=true:autohint=true:pixelsize=16",
-	"Mononoki Nerd Font:style=Bold:size=12:antialias=true:autohint=true:pixelsize=16"
+	"Mononoki Nerd Font:style=Bold:size=12:antialias=true:autohint=true:pixelsize=16",
+	"DejaVu Sans Mono for Powerline:size=12:pixelsize=16"
 };
-
 /*gruvbox2*/
 static const char col_1[]       = "#32302f";
 static const char col_2[]       = "#73675c";
 static const char col_3[]       = "#dfbf8e";
 static const char col_4[]       = "#fbf1c7";
 static const char col_5[]       = "#B8bb26";
+static const char col_6[]       = "#C42824";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm]       = { col_3, col_1, col_1 },
-	[SchemeSel]        = { col_3, col_2, col_5 },
+	[SchemeSel]        = { col_3, col_2, col_3 },
 	[SchemeStatus]     = { col_3, col_1, col_1 }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]    = { col_1, col_5, col_5 }, // Tagbar left selected {text,background,not used but cannot be empty}
+	[SchemeTagsSel]    = { col_1, col_3, col_5 }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm]   = { col_3, col_1, col_1 }, // Tagbar left unselected {text,background,not used but cannot be empty}
 	[SchemeInfoSel]    = { col_3, col_1, col_3 }, // infobar middle  selected {text,background,not used but cannot be empty}
 	[SchemeInfoNorm]   = { col_3, col_1, col_1 }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
-//static const char *tags[] =   { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] =   { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 //static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
-static const char *tags[] = { "󰞷","","","","","","","",""};
+//static const char *tags[] = { "󰞷","","","","","","","",""};
 //static const char *tags[] = { "Term", "Emacs", "Firefox", "Config", "Chat", "Tools", "Music", "Misc", "Misc"};
 //static const char *tags[] = { "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
 //static const char *tags[] = { "Um", "Dois", "Treis", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove" };
@@ -65,7 +66,7 @@ static const Rule rules[] = {
 	{ "copyq",			  NULL,		NULL,		0,		1,		-1 },
 	{ "openboard",			  NULL,		NULL,	   1 << 8,		1,		-1 },
 	{ "mpv",			  NULL,          NULL,           0,              1,		-1 },
-	{ "Spotube",		     "spotube",		NULL,	   1 << 6,              0,              -1 },
+      /*{ "Spotube",		     "spotube",		NULL,	   1 << 6,              0,              -1 },
 	{ "Spotify",		     "spotify",		NULL,	   1 << 6,              0,              -1 },
 	{ "discord",		     "discord",		NULL,	   1 << 4,              0,              -1 },
 	{ "TelegramDesktop","telegram-desktop",		NULL,	   1 << 4,              0,              -1 },
@@ -75,6 +76,7 @@ static const Rule rules[] = {
 	{ "Emacs",		       "emacs",		NULL,	   1 << 1,		0,		-1 },
 	{ "Thunar",		      "thunar",		NULL,	   1 << 3,		0,		-1 },
 	{ "Firefox-esr",		  NULL,		NULL,	   1 << 2,		0,		-1 },
+	*/
 };
 
 /* layout(s) */
@@ -92,8 +94,10 @@ static const Layout layouts[]     = {
 	{ "[D]",      deck      },
 	{ "HHH",      grid      },
 	{ "[@]",      spiral    },
-	{ "[\\]",      dwindle  },
-	{  NULL,      NULL      },
+	{ "[\\]",     dwindle   },
+	{ "TTT",      bstack    },
+	{ "===",      bstackhoriz },
+	{  NULL,      NULL      }
 
 };
 
@@ -112,7 +116,7 @@ static const Layout layouts[]     = {
 static char dmenumon[2]        = "0";
 static const char *dmenucmd[]  = { "dmenu_run", NULL };
 static const char *roficmd[]   = { "/bin/sh", "-c", "rofi -modi 'window,drun,ssh,combi' -font 'Comic code 15' -show drun -icon-theme 'Gruvbox' -show-icons -theme 'gruvbox-dark' ", NULL };
-static const char *termcmd[]   = { "alacritty", NULL };
+static const char *termcmd[]   = { "kitty", "--single-instance", NULL };
 
 /* scratch pad */
 static const char scratchpadname[] = "scratchpad";
@@ -163,6 +167,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[6]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[7]} },
 	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[8]} },
+	{ MODKEY,                       XK_a,      setlayout,      {.v = &layouts[9]} },
+	{ MODKEY,                       XK_z,      setlayout,      {.v = &layouts[10]} },
+
 	{ MODKEY|ControlMask,		XK_comma,  cyclelayout,    {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
@@ -189,7 +196,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_r,      quit,           {1} },
 
 	/*Meus atalhos*/
-	{ MODKEY,                       XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-atalhos-programas") },
+	//	{ MODKEY,                       XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-atalhos-programas") },
 	{ ControlMask|Mod1Mask,         XK_l,                           spawn,          SHCMD("~/.local/bin/slock_personalizado") },
 	/*volume pulseaudio*/
 	{ 0,                            XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume") },
@@ -222,6 +229,7 @@ static const Key keys[] = {
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
+
 static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },

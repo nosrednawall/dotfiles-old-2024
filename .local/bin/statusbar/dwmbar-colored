@@ -9,7 +9,7 @@
 source ~/.local/bin/statusbar/themes/gruvbox
 #source ~/.local/bin/statusbar/themes/doom
 
-
+export TERM=ansi
 interval=0
 
 # Battery :
@@ -57,7 +57,7 @@ cpu(){
 	total=$((a+b+c+idle))
 	cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
 	#echo -e " $cpu%"
-	echo -e "^c$cyan^^c$black^^b$cyan^  $cpu% "
+	printf "^c$cyan^^c$black^^b$cyan^  $cpu% "
 	#echo -e "^c$cyan^^c$black^^b$cyan^ 󰻠 $cpu% "
 }
 
@@ -146,7 +146,7 @@ nettrf(){
 # Updates
 pkg_updates() {
 	#updates=$(xbps-install -un | wc -l) # void
-  	#updates=$(eix --installed --upgrade | tail -1 | awk '{ print $2 }')
+	#updates=$(eix --installed --upgrade | tail -1 | awk '{ print $2 }')
 	# updates=$(pacman -Qu | grep -Fcv "[ignored]" | sed "s/^//;s/^0$//g")   # arch , needs pacman contrib
 	updates=$(aptitude search '~U' | wc -l)  # apt (ubuntu,debian etc)
 
