@@ -6,8 +6,13 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 //static char *font = "Liberation Mono:pixelsize=16:antialias=true:autohint=true";
-static char *font = "Comic code:size=12:antialias=true:autohint=true:pixelsize=16";
-
+//static char *font = "Comic code:size=12:antialias=true:autohint=true:pixelsize=16";
+static char *fonts[] = {
+       "Comic code:size=12:antialias=true:autohint=true:pixelsize=16",
+       "Mononoki Nerd Font:style=Bold:size=12:antialias=true:autohint=true:pixelsize=16",
+       "DejaVu Sans Mono for Powerline:size=12:pixelsize=16",
+};
+static size_t currentfont = 0;
 static int borderpx = 2;
 
 /*
@@ -249,6 +254,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ TERMMOD,              XK_S,           cyclefonts,     {}        },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 	{ MODKEY,               XK_1,           selectscheme,   {.i =  0} },
