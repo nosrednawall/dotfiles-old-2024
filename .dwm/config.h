@@ -7,12 +7,12 @@
 #include "fibonacci.c"
 
 /* appearance */
-static const unsigned int borderpx         = 5;        /* border pixel of windows */
+static const unsigned int borderpx         = 3;        /* border pixel of windows */
 static const unsigned int gappx            = 10;       /* gaps between windows */
 static const unsigned int snap             = 32;       /* snap pixel */
 static const unsigned int systraypinning   = 0;        /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft    = 0;        /* 0: systray in the right corner, >0: systray on left of status text */
-static const unsigned int systrayspacing   = 0;        /* systray spacing */
+static const unsigned int systrayspacing   = 1;        /* systray spacing */
 static const int systraypinningfailfirst   = 1;        /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray               = 1;        /* 0 means no systray */
 static const int showbar                   = 1;        /* 0 means no bar */
@@ -20,25 +20,25 @@ static const int topbar                    = 1;        /* 0 means bottom bar */
 static const int user_bh                   = 10;        /* 2 is the default spacing around the bar's font */
 static const char *fonts[]                 = {
 	"Comic code:size=12:antialias=true:autohint=true:pixelsize=16",
-	"Mononoki Nerd Font:style=Bold:size=12:antialias=true:autohint=true:pixelsize=16",
-	"DejaVu Sans Mono for Powerline:size=12:pixelsize=16"
+	"Mononoki Nerd Font:style=Bold:size=12:antialias=true:autohint=true:pixelsize=16"
 };
-/*gruvbox2*/
+/*gruvbox*/
 static const char col_1[]       = "#282828";
 static const char col_2[]       = "#695F55";
-static const char col_3[]       = "#dfbf8e";
-static const char col_4[]       = "#fbf1c7";
+static const char col_3[]       = "#ebdbb2";
+static const char col_4[]       = "#dfbf8e";
 static const char col_5[]       = "#B8bb26";
 static const char col_6[]       = "#C42824";
+static const char col_7[]       = "#689d68";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm]       = { col_3, col_1, col_1 },
-	[SchemeSel]        = { col_3, col_1, col_3 },
+	[SchemeSel]        = { col_3, col_1, col_7 },
 	[SchemeStatus]     = { col_1, col_1, col_1 }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeTagsSel]    = { col_1, col_3, col_5 }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm]   = { col_3, col_1, col_1 }, // Tagbar left unselected {text,background,not used but cannot be empty}
-	[SchemeInfoSel]    = { col_1, col_3, col_1 }, // infobar middle  selected {text,background,not used but cannot be empty}
+	[SchemeInfoSel]    = { col_3, col_1, col_1 }, // infobar middle  selected {text,background,not used but cannot be empty}
 	[SchemeInfoNorm]   = { col_3, col_1, col_1 }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
@@ -74,10 +74,10 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact          = 0.5; /* factor of master area size [0.05..0.95] */
+static const float mfact          = 0.5;  /* factor of master area size [0.05..0.95] */
 static const int nmaster          = 1;    /* number of clients in master area */
 static const int resizehints      = 1;    /* 1 means respect size hints in tiled resizals */
-static const int lockfullscreen   = 1; /* 1 will force focus on the fullscreen window */
+static const int lockfullscreen   = 1;    /* 1 will force focus on the fullscreen window */
 static const Layout layouts[]     = {
 	/* symbol     arrange function */
 	{ "[]=",      tile      },    /* first entry is default */

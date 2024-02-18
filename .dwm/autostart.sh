@@ -11,5 +11,7 @@ copyq &
 pgrep -x pasystray > /dev/null || pasystray &
 pgrep -x mpd > /dev/null || mpd ~/.config/mpd/mpd.conf
 bash ~/.local/bin/if_monitor.sh
-nitrogen --restore &
+# nitrogen --restore &
+# feh --recursive --bg-fill --randomize ~/.wallpapers/
+feh --recursive --bg-fill --randomize ~/.wallpapers/* &
 pgrep -x slstatus > /dev/null || slstatus &
