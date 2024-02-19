@@ -7,7 +7,7 @@
 #include "fibonacci.c"
 
 /* appearance */
-static const unsigned int borderpx         = 3;        /* border pixel of windows */
+static const unsigned int borderpx         = 5;        /* border pixel of windows */
 static const unsigned int gappx            = 10;       /* gaps between windows */
 static const unsigned int snap             = 32;       /* snap pixel */
 static const unsigned int systraypinning   = 0;        /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -36,7 +36,7 @@ static const char *colors[][3]      = {
 	[SchemeNorm]       = { col_3, col_1, col_1 },
 	[SchemeSel]        = { col_3, col_1, col_7 },
 	[SchemeStatus]     = { col_1, col_1, col_1 }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]    = { col_1, col_3, col_5 }, // Tagbar left selected {text,background,not used but cannot be empty}
+	[SchemeTagsSel]    = { col_1, col_7, col_5 }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm]   = { col_3, col_1, col_1 }, // Tagbar left unselected {text,background,not used but cannot be empty}
 	[SchemeInfoSel]    = { col_3, col_1, col_1 }, // infobar middle  selected {text,background,not used but cannot be empty}
 	[SchemeInfoNorm]   = { col_3, col_1, col_1 }, // infobar middle  unselected {text,background,not used but cannot be empty}

@@ -1,0 +1,67 @@
+;; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Mon Feb 19 18:57:02 2024
+;; Desktop file format version 208
+;; Emacs version 28.2
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (26067 52910 415657 571000) (desktop . "208") "anderson@debian" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-UKWN-Mononoki Nerd Font-normal-normal-normal-*-16-*-*-*-m-0-iso10646-1") (font-parameter . "Mononoki Nerd Font-12") (border-width . 0) (internal-border-width . 1) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#ebdbb2") (background-color . "#282828") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground . "white") (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "#ebdbb2") (environment) (last-focus-update . t) (powerline-cache) (tabs (current-tab (name . "~/.dotfiles/") (explicit-name))) (nil . "Unprintable entity") (Emacs . "Unprintable entity") (OrgMode . "Unprintable entity") (Elisp . "Unprintable entity") (frameset--id . "95AE-DE87-6A45-45E3") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (height . 72) (width . 206) (left . 1930) (top . 37)) ((min-height . 4) (min-width . 20) (min-height-ignore . 4) (min-width-ignore . 13) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 76) (min-pixel-width . 180) (min-pixel-height-ignore . 76) (min-pixel-width-ignore . 117) (min-pixel-height-safe . 19) (min-pixel-width-safe . 36)) hc (pixel-width . 1870) (pixel-height . 1349) (total-width . 208) (total-height . 71) (normal-height . 1.0) (normal-width . 1.0) (combination-limit . t) (leaf (pixel-width . 942) (pixel-height . 1349) (total-width . 105) (total-height . 71) (normal-height . 1.0) (normal-width . 0.5024630541871922) (buffer "myinit.org" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins 3) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 5930) (start . 4923)) (prev-buffers ("*Warnings*" 1 1418) ("config" 1 1) ("*Async-native-compile-log*" 889 1533) ("*Messages*" 1 1940) ("*scratch*" 1 145) ("index.html" 1 813) ("*dashboard*" 1 643) ("myinit.org" 1 9791) ("app.js" 1 1))) (leaf (last . t) (pixel-width . 928) (pixel-height . 1349) (total-width . 103) (total-height . 71) (normal-height . 1.0) (normal-width . 0.4975369458128079) (buffer "app.js" (selected) (hscroll . 0) (fringes 8 8 nil nil) (margins 2) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 603) (start . 1)) (prev-buffers ("config" 1 1)))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring '("indent" "scheme\\[SchemeNorm]\\[ColB" "updatesys" "mai"))
+(setq register-alist nil)
+(setq file-name-history '(#("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/index.html" 0 102 (ivy-index 7)) #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/app.js" 0 98 (ivy-index 3)) #("/home/anderson/.dwm/autostart.sh" 0 32 (ivy-index 0)) #("/home/anderson/.config/picom.conf" 0 33 (ivy-index 3)) #("/home/anderson/.emacs.d/myinit.org" 0 34 (ivy-index 1)) #("/home/anderson/.dotfiles/.dwm/" 0 30 (ivy-index 0)) #("/home/anderson/.dotfiles/.Xresources" 0 36 (ivy-index 0)) #("/home/anderson/.config/st/config.def.h" 0 38 (ivy-index 0)) "~/.dotfiles/.emacs.d/init.el"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/anderson/.dotfiles/.emacs.d/myinit.org"
+  "myinit.org"
+  'org-mode
+  '(which-key-mode override-global-mode ivy-mode yas-minor-mode indent-guide-mode linum-mode)
+  5930
+  '(5930 nil)
+  nil
+  nil
+  '((buffer-display-time 26067 52508 829582 186000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/index.html"
+  "index.html"
+  'web-mode
+  '(which-key-mode override-global-mode ivy-mode auto-complete-mode yas-minor-mode indent-guide-mode linum-mode)
+  813
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 26067 52504 627624 749000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/app.js"
+  "app.js"
+  'js-mode
+  '(which-key-mode override-global-mode ivy-mode auto-complete-mode yas-minor-mode indent-guide-mode linum-mode)
+  603
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 2) (buffer-display-time 26067 51657 851000 563000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/.git/config"
+  "config"
+  'conf-unix-mode
+  '(which-key-mode override-global-mode ivy-mode yas-minor-mode indent-guide-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 26067 52507 431632 257000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
