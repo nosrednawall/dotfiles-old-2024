@@ -17,7 +17,7 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = mouse
+    follow = keyboard
 
     ### Geometry ###
 
@@ -118,7 +118,7 @@
 
     ### Text ###
 
-    font = Comic code 8
+    font = Comic code 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -162,11 +162,11 @@
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = center
+    alignment = left
 
     # Vertical alignment of message text and icon.
     # Possible values are "top", "center" and "bottom".
-    vertical_alignment = center
+    vertical_alignment = top
 
     # Show age of message if message is older than show_age_threshold
     # seconds.
@@ -307,6 +307,7 @@
 [urgency_low]
     background = "#ebdbb2"
     foreground = "#282828"
+    highlight  = "#e78a4e"
     timeout = 5
 
 [urgency_normal]
