@@ -30,8 +30,10 @@ case $chosen in
 	;;
     $tabletwaconhdmi)
 	mapwacon.sh -d "Wacom Intuos S Pen stylus" -s "HDMI-0"
+	notify-send -t 3000 "󰓶 Tablet Wacon HDMI" "Configurado a área do tablet wacon para a tela HDMI" --icon="/usr/share/icons/ePapirus/16x16/devices/input-tablet.svg"
 	;;
     $tabletwaconnotebook)
 	mapwacon.sh -d "Wacom Intuos S Pen stylus" -s "eDP-1-1"
+	notify-send -t 3000 "󰓶 Tablet Wacon Notebook" "Configurado a área do tablet wacon para a tela do Notebook" --icon="/usr/share/icons/ePapirus/16x16/devices/input-tablet.svg"
 	;;
 esac
