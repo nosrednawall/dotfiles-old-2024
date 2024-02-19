@@ -32,7 +32,7 @@ static const char col_6[]       = "#C42824";
 static const char col_7[]       = "#689d68";
 
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
+	/*                      fg      bg   border   */
 	[SchemeNorm]       = { col_3, col_1, col_1 },
 	[SchemeSel]        = { col_3, col_1, col_7 },
 	[SchemeStatus]     = { col_1, col_1, col_1 }, // Statusbar right {text,background,not used but cannot be empty}
@@ -43,7 +43,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] =   { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const unsigned int ulinepad      = 5;	/* horizontal padding between the underline and tag */
 static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
@@ -74,24 +74,24 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact          = 0.5;  /* factor of master area size [0.05..0.95] */
+static const float mfact          = 0.55;  /* factor of master area size [0.05..0.95] */
 static const int nmaster          = 1;    /* number of clients in master area */
 static const int resizehints      = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen   = 1;    /* 1 will force focus on the fullscreen window */
 static const Layout layouts[]     = {
 	/* symbol     arrange function */
-	{ "[]=",      tile      },    /* first entry is default */
-	{ "><>",      NULL      },    /* no layout function means floating behavior */
-	{ "[M]",      monocle   },
-	{ "|+|",      tatami    },
-	{ "|||",      tcl       },
-	{ "[D]",      deck      },
-	{ "HHH",      grid      },
-	{ "[@]",      spiral    },
-	{ "[\\]",     dwindle   },
-	{ "TTT",      bstack    },
+	{ "[]=",      tile        },    /* first entry is default */
+	{ "><>",      NULL        },    /* no layout function means floating behavior */
+	{ "[M]",      monocle     },
+	{ "|+|",      tatami      },
+	{ "|||",      tcl         },
+	{ "[D]",      deck        },
+	{ "HHH",      grid        },
+	{ "[@]",      spiral      },
+	{ "[\\]",     dwindle     },
+	{ "TTT",      bstack      },
 	{ "===",      bstackhoriz },
-	{  NULL,      NULL      }
+	{  NULL,      NULL        }
 
 };
 

@@ -13,22 +13,25 @@ options="$casa\n$notebook\n$dia\n$noite\n$tabletwaconhdmi\n$tabletwaconnotebook"
 chosen="$(echo -e "$options" | dmenu -p "Scripts de monitor " )"
 case $chosen in
     $casa)
-        xrandr --output HDMI-0 --auto --rotate normal --dpi 96 --output eDP-1-1 --primary --auto --rotate normal --dpi 96 --left-of HDMI-0
-        ;;
+	xrandr --output HDMI-0 --auto --rotate normal --dpi 96 --output eDP-1-1 --primary --auto --rotate normal --dpi 96 --left-of HDMI-0
+	notify-send -t 3000 "󰡁 HDMI Inserido" "Adicionado tela via HDMI" --icon="/usr/share/icons/ePapirus/16x16/devices/computer.svg"
+	;;
     $notebook)
-        xrandr --output HDMI-0 --off --output eDP-1-1 --primary --auto --rotate normal --dpi 96
-        ;;
+	xrandr --output HDMI-0 --off --output eDP-1-1 --primary --auto --rotate normal --dpi 96
+	notify-send -t 3000 "  Modo Laptop" "Alterado tela para modo Laptop" --icon="/usr/share/icons/ePapirus/16x16/devices/computer-laptop.svg"
+	;;
     $dia)
-        redshift -P -O 6500
-        ;;
+	redshift -P -O 6500
+	notify-send -t 3000 "󰛨 Modo Diurno" "Alterado o brilho da tela para o modo diurno" --icon="/usr/share/icons/ePapirus/16x16/actions/colors-chromablue.svg"
+	;;
     $noite)
-        redshift -P -O 4500
-        ;;
+	redshift -P -O 4500
+	notify-send -t 3000 "󱩍 Modo noturno" "Alterado o brilho da tela para o modo noturno" --icon="/usr/share/icons/ePapirus/16x16/actions/redeyes.svg"
+	;;
     $tabletwaconhdmi)
-        mapwacon.sh -d "Wacom Intuos S Pen stylus" -s "HDMI-0"
-        ;;
+	mapwacon.sh -d "Wacom Intuos S Pen stylus" -s "HDMI-0"
+	;;
     $tabletwaconnotebook)
 	mapwacon.sh -d "Wacom Intuos S Pen stylus" -s "eDP-1-1"
 	;;
 esac
-
