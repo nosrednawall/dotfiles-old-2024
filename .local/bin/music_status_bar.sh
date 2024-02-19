@@ -9,5 +9,5 @@ else
     artist=$(mpc -f %artist% current)
     time=$(mpc -f %time% current)
 
-    echo "$icon $title [$artist] [$time]"
+    echo "$icon $title[$artist]"
 fi
