@@ -1,6 +1,6 @@
 #!/bin/bash
 
-firefox=" Firefox"
+chrome=" Chrome"
 thunar=" Thunar"
 emacs=" Emacs"
 spotify=" Spotify"
@@ -13,32 +13,41 @@ rstudio=" R-Studio"
 drawio="󰽉 Draw.io"
 
 # Variable passed to dmenu
-options="$firefox\n$thunar\n$emacs\n$spotify\n$spotube\n$telegram\n$discord\n$obsidian\n$openboard\n$rstudio\n$drawio"
+options="$chrome\n$thunar\n$emacs\n$spotify\n$spotube\n$telegram\n$discord\n$obsidian\n$openboard\n$rstudio\n$drawio"
 
 chosen="$(echo -e "$options" | dmenu -p "Scripts de monitor " )"
 case $chosen in
-     $firefox)
-	firefox
+     $chrome)
+	google-chrome-stable
 	;;
      $thunar)
 	thunar
 	;;
      $emacs)
+	 emacs
 	;;
      $spotify)
+	 flatpak run com.spotify.Client
 	;;
      $spotube)
+	 spotube
 	;;
      $telegram)
+	 telegram-desktop
 	;;
      $discord)
+	 flatpak run com.discordapp.Discord
 	;;
      $obsidian)
+	 flatpak run md.obsidian.Obsidian
 	;;
      $openboard)
+	 openboard
 	;;
      $rstudio)
+	 rstudio
 	;;
      $drawio)
+	 flatpak run com.jgraph.drawio.desktop
 	;;
 esac

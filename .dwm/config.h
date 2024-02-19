@@ -161,7 +161,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[6]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[7]} },
 	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[8]} },
-	{ MODKEY,                       XK_a,      setlayout,      {.v = &layouts[9]} },
+	{ MODKEY|ShiftMask,             XK_z,      setlayout,      {.v = &layouts[9]} },
 	{ MODKEY,                       XK_z,      setlayout,      {.v = &layouts[10]} },
 
 	{ MODKEY|ControlMask,		XK_comma,  cyclelayout,    {.i = -1 } },
@@ -190,7 +190,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_r,      quit,           {1} },
 
 	/*Meus atalhos*/
-	//	{ MODKEY,                       XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-atalhos-programas") },
+	{ MODKEY,                       XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-atalhos-programas") },
 	{ ControlMask|Mod1Mask,         XK_l,                           spawn,          SHCMD("~/.local/bin/slock_personalizado") },
 	/*volume pulseaudio*/
 	{ 0,                            XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume") },
