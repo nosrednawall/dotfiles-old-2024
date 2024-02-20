@@ -1,9 +1,11 @@
 #!/bin/bash
 
-mute=$(pactl get-sink-mute @DEFAULT_SINK@ | grep "sim" -ic)
+muteVol=$(pactl get-sink-mute @DEFAULT_SINK@ | grep "sim" -ic)
+muteMic=$(pactl get-source-mute @DEFAULT_SOURCE@ | grep 'sim' -ic)
 volume=$(pactl get-sink-volume @DEFAULT_SINK@ | grep "Volume" | awk '{print$5}' | sed 's/%//')
+microfone=$(pactl get-source-volume @DEFAULT_SOURCE@ | grep "Volume" | awk '{print$5}' | sed 's/%//')
 
-if [ "$mute" -eq 1 ]; then
+if [ "$muteVol" -eq 1 ]; then
     icon="󰸈 "
 else
     if [ "$volume" -le 30 ]; then
@@ -15,4 +17,10 @@ else
     fi
 fi
 
-echo "$icon$volume%"
+if [ "$muteMic" -eq 1 ]; then
+    iconMic=" "
+else
+    iconMic=" "
+fi
+
+echo "$icon$volume% $iconMic$microfone%"

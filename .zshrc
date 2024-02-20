@@ -8,7 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="alien"
+#ZSH_THEME="alien"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -63,48 +64,48 @@ ENABLE_CORRECTION="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=/home/anderson/.zplug/repos/eendroroy/alien
-export ALIEN_SECTIONS_RIGHT=(
-  time
-)
+#ZSH_CUSTOM=/home/anderson/.zplug/repos/eendroroy/alien
+#export ALIEN_SECTIONS_RIGHT=(
+#  time
+#)
 
 
-export ALIEN_SECTIONS_LEFT=(
-  exit
-  battery
-  user
-  path
-  vcs_branch:async
-  vcs_status:async
-  vcs_dirty:async
-  newline
-  ssh
-  venv
-  prompt
-)
+#export ALIEN_SECTIONS_LEFT=(
+#  exit
+#  battery
+#  user
+#  path
+#  vcs_branch:async
+#  vcs_status:async
+#  vcs_dirty:async
+#  newline
+#  ssh
+#  venv
+#  prompt
+#)
 
 
-export ALIEN_THEME="gruvbox"
-export ALIEN_GIT_STASH_SYM=@
-export ALIEN_GIT_SYM=G
-export ALIEN_HG_SYM=H
-export ALIEN_SVN_SYM=S
-export ALIEN_BRANCH_SYM=
-export ALIEN_GIT_ADD_SYM=+
-export ALIEN_GIT_DEL_SYM=-
-export ALIEN_GIT_MOD_SYM=⭑
-export ALIEN_GIT_NEW_SYM=?
-export ALIEN_GIT_PUSH_SYM=↑
-export ALIEN_GIT_PULL_SYM=↓
-export ALIEN_JAVA_SYM='JAVA:'
-export ALIEN_PY_SYM='PY:'
-export ALIEN_RB_SYM='RB:'
-export ALIEN_GO_SYM='GO:'
-export ALIEN_ELIXIR_SYM='EX:'
-export ALIEN_CRYSTAL_SYM='CR:'
-export ALIEN_NODE_SYM='⬡ '
-export ALIEN_PHP_SYM='PHP:'
-export ALIEN_USE_NERD_FONT=1
+#export ALIEN_THEME="gruvbox"
+#export ALIEN_GIT_STASH_SYM=@
+#export ALIEN_GIT_SYM=G
+#export ALIEN_HG_SYM=H
+#export ALIEN_SVN_SYM=S
+#export ALIEN_BRANCH_SYM=
+#export ALIEN_GIT_ADD_SYM=+
+#export ALIEN_GIT_DEL_SYM=-
+#export ALIEN_GIT_MOD_SYM=⭑
+#export ALIEN_GIT_NEW_SYM=?
+#export ALIEN_GIT_PUSH_SYM=↑
+#export ALIEN_GIT_PULL_SYM=↓
+#export ALIEN_JAVA_SYM='JAVA:'
+#export ALIEN_PY_SYM='PY:'
+#export ALIEN_RB_SYM='RB:'
+#export ALIEN_GO_SYM='GO:'
+#export ALIEN_ELIXIR_SYM='EX:'
+#export ALIEN_CRYSTAL_SYM='CR:'
+#export ALIEN_NODE_SYM='⬡ '
+#export ALIEN_PHP_SYM='PHP:'
+#export ALIEN_USE_NERD_FONT=1
 
 
 # Which plugins would you like to load?
