@@ -94,9 +94,9 @@
   (setq inhibiy-startup-message t)
 
 
-  (tool-bar-mode -1)  ;; tira a barra de ferramentas
-  (menu-bar-mode -1)  ;; tira a barra de ferramentas
-  (scroll-bar-mode -1)  ; Remover barra de rolagem
+;;  (tool-bar-mode -1)  ;; tira a barra de ferramentas
+ ;; (menu-bar-mode -1)  ;; tira a barra de ferramentas
+ ;; (scroll-bar-mode -1)  ; Remover barra de rolagem
 
   ;; Adiciona um gancho? para entrar em linum-mode quando for texto e programação
   (add-hook 'text-mode-hook 'linum-mode)

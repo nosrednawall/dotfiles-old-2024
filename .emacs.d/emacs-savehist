@@ -3,17 +3,29 @@
 
 (setq savehist-minibuffer-history-variables '(shell-command-history magit-git-command-history magit-revision-history extended-command-history ido-file-history minibuffer-history empty-history read-from-kill-ring-history ivy-history counsel-M-x-history swiper-history ido-buffer-history file-name-history))
 (setq shell-command-history '("/usr/bin/zsh" "/usr/bin/bash"))
-(setq magit-revision-history '(#("origin/main" 0 11 (ivy-index 0)) #("1a51c1d" 0 7 (ivy-index 0)) #("main" 0 4 (ivy-index 0)) #("ola mundo" 0 9 (ivy-index 0))))
-(setq ido-file-history '("." "music_status_bar.sh" "volume_icon.sh" "battery_status.sh" "advinha_mais.html" "estrelas.html" "media_idades_familiares.html" "media_idades_familiares.hml" "tabuada.html" "ano_copa.html" "jogo_advinha.html" "futebol.html" "imc.html" "programa.html" "texto_puro.html" "primeiro_teste.html"))
+(setq magit-revision-history '(#("origin/main" 0 11 (ivy-index 0)) #("main" 0 4 (ivy-index 0)) #("1a51c1d" 0 7 (ivy-index 0)) #("ola mundo" 0 9 (ivy-index 0))))
+(setq ido-file-history '("cpu_status.sh" "." "music_status_bar.sh" "volume_icon.sh" "battery_status.sh" "advinha_mais.html" "estrelas.html" "media_idades_familiares.html" "media_idades_familiares.hml" "tabuada.html" "ano_copa.html" "jogo_advinha.html" "futebol.html" "imc.html" "programa.html" "texto_puro.html" "primeiro_teste.html"))
 (setq minibuffer-history '("/usr/bin/bash" "/usr/bin/zsh"))
-(setq ivy-history '(#("./" 0 2 (ivy-index 0)) #("... (choose a dir)" 0 18 (ivy-index 1)) #("~/.dotfiles/" 0 12 (ivy-index 0)) #("electric-indent-mode" 0 20 (ivy-index 14)) #("indent-guide" 0 12 (ivy-index 0)) #("web-mode-indent-style" 0 21 (ivy-index 0)) #("rainbow-mode" 0 12 (ivy-index 3))))
-(setq counsel-M-x-history '(#("^rainbo" 0 7 (ivy-index 0)) "rainbow-mode" #("^term" 0 5 (ivy-index 0)) "term" #("^rain" 0 5 (ivy-index 0)) #("^conf-mod" 0 9 (ivy-index 0)) "conf-mode" #("^centaur-tabs-mode" 0 18 (ivy-index 0)) "centaur-tabs-mode" #("^centaur-tabs-g" 0 15 (ivy-index 0)) "centaur-tabs-group-buffer-groups" #("^magit-merge" 0 12 (ivy-index 3)) "magit-merge" #("^magit-status" 0 13 (ivy-index 2)) "magit-status" #("^rainb" 0 6 (ivy-index 0)) #("^ansi-" 0 6 (ivy-index 1)) "ansi-term" #("^conf-mode" 0 10 (ivy-index 0)) #("^ansi" 0 5 (ivy-index 1)) #("^magit-stat" 0 11 (ivy-index 2)) #("^ansi-te" 0 8 (ivy-index 0)) #("^java" 0 5 (ivy-index 1)) "javascript-mode" #("^customize-va" 0 13 (ivy-index 0)) "customize-variable" #("^indent-gui" 0 11 (ivy-index 0)) "indent-guide-mode" #("^package-install" 0 16 (ivy-index 0)) "package-install" #("^package-lis" 0 12 (ivy-index 0)) "package-list-packages" #("^web-mode" 0 9 (ivy-index 82)) "web-mode" #("ansi" 0 4 (ivy-index 2)) #("^cua" 0 4 (ivy-index 5)) "cua-toggle-rectangle-mark" "cua-paste" "cua-paste-pop" "cua-cut-region" #("^cua-sc" 0 7 (ivy-index 1)) "cua-scroll-down" #("^cua-s" 0 6 (ivy-index 2)) "cua-selection-mode"))
+(setq ivy-history '(#("index.html" 0 10 (ivy-index 0)) #("origin" 0 6 (ivy-index 0)) #("./" 0 2 (ivy-index 0)) #("... (choose a dir)" 0 18 (ivy-index 1)) #("~/.dotfiles/" 0 12 (ivy-index 0)) #("electric-indent-mode" 0 20 (ivy-index 14)) #("indent-guide" 0 12 (ivy-index 0)) #("web-mode-indent-style" 0 21 (ivy-index 0)) #("rainbow-mode" 0 12 (ivy-index 3))))
+(setq counsel-M-x-history '(#("^rain" 0 5 (ivy-index 0)) "rainbow-mode" #("^conf-mo" 0 8 (ivy-index 1)) "conf-mode" #("^magit-rebase" 0 13 (ivy-index 2)) "magit-rebase" #("^term" 0 5 (ivy-index 40)) "term" #("^magit-log-current" 0 18 (ivy-index 0)) "magit-log-current" #("^magit-log --g" 0 14 (ivy-index 0)) "magit-log:--grep" #("^magit-lo" 0 9 (ivy-index 1)) "magit-log:-G" #("^magit-log" 0 10 (ivy-index 8)) "magit-log" #("^rainbo" 0 7 (ivy-index 0)) #("^conf-mod" 0 9 (ivy-index 0)) #("^centaur-tabs-mode" 0 18 (ivy-index 0)) "centaur-tabs-mode" #("^centaur-tabs-g" 0 15 (ivy-index 0)) "centaur-tabs-group-buffer-groups" #("^magit-merge" 0 12 (ivy-index 3)) "magit-merge" #("^magit-status" 0 13 (ivy-index 2)) "magit-status" #("^rainb" 0 6 (ivy-index 0)) #("^ansi-" 0 6 (ivy-index 1)) "ansi-term" #("^conf-mode" 0 10 (ivy-index 0)) #("^ansi" 0 5 (ivy-index 1)) #("^magit-stat" 0 11 (ivy-index 2)) #("^ansi-te" 0 8 (ivy-index 0)) #("^java" 0 5 (ivy-index 1)) "javascript-mode" #("^customize-va" 0 13 (ivy-index 0)) "customize-variable" #("^indent-gui" 0 11 (ivy-index 0)) "indent-guide-mode" #("^package-install" 0 16 (ivy-index 0)) "package-install" #("^package-lis" 0 12 (ivy-index 0)) "package-list-packages" #("^web-mode" 0 9 (ivy-index 82)) "web-mode" #("ansi" 0 4 (ivy-index 2)) #("^cua" 0 4 (ivy-index 5)) "cua-toggle-rectangle-mark" "cua-paste" "cua-paste-pop" "cua-cut-region" #("^cua-sc" 0 7 (ivy-index 1)) "cua-scroll-down" #("^cua-s" 0 6 (ivy-index 2)) "cua-selection-mode"))
 (setq swiper-history '(#("indent" 0 6 (ivy-index 16)) #("   indent-guide                   20160630       available    melpa-stable show vertical lines to guide indentation" 0 1 (swiper-line-number 1665 display "1665 ") 1 3 (tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 3 15 (button (t) category default-button face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package tabulated-list-column-name "Package" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 15 16 (tabulated-list-column-name "Package" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 16 34 (display (space :align-to 33) tabulated-list-column-name "Package" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 34 42 (font-lock-face package-status-available help-echo #("Version: 20160630" 9 17 (font-lock-face package-status-available)) tabulated-list-column-name "Version" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 42 43 (tabulated-list-column-name "Version" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 43 49 (display (space :align-to 48) tabulated-list-column-name "Version" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 49 58 (font-lock-face package-status-available help-echo #("Status: available" 8 17 (font-lock-face package-status-available)) tabulated-list-column-name "Status" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 58 59 (tabulated-list-column-name "Status" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 59 62 (display (space :align-to 61) tabulated-list-column-name "Status" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 62 69 (font-lock-face package-status-available help-echo #("Archive: melpa-stable" 9 21 (font-lock-face package-status-available)) tabulated-list-column-name "Archive" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 69 74 (font-lock-face package-status-available display "…" help-echo #("Archive: melpa-stable" 9 21 (font-lock-face package-status-available)) tabulated-list-column-name "Archive" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 74 75 (tabulated-list-column-name "Archive" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 75 115 (font-lock-face package-description help-echo #("Description: show vertical lines to guide indentation" 13 53 (font-lock-face package-description)) tabulated-list-column-name "Description" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))])) "scheme[SchemeNorm][ColBg" #("scheme[SchemeNorm][ColB" 0 23 (ivy-index 8)) #(" 	XSetForeground(dpy, drw->gc, scheme[SchemeNorm][ColBg].pixel);" 0 1 (swiper-line-number 2761 display "2761 ") 1 2 (fontified t c-is-sws t) 2 3 (c-is-sws t fontified t) 3 49 (fontified t) 49 50 (fontified t) 50 51 (fontified t) 51 52 (fontified t) 52 53 (fontified t) 53 54 (fontified t) 54 55 (fontified t) 55 56 (fontified t) 56 57 (fontified t) 57 58 (fontified t) 58 59 (fontified t) 59 60 (fontified t) 60 61 (fontified t) 61 62 (fontified t) 62 63 (fontified t) 63 64 (fontified t rear-nonsticky t)) #("updatesys" 0 9 (ivy-index 18)) #(" updatesystray(void)" 0 1 (swiper-line-number 2700 display "2700 ") 1 14 (fontified t face font-lock-function-name-face) 14 15 (fontified t c-type c-decl-arg-start) 15 19 (fontified t face font-lock-type-face) 19 20 (fontified t)) #("mai" 0 3 (ivy-index 0)) #(" main(int argc, char *argv[])" 0 1 (swiper-line-number 814 display "814 ") 1 5 (fontified t face font-lock-function-name-face) 5 6 (fontified t c-type c-decl-arg-start) 6 9 (fontified t face font-lock-type-face) 9 10 (fontified t) 10 14 (fontified t face font-lock-variable-name-face) 14 15 (fontified t c-type c-decl-arg-start) 15 16 (fontified t) 16 20 (fontified t face font-lock-type-face) 20 22 (fontified t) 22 26 (fontified t face font-lock-variable-name-face) 26 29 (fontified t))))
-(setq ido-buffer-history '("*terminal*" "index.html" "config.mk" "Untitled<2>" "Untitled<3>" "Untitled" "init.el" "myinit.org" "config" "muta_microfone" "config.def.h<.dwm>" "block-battery" "dwmbar-powerline" "battery_status.sh" "diminui_volume" "muta_volume" "*scratch*" "*Messages*" "*Async-native-compile-log*" "*Warnings*" "magit-process: .dotfiles" "magit: .dotfiles" "volume_icon.sh" "*ansi-term*" "app.js" "x.c" "x.c.rej" "config.def.h" "config.def.h.rej" "config.def.h<st>"))
-(setq file-name-history '(#("/home/anderson/.local/bin/volume_icon.sh" 0 40 (ivy-index 6)) #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/index.html" 0 102 (ivy-index 7)) #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/app.js" 0 98 (ivy-index 3)) #("/home/anderson/.dwm/autostart.sh" 0 32 (ivy-index 0)) #("/home/anderson/.config/picom.conf" 0 33 (ivy-index 3)) #("/home/anderson/.emacs.d/myinit.org" 0 34 (ivy-index 1)) #("/home/anderson/.dotfiles/.dwm/" 0 30 (ivy-index 0)) #("/home/anderson/.dotfiles/.Xresources" 0 36 (ivy-index 0)) #("/home/anderson/.config/st/config.def.h" 0 38 (ivy-index 0)) "~/.dotfiles/.emacs.d/init.el"))
+(setq ido-buffer-history '("dunstrc" "dmenu-power" "config.def.h" "picom.conf" "*terminal*" "index.html" "config.mk" "Untitled<2>" "Untitled<3>" "Untitled" "init.el" "myinit.org" "config" "muta_microfone" "config.def.h<.dwm>" "block-battery" "dwmbar-powerline" "battery_status.sh" "diminui_volume" "muta_volume" "*scratch*" "*Messages*" "*Async-native-compile-log*" "*Warnings*" "magit-process: .dotfiles" "magit: .dotfiles" "volume_icon.sh" "*ansi-term*" "app.js" "x.c" "x.c.rej" "config.def.h.rej" "config.def.h<st>"))
+(setq file-name-history '(#("/home/anderson/.emacs.d/myinit.org" 0 34 (ivy-index 2)) #("/home/anderson/.local/bin/volume_icon.sh" 0 40 (ivy-index 6)) #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/index.html" 0 102 (ivy-index 7)) #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/app.js" 0 98 (ivy-index 3)) #("/home/anderson/.dwm/autostart.sh" 0 32 (ivy-index 0)) #("/home/anderson/.config/picom.conf" 0 33 (ivy-index 3)) #("/home/anderson/.dotfiles/.dwm/" 0 30 (ivy-index 0)) #("/home/anderson/.dotfiles/.Xresources" 0 36 (ivy-index 0)) #("/home/anderson/.config/st/config.def.h" 0 38 (ivy-index 0)) "~/.dotfiles/.emacs.d/init.el"))
 (setq projectile-project-command-history '#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ()))
-(setq kill-ring '("\"class_g = 'dwmsystray'\"," "focus-exclude = \"x = 0 && y = 0 && override_redirect = true\";" ":32a" "\"_NET_WM_WINDOW_TYPE = '_NET_WM_WINDOW_TYPE_DOCK'\"," "\"class_g     = 'dwm'\" " #("#689d68" 0 7 (fontified t face ((:foreground "black") (:background "#689d68")))) #("    background = \"#282828\"
-    foreground = \"#ebdbb2\"" 0 4 (fontified t) 4 14 (fontified t face font-lock-variable-name-face) 14 17 (fontified t) 17 18 (fontified t face font-lock-string-face) 18 25 (fontified t face ((:foreground "white") (:background "#282828"))) 25 26 (fontified t rear-nonsticky t face font-lock-string-face) 26 27 (fontified t) 27 31 (fontified t) 31 41 (fontified t face font-lock-variable-name-face) 41 44 (fontified t) 44 45 (fontified t face font-lock-string-face) 45 52 (fontified t face ((:foreground "black") (:background "#ebdbb2"))) 52 53 (rear-nonsticky t fontified t face font-lock-string-face)) #("\"#282828\"" 0 1 (fontified t face font-lock-string-face) 1 8 (fontified t face ((:foreground "white") (:background "#282828"))) 8 9 (fontified t face font-lock-string-face)) #("\"#ebdbb2\"" 0 1 (fontified t face font-lock-string-face) 1 8 (fontified t face ((:foreground "black") (:background "#ebdbb2"))) 8 9 (fontified t face font-lock-string-face)) #("#ZSH_THEME=" 0 1 (fontified t face font-lock-comment-delimiter-face) 1 10 (fontified t face font-lock-comment-face) 10 11 (fontified t face font-lock-comment-face)) "robbyrussell" #("https://github.com/ohmyzsh/ohmyzsh/wiki/Themes" 0 46 (fontified t face font-lock-comment-face)) #("pactl set-source-volume @DEFAULT_SOURCE@ +5%" 0 44 (fontified t)) "" "" #("is_mute=$(pactl get-source-mute @DEFAULT_SOURCE@ | grep 'sim' -ic)" 0 7 (fontified t face font-lock-variable-name-face) 7 10 (fontified t) 10 56 (fontified t face sh-quoted-exec) 56 61 (fontified t face sh-quoted-exec) 61 65 (fontified t face sh-quoted-exec) 65 66 (fontified t)) #("if [ \"$mute\" -eq 1 ]; then
+(setq kill-ring '(#("{ cpu_perc,	    \"^b#282828^^c#fb4934^ %.3s󰏰 \",	   NULL}," 0 1 (fontified t c-type c-not-decl) 1 2 (fontified t) 2 10 (fontified t) 10 11 (fontified t c-type c-not-decl) 11 16 (fontified t) 16 46 (fontified t face font-lock-string-face) 46 51 (fontified t) 51 55 (fontified t face font-lock-constant-face) 55 57 (fontified t)) #("	read cpu a b c previdle rest < /proc/stat
+	prevtotal=$((a+b+c+previdle))
+	sleep 0.5
+	read cpu a b c idle rest < /proc/stat
+	total=$((a+b+c+idle))
+	cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))" 0 1 (fontified t) 1 5 (fontified t face font-lock-builtin-face) 5 44 (fontified t) 44 53 (fontified t face font-lock-variable-name-face) 53 56 (fontified t) 56 71 (fontified t face sh-quoted-exec) 71 86 (fontified t) 86 90 (fontified t face font-lock-builtin-face) 90 125 (fontified t) 125 130 (fontified t face font-lock-variable-name-face) 130 133 (fontified t) 133 144 (fontified t face sh-quoted-exec) 144 148 (fontified t) 148 151 (fontified t face font-lock-variable-name-face) 151 154 (fontified t) 154 177 (fontified t face sh-quoted-exec) 177 221 (fontified t)) #("top -bn1 | grep load | awk '{printf \"%.2f%%\\t\\t\\n\", $(NF-2)}'" 0 24 (fontified t face sh-quoted-exec) 24 27 (fontified t face sh-quoted-exec) 27 58 (fontified t face sh-quoted-exec) 58 61 (fontified t face font-lock-string-face)) #("" 0 1 (fontified t face font-lock-string-face)) "top -bn1 | grep load | awk '{printf \"%.2f%%\\t\\t\\n\", $(NF-2)}'
+" #("sensors | awk '/edge/ {print$2}' | sed 's/+//'" 0 14 (face font-lock-string-face fontified t) 14 15 (face font-lock-string-face fontified t syntax-table (1)) 15 31 (face font-lock-string-face fontified t) 31 32 (face font-lock-string-face fontified t syntax-table (1)) 32 39 (face font-lock-string-face fontified t) 39 40 (face font-lock-string-face fontified t syntax-table (1)) 40 45 (face font-lock-string-face fontified t) 45 46 (face font-lock-string-face fontified t syntax-table (1))) #("#!/bin/bash
+
+muteVol=$(pactl get-sink-mute @DEFAULT_SINK@ | grep \"sim\" -ic)
+muteMic=$(pactl get-source-mute @DEFAULT_SOURCE@ | grep 'sim' -ic)
+volume=$(pactl get-sink-volume @DEFAULT_SINK@ | grep \"Volume\" | awk '{print$5}' | sed 's/%//')
+microfone=$(pactl get-source-volume @DEFAULT_SOURCE@ | grep \"Volume\" | awk '{print$5}' | sed 's/%//')
+
+if [ \"$muteVol\" -eq 1 ]; then
     icon=\"󰸈 \"
 else
     if [ \"$volume\" -le 30 ]; then
@@ -23,293 +35,15 @@ else
     elif [ \"$volume\" -ge 61 ]; then
 	icon=\"󰕾 \"
     fi
-fi" 0 2 (fontified t face font-lock-keyword-face) 2 5 (fontified t) 5 12 (fontified t face font-lock-string-face) 12 22 (fontified t) 22 26 (fontified t face font-lock-keyword-face) 26 31 (fontified t) 31 35 (fontified t face font-lock-variable-name-face) 35 36 (fontified t) 36 40 (fontified t face font-lock-string-face) 40 41 (fontified t) 41 45 (fontified t face font-lock-keyword-face) 45 50 (fontified t) 50 52 (fontified t face font-lock-keyword-face) 52 55 (fontified t) 55 64 (fontified t face font-lock-string-face) 64 75 (fontified t) 75 79 (fontified t face font-lock-keyword-face) 79 81 (fontified t) 81 85 (fontified t face font-lock-variable-name-face) 85 86 (fontified t) 86 90 (fontified t face font-lock-string-face) 90 95 (fontified t) 95 99 (fontified t face font-lock-keyword-face) 99 102 (fontified t) 102 111 (fontified t face font-lock-string-face) 111 122 (fontified t) 122 126 (fontified t face font-lock-keyword-face) 126 128 (fontified t) 128 132 (fontified t face font-lock-variable-name-face) 132 133 (fontified t) 133 137 (fontified t face font-lock-string-face) 137 142 (fontified t) 142 146 (fontified t face font-lock-keyword-face) 146 149 (fontified t) 149 158 (fontified t face font-lock-string-face) 158 169 (fontified t) 169 173 (fontified t face font-lock-keyword-face) 173 175 (fontified t) 175 179 (fontified t face font-lock-variable-name-face) 179 180 (fontified t) 180 184 (fontified t face font-lock-string-face) 184 189 (fontified t) 189 191 (fontified t face font-lock-keyword-face) 191 192 (fontified t) 192 194 (fontified t face font-lock-keyword-face)) #("volume=$(pactl get-source-volume @DEFAULT_SOURCE@ | grep \"Volume\" | awk '{print$5}' | sed 's/%//')" 0 6 (fontified t face font-lock-variable-name-face) 6 9 (fontified t) 9 57 (fontified t face sh-quoted-exec) 57 65 (fontified t face sh-quoted-exec) 65 72 (fontified t face sh-quoted-exec) 72 83 (fontified t face sh-quoted-exec) 83 90 (fontified t face sh-quoted-exec) 90 97 (fontified t face sh-quoted-exec) 97 98 (fontified t)) #("volume=$(pactl get-sink-volume @DEFAULT_SINK@ | grep \"Volume\" | awk '{print$5}' | sed 's/%//')" 0 6 (fontified t face font-lock-variable-name-face) 6 9 (fontified t) 9 53 (fontified t face sh-quoted-exec) 53 61 (fontified t face sh-quoted-exec) 61 68 (fontified t face sh-quoted-exec) 68 79 (fontified t face sh-quoted-exec) 79 86 (fontified t face sh-quoted-exec) 86 93 (fontified t face sh-quoted-exec) 93 94 (fontified t)) "  (use-package centaur-tabs
-	:ensure t
-	:demand
-	:config
-	(setq centaur-tabs-style \"box\"
-	  centaur-tabs-set-bar 'over
-	  centaur-tabs-set-modified-marker t
-	  centaur-tabs-modified-marker \"*\"
-	  centaur-tabs-set-icons t
-	  centaur-tabs-height 32)
-	(centaur-tabs-change-fonts (face-attribute 'default :font) 120)
-	(centaur-tabs-headline-match)
-	(centaur-tabs-mode t)
-	:bind
-	(\"C-x <prior>\" . centaur-tabs-backward)
-	(\"C-x <next>\" . centaur-tabs-forward)
-	:hook
-	(dashboard-mode . centaur-tabs-local-mode)
-	(vterm-mode . centaur-tabs-local-mode))" "(centaur-tabs-group-by-projectile-project)" "(use-package centaur-tabs
-  :init
-  (setq centaur-tabs-enable-key-bindings t)
-  :config
-  (setq centaur-tabs-style \"bar\"
-        centaur-tabs-height 32
-        centaur-tabs-set-icons t
-        centaur-tabs-show-new-tab-button t
-        centaur-tabs-set-modified-marker t
-        centaur-tabs-show-navigation-buttons t
-        centaur-tabs-set-bar 'under
-        centaur-tabs-show-count nil
-        ;; centaur-tabs-label-fixed-length 15
-        ;; centaur-tabs-gray-out-icons 'buffer
-        ;; centaur-tabs-plain-icons t
-        x-underline-at-descent-line t
-        centaur-tabs-left-edge-margin nil)
-  (centaur-tabs-change-fonts (face-attribute 'default :font) 110)
-  (centaur-tabs-headline-match)
-  ;; (centaur-tabs-enable-buffer-alphabetical-reordering)
-  ;; (setq centaur-tabs-adjust-buffer-order t)
-  (centaur-tabs-mode t)
-  (setq uniquify-separator \"/\")
-  (setq uniquify-buffer-name-style 'forward)
-  (defun centaur-tabs-buffer-groups ()
-    \"`centaur-tabs-buffer-groups' control buffers' group rules.
-
-Group centaur-tabs with mode if buffer is derived from `eshell-mode' `emacs-lisp-mode' `dired-mode' `org-mode' `magit-mode'.
-All buffer name start with * will group to \\\"Emacs\\\".
-Other buffer group by `centaur-tabs-get-group-name' with project name.\"
-    (list
-     (cond
-      ;; ((not (eq (file-remote-p (buffer-file-name)) nil))
-      ;; \"Remote\")
-      ((or (string-equal \"*\" (substring (buffer-name) 0 1))
-           (memq major-mode '(magit-process-mode
-                              magit-status-mode
-                              magit-diff-mode
-                              magit-log-mode
-                              magit-file-mode
-                              magit-blob-mode
-                              magit-blame-mode
-                              )))
-       \"Emacs\")
-      ((derived-mode-p 'prog-mode)
-       \"Editing\")
-      ((derived-mode-p 'dired-mode)
-       \"Dired\")
-      ((memq major-mode '(helpful-mode
-                          help-mode))
-       \"Help\")
-      ((memq major-mode '(org-mode
-                          org-agenda-clockreport-mode
-                          org-src-mode
-                          org-agenda-mode
-                          org-beamer-mode
-                          org-indent-mode
-                          org-bullets-mode
-                          org-cdlatex-mode
-                          org-agenda-log-mode
-                          diary-mode))
-       \"OrgMode\")
-      (t
-       (centaur-tabs-get-group-name (current-buffer))))))
-  :hook
-  (dashboard-mode . centaur-tabs-local-mode)
-  (term-mode . centaur-tabs-local-mode)
-  (calendar-mode . centaur-tabs-local-mode)
-  (org-agenda-mode . centaur-tabs-local-mode)
-  :bind
-  (\"C-<prior>\" . centaur-tabs-backward)
-  (\"C-<next>\" . centaur-tabs-forward)
-  (\"C-S-<prior>\" . centaur-tabs-move-current-tab-to-left)
-  (\"C-S-<next>\" . centaur-tabs-move-current-tab-to-right)
-  (:map evil-normal-state-map
-        (\"g t\" . centaur-tabs-forward)
-        (\"g T\" . centaur-tabs-backward)))" "(defun tabbar-add-tab (tabset object &optional append_ignored)
-  \"Add to TABSET a tab with value OBJECT if there isn't one there yet.
-If the tab is added, it is added at the beginning of the tab list,
-unless the optional argument APPEND is non-nil, in which case it is
-added at the end.\"
-  (let ((tabs (tabbar-tabs tabset)))
-    (if (tabbar-get-tab object tabset)
-        tabs
-      (let ((tab (tabbar-make-tab object tabset)))
-        (tabbar-set-template tabset nil)
-        (set tabset (sort (cons tab tabs)
-                          (lambda (a b) (string< (buffer-name (car a)) (buffer-name (car b))))))))))" "  (setq uniquify-separator \"/\")
-  (setq uniquify-buffer-name-style 'forward)
-  (defun centaur-tabs-buffer-groups ()
-    \"`centaur-tabs-buffer-groups' control buffers' group rules.
-
-Group centaur-tabs with mode if buffer is derived from `eshell-mode' `emacs-lisp-mode' `dired-mode' `org-mode' `magit-mode'.
-All buffer name start with * will group to \\\"Emacs\\\".
-Other buffer group by `centaur-tabs-get-group-name' with project name.\"
-    (list
-     (cond
-      ;; ((not (eq (file-remote-p (buffer-file-name)) nil))
-      ;; \"Remote\")
-      ((or (string-equal \"*\" (substring (buffer-name) 0 1))
-           (memq major-mode '(magit-process-mode
-                              magit-status-mode
-                              magit-diff-mode
-                              magit-log-mode
-                              magit-file-mode
-                              magit-blob-mode
-                              magit-blame-mode
-                              )))
-       \"Emacs\")
-      ((derived-mode-p 'prog-mode)
-       \"Editing\")
-      ((derived-mode-p 'dired-mode)
-       \"Dired\")
-      ((memq major-mode '(helpful-mode
-                          help-mode))
-       \"Help\")
-      ((memq major-mode '(org-mode
-                          org-agenda-clockreport-mode
-                          org-src-mode
-                          org-agenda-mode
-                          org-beamer-mode
-                          org-indent-mode
-                          org-bullets-mode
-                          org-cdlatex-mode
-                          org-agenda-log-mode
-                          diary-mode))
-       \"OrgMode\")
-      (t
-       (centaur-tabs-get-group-name (current-buffer))))))
-  :hook
-  (dashboard-mode . centaur-tabs-local-mode)
-  (term-mode . centaur-tabs-local-mode)
-  (calendar-mode . centaur-tabs-local-mode)
-  (org-agenda-mode . centaur-tabs-local-mode)
-  :bind
-  (\"C-<prior>\" . centaur-tabs-backward)
-  (\"C-<next>\" . centaur-tabs-forward)
-  (\"C-S-<prior>\" . centaur-tabs-move-current-tab-to-left)
-  (\"C-S-<next>\" . centaur-tabs-move-current-tab-to-right)
-  (:map evil-normal-state-map
-        (\"g t\" . centaur-tabs-forward)
-        (\"g T\" . centaur-tabs-backward)))" " (setq uniquify-separator \"/\")
-  (setq uniquify-buffer-name-style 'forward)
-  (defun centaur-tabs-buffer-groups ()
-    \"`centaur-tabs-buffer-groups' control buffers' group rules.
-
-Group centaur-tabs with mode if buffer is derived from `eshell-mode' `emacs-lisp-mode' `dired-mode' `org-mode' `magit-mode'.
-All buffer name start with * will group to \\\"Emacs\\\".
-Other buffer group by `centaur-tabs-get-group-name' with project name.\"
-    (list
-     (cond
-      ;; ((not (eq (file-remote-p (buffer-file-name)) nil))
-      ;; \"Remote\")
-      ((or (string-equal \"*\" (substring (buffer-name) 0 1))
-           (memq major-mode '(magit-process-mode
-                              magit-status-mode
-                              magit-diff-mode
-                              magit-log-mode
-                              magit-file-mode
-                              magit-blob-mode
-                              magit-blame-mode
-                              )))
-       \"Emacs\")
-      ((derived-mode-p 'prog-mode)
-       \"Editing\")
-      ((derived-mode-p 'dired-mode)
-       \"Dired\")
-      ((memq major-mode '(helpful-mode
-                          help-mode))
-       \"Help\")
-      ((memq major-mode '(org-mode
-                          org-agenda-clockreport-mode
-                          org-src-mode
-                          org-agenda-mode
-                          org-beamer-mode
-                          org-indent-mode
-                          org-bullets-mode
-                          org-cdlatex-mode
-                          org-agenda-log-mode
-                          diary-mode))
-       \"OrgMode\")
-      (t
-       (centaur-tabs-get-group-name (current-buffer))))))
-  :hook
-  (dashboard-mode . centaur-tabs-local-mode)
-  (term-mode . centaur-tabs-local-mode)
-  (calendar-mode . centaur-tabs-local-mode)
-  (org-agenda-mode . centaur-tabs-local-mode)
-  :bind
-  (\"C-<prior>\" . centaur-tabs-backward)
-  (\"C-<next>\" . centaur-tabs-forward)
-  (\"C-S-<prior>\" . centaur-tabs-move-current-tab-to-left)
-  (\"C-S-<next>\" . centaur-tabs-move-current-tab-to-right)
-  (:map evil-normal-state-map
-        (\"g t\" . centaur-tabs-forward)
-        (\"g T\" . centaur-tabs-backward)))" "; Inherit the face of `doom-modeline-panel` for better appearance
-(set-face-attribute 'tab-bar-tab nil :inherit 'doom-modeline-panel :foreground nil :background nil)
-
-;; Totally customize the format of the tab bar name
-(defun my/tab-bar-format (tab i)
-  (propertize
-   (format
-    (concat
-      (if (eq (car tab) 'current-tab)
-          \"🔥 \" \"\")
-      \"%s\")
-    (alist-get 'name tab))
-   'face (list (append
-                  '(:foreground \"#FFFFFF\")
-                  (if (eq (car tab) 'current-tab)
-                      '(:box t)
-                      '())))))
-
-;; Replace the default tab bar function
-(setq tab-bar-tab-name-format-function #'my/tab-bar-format)
-
-(defun my/tab-bar-tab-name-function ()
-  (let ((project (project-current)))
-    (if project
-        (project-root project)
-        (tab-bar-tab-name-current))))
-
-(setq tab-bar-tab-name-function #'my/tab-bar-tab-name-function)
-
-;; Only show the tab bar if there are 2 or more tabs
-(setq tab-bar-show 1)
-
-(defun my/tab-bar-string () \"HELLO\")
-
-;; Customize the tab bar format to add the global mode line string
-(setq tab-bar-format '(tab-bar-format-tabs tab-bar-separator tab-bar-format-align-right tab-bar-format-global))
-
-(add-to-list 'global-mode-string \"HELLO\")
-
-;; Make sure mode line text in the tab bar can be read
-(set-face-attribute 'tab-bar nil :foreground \"#FFFFFF\")
-
-(defun my/project-create-tab ()
-  (interactive)
-  (tab-bar-new-tab)
-  (magit-status))
-
-(setq project-switch-commands #'my/project-create-tab)
-
-(defun my/switch-to-tab-buffer ()
-  (interactive)
-  (if (project-current)
-      (call-interactively #'project-switch-to-buffer)
-    (call-interactively #'switch-to-buffer)))
-
-(global-set-key (kbd \"C-x b\") #'my/switch-to-tab-buffer)
-
-;; Turn on tab bar mode after startup
-(tab-bar-mode 1)
-
-;; Save the desktop session
-(desktop-save-mode 1)" "[[fallthrough]];" "highlight=\"#e78a4e\"" "audio-input-microphone-muted.svg" "microphone-sensitivity-muted-symbolic.svg" "microphone-sensitivity-muted.svg" "/usr/share/icons/ePapirus/24x24/panel" "audio-input-microphone.svg" "/usr/share/icons/ePapirus-Dark/16x16/devices" "microphone-disabled-symbolic.svg" "/usr/share/icons/Papirus-Dark/symbolic/status" "audio-input-microphone.svg" "" "" #("pactl get-source-mute @DEFAULT_SOURCE@ | grep 'sim' -ic" 0 23 (face sh-quoted-exec fontified t) 23 37 (face sh-quoted-exec fontified t) 37 46 (face sh-quoted-exec fontified t) 46 49 (face sh-quoted-exec fontified t) 49 51 (face sh-quoted-exec fontified t) 51 55 (face sh-quoted-exec fontified t)) #("is_mute=$(pactl get-sink-mute @DEFAULT_SINK@ | grep 'sim' -ic)
-
-if [ \"$is_mute\" -eq 1 ]; then
-    notify-send -t 3000 \"󰝟 Mute:Yes\" \"Volume mutado\" --icon=\"/usr/share/icons/ePapirus/16x16/actions/audio-volume-muted.svg\"
-else
-    notify-send -t 3000 \" Mute:No\" \"Volume desmutado\" --icon=\"/usr/share/icons/ePapirus/16x16/actions/audio-volume-high.svg\"
 fi
-" 0 7 (face font-lock-variable-name-face fontified t) 7 10 (fontified t) 10 52 (face sh-quoted-exec fontified t) 52 55 (face sh-quoted-exec fontified t) 55 57 (face sh-quoted-exec fontified t) 57 61 (face sh-quoted-exec fontified t) 61 62 (fontified t) 62 63 (fontified t) 63 64 (fontified t) 64 66 (face font-lock-keyword-face fontified t) 66 69 (fontified t) 69 79 (face font-lock-string-face fontified t) 79 85 (fontified t) 85 89 (fontified t) 89 93 (face font-lock-keyword-face fontified t) 93 94 (fontified t) 94 98 (fontified t) 98 118 (fontified t) 118 119 (face font-lock-string-face fontified t) 119 120 (face font-lock-string-face fontified t rear-nonsticky t) 120 130 (face font-lock-string-face fontified t) 130 131 (fontified t) 131 146 (face font-lock-string-face fontified t) 146 154 (fontified t) 154 195 (face font-lock-string-face fontified t) 195 216 (face font-lock-string-face fontified t) 216 217 (face font-lock-string-face rear-nonsticky t fontified t) 217 218 (face font-lock-string-face fontified t) 218 219 (fontified t) 219 223 (face font-lock-keyword-face fontified t) 223 224 (fontified t rear-nonsticky t) 224 228 (fontified t) 228 248 (fontified t) 248 249 (face font-lock-string-face fontified t) 249 250 (face font-lock-string-face rear-nonsticky t fontified t) 250 259 (face font-lock-string-face fontified t) 259 260 (fontified t) 260 278 (face font-lock-string-face fontified t) 278 286 (fontified t) 286 327 (face font-lock-string-face fontified t) 327 347 (face font-lock-string-face fontified t) 347 348 (face font-lock-string-face rear-nonsticky t fontified t) 348 349 (face font-lock-string-face fontified t rear-nonsticky t) 349 350 (fontified t) 350 352 (face font-lock-keyword-face fontified t) 352 353 (fontified t)) "" "audio-volume-high.svg" "audio-volume-muted.svg" #("/usr/share/icons/ePapirus/16x16/devices/audio-speakers.svg" 0 58 (face font-lock-string-face fontified t)) #("notify-send -t 3000 \"󰝟 $is_mute\" \"Volume mutado\" --icon=\"/usr/share/icons/ePapirus/16x16/devices/audio-speakers.svg\"" 0 20 (fontified t) 20 21 (face font-lock-string-face fontified t) 21 22 (face font-lock-string-face fontified t rear-nonsticky t) 22 32 (face font-lock-string-face fontified t) 32 33 (fontified t) 33 48 (face font-lock-string-face fontified t) 48 56 (fontified t) 56 116 (face font-lock-string-face fontified t)) "pactl get-sink-mute @DEFAULT_SINK@ | grep 'sim' -ic
-" #("pactl get-sink-mute @DEFAULT_SINK@" 0 34 (face sh-quoted-exec fontified t)) "󰝟" #("notify-send -t 3000 \" 󰝝 $volume%\" \"Aumentado +5% de volume\" --icon=\"/usr/share/icons/ePapirus/16x16/devices/audio-speakers.svg\"
-" 0 20 (fontified t) 20 34 (face font-lock-string-face fontified t) 34 35 (fontified t) 35 60 (face font-lock-string-face fontified t) 60 68 (fontified t) 68 128 (face font-lock-string-face fontified t) 128 129 (fontified t)) "#AFAF00" #("static const char c_orange[]      = \"#d65d0e\";" 0 6 (face font-lock-keyword-face fontified t) 6 7 (fontified t) 7 12 (face font-lock-keyword-face fontified t) 12 13 (fontified t) 13 16 (face font-lock-type-face fontified t) 16 17 (face font-lock-type-face c-type c-decl-id-start fontified t) 17 18 (fontified t) 18 26 (face font-lock-variable-name-face fontified t) 26 36 (fontified t) 36 45 (face font-lock-string-face fontified t) 45 46 (fontified t)) #("	{ run_command,	    \"^b#282828^^c#fb4934^%s\",		   \"sensors | awk '/edge/ {print$2}' | sed 's/+//'\"}," 0 1 (fontified t) 1 2 (c-type c-not-decl fontified t) 2 14 (fontified t) 14 15 (c-type c-not-decl fontified t) 15 20 (fontified t) 20 44 (face font-lock-string-face fontified t) 44 50 (fontified t) 50 65 (face font-lock-string-face fontified t) 65 66 (face font-lock-string-face fontified t syntax-table (1)) 66 82 (face font-lock-string-face fontified t) 82 83 (face font-lock-string-face fontified t syntax-table (1)) 83 85 (face font-lock-string-face fontified t) 85 90 (face font-lock-string-face fontified t) 90 91 (face font-lock-string-face fontified t syntax-table (1)) 91 96 (face font-lock-string-face fontified t) 96 97 (face font-lock-string-face fontified t syntax-table (1)) 97 98 (face font-lock-string-face fontified t) 98 100 (fontified t)) #("echo \"$icon $title $artist $time\"" 0 4 (face font-lock-builtin-face fontified t) 4 5 (fontified t) 5 6 (face font-lock-string-face fontified t) 6 18 (face font-lock-string-face fontified t) 18 19 (face font-lock-string-face fontified t) 19 20 (face font-lock-string-face fontified t) 20 21 (face font-lock-string-face fontified t) 21 22 (face font-lock-string-face fontified t) 22 23 (face font-lock-string-face fontified t) 23 24 (face font-lock-string-face fontified t) 24 25 (face font-lock-string-face fontified t) 25 26 (face font-lock-string-face fontified t) 26 27 (face font-lock-string-face fontified t) 27 28 (face font-lock-string-face fontified t) 28 29 (face font-lock-string-face fontified t) 29 30 (face font-lock-string-face fontified t) 30 31 (face font-lock-string-face fontified t) 31 32 (face font-lock-string-face fontified t) 32 33 (face font-lock-string-face fontified t rear-nonsticky t)) #("    artist=$(mpc -f %artist% current)
-    time=$(mpc -f %time% current)" 0 4 (fontified t) 4 10 (face font-lock-variable-name-face fontified t) 10 13 (fontified t) 13 26 (fontified t) 26 36 (fontified t) 36 38 (fontified t) 38 42 (fontified t) 42 46 (face font-lock-variable-name-face fontified t) 46 49 (fontified t) 49 60 (fontified t) 60 70 (fontified t) 70 71 (fontified t)) "mpc -f %time% current
-" "mpc -f %artist% current
-" "󰝚" "mpc -f %title% current
-" #("previewname=\"$previewdir/$(mpc --format %album% current | base64).png\"" 0 11 (face font-lock-variable-name-face fontified t) 11 12 (fontified t) 12 70 (face font-lock-string-face fontified t))))
+
+if [ \"$muteMic\" -eq 1 ]; then
+    iconMic=\" \"
+else
+    iconMic=\" \"
+fi
+
+echo \"$icon$volume% $iconMic$microfone%\"
+" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 7 (face font-lock-comment-face fontified t) 7 11 (face font-lock-keyword-face fontified t) 11 12 (face font-lock-comment-face fontified t) 12 13 (fontified t) 13 20 (face font-lock-variable-name-face fontified t) 20 23 (fontified t) 23 65 (face sh-quoted-exec fontified t) 65 70 (face sh-quoted-exec fontified t) 70 74 (face sh-quoted-exec fontified t) 74 76 (fontified t) 76 83 (face font-lock-variable-name-face fontified t) 83 86 (fontified t) 86 132 (face sh-quoted-exec fontified t) 132 137 (face sh-quoted-exec fontified t) 137 141 (face sh-quoted-exec fontified t) 141 143 (fontified t) 143 149 (face font-lock-variable-name-face fontified t) 149 152 (fontified t) 152 196 (face sh-quoted-exec fontified t) 196 204 (face sh-quoted-exec fontified t) 204 211 (face sh-quoted-exec fontified t) 211 222 (face sh-quoted-exec fontified t) 222 229 (face sh-quoted-exec fontified t) 229 236 (face sh-quoted-exec fontified t) 236 238 (fontified t) 238 247 (face font-lock-variable-name-face fontified t) 247 250 (fontified t) 250 298 (face sh-quoted-exec fontified t) 298 306 (face sh-quoted-exec fontified t) 306 313 (face sh-quoted-exec fontified t) 313 324 (face sh-quoted-exec fontified t) 324 331 (face sh-quoted-exec fontified t) 331 338 (face sh-quoted-exec fontified t) 338 341 (fontified t) 341 343 (face font-lock-keyword-face fontified t) 343 346 (fontified t) 346 356 (face font-lock-string-face fontified t) 356 366 (fontified t) 366 370 (face font-lock-keyword-face fontified t) 370 375 (fontified t) 375 379 (face font-lock-variable-name-face fontified t) 379 380 (fontified t) 380 384 (face font-lock-string-face fontified t) 384 385 (fontified t) 385 389 (face font-lock-keyword-face fontified t) 389 394 (fontified t) 394 396 (face font-lock-keyword-face fontified t) 396 399 (fontified t) 399 408 (face font-lock-string-face fontified t) 408 419 (fontified t) 419 423 (face font-lock-keyword-face fontified t) 423 425 (fontified t) 425 429 (face font-lock-variable-name-face fontified t) 429 430 (fontified t) 430 434 (face font-lock-string-face fontified t) 434 439 (fontified t) 439 443 (face font-lock-keyword-face fontified t) 443 446 (fontified t) 446 455 (face font-lock-string-face fontified t) 455 466 (fontified t) 466 470 (face font-lock-keyword-face fontified t) 470 472 (fontified t) 472 476 (face font-lock-variable-name-face fontified t) 476 477 (fontified t) 477 481 (face font-lock-string-face fontified t) 481 486 (fontified t) 486 490 (face font-lock-keyword-face fontified t) 490 493 (fontified t) 493 502 (face font-lock-string-face fontified t) 502 513 (fontified t) 513 517 (face font-lock-keyword-face fontified t) 517 519 (fontified t) 519 523 (face font-lock-variable-name-face fontified t) 523 524 (fontified t) 524 528 (face font-lock-string-face fontified t) 528 533 (fontified t) 533 535 (face font-lock-keyword-face fontified t) 535 536 (fontified t) 536 538 (face font-lock-keyword-face fontified t) 538 540 (fontified t) 540 542 (face font-lock-keyword-face fontified t) 542 545 (fontified t) 545 555 (face font-lock-string-face fontified t) 555 565 (fontified t) 565 569 (face font-lock-keyword-face fontified t) 569 574 (fontified t) 574 581 (face font-lock-variable-name-face fontified t) 581 582 (fontified t) 582 586 (face font-lock-string-face fontified t) 586 587 (fontified t) 587 591 (face font-lock-keyword-face fontified t) 591 596 (fontified t) 596 603 (face font-lock-variable-name-face fontified t) 603 604 (fontified t) 604 608 (face font-lock-string-face fontified t) 608 609 (fontified t) 609 611 (face font-lock-keyword-face fontified t) 611 613 (fontified t) 613 617 (face font-lock-builtin-face fontified t) 617 618 (fontified t) 618 653 (face font-lock-string-face fontified t) 653 654 (fontified t)) "q"))
 (setq search-ring 'nil)
 (setq regexp-search-ring '("indent" "scheme\\[SchemeNorm]\\[ColB" "updatesys" "mai"))

@@ -12,13 +12,13 @@ options="$shutdown\n$reboot\n$logout\n$suspend\n$hibernate"
 chosen="$(echo -e "$options" | dmenu -p "Power-Menu " )"
 case $chosen in
     $shutdown)
-        systemctl poweroff
+	systemctl poweroff
 	;;
     $reboot)
-        systemctl reboot
-        ;;
+	systemctl reboot
+	;;
     $logout)
-        pkill -KILL -u $USER
+	pkill -KILL -u $USER
 	;;
     $suspend)
 	systemctl suspend
