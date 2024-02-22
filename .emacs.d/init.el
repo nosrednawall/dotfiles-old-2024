@@ -57,7 +57,7 @@
  ;; If there is more than one, they won't work right.
  '(electric-indent-mode t)
  '(package-selected-packages
-   '(indent-guide rainbow-mode ggtags auto-complete web-mode elpy org-bullets counsel neotree spaceline all-the-icons centaur-tabs buffer-flip which-key gruvbox-theme try projectile dashboard use-package seq magit ess))
+   '(markdown-preview-mode markdown-mode indent-guide rainbow-mode ggtags auto-complete web-mode elpy org-bullets counsel neotree spaceline all-the-icons centaur-tabs buffer-flip which-key gruvbox-theme try projectile dashboard use-package seq magit ess))
  '(warning-suppress-types '((comp) (comp) (comp) (comp))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

@@ -23,4 +23,4 @@ else
     iconMic=" "
 fi
 
-echo "$icon$volume% $iconMic$microfone%"
+echo "$icon$volume󰏰 $iconMic$microfone󰏰 "

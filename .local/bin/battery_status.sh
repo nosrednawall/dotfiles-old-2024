@@ -12,9 +12,9 @@ battery_level=$(cat /sys/class/power_supply/BAT1/capacity)
 if [[ "$is_plugged" -eq 1 ]]; then
     icon=""
 else
-    if [ "$battery_level" -le 15 ]; then
+    if [ "$battery_level" -le 30 ]; then
 	icon=""
-    elif [ "$battery_level" -le 25 ]; then
+    elif [ "$battery_level" -le 40 ]; then
 	icon=""
     elif [ "$battery_level" -le 60 ]; then
 	icon=""
@@ -25,4 +25,4 @@ else
     fi
 fi
 
-echo "$icon $battery_level%"
+echo "$icon $battery_level󰏰 "
