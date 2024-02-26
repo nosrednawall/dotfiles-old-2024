@@ -191,6 +191,8 @@ static const Key keys[] = {
 
 	/*Meus atalhos*/
 	{ MODKEY,                       XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-atalhos-programas") },
+	{ MODKEY|ShiftMask,             XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-docker-images") },
+	{ MODKEY|ControlMask,           XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-docker-lista-funcionando") },
 	{ ControlMask|Mod1Mask,         XK_l,                           spawn,          SHCMD("~/.local/bin/slock_personalizado") },
 	/*volume pulseaudio*/
 	{ 0,                            XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume") },

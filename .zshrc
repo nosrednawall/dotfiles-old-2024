@@ -149,6 +149,8 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin/dmenu:$PATH"
 export PATH="$HOME/.local/bin/statusbar:$PATH"
+export SUDO_ASKPASS="/usr/bin/ssh-askpass"
+
 alias em="emacs -nw"
 alias nvidia="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
 #alias rm='echo "rm is disabled, use trash"'
@@ -156,3 +158,8 @@ alias nvidia="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
 alias backup123="sudo bash -c 'dd if=/dev/nvme0n1p1 | pv | gzip -1 - | dd of=/media/backup/$(date +%Y%m%d_%H%M%S)_boot.gz'"
 alias backup1234="sudo bash -c 'dd if=/dev/nvme0n1p1 | gzip > /media/backup/20240128_boot.gz'x"
 alias betterdiscord-update="DISC_CONFIG=\"\$HOME/.var/app/com.discordapp.Discord/config/discord\" && BD_ASAR=betterdiscord.asar && wget --timestamping -P \"\${DISC_CONFIG}/../BetterDiscord/data\" -- \"https://github.com/BetterDiscord/BetterDiscord/releases/latest/download/\${BD_ASAR}\" && DISC_VER=\"\$(ls --sort=time --time=creation \"\${DISC_CONFIG}\" | grep -E -m 1 '^[0-9]+\\.[0-9]+\\.[0-9]+\$')\" && echo -e \"require('../../../../BetterDiscord/data/\${BD_ASAR}');\\nmodule.exports = require('./core.asar');\" | tee \"\${DISC_CONFIG}/\${DISC_VER}/modules/discord_desktop_core/index.js\" && echo -e \"\\nBetterDiscord installed. Restart Discord if currently running.\" || echo -e \"\\nInstallation failed.\""
+
+# Alias dockers images
+alias start_postgres="sudo docker container start curso-alura-postgres-desenvolve"
+alias start_pgadmin="sudo docker container start pgadmin-docker"
+

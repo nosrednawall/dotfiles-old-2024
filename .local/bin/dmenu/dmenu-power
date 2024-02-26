@@ -12,18 +12,18 @@ options="$shutdown\n$reboot\n$logout\n$suspend\n$hibernate"
 chosen="$(echo -e "$options" | dmenu -p "Power-Menu " )"
 case $chosen in
     $shutdown)
-	systemctl poweroff
+	SUDO_ASKPASS=/usr/bin/ssh-askpass sudo -A systemctl poweroff
 	;;
     $reboot)
-	systemctl reboot
+	SUDO_ASKPASS=/usr/bin/ssh-askpass sudo -A systemctl reboot
 	;;
     $logout)
-	pkill -KILL -u $USER
+	SUDO_ASKPASS=/usr/bin/ssh-askpass sudo -A pkill -KILL -u $USER
 	;;
     $suspend)
-	systemctl suspend
+	SUDO_ASKPASS=/usr/bin/ssh-askpass sudo -A systemctl suspend
 	;;
     $hibernate)
-	systemctl hibernate
+	SUDO_ASKPASS=/usr/bin/ssh-askpass sudo -A systemctl hibernate
 	;;
 esac

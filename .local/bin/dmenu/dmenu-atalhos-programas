@@ -11,9 +11,10 @@ obsidian=" Obsidian"
 openboard="󰢐 OpenBoard"
 rstudio=" R-Studio"
 drawio="󰽉 Draw.io"
+brmodelo=" brModelo"
 
 # Variable passed to dmenu
-options="$chrome\n$thunar\n$emacs\n$spotify\n$spotube\n$telegram\n$discord\n$obsidian\n$openboard\n$rstudio\n$drawio"
+options="$chrome\n$thunar\n$emacs\n$spotify\n$spotube\n$telegram\n$discord\n$obsidian\n$openboard\n$rstudio\n$drawio\n$brmodelo"
 
 chosen="$(echo -e "$options" | dmenu -p "Scripts de monitor " )"
 case $chosen in
@@ -49,5 +50,8 @@ case $chosen in
 	;;
      $drawio)
 	 flatpak run com.jgraph.drawio.desktop
-	;;
+	 ;;
+     $brmodelo)
+	 java -jar ~/.programas/brmodelo/brModelo.jar
+	 ;;
 esac
