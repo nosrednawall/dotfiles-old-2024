@@ -92,6 +92,7 @@ static const struct arg args[] = {
 	//{ battery_perc,	    "^b#282828^^c#b16286^  %s󰏰 ",	   "BAT1" },
 	{ run_command,	    "^b#282828^^c#b16286^ %s",		   "bash ~/.local/bin/battery_status.sh" },
 	{ run_command,	    "^b#282828^^c#dfbf8e^ %s",		   "bash ~/.local/bin/volume_icon.sh" },
+	{ run_command,      "^b#282828^^c#45858b^ 󰌌 %s",           "setxkbmap -query | grep layout | awk '{print$2}'"},
 	{ run_command,	    "^b#282828^^c#d65d0e^  %s",	   "date +'%a %d %b %Y'" },
 	{ run_command,	    "^b#282828^^c#689d6a^ 󰥔 %s ",	   "date +'%H:%M'"},
 };

@@ -219,7 +219,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_q,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-power" ) },
 	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
 	{ MODKEY,			XK_e,				spawn,		SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
-	{ MODKEY,                       XK_w,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pulseaudio-sink") }
+	{ MODKEY,                       XK_w,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pulseaudio-sink") },
+	{ MODKEY,                       XK_k,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-teclados") }
 };
 
 

@@ -10,15 +10,140 @@
 (setq compile-history '("make -k "))
 (setq shell-command-history '("/usr/bin/zsh" "/usr/bin/bash"))
 (setq magit-revision-history '(#("5ad9048" 0 7 (ivy-index 0)) #("9e4e37a8e58c4c2695feeb6ce1223b8849c5f7f7" 0 40 (ivy-index 0)) #("e5b577f5f6a6135f1566bf97f4a4c1a2ea06af15" 0 40 (ivy-index 0)) #("HEAD" 0 4 (ivy-index 3)) #("main" 0 4 (ivy-index 0)) #("origin/main" 0 11 (ivy-index 0)) #("1a51c1d" 0 7 (ivy-index 0)) #("ola mundo" 0 9 (ivy-index 0))))
-(setq ido-file-history '("aula001.sql" "init.el" "emacs.org" "myinit.org" nil "tabela_funcionarios.sql" "tabela_aluno.sql" "README.md" "dunstrc" "cpu_status.sh" "." "music_status_bar.sh" "volume_icon.sh" "battery_status.sh" "advinha_mais.html" "estrelas.html" "media_idades_familiares.html" "media_idades_familiares.hml" "tabuada.html" "ano_copa.html" "jogo_advinha.html" "futebol.html" "imc.html" "programa.html" "texto_puro.html" "primeiro_teste.html"))
+(setq ido-file-history '("dmenu-teclados" "aula001.sql" "init.el" "emacs.org" "myinit.org" nil "tabela_funcionarios.sql" "tabela_aluno.sql" "README.md" "dunstrc" "cpu_status.sh" "." "music_status_bar.sh" "volume_icon.sh" "battery_status.sh" "advinha_mais.html" "estrelas.html" "media_idades_familiares.html" "media_idades_familiares.hml" "tabuada.html" "ano_copa.html" "jogo_advinha.html" "futebol.html" "imc.html" "programa.html" "texto_puro.html" "primeiro_teste.html"))
 (setq minibuffer-history '("/usr/bin/zsh" "select * from curso;" "select * from cursos;" "/usr/bin/bash"))
-(setq ivy-history '(#("~/.dotfiles/" 0 12 (ivy-index 0)) #("emacsql-psql" 0 12 (ivy-index 13)) #("index.html" 0 10 (ivy-index 0)) #("myterminal-controls" 0 19 (ivy-index 10)) #("origin" 0 6 (ivy-index 0)) #("./" 0 2 (ivy-index 0)) #("... (choose a dir)" 0 18 (ivy-index 1)) #("electric-indent-mode" 0 20 (ivy-index 14)) #("indent-guide" 0 12 (ivy-index 0)) #("web-mode-indent-style" 0 21 (ivy-index 0)) #("rainbow-mode" 0 12 (ivy-index 3))))
-(setq counsel-M-x-history '(#("^sql" 0 4 (ivy-index 1)) "sql-postgres" #("^sql-pos" 0 8 (ivy-index 0)) #("^term" 0 5 (ivy-index 0)) "term" #("^ansi" 0 5 (ivy-index 1)) "ansi-term" #("^rainbo" 0 7 (ivy-index 0)) "rainbow-mode" #("^conf-mo" 0 8 (ivy-index 0)) "conf-mode" #("linu" 0 4 (ivy-index 0)) "linum-mode" #("^sql-hel" 0 8 (ivy-index 0)) "sql-help" #("^sql-set" 0 8 (ivy-index 1)) "sql-set-sqli-buffer" "sql-set-product" #("^sql-mode" 0 9 (ivy-index 0)) "sql-mode" #("^try" 0 4 (ivy-index 1)) "try" #("^ter" 0 4 (ivy-index 0)) #("^markdown-pre" 0 13 (ivy-index 0)) "markdown-preview-cleanup" #("^markdown-previ" 0 15 (ivy-index 1)) "markdown-preview" "markdown-preview-mode" "markdown-preview-open-browser" #("^markdown-vi" 0 12 (ivy-index 0)) "markdown-view-mode" #("^markdown-v" 0 11 (ivy-index 0)) #("^markdown-p" 0 11 (ivy-index 0)) #("^markdown-mode" 0 14 (ivy-index 2)) "markdown-mode" #("^markdo" 0 7 (ivy-index 2)) #("^ra" 0 3 (ivy-index 1)) #("^conf-mod" 0 9 (ivy-index 0)) #("^myter" 0 6 (ivy-index 1)) "myterminal-controls-open-controls" #("^rain" 0 5 (ivy-index 0)) #("^magit-rebase" 0 13 (ivy-index 2)) "magit-rebase" #("^magit-log-current" 0 18 (ivy-index 0)) "magit-log-current" #("^magit-log --g" 0 14 (ivy-index 0)) "magit-log:--grep" #("^magit-lo" 0 9 (ivy-index 1)) "magit-log:-G" #("^magit-log" 0 10 (ivy-index 8)) "magit-log" #("^centaur-tabs-mode" 0 18 (ivy-index 0)) "centaur-tabs-mode" #("^centaur-tabs-g" 0 15 (ivy-index 0)) "centaur-tabs-group-buffer-groups" #("^magit-merge" 0 12 (ivy-index 3)) "magit-merge" #("^magit-status" 0 13 (ivy-index 2)) "magit-status" #("^rainb" 0 6 (ivy-index 0)) #("^ansi-" 0 6 (ivy-index 1)) #("^conf-mode" 0 10 (ivy-index 0)) #("^magit-stat" 0 11 (ivy-index 2)) #("^ansi-te" 0 8 (ivy-index 0)) #("^java" 0 5 (ivy-index 1)) "javascript-mode" #("^customize-va" 0 13 (ivy-index 0)) "customize-variable" #("^indent-gui" 0 11 (ivy-index 0)) "indent-guide-mode" #("^package-install" 0 16 (ivy-index 0)) "package-install" #("^package-lis" 0 12 (ivy-index 0)) "package-list-packages" #("^web-mode" 0 9 (ivy-index 82)) "web-mode" #("ansi" 0 4 (ivy-index 2)) #("^cua" 0 4 (ivy-index 5)) "cua-toggle-rectangle-mark" "cua-paste" "cua-paste-pop" "cua-cut-region" #("^cua-sc" 0 7 (ivy-index 1)) "cua-scroll-down" #("^cua-s" 0 6 (ivy-index 2)) "cua-selection-mode"))
+(setq ivy-history '(#("origin" 0 6 (ivy-index 0)) #("~/.dotfiles/" 0 12 (ivy-index 0)) #("emacsql-psql" 0 12 (ivy-index 13)) #("index.html" 0 10 (ivy-index 0)) #("myterminal-controls" 0 19 (ivy-index 10)) #("./" 0 2 (ivy-index 0)) #("... (choose a dir)" 0 18 (ivy-index 1)) #("electric-indent-mode" 0 20 (ivy-index 14)) #("indent-guide" 0 12 (ivy-index 0)) #("web-mode-indent-style" 0 21 (ivy-index 0)) #("rainbow-mode" 0 12 (ivy-index 3))))
+(setq counsel-M-x-history '(#("^rain" 0 5 (ivy-index 0)) "rainbow-mode" #("^sql" 0 4 (ivy-index 1)) "sql-postgres" #("^sql-pos" 0 8 (ivy-index 0)) #("^term" 0 5 (ivy-index 0)) "term" #("^ansi" 0 5 (ivy-index 1)) "ansi-term" #("^rainbo" 0 7 (ivy-index 0)) #("^conf-mo" 0 8 (ivy-index 0)) "conf-mode" #("linu" 0 4 (ivy-index 0)) "linum-mode" #("^sql-hel" 0 8 (ivy-index 0)) "sql-help" #("^sql-set" 0 8 (ivy-index 1)) "sql-set-sqli-buffer" "sql-set-product" #("^sql-mode" 0 9 (ivy-index 0)) "sql-mode" #("^try" 0 4 (ivy-index 1)) "try" #("^ter" 0 4 (ivy-index 0)) #("^markdown-pre" 0 13 (ivy-index 0)) "markdown-preview-cleanup" #("^markdown-previ" 0 15 (ivy-index 1)) "markdown-preview" "markdown-preview-mode" "markdown-preview-open-browser" #("^markdown-vi" 0 12 (ivy-index 0)) "markdown-view-mode" #("^markdown-v" 0 11 (ivy-index 0)) #("^markdown-p" 0 11 (ivy-index 0)) #("^markdown-mode" 0 14 (ivy-index 2)) "markdown-mode" #("^markdo" 0 7 (ivy-index 2)) #("^ra" 0 3 (ivy-index 1)) #("^conf-mod" 0 9 (ivy-index 0)) #("^myter" 0 6 (ivy-index 1)) "myterminal-controls-open-controls" #("^magit-rebase" 0 13 (ivy-index 2)) "magit-rebase" #("^magit-log-current" 0 18 (ivy-index 0)) "magit-log-current" #("^magit-log --g" 0 14 (ivy-index 0)) "magit-log:--grep" #("^magit-lo" 0 9 (ivy-index 1)) "magit-log:-G" #("^magit-log" 0 10 (ivy-index 8)) "magit-log" #("^centaur-tabs-mode" 0 18 (ivy-index 0)) "centaur-tabs-mode" #("^centaur-tabs-g" 0 15 (ivy-index 0)) "centaur-tabs-group-buffer-groups" #("^magit-merge" 0 12 (ivy-index 3)) "magit-merge" #("^magit-status" 0 13 (ivy-index 2)) "magit-status" #("^rainb" 0 6 (ivy-index 0)) #("^ansi-" 0 6 (ivy-index 1)) #("^conf-mode" 0 10 (ivy-index 0)) #("^magit-stat" 0 11 (ivy-index 2)) #("^ansi-te" 0 8 (ivy-index 0)) #("^java" 0 5 (ivy-index 1)) "javascript-mode" #("^customize-va" 0 13 (ivy-index 0)) "customize-variable" #("^indent-gui" 0 11 (ivy-index 0)) "indent-guide-mode" #("^package-install" 0 16 (ivy-index 0)) "package-install" #("^package-lis" 0 12 (ivy-index 0)) "package-list-packages" #("^web-mode" 0 9 (ivy-index 82)) "web-mode" #("ansi" 0 4 (ivy-index 2)) #("^cua" 0 4 (ivy-index 5)) "cua-toggle-rectangle-mark" "cua-paste" "cua-paste-pop" "cua-cut-region" #("^cua-sc" 0 7 (ivy-index 1)) "cua-scroll-down" #("^cua-s" 0 6 (ivy-index 2)) "cua-selection-mode"))
 (setq swiper-history '(#("indent" 0 6 (ivy-index 16)) #("   indent-guide                   20160630       available    melpa-stable show vertical lines to guide indentation" 0 1 (display "1665 " swiper-line-number 1665) 1 3 (tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))] tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil)) 3 15 (tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))] tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-column-name "Package" action package-menu-describe-package package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) follow-link t font-lock-face package-name face package-name category default-button button (t)) 15 16 (tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))] tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-column-name "Package") 16 34 (tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))] tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-column-name "Package" display (space :align-to 33)) 34 42 (tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))] tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-column-name "Version" help-echo #("Version: 20160630" 9 17 (font-lock-face package-status-available)) font-lock-face package-status-available) 42 43 (tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))] tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-column-name "Version") 43 49 (tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))] tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-column-name "Version" display (space :align-to 48)) 49 58 (tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))] tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-column-name "Status" help-echo #("Status: available" 8 17 (font-lock-face package-status-available)) font-lock-face package-status-available) 58 59 (tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))] tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-column-name "Status") 59 62 (tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))] tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-column-name "Status" display (space :align-to 61)) 62 69 (tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))] tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-column-name "Archive" help-echo #("Archive: melpa-stable" 9 21 (font-lock-face package-status-available)) font-lock-face package-status-available) 69 74 (tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))] tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-column-name "Archive" help-echo #("Archive: melpa-stable" 9 21 (font-lock-face package-status-available)) display "…" font-lock-face package-status-available) 74 75 (tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))] tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-column-name "Archive") 75 115 (tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))] tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-column-name "Description" help-echo #("Description: show vertical lines to guide indentation" 13 53 (font-lock-face package-description)) font-lock-face package-description)) "scheme[SchemeNorm][ColBg" #("scheme[SchemeNorm][ColB" 0 23 (ivy-index 8)) #(" 	XSetForeground(dpy, drw->gc, scheme[SchemeNorm][ColBg].pixel);" 0 1 (display "2761 " swiper-line-number 2761) 1 2 (c-is-sws t fontified t) 2 3 (fontified t c-is-sws t) 3 49 (fontified t) 49 50 (fontified t) 50 51 (fontified t) 51 52 (fontified t) 52 53 (fontified t) 53 54 (fontified t) 54 55 (fontified t) 55 56 (fontified t) 56 57 (fontified t) 57 58 (fontified t) 58 59 (fontified t) 59 60 (fontified t) 60 61 (fontified t) 61 62 (fontified t) 62 63 (fontified t) 63 64 (rear-nonsticky t fontified t)) #("updatesys" 0 9 (ivy-index 18)) #(" updatesystray(void)" 0 1 (display "2700 " swiper-line-number 2700) 1 14 (face font-lock-function-name-face fontified t) 14 15 (c-type c-decl-arg-start fontified t) 15 19 (face font-lock-type-face fontified t) 19 20 (fontified t)) #("mai" 0 3 (ivy-index 0)) #(" main(int argc, char *argv[])" 0 1 (display "814 " swiper-line-number 814) 1 5 (face font-lock-function-name-face fontified t) 5 6 (c-type c-decl-arg-start fontified t) 6 9 (face font-lock-type-face fontified t) 9 10 (fontified t) 10 14 (face font-lock-variable-name-face fontified t) 14 15 (c-type c-decl-arg-start fontified t) 15 16 (fontified t) 16 20 (face font-lock-type-face fontified t) 20 22 (fontified t) 22 26 (face font-lock-variable-name-face fontified t) 26 29 (fontified t))))
 (setq ido-buffer-history '("tabela_funcionarios.sql" "aula001.sql" "banco-inicial.sql" "*SQL: Postgres*" "dmenu-docker-compose.sh" "config.def.h" "HELLO" "index.theme" "icon-theme.cache" "]" "action-unavailable-symbolic.svg" "*terminal*" "autostart.sh" "dmenu-window" "dmenu-power" "dmenu-docker-images" "battery_status.sh" "emacs.org" "init.el" "dunstrc" "*Compile-Log*" "*ansi-term*" "picom.conf" "index.html" "config.mk" "Untitled<2>" "Untitled<3>" "Untitled" "myinit.org" "config" "muta_microfone" "config.def.h<.dwm>" "block-battery" "dwmbar-powerline" "diminui_volume" "muta_volume" "*scratch*" "*Messages*" "*Async-native-compile-log*" "*Warnings*" "magit-process: .dotfiles" "magit: .dotfiles" "volume_icon.sh" "app.js" "x.c" "x.c.rej" "config.def.h.rej" "config.def.h<st>"))
-(setq file-name-history '(#("/home/anderson/.dotfiles/.local/bin/dmenu/dmenu-docker-lista-funcionando" 0 72 (ivy-index 0)) #("/home/anderson/.dotfiles/.local/bin/dmenu/dmenu-atalhos-programas" 0 65 (ivy-index 0)) #("/home/anderson/.dotfiles/.local/bin/dmenu/dmenu-docker-images" 0 61 (ivy-index 4)) #("/home/anderson/dmenu-docker-compose.sh" 0 38 (ivy-index 2)) #("/home/anderson/.dotfiles/.dwm/config.def.h" 0 42 (ivy-index 0)) "/home/anderson/.emacs.d/init.el" "/home/anderson/.emacs.d/emacs.org" "/home/anderson/.emacs.d/myinit.org" #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/007_PostgreSQL/tabela_funcionarios.sql" 0 99 (ivy-index 9)) #("/home/anderson/.dwm/autostart.sh" 0 32 (ivy-index 0)) "/home/anderson/.dotfiles/.config/dunst/dunstrc" #("/home/anderson/.local/bin/volume_icon.sh" 0 40 (ivy-index 6)) #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/index.html" 0 102 (ivy-index 7)) #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/app.js" 0 98 (ivy-index 3)) #("/home/anderson/.config/picom.conf" 0 33 (ivy-index 3)) #("/home/anderson/.dotfiles/.dwm/" 0 30 (ivy-index 0)) #("/home/anderson/.dotfiles/.Xresources" 0 36 (ivy-index 0)) #("/home/anderson/.config/st/config.def.h" 0 38 (ivy-index 0)) "~/.dotfiles/.emacs.d/init.el"))
+(setq file-name-history '(#("/home/anderson/.dotfiles/.local/bin/dmenu/" 0 42 (ivy-index 2)) #("/home/anderson/.emacs.d/emacs.org" 0 33 (ivy-index 3)) #("/home/anderson/.dotfiles/.local/bin/dmenu/dmenu-docker-lista-funcionando" 0 72 (ivy-index 0)) #("/home/anderson/.dotfiles/.local/bin/dmenu/dmenu-atalhos-programas" 0 65 (ivy-index 0)) #("/home/anderson/.dotfiles/.local/bin/dmenu/dmenu-docker-images" 0 61 (ivy-index 4)) #("/home/anderson/dmenu-docker-compose.sh" 0 38 (ivy-index 2)) #("/home/anderson/.dotfiles/.dwm/config.def.h" 0 42 (ivy-index 0)) "/home/anderson/.emacs.d/init.el" "/home/anderson/.emacs.d/myinit.org" #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/007_PostgreSQL/tabela_funcionarios.sql" 0 99 (ivy-index 9)) #("/home/anderson/.dwm/autostart.sh" 0 32 (ivy-index 0)) "/home/anderson/.dotfiles/.config/dunst/dunstrc" #("/home/anderson/.local/bin/volume_icon.sh" 0 40 (ivy-index 6)) #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/index.html" 0 102 (ivy-index 7)) #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/app.js" 0 98 (ivy-index 3)) #("/home/anderson/.config/picom.conf" 0 33 (ivy-index 3)) #("/home/anderson/.dotfiles/.dwm/" 0 30 (ivy-index 0)) #("/home/anderson/.dotfiles/.Xresources" 0 36 (ivy-index 0)) #("/home/anderson/.config/st/config.def.h" 0 38 (ivy-index 0)) "~/.dotfiles/.emacs.d/init.el"))
 (setq projectile-project-command-history '#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ()))
-(setq kill-ring '("A9w@arM4AY3u*%" "INSERT INTO aluno (primeiro_nome, ultimo_nome, data_nascimento) VALUES (
+(setq kill-ring '("󰌌" "setxkbmap -query | grep layout | awk '{print$2}'
+" "setxkbmap" #("	{ MODKEY,                       XK_w,                           spawn,          SHCMD(\"~/.local/bin/dmenu/dmenu-pulseaudio-sink\") }" 0 1 (fontified t) 1 2 (fontified t c-type c-not-decl) 2 9 (fontified t) 9 10 (fontified t c-type c-not-decl) 10 37 (fontified t) 37 38 (fontified t c-type c-not-decl) 38 70 (fontified t) 70 71 (fontified t c-type c-not-decl) 71 87 (fontified t) 87 129 (fontified t face font-lock-string-face) 129 132 (fontified t)) "keyboard.svg" #("usr/share/icons/ePapirus/16x16/devices/computer-laptop.svg" 0 58 (face font-lock-string-face)) "󰌌" "setxkbmap -model pc105 -layout us" "setxkbmap -model pc105 -layout br -variant abnt2
+" #("#!/bin/bash
+
+casa=\"󰍹  Monitor Externo\"
+notebook=\"  Notebook\"
+noite=\"󱩍 Noite\"
+dia=\"󰛨 Dia\"
+tabletwaconhdmi=\"󰓶 Tablet Wacon HDMI\"
+tabletwaconnotebook=\"󰓶 Tablet Wacon Notebook\"
+
+# Variable passed to dmenu
+options=\"$casa\\n$notebook\\n$dia\\n$noite\\n$tabletwaconhdmi\\n$tabletwaconnotebook\"
+
+chosen=\"$(echo -e \"$options\" | dmenu -p \"Scripts de monitor \" )\"
+case $chosen in
+    $casa)
+	xrandr --output HDMI-0 --auto --rotate normal --dpi 96 --output eDP-1-1 --primary --auto --rotate normal --dpi 96 --left-of HDMI-0
+	notify-send -t 3000 \"󰡁 HDMI Inserido\" \"Adicionado tela via HDMI\" --icon=\"/usr/share/icons/ePapirus/16x16/devices/computer.svg\"
+	;;
+    $notebook)
+	xrandr --output HDMI-0 --off --output eDP-1-1 --primary --auto --rotate normal --dpi 96
+	notify-send -t 3000 \"  Modo Laptop\" \"Alterado tela para modo Laptop\" --icon=\"/usr/share/icons/ePapirus/16x16/devices/computer-laptop.svg\"
+	;;
+    $dia)
+	redshift -P -O 6500
+	notify-send -t 3000 \"󰛨 Modo Diurno\" \"Alterado o brilho da tela para o modo diurno\" --icon=\"/usr/share/icons/ePapirus/16x16/actions/colors-chromablue.svg\"
+	;;
+    $noite)
+	redshift -P -O 4500
+	notify-send -t 3000 \"󱩍 Modo noturno\" \"Alterado o brilho da tela para o modo noturno\" --icon=\"/usr/share/icons/ePapirus/16x16/actions/redeyes.svg\"
+	;;
+    $tabletwaconhdmi)
+	/home/anderson/.local/bin/mapwacon.sh -d \"Wacom Intuos S Pen stylus\" -s \"HDMI-0\"
+	notify-send -t 3000 \"󰓶 Tablet Wacon HDMI\" \"Configurado a área do tablet wacon para a tela HDMI\" --icon=\"/usr/share/icons/ePapirus/16x16/devices/input-tablet.svg\"
+	;;
+    $tabletwaconnotebook)
+	/home/anderson/.local/bin/mapwacon.sh -d \"Wacom Intuos S Pen stylus\" -s \"eDP-1-1\"
+	notify-send -t 3000 \"󰓶 Tablet Wacon Notebook\" \"Configurado a área do tablet wacon para a tela do Notebook\" --icon=\"/usr/share/icons/ePapirus/16x16/devices/input-tablet.svg\"
+	;;
+esac
+]
+" 0 1 (fontified t face font-lock-comment-delimiter-face) 1 7 (fontified t face font-lock-comment-face) 7 11 (fontified t face font-lock-keyword-face) 11 12 (fontified t face font-lock-comment-face) 12 13 (fontified t) 13 17 (fontified t face font-lock-variable-name-face) 17 18 (fontified t) 18 38 (fontified t face font-lock-string-face) 38 39 (fontified t) 39 47 (fontified t face font-lock-variable-name-face) 47 48 (fontified t) 48 61 (fontified t face font-lock-string-face) 61 62 (fontified t) 62 67 (fontified t face font-lock-variable-name-face) 67 68 (fontified t) 68 77 (fontified t face font-lock-string-face) 77 78 (fontified t) 78 81 (fontified t face font-lock-variable-name-face) 81 82 (fontified t) 82 89 (fontified t face font-lock-string-face) 89 90 (fontified t) 90 105 (fontified t face font-lock-variable-name-face) 105 106 (fontified t) 106 127 (fontified t face font-lock-string-face) 127 128 (fontified t) 128 147 (fontified t face font-lock-variable-name-face) 147 148 (fontified t) 148 173 (fontified t face font-lock-string-face) 173 175 (fontified t) 175 177 (fontified t face font-lock-comment-delimiter-face) 177 202 (fontified t face font-lock-comment-face) 202 209 (fontified t face font-lock-variable-name-face) 209 210 (fontified t) 210 282 (fontified t face font-lock-string-face) 282 284 (fontified t) 284 290 (fontified t face font-lock-variable-name-face) 290 291 (fontified t) 291 294 (fontified t face font-lock-string-face) 294 302 (fontified t face sh-quoted-exec) 302 303 (fontified t syntax-table (1) face sh-quoted-exec) 303 311 (fontified t face sh-quoted-exec) 311 312 (fontified t syntax-table (1) face sh-quoted-exec) 312 324 (fontified t face sh-quoted-exec) 324 325 (fontified t syntax-table (1) face sh-quoted-exec) 325 344 (fontified t face sh-quoted-exec) 344 345 (fontified t syntax-table (1) face sh-quoted-exec) 345 346 (fontified t face sh-quoted-exec) 346 348 (fontified t face font-lock-string-face) 348 349 (fontified t) 349 353 (fontified t face font-lock-keyword-face) 353 355 (fontified t) 355 361 (fontified t face font-lock-variable-name-face) 361 362 (fontified t face font-lock-keyword-face) 362 364 (fontified t syntax-multiline t face font-lock-keyword-face) 364 370 (fontified t syntax-multiline t) 370 374 (fontified t syntax-multiline t face font-lock-variable-name-face) 374 375 (fontified t syntax-multiline t syntax-table (1)) 375 529 (fontified t) 529 546 (fontified t face font-lock-string-face) 546 547 (fontified t) 547 573 (fontified t face font-lock-string-face) 573 581 (fontified t) 581 635 (fontified t face font-lock-string-face) 635 637 (fontified t) 637 645 (fontified t syntax-multiline t) 645 653 (fontified t syntax-multiline t face font-lock-variable-name-face) 653 654 (fontified t syntax-multiline t syntax-table (1)) 654 765 (fontified t) 765 781 (fontified t face font-lock-string-face) 781 782 (fontified t) 782 814 (fontified t face font-lock-string-face) 814 822 (fontified t) 822 883 (fontified t face font-lock-string-face) 883 885 (fontified t) 885 893 (fontified t syntax-multiline t) 893 896 (fontified t syntax-multiline t face font-lock-variable-name-face) 896 897 (fontified t syntax-multiline t syntax-table (1)) 897 940 (fontified t) 940 955 (fontified t face font-lock-string-face) 955 956 (fontified t) 956 1002 (fontified t face font-lock-string-face) 1002 1010 (fontified t) 1010 1073 (fontified t face font-lock-string-face) 1073 1075 (fontified t) 1075 1083 (fontified t syntax-multiline t) 1083 1088 (fontified t syntax-multiline t face font-lock-variable-name-face) 1088 1089 (fontified t syntax-multiline t syntax-table (1)) 1089 1132 (fontified t) 1132 1148 (fontified t face font-lock-string-face) 1148 1149 (fontified t) 1149 1196 (fontified t face font-lock-string-face) 1196 1204 (fontified t) 1204 1257 (fontified t face font-lock-string-face) 1257 1259 (fontified t) 1259 1267 (fontified t syntax-multiline t) 1267 1282 (fontified t syntax-multiline t face font-lock-variable-name-face) 1282 1283 (fontified t syntax-multiline t syntax-table (1)) 1283 1326 (fontified t) 1326 1353 (fontified t face font-lock-string-face) 1353 1357 (fontified t) 1357 1365 (fontified t face font-lock-string-face) 1365 1387 (fontified t) 1387 1408 (fontified t face font-lock-string-face) 1408 1409 (fontified t) 1409 1462 (fontified t face font-lock-string-face) 1462 1470 (fontified t) 1470 1500 (fontified t face font-lock-string-face) 1500 1528 (fontified t face font-lock-string-face) 1528 1529 (fontified t) 1529 1530 (fontified t) 1530 1538 (fontified t syntax-multiline t) 1538 1557 (fontified t syntax-multiline t face font-lock-variable-name-face) 1557 1558 (fontified t syntax-multiline t syntax-table (1)) 1558 1601 (fontified t) 1601 1628 (fontified t face font-lock-string-face) 1628 1632 (fontified t) 1632 1641 (fontified t face font-lock-string-face) 1641 1663 (fontified t) 1663 1688 (fontified t face font-lock-string-face) 1688 1689 (fontified t) 1689 1749 (fontified t face font-lock-string-face) 1749 1757 (fontified t) 1757 1815 (fontified t face font-lock-string-face) 1815 1820 (fontified t) 1820 1824 (fontified t face font-lock-keyword-face) 1824 1827 (fontified t)) #("#!/bin/bash
+
+casa=\"󰍹  Monitor Externo\"
+notebook=\"  Notebook\"
+noite=\"󱩍 Noite\"
+dia=\"󰛨 Dia\"
+tabletwaconhdmi=\"󰓶 Tablet Wacon HDMI\"
+tabletwaconnotebook=\"󰓶 Tablet Wacon Notebook\"
+
+# Variable passed to dmenu
+options=\"$casa\\n$notebook\\n$dia\\n$noite\\n$tabletwaconhdmi\\n$tabletwaconnotebook\"
+
+chosen=\"$(echo -e \"$options\" | dmenu -p \"Scripts de monitor \" )\"
+case $chosen in
+    $casa)
+	xrandr --output HDMI-0 --auto --rotate normal --dpi 96 --output eDP-1-1 --primary --auto --rotate normal --dpi 96 --left-of HDMI-0
+	notify-send -t 3000 \"󰡁 HDMI Inserido\" \"Adicionado tela via HDMI\" --icon=\"/usr/share/icons/ePapirus/16x16/devices/computer.svg\"
+	;;
+    $notebook)
+	xrandr --output HDMI-0 --off --output eDP-1-1 --primary --auto --rotate normal --dpi 96
+	notify-send -t 3000 \"  Modo Laptop\" \"Alterado tela para modo Laptop\" --icon=\"/usr/share/icons/ePapirus/16x16/devices/computer-laptop.svg\"
+	;;
+    $dia)
+	redshift -P -O 6500
+	notify-send -t 3000 \"󰛨 Modo Diurno\" \"Alterado o brilho da tela para o modo diurno\" --icon=\"/usr/share/icons/ePapirus/16x16/actions/colors-chromablue.svg\"
+	;;
+    $noite)
+	redshift -P -O 4500
+	notify-send -t 3000 \"󱩍 Modo noturno\" \"Alterado o brilho da tela para o modo noturno\" --icon=\"/usr/share/icons/ePapirus/16x16/actions/redeyes.svg\"
+	;;
+    $tabletwaconhdmi)
+	/home/anderson/.local/bin/mapwacon.sh -d \"Wacom Intuos S Pen stylus\" -s \"HDMI-0\"
+	notify-send -t 3000 \"󰓶 Tablet Wacon HDMI\" \"Configurado a área do tablet wacon para a tela HDMI\" --icon=\"/usr/share/icons/ePapirus/16x16/devices/input-tablet.svg\"
+	;;
+    $tabletwaconnotebook)
+	/home/anderson/.local/bin/mapwacon.sh -d \"Wacom Intuos S Pen stylus\" -s \"eDP-1-1\"
+	notify-send -t 3000 \"󰓶 Tablet Wacon Notebook\" \"Configurado a área do tablet wacon para a tela do Notebook\" --icon=\"/usr/share/icons/ePapirus/16x16/devices/input-tablet.svg\"
+	;;
+esac
+" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 7 (face font-lock-comment-face fontified t) 7 11 (face font-lock-keyword-face fontified t) 11 12 (face font-lock-comment-face fontified t) 12 13 (fontified t) 13 17 (face font-lock-variable-name-face fontified t) 17 18 (fontified t) 18 38 (face font-lock-string-face fontified t) 38 39 (fontified t) 39 47 (face font-lock-variable-name-face fontified t) 47 48 (fontified t) 48 61 (face font-lock-string-face fontified t) 61 62 (fontified t) 62 67 (face font-lock-variable-name-face fontified t) 67 68 (fontified t) 68 77 (face font-lock-string-face fontified t) 77 78 (fontified t) 78 81 (face font-lock-variable-name-face fontified t) 81 82 (fontified t) 82 89 (face font-lock-string-face fontified t) 89 90 (fontified t) 90 105 (face font-lock-variable-name-face fontified t) 105 106 (fontified t) 106 127 (face font-lock-string-face fontified t) 127 128 (fontified t) 128 147 (face font-lock-variable-name-face fontified t) 147 148 (fontified t) 148 173 (face font-lock-string-face fontified t) 173 175 (fontified t) 175 177 (face font-lock-comment-delimiter-face fontified t) 177 202 (face font-lock-comment-face fontified t) 202 209 (face font-lock-variable-name-face fontified t) 209 210 (fontified t) 210 282 (face font-lock-string-face fontified t) 282 284 (fontified t) 284 290 (face font-lock-variable-name-face fontified t) 290 291 (fontified t) 291 294 (face font-lock-string-face fontified t) 294 302 (face sh-quoted-exec fontified t) 302 303 (face sh-quoted-exec syntax-table (1) fontified t) 303 311 (face sh-quoted-exec fontified t) 311 312 (face sh-quoted-exec syntax-table (1) fontified t) 312 324 (face sh-quoted-exec fontified t) 324 325 (face sh-quoted-exec syntax-table (1) fontified t) 325 344 (face sh-quoted-exec fontified t) 344 345 (face sh-quoted-exec syntax-table (1) fontified t) 345 346 (face sh-quoted-exec fontified t) 346 348 (face font-lock-string-face fontified t) 348 349 (fontified t) 349 353 (face font-lock-keyword-face fontified t) 353 355 (fontified t) 355 361 (face font-lock-variable-name-face fontified t) 361 362 (face font-lock-keyword-face fontified t) 362 364 (face font-lock-keyword-face syntax-multiline t fontified t) 364 370 (syntax-multiline t fontified t) 370 374 (face font-lock-variable-name-face syntax-multiline t fontified t) 374 375 (syntax-table (1) syntax-multiline t fontified t) 375 529 (fontified t) 529 546 (face font-lock-string-face fontified t) 546 547 (fontified t) 547 573 (face font-lock-string-face fontified t) 573 581 (fontified t) 581 635 (face font-lock-string-face fontified t) 635 637 (fontified t) 637 645 (syntax-multiline t fontified t) 645 653 (face font-lock-variable-name-face syntax-multiline t fontified t) 653 654 (syntax-table (1) syntax-multiline t fontified t) 654 765 (fontified t) 765 781 (face font-lock-string-face fontified t) 781 782 (fontified t) 782 814 (face font-lock-string-face fontified t) 814 822 (fontified t) 822 883 (face font-lock-string-face fontified t) 883 885 (fontified t) 885 893 (syntax-multiline t fontified t) 893 896 (face font-lock-variable-name-face syntax-multiline t fontified t) 896 897 (syntax-table (1) syntax-multiline t fontified t) 897 940 (fontified t) 940 955 (face font-lock-string-face fontified t) 955 956 (fontified t) 956 1002 (face font-lock-string-face fontified t) 1002 1010 (fontified t) 1010 1073 (face font-lock-string-face fontified t) 1073 1075 (fontified t) 1075 1083 (syntax-multiline t fontified t) 1083 1088 (face font-lock-variable-name-face syntax-multiline t fontified t) 1088 1089 (syntax-table (1) syntax-multiline t fontified t) 1089 1132 (fontified t) 1132 1148 (face font-lock-string-face fontified t) 1148 1149 (fontified t) 1149 1196 (face font-lock-string-face fontified t) 1196 1204 (fontified t) 1204 1257 (face font-lock-string-face fontified t) 1257 1259 (fontified t) 1259 1267 (syntax-multiline t fontified t) 1267 1282 (face font-lock-variable-name-face syntax-multiline t fontified t) 1282 1283 (syntax-table (1) syntax-multiline t fontified t) 1283 1326 (fontified t) 1326 1353 (face font-lock-string-face fontified t) 1353 1357 (fontified t) 1357 1365 (face font-lock-string-face fontified t) 1365 1387 (fontified t) 1387 1408 (face font-lock-string-face fontified t) 1408 1409 (fontified t) 1409 1462 (face font-lock-string-face fontified t) 1462 1470 (fontified t) 1470 1500 (face font-lock-string-face fontified t) 1500 1528 (face font-lock-string-face fontified t) 1528 1529 (fontified t) 1529 1530 (fontified t) 1530 1538 (syntax-multiline t fontified t) 1538 1557 (face font-lock-variable-name-face syntax-multiline t fontified t) 1557 1558 (syntax-table (1) syntax-multiline t fontified t) 1558 1601 (fontified t) 1601 1628 (face font-lock-string-face fontified t) 1628 1632 (fontified t) 1632 1641 (face font-lock-string-face fontified t) 1641 1663 (fontified t) 1663 1688 (face font-lock-string-face fontified t) 1688 1689 (fontified t) 1689 1749 (face font-lock-string-face fontified t) 1749 1757 (fontified t) 1757 1815 (face font-lock-string-face fontified t) 1815 1820 (fontified t) 1820 1824 (face font-lock-keyword-face fontified t) 1824 1825 (fontified t)) "/home/anderson/.local/bin/mapwacon.sh
+" "(use-package excorporate :after org-agenda)
+
+;; Track whether we've turned excorporate on or not
+(setq my-calendar-init nil)
+
+;; setup a callback to cleanup the diary buffers for use below
+(defun my-diary-cleanup ()
+  (when (get-buffer \"diary\")
+    (kill-buffer \"diary\"))
+  (when (get-buffer \"diary-excorporate-transient\")
+    (kill-buffer \"diary-excorporate-transient\"))
+  (when (get-buffer \"diary-excorporate-today\")
+    (kill-buffer \"diary-excorporate-today\"))
+  (org-agenda-maybe-redo)
+  (message \"Cleaned up diary buffers\"))  
+
+
+;; Load today's org agenda with excorporate. 
+;; excorporate uses the fsm (finite-state-machine) to do most operations aysnc
+;; Wired in via advice below
+(defun my-agenda-update-diary (&optional args)
+  \"call excorporate to update the diary for today\"
+
+  ;; onetime setup
+  (when (not my-calendar-init)
+    (progn
+      (message \"excorporate setup starting\")
+      ;; turn off diarying for this call
+      (excorporate)
+      (message \"excorporate setup done\")
+      (setq my-calendar-init t)))
+  
+  ;; skip if the file was updated within the last minute
+  (message \"my diary update started %s\" (current-time-string))
+  (when (> (time-convert (time-subtract (current-time) (file-attribute-modification-time
+                            (file-attributes \"~/.emacs.d/excorporate/diary-excorporate-today\"))) 'integer) 60)
+    
+    (exco-diary-diary-advice (calendar-current-date) (calendar-current-date) #'my-diary-cleanup)))
+
+;; Setup advice so the agenda update runs before the org-agenda command
+(advice-add 'org-agenda :before #'my-agenda-update-diary)
+
+;; import emacs calendar/diary entries in org
+(setq org-agenda-include-diary t)" "A9w@arM4AY3u*%" "INSERT INTO aluno (primeiro_nome, ultimo_nome, data_nascimento) VALUES (
 	'Vinicius', 'Dias', '1997-10-15'
 ), (
 	'Patricia', 'Freitas', '1986-10-25'
@@ -235,288 +360,6 @@ connection.\"
 	      (sql-server \"localhost\")
 	      (sql-user \"postgres\")
 	      (sql-password \"password\")
-	      (sql-database \"myapp_test\")))" "psql -h 172.17.0.2 -p 5432 -U postgres
-" "((sql-mode . ((sql-postgres-login-params 
-  '((user :default \"username\")
-    (database :default \"app_development\")
-    (server :default \"localhost\")
-    (port :default 5432))))))" #("startup" 0 7 (font-lock-fontified t help-echo nil fontified t src-block t font-lock-multiline t face (org-block))) #("hook))
-    (provide" 0 12 (face (org-block) font-lock-multiline t src-block t fontified t help-echo nil font-lock-fontified t) 12 19 (face (org-block) font-lock-multiline t src-block t fontified t help-echo nil font-lock-fontified t)) #("'dashboard" 0 1 (font-lock-fontified t help-echo nil fontified t src-block t font-lock-multiline t face (org-block)) 1 10 (font-lock-fontified t help-echo nil fontified t src-block t font-lock-multiline t face (font-lock-constant-face org-block))) #("config)
-#+END_SRC
-
-" 0 6 (face (font-lock-constant-face org-block) font-lock-multiline t src-block t fontified t help-echo nil font-lock-fontified t) 6 8 (face (org-block) font-lock-multiline t src-block t fontified t font-lock-fontified t) 8 10 (face (org-block) font-lock-multiline t src-block t fontified t font-lock-fontified t) 10 14 (font-lock-fontified t fontified t font-lock-multiline t face (org-block) src-block t) 14 17 (font-lock-fontified t fontified t font-lock-multiline t face org-block-end-line) 17 18 (fontified t face org-block-end-line) 18 19 (fontified t)) #("qq" 0 2 (fontified t face (bold) font-lock-multiline t org-emphasis t)) "/*
-CREATE TABLE aluno (
-	id SERIAL,
-	nome VARCHAR(255),
-	cpf CHAR(11),
-	observacao TEXT,
-	idade INTEGER,
-	dinheiro NUMERIC(10,2),
-	altura REAL,
-	ativo BOOLEAN,
-	data_nasc DATE,
-	hora_aula TIME,
-	matriculado_em TIMESTAMP
-);
-
-SELECT * FROM aluno;
-
-INSERT INTO aluno (
-	nome, 
-	cpf,
-	observacao,
-	idade,
-	dinheiro,
-	altura,
-	ativo,
-	data_nasc,
-	hora_aula,
-	matriculado_em	
-) 
-VALUES (
-	'Marina Azevedo Gomes',
-	'15176045834',
-	'Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent. In elementis mé pra quem é amistosis quis leo. Leite de capivaris, leite de mula manquis sem cabeça. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Eu nunca mais boto a boca num copo de cachaça, agora eu só uso canudis! Atirei o pau no gatis, per gatis num morreus. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Paisis, filhis, espiritis santis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Bota 1 metro de cachacis aí pra viagem! Sapien in monti palavris qui num significa nadis i pareci latim. Si num tem leite então bota uma pinga aí cumpadi!',
-	70,
-	100000.50,
-	1.81,
-	TRUE,
-	'1953-10-20',
-	'17:30:00',
-	'2024-02-22 13:26:30'
-);
-*/
-
-SELECT * 
-FROM ALUNO
-WHERE id = 1
-/*
-UPDATE ALUNO
-SET observacao = 'Teste update informação'
-WHERE id = 1
-
-DELETE FROM aluno
-WHERE id = 1
-*/
-
-SELECT 
-	NOME AS \"Nome do Aluno\",
-	IDADE,
-	MATRICULADO_EM AS \"Quando se matriculou\"
-FROM ALUNO;
-
-INSERT INTO aluno (nome) VALUES ('Helena');
-INSERT INTO aluno (nome) VALUES ('Alice');
-INSERT INTO aluno (nome) VALUES ('Laura');
-INSERT INTO aluno (nome) VALUES ('Maria Alice');
-INSERT INTO aluno (nome) VALUES ('Sophia');
-INSERT INTO aluno (nome) VALUES ('Manuela');
-INSERT INTO aluno (nome) VALUES ('Maitê');
-INSERT INTO aluno (nome) VALUES ('Liz');
-INSERT INTO aluno (nome) VALUES ('Cecília');
-INSERT INTO aluno (nome) VALUES ('Isabella');
-INSERT INTO aluno (nome) VALUES ('Luísa');
-INSERT INTO aluno (nome) VALUES ('Eloá');
-INSERT INTO aluno (nome) VALUES ('Heloísa');
-INSERT INTO aluno (nome) VALUES ('Júlia');
-INSERT INTO aluno (nome) VALUES ('Ayla');
-INSERT INTO aluno (nome) VALUES ('Maria Luísa');
-INSERT INTO aluno (nome) VALUES ('Isis');
-INSERT INTO aluno (nome) VALUES ('Elisa');
-INSERT INTO aluno (nome) VALUES ('Antonella');
-INSERT INTO aluno (nome) VALUES ('Valentina');
-INSERT INTO aluno (nome) VALUES ('Maya');
-INSERT INTO aluno (nome) VALUES ('Maria Júlia');
-INSERT INTO aluno (nome) VALUES ('Aurora');
-INSERT INTO aluno (nome) VALUES ('Lara');
-INSERT INTO aluno (nome) VALUES ('Maria Clara');
-
-SELECT 
-	* 
-FROM ALUNO
-WHERE NOME NOT LIKE 'Ma%'
-
-
-SELECT 
-	* 
-FROM ALUNO
-WHERE CPF is not null
-
-SELECT 
-	* 
-FROM ALUNO
-WHERE CPF is null
-
-
-SELECT 
-	* 
-FROM ALUNO
-WHERE idade = 70
-
-
-SELECT 
-	* 
-FROM ALUNO
-WHERE idade <> 71
-
-SELECT 
-	* 
-FROM ALUNO
-WHERE idade >= 70
-
-
-SELECT 
-	* 
-FROM ALUNO
-WHERE idade <= 70
-
-
-SELECT 
-	* 
-FROM ALUNO
-WHERE idade BETWEEN 10 AND 100
-
-SELECT 
-	* 
-FROM ALUNO
-WHERE ATIVO = TRUE
-
-SELECT 
-	* 
-FROM ALUNO
-WHERE ATIVO IS NULL
-
-CREATE TABLE curso(
-	id SERIAL PRIMARY KEY,
-	nome varchar(255) NOT NULL
-);
-
-DROP  TABLE ALUNO;
-
-CREATE TABLE ALUNO(
-	id SERIAL PRIMARY KEY,
-	nome VARCHAR(255) NOT NULL
-)
-
-INSERT INTO ALUNO (nome) VALUES('Diogo');
-INSERT INTO ALUNO (nome) VALUES('Vinicios');
-INSERT INTO ALUNO (nome) VALUES('Nico');
-
-SELECT * FROM ALUNO
-
-INSERT INTO CURSO (nome) VALUES('HTML');
-INSERT INTO CURSO (nome) VALUES('JAVASCRIPT');
-
-DROP TABLE aluno_curso;
-
-CREATE TABLE aluno_curso(
-	aluno_id INTEGER,
-	curso_id INTEGER,
-	PRIMARY KEY (aluno_id, curso_id),
-	
-	FOREIGN KEY(aluno_id)
-	REFERENCES aluno(id)
-	ON DELETE CASCADE
-	ON UPDATE CASCADE,
-
-	FOREIGN KEY(curso_id)
-	REFERENCES curso(id)
-)
-
-INSERT INTO aluno_curso (aluno_id, curso_id) VALUES(1,1);
-INSERT INTO aluno_curso (aluno_id, curso_id) VALUES(2,1);
-INSERT INTO aluno_curso (aluno_id, curso_id) VALUES(2,2);
-
-/* JOIN SERVE PARA JUNTAR OS DADOS RELACIONADOS DA TABELA A COM A TABELA B */
-SELECT 
-	aluno.id AS \"ID ALUNO\",
-	aluno.nome AS \"Aluno\",
-	curso.id AS \"ID CURSO\",
-	curso.nome AS \"Curso\"
-FROM aluno
-JOIN aluno_curso ON aluno_curso.aluno_id = aluno.id
-JOIN curso       ON curso.id             = aluno_curso.curso_id
-
---INSERT INTO aluno (nome) VALUES ('Vinicius')
---INSERT INTO curso (nome) VALUES('CSS')
-
-/*  LEFT JOIN SERVE PARA JUNTAR OS DADOS RELACIONADOS DA TABELA A (DA ESQUERDA) COM A TABELA B (DA DIREITA), e traz dados não relacionados também entre as tabelas da tabela A */
-SELECT aluno.nome AS \"Aluno\",
-		curso.nome AS \"Curso\"
-FROM aluno
-LEFT JOIN aluno_curso ON aluno_curso.aluno_id = aluno.id
-LEFT JOIN curso       ON curso.id             = aluno_curso.curso_id
-
-/*  faz o inverso do LEFT JOIN*/
-SELECT aluno.nome AS \"Aluno\",
-		curso.nome AS \"Curso\"
-FROM aluno
-RIGHT JOIN aluno_curso ON aluno_curso.aluno_id = aluno.id
-RIGHT JOIN curso       ON curso.id             = aluno_curso.curso_id
-
-/*traz todos os dados de ambas as tabelas, mesmo que não tenham foreighn keys*/
-SELECT aluno.nome AS \"Aluno\",
-		curso.nome AS \"Curso\"
-FROM aluno
-FULL JOIN aluno_curso ON aluno_curso.aluno_id = aluno.id
-FULL JOIN curso       ON curso.id             = aluno_curso.curso_id
-
-/*multiplica as linas da tabela a direita pela da esquerda*/
-SELECT aluno.nome AS \"Aluno\",
-		curso.nome AS \"Curso\"
-FROM aluno
-CROSS JOIN curso
-
---INSERT INTO aluno (nome) VALUES('João');
-
-SELECT * FROM ALUNO_CURSO
-SELECT * FROM ALUNO
-DELETE FROM ALUNO WHERE id = 1
-UPDATE ALUNO SET ID=10 WHERE ID=2
-
-" "SELECT * 
-FROM ALUNO
-WHERE id = 1
-
-UPDATE ALUNO
-SET observacao = 'Teste update informação'
-WHERE id = 1" "INSERT INTO aluno (
-	nome, 
-	cpf,
-	observacao,
-	idade,
-	dinheiro,
-	altura,
-	ativo,
-	data_nasc,
-	hora_aula,
-	matriculado_em	
-) 
-VALUES (
-	'Marina Azevedo Gomes',
-	'15176045834',
-	'Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent. In elementis mé pra quem é amistosis quis leo. Leite de capivaris, leite de mula manquis sem cabeça. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Eu nunca mais boto a boca num copo de cachaça, agora eu só uso canudis! Atirei o pau no gatis, per gatis num morreus. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Paisis, filhis, espiritis santis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Bota 1 metro de cachacis aí pra viagem! Sapien in monti palavris qui num significa nadis i pareci latim. Si num tem leite então bota uma pinga aí cumpadi!',
-	70,
-	100000.50,
-	1.81,
-	TRUE,
-	'1953-10-20',
-	'17:30:00',
-	'2024-02-22 13:26:30'
-);" "CREATE TABLE aluno (
-	id SERIAL,
-	nome VARCHAR(255),
-	cpf CHAR(11),
-	observacao TEXT,
-	idade INTEGER,
-	dinheiro NUMERIC(10,2),
-	altura REAL,
-	ativo BOOLEAN,
-	data_nasc DATE,
-	hora_aula TIME,
-	matriculado_em TIMESTAMP
-);
-
-SELECT * FROM aluno;" #("| :---: |" 0 9 (face (markdown-table-face) fontified t)) "https://avatars.githubusercontent.com/u/20650823?v=4"))
+	      (sql-database \"myapp_test\")))"))
 (setq search-ring 'nil)
 (setq regexp-search-ring '("indent" "scheme\\[SchemeNorm]\\[ColB" "updatesys" "mai"))
