@@ -8,11 +8,11 @@
   (set-locale-environment "pt_BR.UTF-8")
 
   ;; Add frame margins. This makes things more pleasant to read.
- ;; (setq default-frame-alist '((internal-border-width . 20)))
+  ;; (setq default-frame-alist '((internal-border-width . 20)))
 
   ;; Starts the Emacs server for emacsclient only if it's not started already
-;;  (load "server")
-;;  (unless (server-running-p) (server-start))
+  ;;  (load "server")
+  ;;  (unless (server-running-p) (server-start))
 
   ;; Clean whitespace before saving a file
   (add-hook 'before-save-hook 'whitespace-cleanup)
@@ -23,6 +23,37 @@
 
   (setq org-babel-sh-command "/bin/bash")
 
+
+    ;; Seleções Visíveis
+  (setq transient-mark-mode t)
+
+  ;; Seleção PC
+  (require 'pc-select)
+  (pc-selection-mode)
+
+  ;; Sobrescrevendo seleções automaticamente
+  (require 'delsel)
+  (delete-selection-mode 1)
+
+  ;; End vai para o fim da linha
+  (define-key global-map [end] 'end-of-line)
+
+  ;; Home vai para o comeco da linha
+  (define-key global-map [home] 'beginning-of-line)
+
+  ;; CTRL-End vai para o fim do documento
+  (define-key global-map [C-end] 'end-of-buffer)
+
+  ;; CTRL-Home vai para o comeco do documento
+  (define-key global-map [C-home] 'beginning-of-buffer)
+
+  ;; Backspace
+  (define-key global-map [backspace]
+  'delete-backward-char)
+
+  ;; Delete
+  (define-key global-map [delete]
+  'delete-char)
 
 #+END_SRC
 ** Coletor de Lixo
@@ -126,53 +157,6 @@
   (when (fboundp 'windmove-default-keybindings)
 	(windmove-default-keybindings))
 
-#+END_SRC
-** Agenda
-#+BEGIN_SRC emacs-lisp
-  (use-package excorporate :after org-agenda)
-
-  ;; Track whether we've turned excorporate on or not
-  (setq my-calendar-init nil)
-
-  ;; setup a callback to cleanup the diary buffers for use below
-  (defun my-diary-cleanup ()
-    (when (get-buffer "diary")
-      (kill-buffer "diary"))
-    (when (get-buffer "diary-excorporate-transient")
-      (kill-buffer "diary-excorporate-transient"))
-    (when (get-buffer "diary-excorporate-today")
-      (kill-buffer "diary-excorporate-today"))
-    (org-agenda-maybe-redo)
-    (message "Cleaned up diary buffers"))
-
-
-  ;; Load today's org agenda with excorporate.
-  ;; excorporate uses the fsm (finite-state-machine) to do most operations aysnc
-  ;; Wired in via advice below
-  (defun my-agenda-update-diary (&optional args)
-    "call excorporate to update the diary for today"
-
-    ;; onetime setup
-    (when (not my-calendar-init)
-      (progn
-	(message "excorporate setup starting")
-	;; turn off diarying for this call
-	(excorporate)
-	(message "excorporate setup done")
-	(setq my-calendar-init t)))
-
-    ;; skip if the file was updated within the last minute
-    (message "my diary update started %s" (current-time-string))
-    (when (> (time-convert (time-subtract (current-time) (file-attribute-modification-time
-			      (file-attributes "~/.emacs.d/excorporate/diary-excorporate-today"))) 'integer) 60)
-
-      (exco-diary-diary-advice (calendar-current-date) (calendar-current-date) #'my-diary-cleanup)))
-
-  ;; Setup advice so the agenda update runs before the org-agenda command
-  (advice-add 'org-agenda :before #'my-agenda-update-diary)
-
-  ;; import emacs calendar/diary entries in org
-  (setq org-agenda-include-diary t)
 #+END_SRC
 * Pacotes
 ** Dashboard
@@ -366,15 +350,12 @@ Trechos de códigos pré-prontos
 *** Python
 **** Elpy
 #+BEGIN_SRC emacs-lisp
+(setq elpy-rpc-python-command "python3")
   (use-package elpy
-    :ensure t
-    :defer t)
-
-  (defun elpy-mode-tweaks ()
-    ;; Enable Flycheck
-    (flycheck-mode 1))
-
-  (add-hook 'python-mode-hook 'elpy-mode-tweaks)
+      :ensure t
+      :defer t
+      :init
+      (advice-add 'python-mode :before 'elpy-enable))
 #+END_SRC
 
 *** Web-Mode
