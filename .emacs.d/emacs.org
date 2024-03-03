@@ -387,13 +387,23 @@ Trechos de códigos pré-prontos
 
 *** PostgreSQL
 #+BEGIN_SRC emacs-lisp
-  (setq sql-postgres-login-params
-		'((user :default "postgres")
-		  (database :default "alura")
-		  (server :default "172.17.0.2")
-		  (port :default 5432)))
+  (defun buffer-mode (buffer-or-name)
+	(with-current-buffer buffer-or-name major-mode))
 
-  (add-hook 'sql-interactive-mode-hook
-		  (lambda ()
-			(toggle-truncate-lines t)))
+
+  (defun filter-buffers-by-mode (mode)
+	(delq nil
+		  (mapcar
+		   (lambda (x) (and (eq (buffer-mode x) mode) x))
+		   (buffer-list))))
+
+	(setq sql-postgres-login-params
+		  '((user :default "postgres")
+			(database :default "alura")
+			(server :default "172.17.0.2")
+			(port :default 5432)))
+
+	(add-hook 'sql-interactive-mode-hook
+			(lambda ()
+			  (toggle-truncate-lines t)))
 #+END_SRC
