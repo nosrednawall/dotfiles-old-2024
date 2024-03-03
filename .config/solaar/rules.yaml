@@ -20,4 +20,9 @@
   - KeyPress:
     - End
     - click
+- Rule:
+  - Key: [Open Emoji Panel, pressed]
+  - KeyPress:
+    - [Super_L, k]
+    - click
 ...

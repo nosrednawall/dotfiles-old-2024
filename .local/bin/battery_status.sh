@@ -10,18 +10,18 @@ battery_level=$(cat /sys/class/power_supply/BAT1/capacity)
 # EXTRA! Altere os ícones para qualquer um de sua preferência, assim como os valores da %
 # EXTRA! Customize a cor do ícone começando com %{F#} e fechando com %{F-}
 if [[ "$is_plugged" -eq 1 ]]; then
-    icon=""
+    icon="^b#282828^^c#989711^"
 else
     if [ "$battery_level" -le 30 ]; then
-	icon=""
+	icon="^b#282828^^c#cc241d^"
     elif [ "$battery_level" -le 40 ]; then
-	icon=""
+	icon="^b#282828^^c#cc241d^"
     elif [ "$battery_level" -le 60 ]; then
-	icon=""
+	icon="^b#282828^^c#d79921^"
     elif [ "$battery_level" -le 90 ]; then
-	icon=""
+	icon="^b#282828^^c#98971a^"
     else
-	icon=""
+	icon="^b#282828^^c#98971a^"
     fi
 fi
 

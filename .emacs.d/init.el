@@ -36,8 +36,8 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
-		 ;;'("melpa" . "https://melpa.org/packages/")
-		 '("melpa-stable" . "https://stable.melpa.org/packages/")
+		 '("melpa" . "https://melpa.org/packages/")
+		 ;;'("melpa-stable" . "https://stable.melpa.org/packages/")
 		 t)
 (package-initialize)
 
@@ -49,26 +49,3 @@
 
 ;; Carrega os pacotes que estão no arquivo ORG - Não uso mais
 (org-babel-load-file (expand-file-name "~/.emacs.d/emacs.org"))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(warning-suppress-types
-   '((comp)
-     (comp)
-     (comp)
-     (comp)
-     (comp)
-     (comp)
-     (comp)
-     (comp)
-     (comp)
-     (comp)
-     (comp))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

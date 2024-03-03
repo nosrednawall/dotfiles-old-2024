@@ -12,9 +12,10 @@ openboard="󰢐 OpenBoard"
 rstudio=" R-Studio"
 drawio="󰽉 Draw.io"
 brmodelo=" brModelo"
+thunderbird=" Thunderbird"
 
 # Variable passed to dmenu
-options="$chrome\n$thunar\n$emacs\n$spotify\n$spotube\n$telegram\n$discord\n$obsidian\n$openboard\n$rstudio\n$drawio\n$brmodelo"
+options="$chrome\n$thunar\n$emacs\n$thunderbird\n$spotify\n$spotube\n$telegram\n$discord\n$obsidian\n$openboard\n$rstudio\n$drawio\n$brmodelo"
 
 chosen="$(echo -e "$options" | dmenu -p "Scripts de monitor " )"
 case $chosen in
@@ -53,5 +54,8 @@ case $chosen in
 	 ;;
      $brmodelo)
 	 java -jar ~/.programas/brmodelo/brModelo.jar
+	 ;;
+     $thunderbird)
+	 thunderbird
 	 ;;
 esac

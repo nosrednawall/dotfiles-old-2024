@@ -9,6 +9,8 @@ pgrep -x dunst > /dev/null || dunst &
 pgrep -x nm-tray > /dev/null || nm-tray &
 copyq &
 pgrep -x pasystray > /dev/null || pasystray &
+pgrep -x solaar > /dev/null || solaar -w hide &
+pgrep -x blueman-applet > /dev/null || blueman-applet &
 pgrep -x mpd > /dev/null || mpd ~/.config/mpd/mpd.conf
 bash ~/.local/bin/if_monitor.sh
 # nitrogen --restore &
