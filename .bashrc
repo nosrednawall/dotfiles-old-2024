@@ -9,6 +9,7 @@ unset MAILCHECK
 export OSH='/home/anderson/.oh-my-bash'
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/emacs/bin:$PATH"
 export PATH="$HOME/.local/bin/dmenu:$PATH"
 alias em="emacs -nw"
 alias nvidia="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"

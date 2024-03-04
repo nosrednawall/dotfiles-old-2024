@@ -149,6 +149,7 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin/dmenu:$PATH"
 export PATH="$HOME/.local/bin/statusbar:$PATH"
+export PATH="$HOME/.local/emacs/bin:$PATH"
 export SUDO_ASKPASS="/usr/bin/ssh-askpass"
 
 alias em="emacs -nw"

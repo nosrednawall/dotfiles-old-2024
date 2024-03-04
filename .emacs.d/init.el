@@ -33,12 +33,23 @@
 ;;; Commentary: Emacs Startup File --- initialization for Emacs
 ;; Adiciona o repositório MELPA
 ;;; code:
+
+;; Don't show the warnings buffer just because some package has used a
+;; deprecated API
+(setq warning-minimum-level :error)
+
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
-		 '("melpa" . "https://melpa.org/packages/")
-		 ;;'("melpa-stable" . "https://stable.melpa.org/packages/")
-		 t)
+		 '("melpa" . "https://melpa.org/packages/") t)
+
+;;(setq package-archives '(("melpa" . "http://melpa.org/packages/")
+;;                         ("gnu" . "http://elpa.gnu.org/packages/")
+;;                         ("nongnu" . "https://elpa.nongnu.org/nongnu/"))
+;;      gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"
+;;      use-package-always-ensure t)
+
+
 (package-initialize)
 
 ;; Bootstrap use-package
@@ -49,3 +60,16 @@
 
 ;; Carrega os pacotes que estão no arquivo ORG - Não uso mais
 (org-babel-load-file (expand-file-name "~/.emacs.d/emacs.org"))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(web-mode ggtags yasnippet auto-complete org-bullets neotree all-the-icons centaur-tabs buffer-flip which-key gruvbox-theme use-package smex magit eglot dap-mode counsel try projectile dashboard autothemer)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

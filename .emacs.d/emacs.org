@@ -246,12 +246,12 @@ Aplica um Alt Tab Entre os Buffers e Buffers com Tabs
   (use-package all-the-icons
 	:ensure t)
 
-  (use-package spaceline
-	:ensure t)
+;;  (use-package spaceline
+;;	:ensure t)
 
 
-  (use-package spaceline-config
-	:config (spaceline-emacs-theme))
+;;(use-package spaceline-config
+;;	:config (spaceline-emacs-theme))
 
   ;; neotree
   (use-package neotree
@@ -336,66 +336,79 @@ Trechos de códigos pré-prontos
 *** Definições
 #+BEGIN_SRC emacs-lisp
    ;; Salva automaticamente quando abre um arquivo no modo de programacao
-  (add-hook 'prog-mode-hook #'(lambda () (auto-save-visited-mode 1)))
-  (indent-guide-global-mode)
+ ;; (add-hook 'prog-mode-hook #'(lambda () (auto-save-visited-mode 1)))
+ ;; (indent-guide-global-mode)
 
 #+END_SRC
 *** Python
-**** Elpy
+**** Eglot
 #+BEGIN_SRC emacs-lisp
-  (setq elpy-rpc-python-command "python3")
+	 (use-package eglot
+	  :init
+	  (setq eglot-report-progress nil)
+	  :hook
+	  ((python-mode . eglot-ensure))
+	  )
+	(add-to-list 'auto-mode-alist '("Pipfile" . conf-mode))
 
-  (require 'python)
-  (define-key python-mode-map (kbd "C-c C-c")
-	(lambda () (interactive) (python-shell-send-buffer t)))
+
+
+
+	  (setq elpy-rpc-python-command "python3")
+
+		(require 'python)
+		(define-key python-mode-map (kbd "C-c C-c")
+		  (lambda () (interactive) (python-shell-send-buffer t)))
 #+END_SRC
 
 *** Web-Mode
 #+BEGIN_SRC emacs-lisp
-	(use-package web-mode
-	  :ensure t)
 
-	(require 'web-mode)
-	(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-	(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-	(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
-	(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-	(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-	(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-	(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-	(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-	(setq web-mode-engines-alist
-	  '(("php"    . "\\.phtml\\'")
-		("blade"  . "\\.blade\\."))
-	  )
+  (use-package web-mode
+	:ensure t)
 
-	(defun web-mode-tweaks ()
-	  ;; Enable Flycheck
-	  (flycheck-mode 1)
+  (require 'web-mode)
+  (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+  (setq web-mode-engines-alist
+	'(("php"    . "\\.phtml\\'")
+	  ("blade"  . "\\.blade\\."))
+	)
 
-	  ;;(setq-default indent-tabs-mode t)
-	  ;;(setq-default tab-width 4) ; Assuming you want your tabs to be four spaces wide
-	  ;;(defvaralias 'c-basic-offset 'tab-width)
-	  (setq-default js2-basic-offset 2)
-	  )
+  (defun web-mode-tweaks ()
+	;; Enable Flycheck
+	(flycheck-mode 1)
+
+	;;(setq-default indent-tabs-mode t)
+	;;(setq-default tab-width 4) ; Assuming you want your tabs to be four spaces wide
+	;;(defvaralias 'c-basic-offset 'tab-width)
+	(setq-default js2-basic-offset 2)
+	)
 
 
 
-	(add-hook 'web-mode 'web-mode-tweaks)
+  (add-hook 'web-mode 'web-mode-tweaks)
 
 #+END_SRC
 
 *** PostgreSQL
 #+BEGIN_SRC emacs-lisp
-  (defun buffer-mode (buffer-or-name)
-	(with-current-buffer buffer-or-name major-mode))
+
+;;  (defun buffer-mode (buffer-or-name)
+;;	(with-current-buffer buffer-or-name major-mode))
 
 
-  (defun filter-buffers-by-mode (mode)
-	(delq nil
-		  (mapcar
-		   (lambda (x) (and (eq (buffer-mode x) mode) x))
-		   (buffer-list))))
+;;  (defun filter-buffers-by-mode (mode)
+;;	(delq nil
+;;		  (mapcar
+;;		   (lambda (x) (and (eq (buffer-mode x) mode) x))
+;;		   (buffer-list))))
 
 	(setq sql-postgres-login-params
 		  '((user :default "postgres")
