@@ -17,3 +17,4 @@ bash ~/.local/bin/if_monitor.sh
 # feh --recursive --bg-fill --randomize ~/.wallpapers/
 feh --recursive --bg-fill --randomize ~/.wallpapers/* &
 pgrep -x slstatus > /dev/null || slstatus &
+pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/sxhkd/sxhkdrc &

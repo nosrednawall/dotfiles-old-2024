@@ -9,53 +9,62 @@ telegram=" Telegram"
 discord="󰙯 Discord"
 obsidian=" Obsidian"
 openboard="󰢐 OpenBoard"
-rstudio=" R-Studio"
+rstudio=" RStudio"
 drawio="󰽉 Draw.io"
 brmodelo=" brModelo"
 thunderbird=" Thunderbird"
+powerbi="󰍲 PowerBI"
+sql_power_architect="SQL Power Architect"
 
 # Variable passed to dmenu
-options="$chrome\n$thunar\n$emacs\n$thunderbird\n$spotify\n$spotube\n$telegram\n$discord\n$obsidian\n$openboard\n$rstudio\n$drawio\n$brmodelo"
+options="$chrome\n$thunar\n$emacs\n$thunderbird\n$spotify\n$spotube\n$telegram\n$discord\n$obsidian\n$openboard\n$rstudio\n$drawio\n$brmodelo\n$sql_power_architect\n$powerbi"
 
-chosen="$(echo -e "$options" | dmenu -p "Scripts de monitor " )"
+chosen="$(echo -e "$options" | dmenu -p "Atalho de Programas" )"
 case $chosen in
-     $chrome)
-	google-chrome-stable
+	 $chrome)
+		 google-chrome-stable
 	;;
-     $thunar)
-	thunar
+	 $thunar)
+		 thunar
 	;;
-     $emacs)
-	 emacs
+	 $emacs)
+		 emacs
 	;;
-     $spotify)
-	 flatpak run com.spotify.Client
+	 $spotify)
+		 flatpak run com.spotify.Client
 	;;
-     $spotube)
-	 spotube
+	 $spotube)
+		 spotube
 	;;
-     $telegram)
-	 telegram-desktop
+	 $telegram)
+		 telegram-desktop
 	;;
-     $discord)
-	 flatpak run com.discordapp.Discord
+	 $discord)
+		 flatpak run com.discordapp.Discord
 	;;
-     $obsidian)
-	 flatpak run md.obsidian.Obsidian
+	 $obsidian)
+		 flatpak run md.obsidian.Obsidian
 	;;
-     $openboard)
-	 openboard
+	 $openboard)
+		 openboard
 	;;
-     $rstudio)
-	 rstudio
+	 $rstudio)
+		 rstudio
 	;;
-     $drawio)
-	 flatpak run com.jgraph.drawio.desktop
+	 $drawio)
+		 flatpak run com.jgraph.drawio.desktop
 	 ;;
-     $brmodelo)
-	 java -jar ~/.programas/brmodelo/brModelo.jar
+	 $brmodelo)
+		 java -jar ~/.programas/brmodelo/brModelo.jar
 	 ;;
-     $thunderbird)
-	 thunderbird
+	 $sql_power_architect)
+		 java -jar /home/anderson/.programas/SQL-Power-Architect/architect-1.0.9/architect.jar
+	 ;;
+	 $thunderbird)
+		 thunderbird
+	 ;;
+	 $powerbi)
+		 SUDO_ASKPASS=/usr/bin/ssh-askpass sudo -A virsh net-list --all && sudo virsh net-start default
+		 virt-manager
 	 ;;
 esac
