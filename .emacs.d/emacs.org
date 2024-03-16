@@ -105,7 +105,7 @@
 
 ** Identação
 #+BEGIN_SRC  emacs-lisp
-  (setq-default tab-width 4)
+ ;; (setq-default tab-width 4)
 
 #+END_SRC
 
@@ -337,8 +337,9 @@ Trechos de códigos pré-prontos
 #+BEGIN_SRC emacs-lisp
    ;; Salva automaticamente quando abre um arquivo no modo de programacao
  ;; (add-hook 'prog-mode-hook #'(lambda () (auto-save-visited-mode 1)))
- ;; (indent-guide-global-mode)
-
+;; (indent-guide-global-mode)
+;; (setq python-indent-guess-indent-offset t)
+;; (setq python-indent-guess-indent-offset-verbose nil)
 #+END_SRC
 *** Python
 **** Eglot

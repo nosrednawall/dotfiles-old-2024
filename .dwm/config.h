@@ -19,8 +19,8 @@ static const int showbar                   = 1;        /* 0 means no bar */
 static const int topbar                    = 1;        /* 0 means bottom bar */
 static const int user_bh                   = 10;        /* 2 is the default spacing around the bar's font */
 static const char *fonts[]                 = {
-	"Comic code:size=12:antialias=true:autohint=true:pixelsize=16",
-	"Mononoki Nerd Font:style=Bold:size=12:antialias=true:autohint=true:pixelsize=16"
+	"Comic code:size=10:antialias=true:autohint=true:pixelsize=16",
+	"Mononoki Nerd Font:style=Bold:size=10:antialias=true:autohint=true:pixelsize=16"
 };
 /*gruvbox*/
 static const char col_1[]       = "#282828";

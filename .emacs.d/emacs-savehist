@@ -11,567 +11,358 @@
 (setq shell-command-history '("/usr/bin/zsh" "/usr/bin/bash"))
 (setq magit-revision-history '(#("5ad9048" 0 7 (ivy-index 0)) #("9e4e37a8e58c4c2695feeb6ce1223b8849c5f7f7" 0 40 (ivy-index 0)) #("e5b577f5f6a6135f1566bf97f4a4c1a2ea06af15" 0 40 (ivy-index 0)) #("HEAD" 0 4 (ivy-index 3)) #("main" 0 4 (ivy-index 0)) #("origin/main" 0 11 (ivy-index 0)) #("1a51c1d" 0 7 (ivy-index 0)) #("ola mundo" 0 9 (ivy-index 0))))
 (setq extended-command-history '("package-install"))
-(setq ido-file-history '("sxhkdrc" "dmenu-bitwarden" "teste.ini" "config.ini" "teste" "." "eqSistCramer.py" "eqSist.py" "eqGrau1.py" "convKm.py" "mediaPond.py" "convFarenheit.py" "segundo2horas.py" "idadeDias2anos.py" "idadeAnos2dias.py" "media.py" "calcula_sistemas.py" "equacao_segundo_grau.py" "media_aritimetica.py" "media_aritimetica_3_valores.py" "soma_dois_numeros.py" "init.el" "calcula_raiz_de_3_numeros.py" "aula004_usando_funcoes.sql" "aula003_sub_consultas.sql" "dmenu-teclados" "aula001.sql" "emacs.org" "myinit.org" nil "tabela_funcionarios.sql" "tabela_aluno.sql" "README.md" "dunstrc" "cpu_status.sh" "music_status_bar.sh" "volume_icon.sh" "battery_status.sh" "advinha_mais.html" "estrelas.html" "media_idades_familiares.html" "media_idades_familiares.hml" "tabuada.html" "ano_copa.html" "jogo_advinha.html" "futebol.html" "imc.html" "programa.html" "texto_puro.html" "primeiro_teste.html"))
+(setq ido-file-history '("." "teste.sql" "onibus.py" "credito.py" "pesoideal.py" "achemaior.py" "medias.py" "multiplos.py" "notas.py" "calcnota.py" "py" "ultimoStr.py" "primaStr.py" "juntaStr.py" "compStr.py" "tamStr.py" "sl-wttr.sh" "sl-wttr.sh~" "degraus.py" "distpontos.py" "eq2graus.py" "volesFera.py" "calculos.py" "escada.py" "capitulo_02_resumo_dados.r" "sxhkdrc" "dmenu-bitwarden" "teste.ini" "config.ini" "teste" "eqSistCramer.py" "eqSist.py" "eqGrau1.py" "convKm.py" "mediaPond.py" "convFarenheit.py" "segundo2horas.py" "idadeDias2anos.py" "idadeAnos2dias.py" "media.py" "calcula_sistemas.py" "equacao_segundo_grau.py" "media_aritimetica.py" "media_aritimetica_3_valores.py" "soma_dois_numeros.py" "init.el" "calcula_raiz_de_3_numeros.py" "aula004_usando_funcoes.sql" "aula003_sub_consultas.sql" "dmenu-teclados" "aula001.sql" "emacs.org" "myinit.org" nil "tabela_funcionarios.sql" "tabela_aluno.sql" "README.md" "dunstrc" "cpu_status.sh" "music_status_bar.sh" "volume_icon.sh" "battery_status.sh" "advinha_mais.html" "estrelas.html" "media_idades_familiares.html" "media_idades_familiares.hml" "tabuada.html" "ano_copa.html" "jogo_advinha.html" "futebol.html" "imc.html" "programa.html" "texto_puro.html" "primeiro_teste.html"))
 (setq minibuffer-history '("dashboard" "/usr/bin/zsh" "select * from curso;" "select * from cursos;" "/usr/bin/bash"))
-(setq ivy-history '(#("101-medidas-uni.R" 0 17 (ivy-index 4)) #("con" 0 3 (ivy-index 0)) "config.h" #("config." 0 7 (ivy-index 0)) #("origin" 0 6 (ivy-index 0)) #("master" 0 6 (ivy-index 0)) #("pdf-tools" 0 9 (ivy-index 0)) #("~/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/" 0 79 (ivy-index 0)) #("dape" 0 4 (ivy-index 0)) #("elpy" 0 4 (ivy-index 1)) #("~/.dotfiles/" 0 12 (ivy-index 0)) #("nyan-mode" 0 9 (ivy-index 0)) #("flycheck" 0 8 (ivy-index 64)) #("emacsql-psql" 0 12 (ivy-index 13)) #("index.html" 0 10 (ivy-index 0)) #("myterminal-controls" 0 19 (ivy-index 10)) #("./" 0 2 (ivy-index 0)) #("... (choose a dir)" 0 18 (ivy-index 1)) #("electric-indent-mode" 0 20 (ivy-index 14)) #("indent-guide" 0 12 (ivy-index 0)) #("web-mode-indent-style" 0 21 (ivy-index 0)) #("rainbow-mode" 0 12 (ivy-index 3))))
-(setq counsel-M-x-history '(#("^term" 0 5 (ivy-index 0)) "term" #("^shell" 0 6 (ivy-index 0)) "shell" #("^magit-" 0 7 (ivy-index 24)) "magit-status" #("^pdf-view" 0 9 (ivy-index 0)) "pdf-view-mode" #("^pdf-vi" 0 7 (ivy-index 0)) #("^pdf-t" 0 6 (ivy-index 6)) "pdf-tools-enable-minor-modes" #("^try" 0 4 (ivy-index 0)) "try" #("^r" 0 2 (ivy-index 1)) "R" #("^R" 0 2 (ivy-index 1)) "R-mode" #("^package-install" 0 16 (ivy-index 0)) "package-install" #("^package-ins" 0 12 (ivy-index 0)) #("^dape" 0 5 (ivy-index 0)) "dape-continue" #("^elpy-mo" 0 8 (ivy-index 1)) "elpy-mode" #("^elpy-ena" 0 9 (ivy-index 0)) "elpy-enable" #("^elpy-dis" 0 9 (ivy-index 0)) "elpy-disable" #("^elpy" 0 5 (ivy-index 0)) #("^elpy-shell-send" 0 16 (ivy-index 2)) "elpy-shell-send-file" "elpy-shell-send-buffer" "elpy-shell-send-statement-and-step" #("^elpy-con" 0 9 (ivy-index 0)) "elpy-config" #("^elpy-s" 0 7 (ivy-index 11)) "elpy-shell-send-defun-and-go" #("^run-p" 0 6 (ivy-index 1)) "run-python" #("^sql-pos" 0 8 (ivy-index 0)) "sql-postgres" #("^sql-post" 0 9 (ivy-index 0)) #("^unta" 0 5 (ivy-index 0)) "untabify" #("^package-inst" 0 13 (ivy-index 0)) #("^elpy-mode" 0 10 (ivy-index 0)) #("^elpy-mod" 0 9 (ivy-index 1)) #("^auto-com" 0 9 (ivy-index 2)) "auto-complete-mode" #("^auto" 0 5 (ivy-index 3)) "auto-complete" #("^elpy-c" 0 7 (ivy-index 1)) #("^elpy-conf" 0 10 (ivy-index 0)) #("^eglo" 0 5 (ivy-index 0)) "eglot" #("^elpy-confi" 0 11 (ivy-index 0)) #("^nyan" 0 5 (ivy-index 4)) "nyan-start-animation" "nyan-start-music" "nyan-mode" "nyan-scroll-buffer" #("^nya" 0 4 (ivy-index 1)) "nyan-toggle-wavy-trail" #("nyan-" 0 5 (ivy-index 7)) #("^spaceline-toggle-n" 0 19 (ivy-index 1)) "spaceline-toggle-nyan-cat-on" "spaceline-toggle-nyan-cat" "elpy-autopep8-fix-code" #("^elpy-menu" 0 10 (ivy-index 0)) "elpy-menu" #("^elpy-" 0 6 (ivy-index 16)) "elpy-check" #("^elpy-config" 0 12 (ivy-index 0)) #("^rain" 0 5 (ivy-index 0)) "rainbow-mode" #("^elpy-en" 0 8 (ivy-index 0)) #("^pyve" 0 5 (ivy-index 5)) "pyvenv-workon" #("^pyvenv" 0 7 (ivy-index 6)) "pyvenv-activate" #("^elpy-rpc" 0 9 (ivy-index 1)) "elpy-rpc-restart" #("^elpy-rp" 0 8 (ivy-index 1)) #("^ansi" 0 5 (ivy-index 1)) "ansi-term" #("^python-mo" 0 10 (ivy-index 0)) "python-mode" #("^sql" 0 4 (ivy-index 1)) #("^rainbo" 0 7 (ivy-index 0)) #("^conf-mo" 0 8 (ivy-index 0)) "conf-mode" #("linu" 0 4 (ivy-index 0)) "linum-mode" #("^sql-hel" 0 8 (ivy-index 0)) "sql-help" #("^sql-set" 0 8 (ivy-index 1)) "sql-set-sqli-buffer" "sql-set-product" #("^sql-mode" 0 9 (ivy-index 0)) "sql-mode" #("^ter" 0 4 (ivy-index 0)) #("^markdown-pre" 0 13 (ivy-index 0)) "markdown-preview-cleanup" #("^markdown-previ" 0 15 (ivy-index 1)) "markdown-preview" "markdown-preview-mode" "markdown-preview-open-browser" #("^markdown-vi" 0 12 (ivy-index 0)) "markdown-view-mode" #("^markdown-v" 0 11 (ivy-index 0)) #("^markdown-p" 0 11 (ivy-index 0)) #("^markdown-mode" 0 14 (ivy-index 2)) "markdown-mode" #("^markdo" 0 7 (ivy-index 2)) #("^ra" 0 3 (ivy-index 1)) #("^conf-mod" 0 9 (ivy-index 0)) #("^myter" 0 6 (ivy-index 1)) "myterminal-controls-open-controls" #("^magit-rebase" 0 13 (ivy-index 2)) "magit-rebase" #("^magit-log-current" 0 18 (ivy-index 0)) "magit-log-current" #("^magit-log --g" 0 14 (ivy-index 0)) "magit-log:--grep" #("^magit-lo" 0 9 (ivy-index 1)) "magit-log:-G" #("^magit-log" 0 10 (ivy-index 8)) "magit-log" #("^centaur-tabs-mode" 0 18 (ivy-index 0)) "centaur-tabs-mode" #("^centaur-tabs-g" 0 15 (ivy-index 0)) "centaur-tabs-group-buffer-groups" #("^magit-merge" 0 12 (ivy-index 3)) "magit-merge" #("^magit-status" 0 13 (ivy-index 2)) #("^rainb" 0 6 (ivy-index 0)) #("^ansi-" 0 6 (ivy-index 1)) #("^conf-mode" 0 10 (ivy-index 0)) #("^magit-stat" 0 11 (ivy-index 2)) #("^ansi-te" 0 8 (ivy-index 0)) #("^java" 0 5 (ivy-index 1)) "javascript-mode" #("^customize-va" 0 13 (ivy-index 0)) "customize-variable" #("^indent-gui" 0 11 (ivy-index 0)) "indent-guide-mode" #("^package-lis" 0 12 (ivy-index 0)) "package-list-packages" #("^web-mode" 0 9 (ivy-index 82)) "web-mode" #("ansi" 0 4 (ivy-index 2)) #("^cua" 0 4 (ivy-index 5)) "cua-toggle-rectangle-mark" "cua-paste" "cua-paste-pop" "cua-cut-region" #("^cua-sc" 0 7 (ivy-index 1)) "cua-scroll-down" #("^cua-s" 0 6 (ivy-index 2)) "cua-selection-mode"))
+(setq ivy-history '(#("tree-sitter-ispell" 0 18 (ivy-index 1)) #("tree-sitter-langs" 0 17 (ivy-index 0)) #("tree-sitter" 0 11 (ivy-index 4)) #("rainbow-mode" 0 12 (ivy-index 0)) #("101-medidas-uni.R" 0 17 (ivy-index 4)) #("con" 0 3 (ivy-index 0)) "config.h" #("config." 0 7 (ivy-index 0)) #("origin" 0 6 (ivy-index 0)) #("master" 0 6 (ivy-index 0)) #("pdf-tools" 0 9 (ivy-index 0)) #("~/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/" 0 79 (ivy-index 0)) #("dape" 0 4 (ivy-index 0)) #("elpy" 0 4 (ivy-index 1)) #("~/.dotfiles/" 0 12 (ivy-index 0)) #("nyan-mode" 0 9 (ivy-index 0)) #("flycheck" 0 8 (ivy-index 64)) #("emacsql-psql" 0 12 (ivy-index 13)) #("index.html" 0 10 (ivy-index 0)) #("myterminal-controls" 0 19 (ivy-index 10)) #("./" 0 2 (ivy-index 0)) #("... (choose a dir)" 0 18 (ivy-index 1)) #("electric-indent-mode" 0 20 (ivy-index 14)) #("indent-guide" 0 12 (ivy-index 0)) #("web-mode-indent-style" 0 21 (ivy-index 0))))
+(setq counsel-M-x-history '(#("^rainbo" 0 7 (ivy-index 0)) "rainbow-mode" #("^sql-pos" 0 8 (ivy-index 0)) "sql-postgres" #("^python-mode" 0 12 (ivy-index 0)) "python-mode" #("^python" 0 7 (ivy-index 0)) #("^eglo" 0 5 (ivy-index 0)) "eglot" #("package-install" 0 15 (ivy-index 0)) #("^package-ins" 0 12 (ivy-index 0)) #("packa" 0 5 (ivy-index 0)) #("^package-install" 0 16 (ivy-index 0)) #("^packa" 0 6 (ivy-index 0)) #("^term" 0 5 (ivy-index 0)) "term" #("^rain" 0 5 (ivy-index 0)) #("^shell" 0 6 (ivy-index 0)) "shell" #("^magit-" 0 7 (ivy-index 24)) "magit-status" #("^pdf-view" 0 9 (ivy-index 0)) "pdf-view-mode" #("^pdf-vi" 0 7 (ivy-index 0)) #("^pdf-t" 0 6 (ivy-index 6)) "pdf-tools-enable-minor-modes" #("^try" 0 4 (ivy-index 0)) "try" #("^r" 0 2 (ivy-index 1)) "R" #("^R" 0 2 (ivy-index 1)) "R-mode" #("^dape" 0 5 (ivy-index 0)) "dape-continue" #("^elpy-mo" 0 8 (ivy-index 1)) "elpy-mode" #("^elpy-ena" 0 9 (ivy-index 0)) "elpy-enable" #("^elpy-dis" 0 9 (ivy-index 0)) "elpy-disable" #("^elpy" 0 5 (ivy-index 0)) #("^elpy-shell-send" 0 16 (ivy-index 2)) "elpy-shell-send-file" "elpy-shell-send-buffer" "elpy-shell-send-statement-and-step" #("^elpy-con" 0 9 (ivy-index 0)) "elpy-config" #("^elpy-s" 0 7 (ivy-index 11)) "elpy-shell-send-defun-and-go" #("^run-p" 0 6 (ivy-index 1)) "run-python" #("^sql-post" 0 9 (ivy-index 0)) #("^unta" 0 5 (ivy-index 0)) "untabify" #("^package-inst" 0 13 (ivy-index 0)) #("^elpy-mode" 0 10 (ivy-index 0)) #("^elpy-mod" 0 9 (ivy-index 1)) #("^auto-com" 0 9 (ivy-index 2)) "auto-complete-mode" #("^auto" 0 5 (ivy-index 3)) "auto-complete" #("^elpy-c" 0 7 (ivy-index 1)) #("^elpy-conf" 0 10 (ivy-index 0)) #("^elpy-confi" 0 11 (ivy-index 0)) #("^nyan" 0 5 (ivy-index 4)) "nyan-start-animation" "nyan-start-music" "nyan-mode" "nyan-scroll-buffer" #("^nya" 0 4 (ivy-index 1)) "nyan-toggle-wavy-trail" #("nyan-" 0 5 (ivy-index 7)) #("^spaceline-toggle-n" 0 19 (ivy-index 1)) "spaceline-toggle-nyan-cat-on" "spaceline-toggle-nyan-cat" "elpy-autopep8-fix-code" #("^elpy-menu" 0 10 (ivy-index 0)) "elpy-menu" #("^elpy-" 0 6 (ivy-index 16)) "elpy-check" #("^elpy-config" 0 12 (ivy-index 0)) #("^elpy-en" 0 8 (ivy-index 0)) #("^pyve" 0 5 (ivy-index 5)) "pyvenv-workon" #("^pyvenv" 0 7 (ivy-index 6)) "pyvenv-activate" #("^elpy-rpc" 0 9 (ivy-index 1)) "elpy-rpc-restart" #("^elpy-rp" 0 8 (ivy-index 1)) #("^ansi" 0 5 (ivy-index 1)) "ansi-term" #("^python-mo" 0 10 (ivy-index 0)) #("^sql" 0 4 (ivy-index 1)) #("^conf-mo" 0 8 (ivy-index 0)) "conf-mode" #("linu" 0 4 (ivy-index 0)) "linum-mode" #("^sql-hel" 0 8 (ivy-index 0)) "sql-help" #("^sql-set" 0 8 (ivy-index 1)) "sql-set-sqli-buffer" "sql-set-product" #("^sql-mode" 0 9 (ivy-index 0)) "sql-mode" #("^ter" 0 4 (ivy-index 0)) #("^markdown-pre" 0 13 (ivy-index 0)) "markdown-preview-cleanup" #("^markdown-previ" 0 15 (ivy-index 1)) "markdown-preview" "markdown-preview-mode" "markdown-preview-open-browser" #("^markdown-vi" 0 12 (ivy-index 0)) "markdown-view-mode" #("^markdown-v" 0 11 (ivy-index 0)) #("^markdown-p" 0 11 (ivy-index 0)) #("^markdown-mode" 0 14 (ivy-index 2)) "markdown-mode" #("^markdo" 0 7 (ivy-index 2)) #("^ra" 0 3 (ivy-index 1)) #("^conf-mod" 0 9 (ivy-index 0)) #("^myter" 0 6 (ivy-index 1)) "myterminal-controls-open-controls" #("^magit-rebase" 0 13 (ivy-index 2)) "magit-rebase" #("^magit-log-current" 0 18 (ivy-index 0)) "magit-log-current" #("^magit-log --g" 0 14 (ivy-index 0)) "magit-log:--grep" #("^magit-lo" 0 9 (ivy-index 1)) "magit-log:-G" #("^magit-log" 0 10 (ivy-index 8)) "magit-log" #("^centaur-tabs-mode" 0 18 (ivy-index 0)) "centaur-tabs-mode" #("^centaur-tabs-g" 0 15 (ivy-index 0)) "centaur-tabs-group-buffer-groups" #("^magit-merge" 0 12 (ivy-index 3)) "magit-merge" #("^magit-status" 0 13 (ivy-index 2)) #("^rainb" 0 6 (ivy-index 0)) #("^ansi-" 0 6 (ivy-index 1)) #("^conf-mode" 0 10 (ivy-index 0)) #("^magit-stat" 0 11 (ivy-index 2)) #("^ansi-te" 0 8 (ivy-index 0)) #("^java" 0 5 (ivy-index 1)) "javascript-mode" #("^customize-va" 0 13 (ivy-index 0)) "customize-variable" #("^indent-gui" 0 11 (ivy-index 0)) "indent-guide-mode" #("^package-lis" 0 12 (ivy-index 0)) "package-list-packages" #("^web-mode" 0 9 (ivy-index 82)) "web-mode" #("ansi" 0 4 (ivy-index 2)) #("^cua" 0 4 (ivy-index 5)) "cua-toggle-rectangle-mark" "cua-paste" "cua-paste-pop" "cua-cut-region" #("^cua-sc" 0 7 (ivy-index 1)) "cua-scroll-down" #("^cua-s" 0 6 (ivy-index 2)) "cua-selection-mode"))
 (setq swiper-history '(#("indent" 0 6 (ivy-index 16)) #("   indent-guide                   20160630       available    melpa-stable show vertical lines to guide indentation" 0 1 (swiper-line-number 1665 display "1665 ") 1 3 (tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 3 15 (button (t) category default-button face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package tabulated-list-column-name "Package" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 15 16 (tabulated-list-column-name "Package" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 16 34 (display (space :align-to 33) tabulated-list-column-name "Package" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 34 42 (font-lock-face package-status-available help-echo #("Version: 20160630" 9 17 (font-lock-face package-status-available)) tabulated-list-column-name "Version" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 42 43 (tabulated-list-column-name "Version" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 43 49 (display (space :align-to 48) tabulated-list-column-name "Version" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 49 58 (font-lock-face package-status-available help-echo #("Status: available" 8 17 (font-lock-face package-status-available)) tabulated-list-column-name "Status" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 58 59 (tabulated-list-column-name "Status" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 59 62 (display (space :align-to 61) tabulated-list-column-name "Status" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 62 69 (font-lock-face package-status-available help-echo #("Archive: melpa-stable" 9 21 (font-lock-face package-status-available)) tabulated-list-column-name "Archive" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 69 74 (font-lock-face package-status-available display "…" help-echo #("Archive: melpa-stable" 9 21 (font-lock-face package-status-available)) tabulated-list-column-name "Archive" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 74 75 (tabulated-list-column-name "Archive" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))]) 75 115 (font-lock-face package-description help-echo #("Description: show vertical lines to guide indentation" 13 53 (font-lock-face package-description)) tabulated-list-column-name "Description" tabulated-list-id #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) tabulated-list-entry [("indent-guide" face package-name font-lock-face package-name follow-link t package-desc #s(package-desc indent-guide (20160630) "show vertical lines to guide indentation" nil tar "melpa-stable" nil ((:commit . "feb207cb5610f351c7cdcf266e0c99117b2f786c") (:authors ("zk_phi")) (:maintainers ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/")) nil) action package-menu-describe-package) #("20160630" 0 8 (font-lock-face package-status-available)) #("available" 0 9 (font-lock-face package-status-available)) #("melpa-stable" 0 12 (font-lock-face package-status-available)) #("show vertical lines to guide indentation" 0 40 (font-lock-face package-description))])) "scheme[SchemeNorm][ColBg" #("scheme[SchemeNorm][ColB" 0 23 (ivy-index 8)) #(" 	XSetForeground(dpy, drw->gc, scheme[SchemeNorm][ColBg].pixel);" 0 1 (swiper-line-number 2761 display "2761 ") 1 2 (fontified t c-is-sws t) 2 3 (c-is-sws t fontified t) 3 49 (fontified t) 49 50 (fontified t) 50 51 (fontified t) 51 52 (fontified t) 52 53 (fontified t) 53 54 (fontified t) 54 55 (fontified t) 55 56 (fontified t) 56 57 (fontified t) 57 58 (fontified t) 58 59 (fontified t) 59 60 (fontified t) 60 61 (fontified t) 61 62 (fontified t) 62 63 (fontified t) 63 64 (fontified t rear-nonsticky t)) #("updatesys" 0 9 (ivy-index 18)) #(" updatesystray(void)" 0 1 (swiper-line-number 2700 display "2700 ") 1 14 (fontified t face font-lock-function-name-face) 14 15 (fontified t c-type c-decl-arg-start) 15 19 (fontified t face font-lock-type-face) 19 20 (fontified t)) #("mai" 0 3 (ivy-index 0)) #(" main(int argc, char *argv[])" 0 1 (swiper-line-number 814 display "814 ") 1 5 (fontified t face font-lock-function-name-face) 5 6 (fontified t c-type c-decl-arg-start) 6 9 (fontified t face font-lock-type-face) 9 10 (fontified t) 10 14 (fontified t face font-lock-variable-name-face) 14 15 (fontified t c-type c-decl-arg-start) 15 16 (fontified t) 16 20 (fontified t face font-lock-type-face) 20 22 (fontified t) 22 26 (fontified t face font-lock-variable-name-face) 26 29 (fontified t))))
-(setq ido-buffer-history '("config.def.h" "*terminal*" "dmenu-docker-images" "dmenu-power" "dmenu-atalhos-programas" "equacao_segundo_grau.py" "*Python*" "media_aritimetica_3_valores.py" "calcula_raiz_de_3_numeros.py" "teste.py" "*Elpy Config*" "*Customize Option: Python Flymake Command*" "if_monitor.sh" "*ansi-term*" "dmenu-teclados" "config.def.h<slstatus>" "tabela_funcionarios.sql" "aula001.sql" "banco-inicial.sql" "*SQL: Postgres*" "dmenu-docker-compose.sh" "HELLO" "index.theme" "icon-theme.cache" "]" "action-unavailable-symbolic.svg" "autostart.sh" "dmenu-window" "battery_status.sh" "emacs.org" "init.el" "dunstrc" "*Compile-Log*" "picom.conf" "index.html" "config.mk" "Untitled<2>" "Untitled<3>" "Untitled" "myinit.org" "config" "muta_microfone" "config.def.h<.dwm>" "block-battery" "dwmbar-powerline" "diminui_volume" "muta_volume" "*scratch*" "*Messages*" "*Async-native-compile-log*" "*Warnings*" "magit-process: .dotfiles" "magit: .dotfiles" "volume_icon.sh" "app.js" "x.c" "x.c.rej" "config.def.h.rej" "config.def.h<st>"))
-(setq file-name-history '(#("/home/anderson/git/Educacional/UFPR_Estatistica/CE301_Estatistica_Basica/100-graficos-tabelas-uni.R" 0 99 (ivy-index 7)) #("/home/anderson/git/Educacional/UFPR_Estatistica/CE301_Estatistica_Basica/101-medidas-uni.R" 0 90 (ivy-index 0)) #("/home/anderson/.dwm/config.def.h" 0 32 (ivy-index 0)) #("/home/anderson/.emacs.d/emacs.org" 0 33 (ivy-index 12)) "/home/anderson/.emacs.d/init.el" #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/008_Postgres_views_funcoes_consultas/dados-aula-2.sql" 0 114 (ivy-index 5)) #("/home/anderson/git/Educacional/UFPR_Estatistica/CI182_Fundamentos_Programacao_Computadores/calcula_raiz_de_3_numeros.py" 0 119 (ivy-index 0)) "~/.emacs.d/emacs.org" #("/home/anderson/.dotfiles/.config/slstatus/config.def.h" 0 54 (ivy-index 0)) #("/home/anderson/.local/bin/battery_status.sh" 0 43 (ivy-index 1)) #("/home/anderson/teste.py" 0 23 (ivy-index 0)) #("/home/anderson/.dotfiles/.local/bin/dmenu/" 0 42 (ivy-index 2)) #("/home/anderson/.dotfiles/.local/bin/dmenu/dmenu-docker-lista-funcionando" 0 72 (ivy-index 0)) #("/home/anderson/.dotfiles/.local/bin/dmenu/dmenu-atalhos-programas" 0 65 (ivy-index 0)) #("/home/anderson/.dotfiles/.local/bin/dmenu/dmenu-docker-images" 0 61 (ivy-index 4)) #("/home/anderson/dmenu-docker-compose.sh" 0 38 (ivy-index 2)) #("/home/anderson/.dotfiles/.dwm/config.def.h" 0 42 (ivy-index 0)) "/home/anderson/.emacs.d/myinit.org" #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/007_PostgreSQL/tabela_funcionarios.sql" 0 99 (ivy-index 9)) #("/home/anderson/.dwm/autostart.sh" 0 32 (ivy-index 0)) "/home/anderson/.dotfiles/.config/dunst/dunstrc" #("/home/anderson/.local/bin/volume_icon.sh" 0 40 (ivy-index 6)) #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/index.html" 0 102 (ivy-index 7)) #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/app.js" 0 98 (ivy-index 3)) #("/home/anderson/.config/picom.conf" 0 33 (ivy-index 3)) #("/home/anderson/.dotfiles/.dwm/" 0 30 (ivy-index 0)) #("/home/anderson/.dotfiles/.Xresources" 0 36 (ivy-index 0)) #("/home/anderson/.config/st/config.def.h" 0 38 (ivy-index 0)) "~/.dotfiles/.emacs.d/init.el"))
+(setq ido-buffer-history '("sl-wttr.sh" "*Python*" "config.def.h" "*terminal*" "dmenu-docker-images" "dmenu-power" "dmenu-atalhos-programas" "equacao_segundo_grau.py" "media_aritimetica_3_valores.py" "calcula_raiz_de_3_numeros.py" "teste.py" "*Elpy Config*" "*Customize Option: Python Flymake Command*" "if_monitor.sh" "*ansi-term*" "dmenu-teclados" "config.def.h<slstatus>" "tabela_funcionarios.sql" "aula001.sql" "banco-inicial.sql" "*SQL: Postgres*" "dmenu-docker-compose.sh" "HELLO" "index.theme" "icon-theme.cache" "]" "action-unavailable-symbolic.svg" "autostart.sh" "dmenu-window" "battery_status.sh" "emacs.org" "init.el" "dunstrc" "*Compile-Log*" "picom.conf" "index.html" "config.mk" "Untitled<2>" "Untitled<3>" "Untitled" "myinit.org" "config" "muta_microfone" "config.def.h<.dwm>" "block-battery" "dwmbar-powerline" "diminui_volume" "muta_volume" "*scratch*" "*Messages*" "*Async-native-compile-log*" "*Warnings*" "magit-process: .dotfiles" "magit: .dotfiles" "volume_icon.sh" "app.js" "x.c" "x.c.rej" "config.def.h.rej" "config.def.h<st>"))
+(setq file-name-history '(#("/home/anderson/.dwm/autostart.sh" 0 32 (ivy-index 0)) #("/home/anderson/.config/slstatus/" 0 32 (ivy-index 0)) #("/home/anderson/git/Educacional/UFPR_Estatistica/CE301_Estatistica_Basica/100-graficos-tabelas-uni.R" 0 99 (ivy-index 14)) #("/home/anderson/git/Educacional/UFPR_Estatistica/CE301_Estatistica_Basica/Livro_Estatitica_Basica/testes.r" 0 105 (ivy-index 0)) #("/home/anderson/git/Educacional/UFPR_Estatistica/CE301_Estatistica_Basica/" 0 73 (ivy-index 4)) #("/var/spool/cron/crontabs/anderson" 0 33 (ivy-index 0)) #("/var/spool/cron/crontabs/" 0 25 (ivy-index 2)) "/tmp/crontab.uSJaXd/crontab" "/tmp/crontab.vtEVge/crontab" "/home/anderson/.dotfiles/.local/bin/sl-wttr.sh~" #("/home/anderson/.dotfiles/.config/slstatus/" 0 42 (ivy-index 1)) #("/home/anderson/git/Educacional/UFPR_Estatistica/CE301_Estatistica_Basica/101-medidas-uni.R" 0 90 (ivy-index 0)) #("/home/anderson/.dwm/config.def.h" 0 32 (ivy-index 0)) #("/home/anderson/.emacs.d/emacs.org" 0 33 (ivy-index 12)) "/home/anderson/.emacs.d/init.el" #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/008_Postgres_views_funcoes_consultas/dados-aula-2.sql" 0 114 (ivy-index 5)) #("/home/anderson/git/Educacional/UFPR_Estatistica/CI182_Fundamentos_Programacao_Computadores/calcula_raiz_de_3_numeros.py" 0 119 (ivy-index 0)) "~/.emacs.d/emacs.org" #("/home/anderson/.dotfiles/.config/slstatus/config.def.h" 0 54 (ivy-index 0)) #("/home/anderson/.local/bin/battery_status.sh" 0 43 (ivy-index 1)) #("/home/anderson/teste.py" 0 23 (ivy-index 0)) #("/home/anderson/.dotfiles/.local/bin/dmenu/" 0 42 (ivy-index 2)) #("/home/anderson/.dotfiles/.local/bin/dmenu/dmenu-docker-lista-funcionando" 0 72 (ivy-index 0)) #("/home/anderson/.dotfiles/.local/bin/dmenu/dmenu-atalhos-programas" 0 65 (ivy-index 0)) #("/home/anderson/.dotfiles/.local/bin/dmenu/dmenu-docker-images" 0 61 (ivy-index 4)) #("/home/anderson/dmenu-docker-compose.sh" 0 38 (ivy-index 2)) #("/home/anderson/.dotfiles/.dwm/config.def.h" 0 42 (ivy-index 0)) "/home/anderson/.emacs.d/myinit.org" #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/007_PostgreSQL/tabela_funcionarios.sql" 0 99 (ivy-index 9)) "/home/anderson/.dotfiles/.config/dunst/dunstrc" #("/home/anderson/.local/bin/volume_icon.sh" 0 40 (ivy-index 6)) #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/index.html" 0 102 (ivy-index 7)) #("/home/anderson/git/Educacional/Programa_Desenvolve_Boticario/006_Git_Github/projeto_inicial/app.js" 0 98 (ivy-index 3)) #("/home/anderson/.config/picom.conf" 0 33 (ivy-index 3)) #("/home/anderson/.dotfiles/.dwm/" 0 30 (ivy-index 0)) #("/home/anderson/.dotfiles/.Xresources" 0 36 (ivy-index 0)) #("/home/anderson/.config/st/config.def.h" 0 38 (ivy-index 0)) "~/.dotfiles/.emacs.d/init.el"))
 (setq projectile-project-command-history '#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ()))
-(setq kill-ring '("
-" "XF86Audio{Prev,Next}
-	mpc -q {prev,next}
-
-@XF86LaunchA
-	scrot -s -e 'image_viewer $f'
-
-super + shift + equal
-	sxiv -rt \"$HOME/image\"
-
-XF86LaunchB
-	xdotool selectwindow | xsel -bi
-
-super + {h,j,k,l}
-	bspc node -f {west,south,north,east}
-
-super + alt + {0-9}
-	mpc -q seek {0-9}0%
-
-super + {alt,ctrl,alt + ctrl} + XF86Eject
-	sudo systemctl {suspend,reboot,poweroff}
-
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
-
-{_,shift + ,super + }XF86MonBrightness{Down,Up}
-	bright {-1,-10,min,+1,+10,max}
-
-super + o ; {e,w,m}
-	{gvim,firefox,thunderbird}
-
-super + alt + control + {h,j,k,l} ; {0-9}
-	bspc node @{west,south,north,east} -r 0.{0-9}
-
-super + alt + p
-	bspc config focus_follows_pointer {true,false}
-
-# Smart resize, will grow or shrink depending on location.
-# Will always grow for floating nodes.
-super + ctrl + alt + {Left,Down,Up,Right}
-  n=10; \\
-  { d1=left;   d2=right;  dx=-$n; dy=0;   \\
-  , d1=bottom; d2=top;    dx=0;   dy=$n;  \\
-  , d1=top;    d2=bottom; dx=0;   dy=-$n; \\
-  , d1=right;  d2=left;   dx=$n;  dy=0;   \\
-  } \\
-  bspc node --resize $d1 $dx $dy || bspc node --resize $d2 $dx $dy" "xdotool" #("static const char *termcmd[]   = { \"st\", NULL };" 0 6 (face font-lock-keyword-face fontified t) 6 7 (fontified t) 7 12 (face font-lock-keyword-face fontified t) 12 13 (fontified t) 13 16 (face font-lock-type-face fontified t) 16 17 (face font-lock-type-face c-type c-decl-id-start fontified t) 17 19 (fontified t) 19 26 (face font-lock-variable-name-face fontified t) 26 35 (fontified t) 35 39 (face font-lock-string-face fontified t) 39 41 (fontified t) 41 45 (face font-lock-constant-face fontified t) 45 48 (fontified t)) "dmenu_command = rofi -dmenu -theme bwm -i" "-i -l 25 -b " "bwm -C
-" #("	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD(\"~/.local/bin/dmenu/dmenu-pass\" ) }," 0 1 (fontified t) 1 2 (fontified t c-type c-not-decl) 2 23 (fontified t) 23 24 (fontified t c-type c-not-decl) 24 37 (fontified t) 37 38 (fontified t c-type c-not-decl) 38 70 (fontified t) 70 71 (fontified t c-type c-not-decl) 71 87 (fontified t) 87 118 (fontified t face font-lock-string-face) 118 123 (fontified t)) "[password_chars]
-# Set custom groups of characters for password generation. Any name is fine and
-# these can be used to create new groups of presets in password_char_presets. If
-# you reuse 'upper', 'lower', 'digits', or 'punctuation', those will
-# replace the default values.
-lower = abcdefghjkmnpqrstuvwxyz
-upper = ABCDEFGHJKMNPQRSTUVWXYZ
-digits = 23456789
-punctuation = !\"#$%%&'()*+,-./:;<=>?@[\\]^_`{}~
-# NOTE: % needs to be escaped with another % sign
-# Custom EXAMPLES:
-punc min = !?#*@-+$%%
-upper = ABCDEFZ
-
-[password_char_presets]
-# Set character preset groups for password generation. For multiple sets use a space in between
-# If you set any custom presets here, the default sets will not be displayed unless uncommented below:
-# Valid values are: upper lower digits punctuation
-# Also valid are any custom sets defined in [password_chars]
-# Custom Examples:
-Minimal Punc = upper lower digits \"punc min\"
-Router Site = upper digits" "pinentry = pinentry-gtk" "gui_editor = gvim -f
-type_library = xdotool" "https://vault.bitwarden.com/" "/home/anderson/.password-store/bit.gpg" "[dmenu]
-# Note that dmenu_command can contain arguments as well
-dmenu_command = rofi -dmenu -theme bwm -i
-# dmenu_command = dmenu -i -l 25 -b -nb #909090 -nf #303030
-pinentry = pinentry-gtk
-title_path = 25
-
-[dmenu_passphrase]
-## Obscure password entry.
-obscure = True
-obscure_color = #303030
-
-[vault]
-server_1 = https://vault.bitwarden.com
-login_1 = joe@joe.com
-server_2 = https://vault.mydomain.net
-login_2 = joe@joe.com
-twofactor_2 = 0
-autotype_default_2 = {TOTP}{ENTER}
-password_cmd_2 = gpg -qd ~/.pass.gpg
-
-session_timeout_min = 720
-
-gui_editor = gvim -f
-type_library = xdotool
-hide_folders = Trash
-               Archived
-               Spouse
-
-## Set the global default
-autotype_default = {USERNAME}{TAB}{PASSWORD}{ENTER}
-
-[password_chars]
-# Set custom groups of characters for password generation. Any name is fine and
-# these can be used to create new groups of presets in password_char_presets. If
-# you reuse 'upper', 'lower', 'digits', or 'punctuation', those will
-# replace the default values.
-lower = abcdefghjkmnpqrstuvwxyz
-upper = ABCDEFGHJKMNPQRSTUVWXYZ
-digits = 23456789
-punctuation = !\"#$%%&'()*+,-./:;<=>?@[\\]^_`{}~
-# NOTE: % needs to be escaped with another % sign
-# Custom EXAMPLES:
-punc min = !?#*@-+$%%
-upper = ABCDEFZ
-
-[password_char_presets]
-# Set character preset groups for password generation. For multiple sets use a space in between
-# If you set any custom presets here, the default sets will not be displayed unless uncommented below:
-# Valid values are: upper lower digits punctuation
-# Also valid are any custom sets defined in [password_chars]
-# Custom Examples:
-Minimal Punc = upper lower digits \"punc min\"
-Router Site = upper digits" "(defvar rutils-show_plot_next_to_r_process t)
-
-(defun add-pdf-to-rcode(rcomm fname)
-  \"add pdf(tmpfile) and dev.off() to R command\"
-  (let*  (
-      (newc (concat \"pdf('\" fname \"')\\n\" rcomm  \"\\n dev.off()\"))
-      )
-    (eval newc)
-      )
-  )
-
-
-(defun rutils-plot-region-or-paragraph()
-  \"execute region or paragraph and save tmp plot to pdf. Then open windows to show pdf\"
-  (interactive)
-    (let*  (
-      (fname (concat (make-temp-file \"plot_\") \".pdf\"))
-      )
-      (progn
-    (if (use-region-p)
-        (ess-eval-linewise (add-pdf-to-rcode (buffer-substring (region-beginning) (region-end)) fname))
-      (progn (ess-eval-linewise (add-pdf-to-rcode (thing-at-point 'paragraph) fname)))
-      )
-        (ess-switch-to-end-of-ESS)
-        )
-    (if (window-in-direction 'right)
-        (progn
-          (select-window (window-in-direction 'right))
-          (find-file fname)
-          )
-      (progn
-        (split-window-right)
-        (select-window (window-in-direction 'right))
-        (find-file fname)
-        )
-        )
-    )
-    )
-    )
-(define-key ess-mode-map (kbd \"C-c g\") 'rutils-plot-region-or-paragraph)" #("	{ \"mpv\",						NULL,		NULL,			0,				1,		-1 }," 0 3 (fontified t) 3 8 (face font-lock-string-face fontified t) 8 15 (fontified t) 15 19 (face font-lock-constant-face fontified t) 19 22 (fontified t) 22 26 (face font-lock-constant-face fontified t) 26 45 (fontified t)) "/home/anderson/git/Educacional/UFPR_Estatistica/CE301_Estatistica_Basica/" #("$sql_power_architect" 0 1 (syntax-multiline t fontified t) 1 2 (syntax-multiline t face font-lock-variable-name-face fontified t) 2 3 (syntax-multiline t face font-lock-variable-name-face fontified t) 3 4 (syntax-multiline t face font-lock-variable-name-face fontified t) 4 5 (syntax-multiline t face font-lock-variable-name-face fontified t) 5 6 (syntax-multiline t face font-lock-variable-name-face fontified t) 6 7 (syntax-multiline t face font-lock-variable-name-face fontified t) 7 8 (syntax-multiline t face font-lock-variable-name-face fontified t) 8 9 (syntax-multiline t face font-lock-variable-name-face fontified t) 9 10 (syntax-multiline t face font-lock-variable-name-face fontified t) 10 11 (syntax-multiline t face font-lock-variable-name-face fontified t) 11 12 (syntax-multiline t face font-lock-variable-name-face fontified t) 12 13 (syntax-multiline t face font-lock-variable-name-face fontified t) 13 14 (syntax-multiline t face font-lock-variable-name-face fontified t) 14 16 (syntax-multiline t face font-lock-variable-name-face fontified t) 16 17 (syntax-multiline t face font-lock-variable-name-face fontified t) 17 18 (syntax-multiline t face font-lock-variable-name-face fontified t) 18 20 (syntax-multiline t face font-lock-variable-name-face fontified t)) "architect.jar" "/home/anderson/.programas/SQL-Power-Architect/architect-1.0.9
-" " virt-manager" #("SUDO_ASKPASS=/usr/bin/ssh-askpass sudo -A" 0 12 (face font-lock-variable-name-face fontified t) 12 41 (fontified t)) "sudo virsh net-list --all
-sudo virsh net-start default " "󰍲" "\"google-chrome\", \"Google-chrome\"
-" "https://encurtador.com.br/dstR0" "https://mundoeducacao.uol.com.br/matematica/solucao-um-sistema-utilizando-regra-cramer.htm#:~:text=Regra%20de%20Cramer%20%C3%A9%20o,tr%C3%AAs%20equa%C3%A7%C3%B5es%20e%20tr%C3%AAs%20inc%C3%B3gnitas." #("www.todamateria.com.br/sistemas-de-equacoes-do-1-grau-exercicios/" 0 65 (face font-lock-doc-face fontified t)) #("determinanteDx = (igualdade1Equacao * valorY2) - (igualdade2Equacao * valorY1)" 0 14 (face font-lock-variable-name-face fontified t) 14 18 (fontified t) 18 50 (fontified t) 50 77 (fontified t) 77 78 (fontified t)) #("#!/usr/bin/env python3
+(setq kill-ring '(#("$iconCam " 0 9 (fontified t face font-lock-string-face)) #("b#282828^^c#fb4934^" 0 1 (fontified t face font-lock-string-face) 1 8 (fontified t face ((:foreground "white") (:background "#282828"))) 8 11 (fontified t face font-lock-string-face) 11 18 (fontified t face ((:foreground "white") (:background "#fb4934"))) 18 19 (fontified t face font-lock-string-face)) #("if [ -z \"$camera\" ]; then
+    iconCam=\"\"
+else
+    iconCam=\"\"" 0 2 (fontified t face font-lock-keyword-face) 2 8 (fontified t) 8 17 (fontified t face font-lock-string-face) 17 18 (fontified t) 18 21 (fontified t) 21 25 (fontified t face font-lock-keyword-face) 25 26 (fontified t) 26 30 (fontified t) 30 37 (fontified t face font-lock-variable-name-face) 37 38 (fontified t) 38 40 (fontified t face font-lock-string-face) 40 41 (fontified t) 41 45 (fontified t face font-lock-keyword-face) 45 46 (fontified t) 46 50 (fontified t) 50 57 (fontified t face font-lock-variable-name-face) 57 58 (fontified t) 58 59 (fontified t face font-lock-string-face) 59 60 (rear-nonsticky t fontified t face font-lock-string-face) 60 61 (fontified t face font-lock-string-face)) #("camera=$(fuser /dev/video0)" 0 6 (fontified t face font-lock-variable-name-face) 6 9 (fontified t) 9 12 (fontified t face sh-quoted-exec) 12 26 (fontified t face sh-quoted-exec) 26 27 (fontified t)) "" "fuser /dev/video0
+" "A9w@arM4AY3u*%" #("    print('As médias calculadas foram:\\n\\t'
+          '- Média Aritimética {0}\\n\\t'
+          '- Média Ponderada {1}\\n\\t'
+          '- Média Harmônica {2}'.format(
+              round(mediaAritimetica, 2),
+              round(mediaPonderada, 2),
+              round(mediaHarmonica, 2)))" 0 4 (fontified t) 4 9 (face font-lock-builtin-face fontified t) 9 10 (fontified t) 10 11 (face font-lock-string-face fontified t) 11 42 (face font-lock-string-face fontified t) 42 43 (face font-lock-string-face fontified t) 43 44 (fontified t) 44 54 (fontified t) 54 55 (face font-lock-string-face fontified t) 55 82 (face font-lock-string-face fontified t) 82 83 (face font-lock-string-face fontified t) 83 84 (fontified t) 84 94 (fontified t) 94 95 (face font-lock-string-face fontified t) 95 120 (face font-lock-string-face fontified t) 120 121 (face font-lock-string-face fontified t) 121 122 (fontified t) 122 132 (fontified t) 132 133 (face font-lock-string-face fontified t) 133 139 (face font-lock-string-face fontified t) 139 154 (face font-lock-string-face fontified t) 154 155 (face font-lock-string-face fontified t) 155 156 (fontified t) 156 162 (face font-lock-builtin-face fontified t) 162 164 (fontified t) 164 178 (fontified t) 178 183 (face font-lock-builtin-face fontified t) 183 206 (fontified t) 206 220 (fontified t) 220 225 (face font-lock-builtin-face fontified t) 225 246 (fontified t) 246 260 (fontified t) 260 265 (face font-lock-builtin-face fontified t) 265 286 (fontified t)) #("print('O texto informado possui {0} caracteres'.format(tamanhoTexto))" 0 5 (fontified t face font-lock-builtin-face) 5 6 (fontified t) 6 47 (fontified t face font-lock-string-face) 47 48 (fontified t) 48 54 (fontified t face font-lock-builtin-face) 54 69 (fontified t)) #("print('O texto informado possui {0} caracteres'.format(tamanhoTexto))" 0 5 (fontified t face font-lock-builtin-face) 5 6 (fontified t) 6 47 (fontified t face font-lock-string-face) 47 48 (fontified t) 48 54 (fontified t face font-lock-builtin-face) 54 69 (fontified t)) "(setq python-indent-guess-indent-offset t)  
+(setq python-indent-guess-indent-offset-verbose nil)" #("title=$(mpc -f %title% current)" 0 1 (fontified t face font-lock-variable-name-face) 1 2 (fontified t face font-lock-variable-name-face) 2 3 (fontified t face font-lock-variable-name-face) 3 4 (fontified t face font-lock-variable-name-face) 4 5 (fontified t face font-lock-variable-name-face) 5 6 (fontified t) 6 7 (fontified t) 7 8 (fontified t) 8 9 (fontified t face sh-quoted-exec) 9 10 (fontified t face sh-quoted-exec) 10 11 (fontified t face sh-quoted-exec) 11 12 (fontified t face sh-quoted-exec) 12 13 (fontified t face sh-quoted-exec) 13 14 (fontified t face sh-quoted-exec) 14 15 (fontified t face sh-quoted-exec) 15 16 (fontified t face sh-quoted-exec) 16 17 (fontified t face sh-quoted-exec) 17 18 (fontified t face sh-quoted-exec) 18 19 (fontified t face sh-quoted-exec) 19 20 (fontified t face sh-quoted-exec) 20 21 (fontified t face sh-quoted-exec) 21 22 (fontified t face sh-quoted-exec) 22 23 (fontified t face sh-quoted-exec) 23 24 (fontified t face sh-quoted-exec) 24 25 (fontified t face sh-quoted-exec) 25 26 (fontified t face sh-quoted-exec) 26 27 (fontified t face sh-quoted-exec) 27 28 (fontified t face sh-quoted-exec) 28 29 (fontified t face sh-quoted-exec) 29 30 (fontified t face sh-quoted-exec) 30 31 (fontified t)) "playing" "mpc status %state%
+" "Escreva programa que pergunte a distância em km que um passageiro deseja per-
+correr e calcule o preço da passagem, cobrando R$ 0,53 por km para viagens de até 200
+km e R$ 0,47/km para viagens mais longas." #("#!/usr/bin/env python3
 # coding=utf8
 # ----------------------------------------------------------------------------
 # Created By  : Anderson José de Souza Inácio
-# Created Date: 2024-03-09
+# Created Date: 2024-03-13
 # version ='1.0'
 # ---------------------------------------------------------------------------
 \"\"\" Curso Estatística 2024 UFPR
 Disciplina CI182 Fundamentos de Programacao de Computadores
-Aula 3 Exercício 3.6 - 3 eqSist
+Aula 4 Exercício 6.7 - 5 credito
 
-Código que realiza o calculo de sistemas de primeiro Grau, utilizando o
-método de substituição, mais informações em
-https://www.todamateria.com.br/sistemas-de-equacoes-do-1-grau-exercicios/\"\"\"
-# ---------------------------------------------------------------------------
-# Import
-# ---------------------------------------------------------------------------
-# from string import *
-# from math import *
+Um banco concedera um credito especial aos seus clientes, variavel com o saldo
+medio no ultimo ano. Faca um programa que leia o saldo medio de um cliente e
+calcule o valor do credito de acordo com a tabela abaixo. Mostre uma mensagem
+informando o saldo medio e o valor do credito.
 
-print('Bem vindo ao programa calcula sistemas!\\n'
-      'Para que o programa funcione corretamente,\\n'
-      'sera necessario informar 6 valores no formato de inteiro ou decimal'
-      '(separado em virgula) mais o operador entre x e y:\\n'
-      ' - Se o valor de X e igualdade for negativo é necessário colocar'
-      ' o menos junto,\\n'
-      ' - Se o valor de X ou Y for 1 deve ser informado 1,\\n'
-      ' - Exemplos:\\n'
-      '   x + y = -12    Seria igual a 1 + 1 = -12\\n'
-      '   3x - y = 20   Seria igual a 3 - 1 = 20\\n')
-
-# Recebe o valor de X da primeira equacao
-valorX1 = float(input('Informe o valor X na primeira equação: '))
-
-# Recebe o sinal entre as icognitas da primeira equacao
-operador1Equacao = str(input('Informe o operador matemático (+ou-): '))
-
-# Recebe o valor de Y da primeira equacao
-valorY1 = float(input('Informe o valor Y na primeira equação: '))
-
-# Recebe o valor de igualdade da primeira equacao
-igualdade1Equacao = float(input('Informe o valor da igualdade da '
-                                'primeira equacao: '))
-
-# Recebe o valor de X da segunda equacao
-valorX2 = float(input('Informe o valor X na segunda equação:  '))
-
-# Recebe o sinal entre as icognidas da segunda equacao
-operador2Equacao = str(input('Informe o operador matemático (+ou-): '))
-
-# Recebe o valor de Y da segunda equacao
-valorY2 = float(input('Informe o valor Y na segunda equação:  '))
-
-# Recebe o valor de igualdade da primeira equacao
-igualdade2Equacao = float(input('Informe o valor da igualdade da '
-                                'segunda equacao: '))
-
-# Inverte a ordem das equações, para as questões
-# na qual se usa o método de adição
-if (valorX1 < valorX2):
-
-    # Parte de cima da divisão final
-    resultadoNumerador = (igualdade2Equacao) - (
-        (valorX2) * (igualdade1Equacao)
-    )
-
-    # Parte de baixo da divisão final
-    if (operador1Equacao == '+' and operador2Equacao == '+'):
-        resultadoDenominador = ((valorX2) * (- (valorY1))) + (valorY2)
-
-    elif (operador1Equacao == '+' and operador2Equacao == '-'):
-        resultadoDenominador = ((valorX2) * (- (valorY1))) - (valorY2)
-
-    elif (operador1Equacao == '-' and operador2Equacao == '+'):
-        resultadoDenominador = ((valorX2) * (+ (valorY1))) + (valorY2)
-
-    else:
-        resultadoDenominador = ((valorX2) * (+ (valorY1))) - (valorY2)
-
-    # Se obtem o valor de Y
-    resultadoFinalY = resultadoNumerador / resultadoDenominador
-
-    # Se obtem o valor de X
-    resultadoFInalX = igualdade1Equacao - resultadoFinalY / valorX1
-
-else:
-    # Parte de cima da divisao final
-    resultadoNumerador = (igualdade1Equacao) - (
-        (valorX1) * (igualdade2Equacao)
-    )
-
-    # Parte de baixo da divisao final
-    if (operador2Equacao == '+' and operador1Equacao == '+'):
-        resultadoDenominador = ((valorX1) * (- (valorY2))) + (valorY1)
-
-    elif (operador2Equacao == '+' and operador1Equacao == '-'):
-        resultadoDenominador = ((valorX1) * (- (valorY2))) - (valorY1)
-
-    elif (operador2Equacao == '-' and operador1Equacao == '+'):
-        resultadoDenominador = ((valorX1) * (+ (valorY2))) + (valorY1)
-
-    else:
-        resultadoDenominador = ((valorX1) * (+ (valorY2))) - (valorY1)
-
-    # Se obtem o valor de Y
-    resultadoFinalY = resultadoNumerador / resultadoDenominador
-
-    # Se obtem o valor de X
-    resultadoFInalX = igualdade2Equacao - resultadoFinalY / valorX2
-
-print(resultadoNumerador, resultadoDenominador)  # Para debbug
-print('O valor de Y é: ', round(resultadoFinalY, 2))
-print('O valor de X é: ', round(resultadoFInalX, 2))
-" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face fontified t syntax-table (15)) 287 598 (face font-lock-doc-face fontified t) 598 599 (face font-lock-doc-face fontified t syntax-table (15)) 599 601 (face font-lock-doc-face fontified t) 601 602 (fontified t) 602 604 (face font-lock-comment-delimiter-face fontified t) 604 680 (face font-lock-comment-face fontified t) 680 682 (face font-lock-comment-delimiter-face fontified t) 682 689 (face font-lock-comment-face fontified t) 689 691 (face font-lock-comment-delimiter-face fontified t) 691 767 (face font-lock-comment-face fontified t) 767 769 (face font-lock-comment-delimiter-face fontified t) 769 790 (face font-lock-comment-face fontified t) 790 792 (face font-lock-comment-delimiter-face fontified t) 792 811 (face font-lock-comment-face fontified t) 811 812 (fontified t) 812 817 (face font-lock-builtin-face fontified t) 817 818 (fontified t) 818 861 (face font-lock-string-face fontified t) 861 868 (fontified t) 868 914 (face font-lock-string-face fontified t) 914 921 (fontified t) 921 990 (face font-lock-string-face fontified t) 990 997 (fontified t) 997 1051 (face font-lock-string-face fontified t) 1051 1058 (fontified t) 1058 1124 (face font-lock-string-face fontified t) 1124 1131 (fontified t) 1131 1150 (face font-lock-string-face fontified t) 1150 1157 (fontified t) 1157 1212 (face font-lock-string-face fontified t) 1212 1219 (fontified t) 1219 1235 (face font-lock-string-face fontified t) 1235 1242 (fontified t) 1242 1289 (face font-lock-string-face fontified t) 1289 1296 (fontified t) 1296 1341 (face font-lock-string-face fontified t) 1341 1344 (fontified t) 1344 1346 (face font-lock-comment-delimiter-face fontified t) 1346 1386 (face font-lock-comment-face fontified t) 1386 1396 (fontified t) 1396 1401 (face font-lock-builtin-face fontified t) 1401 1402 (fontified t) 1402 1407 (face font-lock-builtin-face fontified t) 1407 1408 (fontified t) 1408 1449 (face font-lock-string-face fontified t) 1449 1453 (fontified t) 1453 1455 (face font-lock-comment-delimiter-face fontified t) 1455 1500 (face font-lock-comment-face fontified t) 1500 1509 (face font-lock-comment-face fontified t) 1509 1525 (face font-lock-variable-name-face fontified t) 1525 1528 (fontified t) 1528 1531 (face font-lock-builtin-face fontified t) 1531 1532 (fontified t) 1532 1537 (face font-lock-builtin-face fontified t) 1537 1538 (fontified t) 1538 1578 (face font-lock-string-face fontified t) 1578 1582 (fontified t) 1582 1584 (face font-lock-comment-delimiter-face fontified t) 1584 1624 (face font-lock-comment-face fontified t) 1624 1631 (face font-lock-variable-name-face fontified t) 1631 1634 (fontified t) 1634 1639 (face font-lock-builtin-face fontified t) 1639 1640 (fontified t) 1640 1645 (face font-lock-builtin-face fontified t) 1645 1646 (fontified t) 1646 1687 (face font-lock-string-face fontified t) 1687 1691 (fontified t) 1691 1693 (face font-lock-comment-delimiter-face fontified t) 1693 1741 (face font-lock-comment-face fontified t) 1741 1761 (fontified t) 1761 1766 (face font-lock-builtin-face fontified t) 1766 1767 (fontified t) 1767 1772 (face font-lock-builtin-face fontified t) 1772 1773 (fontified t) 1773 1807 (face font-lock-string-face fontified t) 1807 1840 (fontified t) 1840 1860 (face font-lock-string-face fontified t) 1860 1864 (fontified t) 1864 1866 (face font-lock-comment-delimiter-face fontified t) 1866 1905 (face font-lock-comment-face fontified t) 1905 1915 (fontified t) 1915 1920 (face font-lock-builtin-face fontified t) 1920 1921 (fontified t) 1921 1926 (face font-lock-builtin-face fontified t) 1926 1927 (fontified t) 1927 1968 (face font-lock-string-face fontified t) 1968 1972 (fontified t) 1972 1974 (face font-lock-comment-delimiter-face fontified t) 1974 2027 (face font-lock-comment-face fontified t) 2027 2046 (fontified t) 2046 2049 (face font-lock-builtin-face fontified t) 2049 2050 (fontified t) 2050 2055 (face font-lock-builtin-face fontified t) 2055 2056 (fontified t) 2056 2096 (face font-lock-string-face fontified t) 2096 2100 (fontified t) 2100 2102 (face font-lock-comment-delimiter-face fontified t) 2102 2141 (face font-lock-comment-face fontified t) 2141 2148 (face font-lock-variable-name-face fontified t) 2148 2151 (fontified t) 2151 2156 (face font-lock-builtin-face fontified t) 2156 2157 (fontified t) 2157 2162 (face font-lock-builtin-face fontified t) 2162 2163 (fontified t) 2163 2204 (face font-lock-string-face fontified t) 2204 2208 (fontified t) 2208 2210 (face font-lock-comment-delimiter-face fontified t) 2210 2258 (face font-lock-comment-face fontified t) 2258 2278 (fontified t) 2278 2283 (face font-lock-builtin-face fontified t) 2283 2284 (fontified t) 2284 2289 (face font-lock-builtin-face fontified t) 2289 2290 (fontified t) 2290 2324 (face font-lock-string-face fontified t) 2324 2357 (fontified t) 2357 2376 (face font-lock-string-face fontified t) 2376 2380 (fontified t) 2380 2382 (face font-lock-comment-delimiter-face fontified t) 2382 2429 (face font-lock-comment-face fontified t) 2429 2431 (face font-lock-comment-delimiter-face fontified t) 2431 2465 (face font-lock-comment-face fontified t) 2465 2467 (face font-lock-keyword-face fontified t) 2467 2494 (fontified t) 2494 2496 (face font-lock-comment-delimiter-face fontified t) 2496 2527 (face font-lock-comment-face fontified t) 2527 2531 (fontified t) 2531 2549 (face font-lock-variable-name-face fontified t) 2549 2627 (fontified t) 2627 2629 (face font-lock-comment-delimiter-face fontified t) 2629 2661 (face font-lock-comment-face fontified t) 2661 2665 (fontified t) 2665 2667 (face font-lock-keyword-face fontified t) 2667 2689 (fontified t) 2689 2692 (face font-lock-string-face fontified t) 2692 2693 (fontified t) 2693 2696 (face font-lock-keyword-face fontified t) 2696 2717 (fontified t) 2717 2720 (face font-lock-string-face fontified t) 2720 2799 (fontified t) 2799 2803 (face font-lock-keyword-face fontified t) 2803 2825 (fontified t) 2825 2828 (face font-lock-string-face fontified t) 2828 2829 (fontified t) 2829 2832 (face font-lock-keyword-face fontified t) 2832 2853 (fontified t) 2853 2856 (face font-lock-string-face fontified t) 2856 2935 (fontified t) 2935 2939 (face font-lock-keyword-face fontified t) 2939 2961 (fontified t) 2961 2964 (face font-lock-string-face fontified t) 2964 2965 (fontified t) 2965 2968 (face font-lock-keyword-face fontified t) 2968 2989 (fontified t) 2989 2992 (face font-lock-string-face fontified t) 2992 3009 (fontified t) 3009 3066 (fontified t) 3066 3071 (fontified t) 3071 3075 (face font-lock-keyword-face fontified t) 3075 3153 (fontified t) 3153 3155 (face font-lock-comment-delimiter-face fontified t) 3155 3177 (face font-lock-comment-face fontified t) 3177 3181 (fontified t) 3181 3196 (face font-lock-variable-name-face fontified t) 3196 3246 (fontified t) 3246 3248 (face font-lock-comment-delimiter-face fontified t) 3248 3270 (face font-lock-comment-face fontified t) 3270 3274 (fontified t) 3274 3289 (face font-lock-variable-name-face fontified t) 3289 3339 (fontified t) 3339 3343 (face font-lock-keyword-face fontified t) 3343 3349 (fontified t) 3349 3351 (face font-lock-comment-delimiter-face fontified t) 3351 3382 (face font-lock-comment-face fontified t) 3382 3482 (fontified t) 3482 3484 (face font-lock-comment-delimiter-face fontified t) 3484 3516 (face font-lock-comment-face fontified t) 3516 3520 (fontified t) 3520 3522 (face font-lock-keyword-face fontified t) 3522 3544 (fontified t) 3544 3547 (face font-lock-string-face fontified t) 3547 3548 (fontified t) 3548 3551 (face font-lock-keyword-face fontified t) 3551 3572 (fontified t) 3572 3575 (face font-lock-string-face fontified t) 3575 3654 (fontified t) 3654 3658 (face font-lock-keyword-face fontified t) 3658 3680 (fontified t) 3680 3683 (face font-lock-string-face fontified t) 3683 3684 (fontified t) 3684 3687 (face font-lock-keyword-face fontified t) 3687 3708 (fontified t) 3708 3711 (face font-lock-string-face fontified t) 3711 3790 (fontified t) 3790 3794 (face font-lock-keyword-face fontified t) 3794 3816 (fontified t) 3816 3819 (face font-lock-string-face fontified t) 3819 3820 (fontified t) 3820 3823 (face font-lock-keyword-face fontified t) 3823 3844 (fontified t) 3844 3847 (face font-lock-string-face fontified t) 3847 3926 (fontified t) 3926 3930 (face font-lock-keyword-face fontified t) 3930 4008 (fontified t) 4008 4010 (face font-lock-comment-delimiter-face fontified t) 4010 4032 (face font-lock-comment-face fontified t) 4032 4101 (fontified t) 4101 4103 (face font-lock-comment-delimiter-face fontified t) 4103 4125 (face font-lock-comment-face fontified t) 4125 4194 (fontified t) 4194 4199 (face font-lock-builtin-face fontified t) 4199 4243 (fontified t) 4243 4245 (face font-lock-comment-delimiter-face fontified t) 4245 4257 (face font-lock-comment-face fontified t) 4257 4262 (face font-lock-builtin-face fontified t) 4262 4263 (fontified t) 4263 4281 (face font-lock-string-face fontified t) 4281 4283 (fontified t) 4283 4288 (face font-lock-builtin-face fontified t) 4288 4310 (fontified t) 4310 4315 (face font-lock-builtin-face fontified t) 4315 4316 (fontified t) 4316 4334 (face font-lock-string-face fontified t) 4334 4336 (fontified t) 4336 4341 (face font-lock-builtin-face fontified t) 4341 4363 (fontified t)) #("while (not valorValido):
-    valorA = str(input('Informe o valor de A: '))
-
-    if(valorA.isnumeric):
-        if(float(valorA) > 0):
-            valorA = float(valorA)
-            valorValido = True
-        else:
-            valorA = 0
-            print('Valor inválido!\\n\\n')
-    else:
-        print('Valor inválido!\\n\\n')
-
-" 0 5 (face font-lock-keyword-face fontified t) 5 6 (fontified t) 6 7 (fontified t) 7 10 (face font-lock-keyword-face fontified t) 10 11 (fontified t) 11 22 (fontified t) 22 24 (fontified t) 24 25 (fontified t) 25 29 (fontified t) 29 35 (face font-lock-variable-name-face fontified t) 35 38 (fontified t) 38 41 (face font-lock-builtin-face fontified t) 41 42 (fontified t) 42 47 (face font-lock-builtin-face fontified t) 47 48 (fontified t) 48 72 (face font-lock-string-face fontified t) 72 75 (fontified t) 75 76 (fontified t) 76 80 (fontified t) 80 82 (face font-lock-keyword-face fontified t) 82 90 (fontified t) 90 99 (fontified t) 99 102 (fontified t) 102 110 (fontified t) 110 112 (face font-lock-keyword-face fontified t) 112 113 (fontified t) 113 118 (face font-lock-builtin-face fontified t) 118 133 (fontified t) 133 145 (fontified t) 145 151 (face font-lock-variable-name-face fontified t) 151 154 (fontified t) 154 159 (face font-lock-builtin-face fontified t) 159 160 (fontified t) 160 168 (fontified t) 168 180 (fontified t) 180 191 (face font-lock-variable-name-face fontified t) 191 194 (fontified t) 194 198 (face font-lock-constant-face fontified t) 198 199 (fontified t) 199 207 (fontified t) 207 211 (face font-lock-keyword-face fontified t) 211 213 (fontified t) 213 225 (fontified t) 225 231 (face font-lock-variable-name-face fontified t) 231 236 (fontified t) 236 248 (fontified t) 248 253 (face font-lock-builtin-face fontified t) 253 254 (fontified t) 254 275 (face font-lock-string-face fontified t) 275 277 (fontified t) 277 281 (fontified t) 281 285 (face font-lock-keyword-face fontified t) 285 287 (fontified t) 287 295 (fontified t) 295 300 (face font-lock-builtin-face fontified t) 300 301 (fontified t) 301 322 (face font-lock-string-face fontified t) 322 324 (fontified t) 324 325 (fontified t)) "Fazer um programa que lê 2 números, a 6= 0 e b e escreve a solução da equação
-ax = b.4" #("#!/usr/bin/env python3
-# coding=utf8
-# ----------------------------------------------------------------------------
-# Created By  : Anderson José de Souza Inácio
-# Created Date: 2024-03-09
-# version ='1.0'
-# ---------------------------------------------------------------------------
-\"\"\" Curso Estatística 2024 UFPR
-Disciplina CI182 Fundamentos de Programacao de Computadores
-Aula 3 Exercício 3.6 - 1 convKm
-
-Fazer um programa que lê um número representando uma velocidade em km/h
-e escreve a correspondente velocidade em ml/h. .
+Saldo medio         Percentual
+-------------------------------------------------------
+de 0 a 200          nenhum credito
+de 201 a 400        20% do valor do saldo medio
+de 401 a 600        30% do valor do saldo medio
+acima de 601        40% do valor do saldo medio
 \"\"\"
 # ---------------------------------------------------------------------------
 # Import
 # ---------------------------------------------------------------------------
 # from string import *
-# from math import *
-
-print('Programa convKm que converte uma informação em km/h para ml/h:')
-kmInformado = float(input('Informe a distância em km/h: '))
-
-milhaCalculado = kmInformado / 1.609344
-
-print('A conversão da distâcia é de'
-      ' {km} km/h para {ml} ml/h'.format(km=round(kmInformado, 2),
-                                         ml=round(milhaCalculado, 2))
-      )
-" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 408 (face font-lock-doc-face fontified t) 408 409 (face font-lock-doc-face fontified t) 409 483 (face font-lock-doc-face fontified t) 483 530 (face font-lock-doc-face fontified t) 530 531 (face font-lock-doc-face fontified t rear-nonsticky t) 531 532 (face font-lock-doc-face fontified t) 532 533 (face font-lock-doc-face fontified t syntax-table (15)) 533 535 (face font-lock-doc-face fontified t) 535 536 (fontified t) 536 538 (face font-lock-comment-delimiter-face fontified t) 538 614 (face font-lock-comment-face fontified t) 614 616 (face font-lock-comment-delimiter-face fontified t) 616 623 (face font-lock-comment-face fontified t) 623 625 (face font-lock-comment-delimiter-face fontified t) 625 701 (face font-lock-comment-face fontified t) 701 703 (face font-lock-comment-delimiter-face fontified t) 703 724 (face font-lock-comment-face fontified t) 724 726 (face font-lock-comment-delimiter-face fontified t) 726 745 (face font-lock-comment-face fontified t) 745 746 (fontified t) 746 751 (face font-lock-builtin-face fontified t) 751 752 (fontified t) 752 816 (face font-lock-string-face fontified t) 816 817 (fontified t) 817 818 (fontified t) 818 829 (face font-lock-variable-name-face fontified t) 829 832 (fontified t) 832 837 (face font-lock-builtin-face fontified t) 837 838 (fontified t) 838 843 (face font-lock-builtin-face fontified t) 843 844 (fontified t) 844 875 (face font-lock-string-face fontified t) 875 877 (fontified t) 877 878 (fontified t rear-nonsticky t) 878 879 (fontified t) 879 893 (face font-lock-variable-name-face fontified t) 893 896 (fontified t) 896 910 (fontified t) 910 917 (fontified t) 917 918 (rear-nonsticky t fontified t) 918 919 (fontified t) 919 920 (fontified t) 920 925 (face font-lock-builtin-face fontified t) 925 926 (fontified t) 926 955 (face font-lock-string-face fontified t) 955 956 (face font-lock-string-face fontified t) 956 957 (fontified t) 957 963 (fontified t) 963 989 (face font-lock-string-face fontified t) 989 990 (face font-lock-string-face fontified t) 990 991 (fontified t) 991 997 (face font-lock-builtin-face fontified t) 997 1000 (fontified t) 1000 1001 (fontified t) 1001 1006 (face font-lock-builtin-face fontified t) 1006 1007 (fontified t) 1007 1018 (fontified t) 1018 1024 (fontified t) 1024 1068 (fontified t) 1068 1073 (face font-lock-builtin-face fontified t) 1073 1074 (fontified t) 1074 1091 (fontified t) 1091 1092 (fontified t) 1092 1093 (fontified t) 1093 1094 (fontified t) 1094 1100 (fontified t) 1100 1101 (fontified t) 1101 1102 (fontified t)) "1.609344" "Fazer um programa que lê um número representando uma velocidade em km/h
-e escreve a correspondente velocidade em ml/h.3 ." #("#!/usr/bin/env python3
+# import math
+" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 409 (face font-lock-doc-face fontified t) 409 410 (face font-lock-doc-face fontified t) 410 489 (face font-lock-doc-face fontified t) 489 566 (face font-lock-doc-face fontified t) 566 574 (face font-lock-doc-face fontified t) 574 644 (face font-lock-doc-face fontified t) 644 657 (face font-lock-doc-face fontified t) 657 689 (face font-lock-doc-face fontified t) 689 690 (face font-lock-doc-face fontified t rear-nonsticky t) 690 691 (face font-lock-doc-face fontified t) 691 692 (face font-lock-doc-face fontified t) 692 712 (face font-lock-doc-face fontified t) 712 723 (face font-lock-doc-face fontified t) 723 778 (face font-lock-doc-face fontified t) 778 779 (face font-lock-doc-face fontified t) 779 799 (face font-lock-doc-face fontified t) 799 812 (face font-lock-doc-face fontified t) 812 813 (face font-lock-doc-face fontified t rear-nonsticky t) 813 814 (face font-lock-doc-face fontified t) 814 834 (face font-lock-doc-face fontified t) 834 860 (face font-lock-doc-face fontified t) 860 861 (face font-lock-doc-face fontified t rear-nonsticky t) 861 862 (face font-lock-doc-face fontified t) 862 882 (face font-lock-doc-face fontified t) 882 908 (face font-lock-doc-face fontified t) 908 909 (face font-lock-doc-face fontified t rear-nonsticky t) 909 910 (face font-lock-doc-face fontified t) 910 930 (face font-lock-doc-face fontified t) 930 956 (face font-lock-doc-face fontified t) 956 957 (face font-lock-doc-face fontified t rear-nonsticky t) 957 958 (face font-lock-doc-face fontified t) 958 959 (face font-lock-doc-face fontified t syntax-table (15)) 959 961 (face font-lock-doc-face fontified t) 961 962 (fontified t) 962 964 (face font-lock-comment-delimiter-face fontified t) 964 1040 (face font-lock-comment-face fontified t) 1040 1042 (face font-lock-comment-delimiter-face fontified t) 1042 1049 (face font-lock-comment-face fontified t) 1049 1051 (face font-lock-comment-delimiter-face fontified t) 1051 1127 (face font-lock-comment-face fontified t) 1127 1129 (face font-lock-comment-delimiter-face fontified t) 1129 1150 (face font-lock-comment-face fontified t) 1150 1152 (face font-lock-comment-delimiter-face fontified t) 1152 1158 (face font-lock-comment-face fontified t) 1158 1163 (face font-lock-comment-face fontified t) 1163 1164 (face font-lock-comment-face fontified t rear-nonsticky t)) #("
+print('Com seu saldo médio de R${0}, você pode conseguir crédito de até R${1}'.
+      format(round(saldoMedio, 2), round(credito, 2)))" 0 1 (fontified t) 1 6 (face font-lock-builtin-face fontified t) 6 7 (fontified t) 7 79 (face font-lock-string-face fontified t) 79 81 (fontified t) 81 87 (fontified t) 87 93 (face font-lock-builtin-face fontified t) 93 94 (fontified t) 94 99 (face font-lock-builtin-face fontified t) 99 100 (fontified t) 100 115 (fontified t) 115 116 (fontified t) 116 121 (face font-lock-builtin-face fontified t) 121 133 (fontified t) 133 134 (fontified t) 134 135 (fontified t)) #("if (saldoMedio > 200 and saldoMedio <= 400):
+    credito = 20
+" 0 2 (face font-lock-keyword-face fontified t) 2 4 (fontified t) 4 21 (fontified t) 21 24 (face font-lock-keyword-face fontified t) 24 25 (fontified t) 25 42 (fontified t) 42 45 (fontified t) 45 49 (fontified t) 49 56 (face font-lock-variable-name-face fontified t) 56 62 (fontified t)) #("40% do valor do saldo médio" 0 27 (face font-lock-doc-face fontified t) 27 28 (face font-lock-doc-face fontified t rear-nonsticky t)) #("30% do valor do saldo médio" 0 28 (face font-lock-doc-face fontified t)) #("20% do valor do saldo médio" 0 28 (face font-lock-doc-face fontified t)) #("nenhum crédito" 0 14 (face font-lock-doc-face fontified t) 14 15 (face font-lock-doc-face fontified t rear-nonsticky t)) #("Percentual
+nenhum crédito" 0 26 (face font-lock-doc-face fontified t)) "Saldo médio
+de 0 a 200
+de 201 a 400
+de 401 a 600
+acima de 601
+Percentual
+nenhum crédito
+20% do valor do saldo médio
+30% do valor do saldo médio
+40% do valor do saldo médio" "Um banco concederá um crédito especial aos seus clientes, variável com o saldo
+médio no último ano. Faça um programa que leia o saldo médio de um cliente e calcule
+o valor do crédito de acordo com a tabela abaixo. Mostre uma mensagem informando o
+saldo médio e o valor do crédito." #("#!/usr/bin/env python3
 # coding=utf8
 # ----------------------------------------------------------------------------
 # Created By  : Anderson José de Souza Inácio
-# Created Date: 2024-03-09
+# Created Date: 2024-03-13
 # version ='1.0'
 # ---------------------------------------------------------------------------
 \"\"\" Curso Estatística 2024 UFPR
 Disciplina CI182 Fundamentos de Programacao de Computadores
-Aula 3 Exercício 3.5 - 6 mediaPond
+Aula 4 Exercício 6.7 - 4 pesoideal
 
-Faça um programa que leia 3 notas de um aluno e calcule a média final
-deste aluno. Considerar que a média é ponderada e que o peso das notas é
-2, 3 e 5 respectivamente.
+Tendo como dados de entrada a altura e o sexo de uma pessoa (M masculino
+e F feminino), construa um programa que calcule seu peso ideal, utilizando
+as seguintes formulas:
+• para homens: (72.7 ∗ h) − 58
+• para mulheres: (62.1 ∗ h) − 44.7
 \"\"\"
 # ---------------------------------------------------------------------------
 # Import
 # ---------------------------------------------------------------------------
 # from string import *
-# from math import *
+# import math
 
-print('Programa mediaPond que calcula a média ponderada de 3 notas:')
-nota1 = float(input('Informe a primeira nota: '))
-nota2 = float(input('Informe a segunda nota: '))
-nota3 = float(input('Informe a terceira nota: '))
-
-mediaPond = (nota1 * 2) + (nota2 * 3) + (nota3 * 5) / (2 + 3 + 5)
-
-print('A média calculada foi de:'
-      ' {media}'.format(media=round(mediaPond, 2))
-      )
-" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 411 (face font-lock-doc-face fontified t) 411 412 (face font-lock-doc-face fontified t) 412 484 (face font-lock-doc-face fontified t) 484 560 (face font-lock-doc-face fontified t) 560 569 (face font-lock-doc-face fontified t) 569 584 (face font-lock-doc-face fontified t) 584 585 (face font-lock-doc-face fontified t rear-nonsticky t) 585 586 (face font-lock-doc-face fontified t) 586 587 (face font-lock-doc-face fontified t syntax-table (15)) 587 589 (face font-lock-doc-face fontified t) 589 590 (fontified t) 590 592 (face font-lock-comment-delimiter-face fontified t) 592 668 (face font-lock-comment-face fontified t) 668 670 (face font-lock-comment-delimiter-face fontified t) 670 677 (face font-lock-comment-face fontified t) 677 679 (face font-lock-comment-delimiter-face fontified t) 679 755 (face font-lock-comment-face fontified t) 755 757 (face font-lock-comment-delimiter-face fontified t) 757 778 (face font-lock-comment-face fontified t) 778 780 (face font-lock-comment-delimiter-face fontified t) 780 799 (face font-lock-comment-face fontified t) 799 800 (fontified t) 800 805 (face font-lock-builtin-face fontified t) 805 806 (fontified t) 806 868 (face font-lock-string-face fontified t) 868 869 (fontified t) 869 870 (fontified t) 870 875 (face font-lock-variable-name-face fontified t) 875 878 (fontified t) 878 883 (face font-lock-builtin-face fontified t) 883 884 (fontified t) 884 889 (face font-lock-builtin-face fontified t) 889 890 (fontified t) 890 917 (face font-lock-string-face fontified t) 917 920 (fontified t) 920 925 (face font-lock-variable-name-face fontified t) 925 928 (fontified t) 928 933 (face font-lock-builtin-face fontified t) 933 934 (fontified t) 934 939 (face font-lock-builtin-face fontified t) 939 940 (fontified t) 940 966 (face font-lock-string-face fontified t) 966 967 (fontified t) 967 968 (rear-nonsticky t fontified t) 968 969 (fontified t) 969 974 (face font-lock-variable-name-face fontified t) 974 977 (fontified t) 977 982 (face font-lock-builtin-face fontified t) 982 983 (fontified t) 983 988 (face font-lock-builtin-face fontified t) 988 989 (fontified t) 989 1016 (face font-lock-string-face fontified t) 1016 1017 (fontified t) 1017 1018 (rear-nonsticky t fontified t) 1018 1019 (fontified t rear-nonsticky t) 1019 1020 (fontified t) 1020 1029 (face font-lock-variable-name-face fontified t) 1029 1033 (fontified t) 1033 1042 (fontified t) 1042 1047 (fontified t) 1047 1061 (fontified t) 1061 1070 (fontified t) 1070 1085 (fontified t) 1085 1086 (fontified t) 1086 1087 (fontified t) 1087 1092 (face font-lock-builtin-face fontified t) 1092 1093 (fontified t) 1093 1120 (face font-lock-string-face fontified t) 1120 1121 (fontified t) 1121 1127 (fontified t) 1127 1136 (face font-lock-string-face fontified t) 1136 1137 (face font-lock-string-face fontified t) 1137 1138 (fontified t) 1138 1144 (face font-lock-builtin-face fontified t) 1144 1150 (fontified t) 1150 1151 (fontified t) 1151 1156 (face font-lock-builtin-face fontified t) 1156 1166 (fontified t) 1166 1171 (fontified t) 1171 1172 (fontified t) 1172 1178 (fontified t) 1178 1179 (fontified t) 1179 1180 (fontified t rear-nonsticky t)) #("nota1 = float(input('Informe a primeira nota: '))" 0 5 (face font-lock-variable-name-face fontified t) 5 8 (fontified t) 8 13 (face font-lock-builtin-face fontified t) 13 14 (fontified t) 14 19 (face font-lock-builtin-face fontified t) 19 20 (fontified t) 20 47 (face font-lock-string-face fontified t) 47 49 (fontified t)) "Faça um programa que leia 3 notas de um aluno e calcule a média final
-deste aluno. Considerar que a média é ponderada e que o peso das notas é 2, 3 e 5
-respectivamente." #("#!/usr/bin/env python3
+" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 411 (face font-lock-doc-face fontified t) 411 412 (face font-lock-doc-face fontified t) 412 485 (face font-lock-doc-face fontified t) 485 560 (face font-lock-doc-face fontified t) 560 573 (face font-lock-doc-face fontified t) 573 583 (face font-lock-doc-face fontified t) 583 647 (face font-lock-doc-face fontified t) 647 648 (face font-lock-doc-face fontified t rear-nonsticky t) 648 649 (face font-lock-doc-face fontified t) 649 650 (face font-lock-doc-face fontified t syntax-table (15)) 650 652 (face font-lock-doc-face fontified t) 652 653 (fontified t) 653 655 (face font-lock-comment-delimiter-face fontified t) 655 731 (face font-lock-comment-face fontified t) 731 733 (face font-lock-comment-delimiter-face fontified t) 733 740 (face font-lock-comment-face fontified t) 740 742 (face font-lock-comment-delimiter-face fontified t) 742 818 (face font-lock-comment-face fontified t) 818 820 (face font-lock-comment-delimiter-face fontified t) 820 841 (face font-lock-comment-face fontified t) 841 843 (face font-lock-comment-delimiter-face fontified t) 843 849 (face font-lock-comment-face fontified t) 849 854 (face font-lock-comment-face fontified t) 854 855 (face font-lock-comment-face fontified t rear-nonsticky t) 855 856 (fontified t)) #("(sexo.upper == 'F'" 0 1 (fontified t) 1 15 (fontified t) 15 18 (face font-lock-string-face fontified t)) "Tendo como dados de entrada a altura e o sexo de uma pessoa (M masculino
+e F feminino), construa um programa que calcule seu peso ideal, utilizando as seguintes
+fórmulas:
+• para homens: (72.7 ∗ h) − 58
+• para mulheres: (62.1 ∗ h) − 44.7" #("#!/usr/bin/env python3
 # coding=utf8
 # ----------------------------------------------------------------------------
 # Created By  : Anderson José de Souza Inácio
-# Created Date: 2024-03-09
+# Created Date: 2024-03-13
 # version ='1.0'
 # ---------------------------------------------------------------------------
 \"\"\" Curso Estatística 2024 UFPR
 Disciplina CI182 Fundamentos de Programacao de Computadores
-Aula 3 Exercício 3.5 - 5 convFarenheit
+Aula 4 Exercício 6.7 - 3 achamaior
 
-Fazer um programa que lê um número representando uma temperatura
-na escala Celsius e escreve a correspondente temperatura na escala Farenheit.
+Escreva um programa que leia 3 números inteiros e mostre o maior deles.
 \"\"\"
 # ---------------------------------------------------------------------------
 # Import
 # ---------------------------------------------------------------------------
 # from string import *
-# from math import *
-
-print('Programa converte temperatura em graus Celsius para Fahrenheit')
-tempCelsius = float(input('Informe a temperatura em Celsius: '))
-
-tempFahrenheit = tempCelsius * (9/5) + 32
-
-print('A temperatura é de: '
-      '{celsius} °C\\n, '
-      '{fahrenheit} °F'.format(celsius=round(tempCelsius, 0),
-                               fahrenheit=round(tempFahrenheit, 0))
-      )
-" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 415 (face font-lock-doc-face fontified t) 415 416 (face font-lock-doc-face fontified t) 416 483 (face font-lock-doc-face fontified t) 483 560 (face font-lock-doc-face fontified t) 560 561 (face font-lock-doc-face fontified t) 561 562 (face font-lock-doc-face fontified t syntax-table (15)) 562 564 (face font-lock-doc-face fontified t) 564 565 (fontified t) 565 567 (face font-lock-comment-delimiter-face fontified t) 567 643 (face font-lock-comment-face fontified t) 643 645 (face font-lock-comment-delimiter-face fontified t) 645 652 (face font-lock-comment-face fontified t) 652 654 (face font-lock-comment-delimiter-face fontified t) 654 730 (face font-lock-comment-face fontified t) 730 732 (face font-lock-comment-delimiter-face fontified t) 732 753 (face font-lock-comment-face fontified t) 753 755 (face font-lock-comment-delimiter-face fontified t) 755 774 (face font-lock-comment-face fontified t) 774 775 (fontified t) 775 780 (face font-lock-builtin-face fontified t) 780 781 (fontified t) 781 845 (face font-lock-string-face fontified t) 845 846 (fontified t) 846 847 (fontified t) 847 858 (face font-lock-variable-name-face fontified t) 858 861 (fontified t) 861 866 (face font-lock-builtin-face fontified t) 866 867 (fontified t) 867 872 (face font-lock-builtin-face fontified t) 872 873 (fontified t) 873 909 (face font-lock-string-face fontified t) 909 911 (fontified t) 911 912 (fontified t rear-nonsticky t) 912 913 (fontified t) 913 927 (face font-lock-variable-name-face fontified t) 927 930 (fontified t) 930 954 (fontified t) 954 955 (fontified t) 955 956 (fontified t) 956 961 (face font-lock-builtin-face fontified t) 961 962 (fontified t) 962 984 (face font-lock-string-face fontified t) 984 985 (fontified t) 985 991 (fontified t) 991 992 (face font-lock-string-face fontified t) 992 1001 (face font-lock-string-face fontified t) 1001 1002 (face font-lock-string-face fontified t) 1002 1003 (face font-lock-string-face fontified t) 1003 1004 (face font-lock-string-face rear-nonsticky t fontified t) 1004 1006 (face font-lock-string-face fontified t) 1006 1008 (face font-lock-string-face fontified t) 1008 1009 (face font-lock-string-face fontified t) 1009 1010 (fontified t) 1010 1016 (fontified t) 1016 1030 (face font-lock-string-face fontified t) 1030 1032 (face font-lock-string-face fontified t) 1032 1033 (face font-lock-string-face fontified t) 1033 1034 (fontified t) 1034 1040 (face font-lock-builtin-face fontified t) 1040 1041 (fontified t) 1041 1047 (fontified t) 1047 1048 (rear-nonsticky t fontified t) 1048 1049 (fontified t) 1049 1054 (face font-lock-builtin-face fontified t) 1054 1055 (fontified t) 1055 1066 (fontified t) 1066 1072 (fontified t) 1072 1103 (fontified t) 1103 1112 (fontified t) 1112 1113 (fontified t rear-nonsticky t) 1113 1114 (fontified t) 1114 1119 (face font-lock-builtin-face fontified t) 1119 1120 (fontified t) 1120 1134 (fontified t) 1134 1138 (fontified t) 1138 1140 (fontified t) 1140 1146 (fontified t) 1146 1147 (fontified t) 1147 1148 (fontified t rear-nonsticky t)) #("fahrenheit" 0 10 (face font-lock-string-face fontified t)) #("celsius" 0 7 (face font-lock-string-face fontified t)) "°F " "°C" "Fazer um programa que lê um número representando uma temperatura
-na escala Celsius e escreve a correspondente temperatura na escala Farenheit.2" #("#!/usr/bin/env python3
+# import math
+" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 411 (face font-lock-doc-face fontified t) 411 412 (face font-lock-doc-face fontified t) 412 483 (face font-lock-doc-face fontified t) 483 484 (face font-lock-doc-face fontified t rear-nonsticky t) 484 485 (face font-lock-doc-face fontified t) 485 486 (face font-lock-doc-face fontified t syntax-table (15)) 486 488 (face font-lock-doc-face fontified t) 488 489 (fontified t) 489 491 (face font-lock-comment-delimiter-face fontified t) 491 567 (face font-lock-comment-face fontified t) 567 569 (face font-lock-comment-delimiter-face fontified t) 569 576 (face font-lock-comment-face fontified t) 576 578 (face font-lock-comment-delimiter-face fontified t) 578 654 (face font-lock-comment-face fontified t) 654 656 (face font-lock-comment-delimiter-face fontified t) 656 677 (face font-lock-comment-face fontified t) 677 679 (face font-lock-comment-delimiter-face fontified t) 679 685 (face font-lock-comment-face fontified t) 685 691 (face font-lock-comment-face fontified t)) #("maior = num1 if num1 > num2 and num1 > num3 else 0" 0 5 (face font-lock-variable-name-face fontified t) 5 13 (fontified t) 13 15 (face font-lock-keyword-face fontified t) 15 28 (fontified t) 28 31 (face font-lock-keyword-face fontified t) 31 44 (fontified t) 44 48 (face font-lock-keyword-face fontified t) 48 50 (fontified t)) #("nota1 = int(input('Informe o valor da nota 1: '))
+nota2 = int(input('Informe o valor da nota 2: '))
+nota3 = int(input('Informe o valor da nota 3: '))
+" 0 5 (face font-lock-variable-name-face fontified t) 5 8 (fontified t) 8 11 (face font-lock-builtin-face fontified t) 11 12 (fontified t) 12 17 (face font-lock-builtin-face fontified t) 17 18 (fontified t) 18 47 (face font-lock-string-face fontified t) 47 48 (fontified t) 48 50 (fontified t) 50 55 (face font-lock-variable-name-face fontified t) 55 56 (fontified t) 56 58 (fontified t) 58 61 (face font-lock-builtin-face fontified t) 61 62 (fontified t) 62 67 (face font-lock-builtin-face fontified t) 67 68 (fontified t) 68 97 (face font-lock-string-face fontified t) 97 98 (fontified t) 98 99 (fontified t rear-nonsticky t) 99 100 (fontified t) 100 105 (face font-lock-variable-name-face fontified t) 105 108 (fontified t) 108 111 (face font-lock-builtin-face fontified t) 111 112 (fontified t) 112 117 (face font-lock-builtin-face fontified t) 117 118 (fontified t) 118 147 (face font-lock-string-face fontified t) 147 148 (fontified t) 148 149 (fontified t rear-nonsticky t) 149 150 (fontified t)) "Escreva um programa que leia 3 números inteiros e mostre o maior deles." #("#!/usr/bin/env python3
 # coding=utf8
 # ----------------------------------------------------------------------------
 # Created By  : Anderson José de Souza Inácio
-# Created Date: 2024-03-09
+# Created Date: 2024-03-13
 # version ='1.0'
 # ---------------------------------------------------------------------------
 \"\"\" Curso Estatística 2024 UFPR
 Disciplina CI182 Fundamentos de Programacao de Computadores
-Aula 3 Exercício 3.5 - 4 segundo2horas
+Aula 4 Exercício 6.7 - 2 medias
 
-Faça programa que leia o tempo de duração de um exame expresso em
-segundos e mostre este tempo expresso em horas, minutos e segundos.
+Um usuario deseja um programa onde possa escolher que tipo de media deseja
+calcular a partir de 3 notas. Faca um programa que leia as notas, a opcao
+escolhida pelo usuario e calcule as medias:
+• aritmetica
+• ponderada (pesos 3, 3 e 4)
+• harmonica (definida como sendo o numero de termos dividido pela soma dos
+inversos de cada termo)
 \"\"\"
 # ---------------------------------------------------------------------------
 # Import
 # ---------------------------------------------------------------------------
 # from string import *
-# from math import *
-
-print('Programa converte segundos em horas, minutos e segundos')
-tempoSegundosInformados = int(input('Informe o tempo total em segundos: '))
-
-tempoMinutos = tempoSegundosInformados / 60
-tempoHoras = tempoMinutos / 60
-tempoSegundos = tempoSegundosInformados % 60
-
-print('O tempo informado é de '
-      '{horas} horas, '
-      '{minutos} minutos e '
-      '{segundos} segundos'.format(horas=round(tempoHoras, 1),
-                                   minutos=round(tempoMinutos, 1),
-                                   segundos=round(tempoSegundos, 1))
-      )
-" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 415 (face font-lock-doc-face fontified t) 415 416 (face font-lock-doc-face fontified t) 416 551 (face font-lock-doc-face fontified t) 551 552 (face font-lock-doc-face fontified t rear-nonsticky t) 552 553 (face font-lock-doc-face fontified t) 553 554 (face font-lock-doc-face fontified t syntax-table (15)) 554 556 (face font-lock-doc-face fontified t) 556 557 (fontified t) 557 559 (face font-lock-comment-delimiter-face fontified t) 559 635 (face font-lock-comment-face fontified t) 635 637 (face font-lock-comment-delimiter-face fontified t) 637 644 (face font-lock-comment-face fontified t) 644 646 (face font-lock-comment-delimiter-face fontified t) 646 722 (face font-lock-comment-face fontified t) 722 724 (face font-lock-comment-delimiter-face fontified t) 724 745 (face font-lock-comment-face fontified t) 745 747 (face font-lock-comment-delimiter-face fontified t) 747 766 (face font-lock-comment-face fontified t) 766 767 (fontified t) 767 772 (face font-lock-builtin-face fontified t) 772 773 (fontified t) 773 830 (face font-lock-string-face fontified t) 830 831 (fontified t) 831 832 (fontified t) 832 855 (face font-lock-variable-name-face fontified t) 855 858 (fontified t) 858 861 (face font-lock-builtin-face fontified t) 861 862 (fontified t) 862 867 (face font-lock-builtin-face fontified t) 867 868 (fontified t) 868 905 (face font-lock-string-face fontified t) 905 907 (fontified t) 907 908 (fontified t rear-nonsticky t) 908 909 (fontified t) 909 921 (face font-lock-variable-name-face fontified t) 921 924 (fontified t) 924 952 (fontified t) 952 953 (fontified t) 953 963 (face font-lock-variable-name-face fontified t) 963 966 (fontified t) 966 984 (fontified t) 984 997 (face font-lock-variable-name-face fontified t) 997 1000 (fontified t) 1000 1028 (fontified t) 1028 1029 (fontified t) 1029 1030 (fontified t) 1030 1035 (face font-lock-builtin-face fontified t) 1035 1036 (fontified t) 1036 1061 (face font-lock-string-face fontified t) 1061 1062 (fontified t) 1062 1068 (fontified t) 1068 1069 (face font-lock-string-face fontified t) 1069 1076 (face font-lock-string-face fontified t) 1076 1084 (face font-lock-string-face fontified t) 1084 1085 (face font-lock-string-face fontified t) 1085 1086 (fontified t) 1086 1092 (fontified t) 1092 1114 (face font-lock-string-face fontified t) 1114 1115 (fontified t) 1115 1121 (fontified t) 1121 1142 (face font-lock-string-face fontified t) 1142 1143 (fontified t) 1143 1149 (face font-lock-builtin-face fontified t) 1149 1155 (fontified t) 1155 1156 (fontified t) 1156 1161 (face font-lock-builtin-face fontified t) 1161 1162 (fontified t) 1162 1172 (fontified t) 1172 1178 (fontified t) 1178 1213 (fontified t) 1213 1220 (fontified t) 1220 1221 (fontified t) 1221 1226 (face font-lock-builtin-face fontified t) 1226 1239 (fontified t) 1239 1245 (fontified t) 1245 1288 (fontified t) 1288 1289 (fontified t) 1289 1294 (face font-lock-builtin-face fontified t) 1294 1308 (fontified t) 1308 1312 (fontified t) 1312 1314 (fontified t) 1314 1320 (fontified t) 1320 1321 (fontified t) 1321 1322 (fontified t rear-nonsticky t)) "Faça programa que leia o tempo de duração de um exame expresso em
-segundos e mostre este tempo expresso em horas, minutos e segundos." #("#!/usr/bin/env python3
+import math
+" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 408 (face font-lock-doc-face fontified t) 408 409 (face font-lock-doc-face fontified t) 409 484 (face font-lock-doc-face fontified t) 484 558 (face font-lock-doc-face fontified t) 558 573 (face font-lock-doc-face fontified t) 573 602 (face font-lock-doc-face fontified t) 602 615 (face font-lock-doc-face fontified t) 615 644 (face font-lock-doc-face fontified t) 644 719 (face font-lock-doc-face fontified t) 719 728 (face font-lock-doc-face fontified t) 728 741 (face font-lock-doc-face fontified t) 741 742 (face font-lock-doc-face fontified t rear-nonsticky t) 742 743 (face font-lock-doc-face fontified t) 743 744 (face font-lock-doc-face fontified t syntax-table (15)) 744 746 (face font-lock-doc-face fontified t) 746 747 (fontified t) 747 749 (face font-lock-comment-delimiter-face fontified t) 749 825 (face font-lock-comment-face fontified t) 825 827 (face font-lock-comment-delimiter-face fontified t) 827 834 (face font-lock-comment-face fontified t) 834 836 (face font-lock-comment-delimiter-face fontified t) 836 912 (face font-lock-comment-face fontified t) 912 914 (face font-lock-comment-delimiter-face fontified t) 914 935 (face font-lock-comment-face fontified t) 935 941 (face font-lock-keyword-face fontified t) 941 946 (fontified t) 946 947 (fontified t rear-nonsticky t)) #("(((mmc/nota1)+(mmc/nota2)+(mmc/nota3))/mmc)" 0 3 (fontified t) 3 7 (fontified t) 7 12 (fontified t) 12 15 (fontified t) 15 19 (fontified t) 19 24 (fontified t) 24 27 (fontified t) 27 31 (fontified t) 31 36 (fontified t) 36 43 (fontified t)) #("nota1 = float(input('Informe o valor da nota 1: '))" 0 5 (face font-lock-variable-name-face fontified t) 5 8 (fontified t) 8 13 (face font-lock-builtin-face fontified t) 13 14 (fontified t) 14 19 (face font-lock-builtin-face fontified t) 19 20 (fontified t) 20 49 (face font-lock-string-face fontified t) 49 50 (fontified t) 50 51 (fontified t)) "Um usuário deseja um programa onde possa escolher que tipo de média deseja
+calcular a partir de 3 notas. Faça um programa que leia as notas, a opção escolhida pelo
+usuário e calcule as médias:
+• aritmética
+• ponderada (pesos 3, 3 e 4)
+• harmônica (definida como sendo o número de termos dividido pela soma dos inversos
+de cada termo)" #("#!/usr/bin/env python3
 # coding=utf8
 # ----------------------------------------------------------------------------
 # Created By  : Anderson José de Souza Inácio
-# Created Date: 2024-03-09
+# Created Date: 2024-03-13
 # version ='1.0'
 # ---------------------------------------------------------------------------
 \"\"\" Curso Estatística 2024 UFPR
 Disciplina CI182 Fundamentos de Programacao de Computadores
-Aula 3 Exercício 3.5 - 3 idadeDias2anos
+Aula 4 Exercício 6.6 - 2 multiplos
 
-Faça um programa que obtenha do usuário a sua idade expressa em dias,
-meses e dias e mostre-a expressa apenas em anos. Considere que 1 ano sempre
-tem 365 dias e que 1 mês sempre tem 30 dias.
+Elaborar um programa que le 2 valores a e b e os escreve com a mensagem:
+“Sao multiplos” ou “Nao sao multiplos”.
 \"\"\"
 # ---------------------------------------------------------------------------
 # Import
 # ---------------------------------------------------------------------------
 # from string import *
-# from math import *
-
-print('Programa converte a idade de dias para anos')
-idadeDias = int(input('Informe a sua idade em dias: '))
-
-idadeAnos = idadeDias / 365
-idadeMeses = idadeDias / 30
-
-print('A idade informada é de '
-      '{anos} anos, '
-      '{meses} meses e '
-      '{dias} dias'.format(anos=round(idadeAnos, 1),
-                           meses=round(idadeMeses, 1),
-                           dias=round(idadeDias, 1))
-      )
-" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 416 (face font-lock-doc-face fontified t) 416 417 (face font-lock-doc-face fontified t) 417 487 (face font-lock-doc-face fontified t) 487 563 (face font-lock-doc-face fontified t) 563 571 (face font-lock-doc-face fontified t) 571 606 (face font-lock-doc-face fontified t) 606 607 (face font-lock-doc-face fontified t rear-nonsticky t) 607 608 (face font-lock-doc-face fontified t) 608 609 (face font-lock-doc-face fontified t syntax-table (15)) 609 611 (face font-lock-doc-face fontified t) 611 612 (fontified t) 612 614 (face font-lock-comment-delimiter-face fontified t) 614 690 (face font-lock-comment-face fontified t) 690 692 (face font-lock-comment-delimiter-face fontified t) 692 699 (face font-lock-comment-face fontified t) 699 701 (face font-lock-comment-delimiter-face fontified t) 701 777 (face font-lock-comment-face fontified t) 777 779 (face font-lock-comment-delimiter-face fontified t) 779 800 (face font-lock-comment-face fontified t) 800 802 (face font-lock-comment-delimiter-face fontified t) 802 821 (face font-lock-comment-face fontified t) 821 822 (fontified t) 822 827 (face font-lock-builtin-face fontified t) 827 828 (fontified t) 828 873 (face font-lock-string-face fontified t) 873 874 (fontified t) 874 875 (fontified t) 875 884 (face font-lock-variable-name-face fontified t) 884 887 (fontified t) 887 890 (face font-lock-builtin-face fontified t) 890 891 (fontified t) 891 896 (face font-lock-builtin-face fontified t) 896 897 (fontified t) 897 928 (face font-lock-string-face fontified t) 928 930 (fontified t) 930 931 (fontified t rear-nonsticky t) 931 932 (fontified t) 932 941 (fontified t) 941 944 (fontified t) 944 960 (fontified t) 960 970 (face font-lock-variable-name-face fontified t) 970 973 (fontified t) 973 988 (fontified t) 988 989 (fontified t) 989 994 (face font-lock-builtin-face fontified t) 994 995 (fontified t) 995 1020 (face font-lock-string-face fontified t) 1020 1021 (fontified t) 1021 1027 (fontified t) 1027 1028 (face font-lock-string-face fontified t) 1028 1034 (face font-lock-string-face fontified t) 1034 1041 (face font-lock-string-face fontified t) 1041 1042 (face font-lock-string-face fontified t) 1042 1043 (fontified t) 1043 1049 (fontified t) 1049 1067 (face font-lock-string-face fontified t) 1067 1068 (fontified t) 1068 1074 (fontified t) 1074 1087 (face font-lock-string-face fontified t) 1087 1088 (fontified t) 1088 1094 (face font-lock-builtin-face fontified t) 1094 1095 (fontified t) 1095 1100 (fontified t) 1100 1105 (face font-lock-builtin-face fontified t) 1105 1106 (fontified t) 1106 1121 (fontified t) 1121 1148 (fontified t) 1148 1154 (fontified t) 1154 1159 (face font-lock-builtin-face fontified t) 1159 1160 (fontified t) 1160 1176 (fontified t) 1176 1203 (fontified t) 1203 1208 (fontified t) 1208 1213 (face font-lock-builtin-face fontified t) 1213 1214 (fontified t) 1214 1227 (fontified t) 1227 1229 (fontified t) 1229 1235 (fontified t) 1235 1236 (fontified t) 1236 1237 (fontified t rear-nonsticky t)) #("#!/usr/bin/env python3
+# import math
+" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 411 (face font-lock-doc-face fontified t) 411 412 (face font-lock-doc-face fontified t) 412 485 (face font-lock-doc-face fontified t) 485 523 (face font-lock-doc-face fontified t) 523 524 (face font-lock-doc-face fontified t rear-nonsticky t) 524 525 (face font-lock-doc-face fontified t) 525 526 (face font-lock-doc-face fontified t syntax-table (15)) 526 528 (face font-lock-doc-face fontified t) 528 529 (fontified t) 529 531 (face font-lock-comment-delimiter-face fontified t) 531 607 (face font-lock-comment-face fontified t) 607 609 (face font-lock-comment-delimiter-face fontified t) 609 616 (face font-lock-comment-face fontified t) 616 618 (face font-lock-comment-delimiter-face fontified t) 618 694 (face font-lock-comment-face fontified t) 694 696 (face font-lock-comment-delimiter-face fontified t) 696 717 (face font-lock-comment-face fontified t) 717 719 (face font-lock-comment-delimiter-face fontified t) 719 725 (face font-lock-comment-face fontified t) 725 731 (face font-lock-comment-face fontified t)) #("    multiplo = valorA * i
+    if (multiplo == valorB):
+        isMultiplos = True
+        break" 0 4 (fontified t) 4 12 (face font-lock-variable-name-face fontified t) 12 26 (fontified t) 26 30 (fontified t) 30 32 (face font-lock-keyword-face fontified t) 32 33 (fontified t) 33 34 (fontified t) 34 42 (fontified t) 42 55 (fontified t) 55 63 (fontified t) 63 74 (face font-lock-variable-name-face fontified t) 74 77 (fontified t) 77 81 (face font-lock-constant-face fontified t) 81 82 (fontified t) 82 90 (fontified t) 90 95 (face font-lock-keyword-face fontified t)) #("for i in range(1, 100):
+    multiplo = valorA * i
+    if (multiplo == valorB):
+        isMultiplos = True
+        break
+" 0 3 (face font-lock-keyword-face fontified t) 3 4 (fontified t) 4 6 (fontified t) 6 8 (face font-lock-keyword-face fontified t) 8 9 (fontified t) 9 14 (face font-lock-builtin-face fontified t) 14 21 (fontified t) 21 24 (fontified t) 24 28 (fontified t) 28 36 (face font-lock-variable-name-face fontified t) 36 50 (fontified t) 50 54 (fontified t) 54 56 (face font-lock-keyword-face fontified t) 56 57 (fontified t) 57 58 (fontified t) 58 66 (fontified t) 66 79 (fontified t) 79 87 (fontified t) 87 98 (face font-lock-variable-name-face fontified t) 98 101 (fontified t) 101 105 (face font-lock-constant-face fontified t) 105 106 (fontified t) 106 114 (fontified t) 114 119 (face font-lock-keyword-face fontified t) 119 120 (fontified t)) "Elaborar um programa que lê 2 valores a e b e os escreve com a mensagem:
+“São múltiplos” ou “Não são múltiplos”." #("#!/usr/bin/env python3
 # coding=utf8
 # ----------------------------------------------------------------------------
 # Created By  : Anderson José de Souza Inácio
-# Created Date: 2024-03-09
+# Created Date: 2024-03-13
 # version ='1.0'
 # ---------------------------------------------------------------------------
 \"\"\" Curso Estatística 2024 UFPR
 Disciplina CI182 Fundamentos de Programacao de Computadores
-Aula 3 Exercício 3.5 - 2 idadeAnos2dias
+Aula 4 Exercício 6.6 - 1 notas
 
-Faça um programa que obtenha do usuário a sua idade expressa em anos,
-meses e dias e mostre-a expressa apenas em dias. Considere que 1 ano sempre
-tem 365 dias e que 1 mês sempre tem 30 dias.
+Escreva um programa que leia o codigo de um aluno e suas tres notas. Calcule a
+media ponderada do aluno, considerando que o peso para a maior nota seja 4 e
+para as duas restantes, 3. Mostre o codigo do aluno, suas tres notas,
+a media calculada e uma mensagem ”APROVADO” se a media for maior ou igual a
+5 e ”REPROVADO” se a media for menor que 5.
 \"\"\"
 # ---------------------------------------------------------------------------
 # Import
 # ---------------------------------------------------------------------------
 # from string import *
-# from math import *
+# import math
+" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 407 (face font-lock-doc-face fontified t) 407 408 (face font-lock-doc-face fontified t) 408 487 (face font-lock-doc-face fontified t) 487 564 (face font-lock-doc-face fontified t) 564 572 (face font-lock-doc-face fontified t) 572 634 (face font-lock-doc-face fontified t) 634 658 (face font-lock-doc-face fontified t) 658 710 (face font-lock-doc-face fontified t) 710 737 (face font-lock-doc-face fontified t) 737 752 (face font-lock-doc-face fontified t) 752 753 (face font-lock-doc-face fontified t rear-nonsticky t) 753 754 (face font-lock-doc-face fontified t) 754 755 (face font-lock-doc-face fontified t syntax-table (15)) 755 757 (face font-lock-doc-face fontified t) 757 758 (fontified t) 758 760 (face font-lock-comment-delimiter-face fontified t) 760 836 (face font-lock-comment-face fontified t) 836 838 (face font-lock-comment-delimiter-face fontified t) 838 845 (face font-lock-comment-face fontified t) 845 847 (face font-lock-comment-delimiter-face fontified t) 847 923 (face font-lock-comment-face fontified t) 923 925 (face font-lock-comment-delimiter-face fontified t) 925 946 (face font-lock-comment-face fontified t) 946 948 (face font-lock-comment-delimiter-face fontified t) 948 959 (face font-lock-comment-face fontified t) 959 960 (face font-lock-comment-face fontified t rear-nonsticky t)) #("nota1 = nota1*4 if nota1 > nota2 and nota1 > nota3 else nota1*3" 0 5 (face font-lock-variable-name-face fontified t) 5 8 (fontified t) 8 16 (fontified t) 16 18 (face font-lock-keyword-face fontified t) 18 19 (fontified t) 19 27 (fontified t) 27 33 (fontified t) 33 36 (face font-lock-keyword-face fontified t) 36 37 (fontified t) 37 45 (fontified t) 45 51 (fontified t) 51 55 (face font-lock-keyword-face fontified t) 55 56 (fontified t) 56 63 (fontified t)) #("print('Bem vindo ao programa calcnota')
+identificacao = int(input('Informe o seu número de indentificação: '))
+nota1 = int(input('Informe o valor da nota 1: '))
+nota2 = int(input('Informe o valor da nota 2: '))
+nota3 = int(input('Informe o valor da nota 3: '))
+mediaExercicios = float(input('Informe a sua média de exercícios: '))
 
-print('Programa converte a idade de anos para dias')
-idadeAnos = int(input('Informe a sua idade em anos: '))
-
-idadeDias = idadeAnos * 365
-idadeMeses = idadeDias / 30
-
-print('A idade informada é de '
-      '{anos} anos, '
-      '{meses} meses e '
-      '{dias} dias'.format(anos=idadeAnos,
-                           meses=round(idadeMeses, 1),
-                           dias=round(idadeDias, 1))
-      )
-" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 416 (face font-lock-doc-face fontified t) 416 417 (face font-lock-doc-face fontified t) 417 487 (face font-lock-doc-face fontified t) 487 563 (face font-lock-doc-face fontified t) 563 571 (face font-lock-doc-face fontified t) 571 606 (face font-lock-doc-face fontified t) 606 607 (face font-lock-doc-face fontified t rear-nonsticky t) 607 608 (face font-lock-doc-face fontified t) 608 609 (face font-lock-doc-face fontified t syntax-table (15)) 609 611 (face font-lock-doc-face fontified t) 611 612 (fontified t) 612 614 (face font-lock-comment-delimiter-face fontified t) 614 690 (face font-lock-comment-face fontified t) 690 692 (face font-lock-comment-delimiter-face fontified t) 692 699 (face font-lock-comment-face fontified t) 699 701 (face font-lock-comment-delimiter-face fontified t) 701 777 (face font-lock-comment-face fontified t) 777 779 (face font-lock-comment-delimiter-face fontified t) 779 800 (face font-lock-comment-face fontified t) 800 802 (face font-lock-comment-delimiter-face fontified t) 802 821 (face font-lock-comment-face fontified t) 821 822 (fontified t) 822 827 (face font-lock-builtin-face fontified t) 827 828 (fontified t) 828 873 (face font-lock-string-face fontified t) 873 874 (fontified t) 874 875 (fontified t) 875 884 (face font-lock-variable-name-face fontified t) 884 887 (fontified t) 887 890 (face font-lock-builtin-face fontified t) 890 891 (fontified t) 891 896 (face font-lock-builtin-face fontified t) 896 897 (fontified t) 897 928 (face font-lock-string-face fontified t) 928 930 (fontified t) 930 931 (fontified t rear-nonsticky t) 931 932 (fontified t) 932 941 (face font-lock-variable-name-face fontified t) 941 944 (fontified t) 944 960 (fontified t) 960 970 (face font-lock-variable-name-face fontified t) 970 973 (fontified t) 973 988 (fontified t) 988 989 (fontified t) 989 994 (face font-lock-builtin-face fontified t) 994 995 (fontified t) 995 1020 (face font-lock-string-face fontified t) 1020 1021 (fontified t) 1021 1027 (fontified t) 1027 1028 (face font-lock-string-face fontified t) 1028 1034 (face font-lock-string-face fontified t) 1034 1041 (face font-lock-string-face fontified t) 1041 1042 (face font-lock-string-face fontified t) 1042 1043 (fontified t) 1043 1049 (fontified t) 1049 1067 (face font-lock-string-face fontified t) 1067 1068 (fontified t) 1068 1074 (fontified t) 1074 1087 (face font-lock-string-face fontified t) 1087 1088 (fontified t) 1088 1094 (face font-lock-builtin-face fontified t) 1094 1095 (fontified t) 1095 1100 (fontified t) 1100 1111 (fontified t) 1111 1138 (fontified t) 1138 1144 (fontified t) 1144 1149 (face font-lock-builtin-face fontified t) 1149 1150 (fontified t) 1150 1166 (fontified t) 1166 1193 (fontified t) 1193 1198 (fontified t) 1198 1203 (face font-lock-builtin-face fontified t) 1203 1204 (fontified t) 1204 1217 (fontified t) 1217 1219 (fontified t) 1219 1225 (fontified t) 1225 1227 (fontified t)) "Faça um programa para calcular a média aritmética de 4 valores reais informados
-pelo usuario." "Faça um programa que obtenha do usuário a sua idade expressa em anos,
-meses e dias e mostre-a expressa apenas em dias. Considere que 1 ano sempre tem 365
-dias e que 1 mês sempre tem 30 dias." #("#!/usr/bin/env python3
+mediaAproveitamento = float(
+    (nota1 + (nota2 * 2) + (nota3 * 3) + mediaExercicios)/7
+)
+" 0 5 (face font-lock-builtin-face fontified t) 5 6 (fontified t) 6 38 (face font-lock-string-face fontified t) 38 40 (fontified t) 40 53 (face font-lock-variable-name-face fontified t) 53 56 (fontified t) 56 59 (face font-lock-builtin-face fontified t) 59 60 (fontified t) 60 65 (face font-lock-builtin-face fontified t) 65 66 (fontified t) 66 107 (face font-lock-string-face fontified t) 107 108 (face font-lock-string-face fontified t) 108 110 (fontified t) 110 111 (fontified t) 111 116 (fontified t) 116 119 (fontified t) 119 122 (face font-lock-builtin-face fontified t) 122 123 (fontified t) 123 128 (face font-lock-builtin-face fontified t) 128 129 (fontified t) 129 158 (face font-lock-string-face fontified t) 158 161 (fontified t) 161 166 (face font-lock-variable-name-face fontified t) 166 169 (fontified t) 169 172 (face font-lock-builtin-face fontified t) 172 173 (fontified t) 173 178 (face font-lock-builtin-face fontified t) 178 179 (fontified t) 179 208 (face font-lock-string-face fontified t) 208 209 (fontified t rear-nonsticky t) 209 210 (fontified t) 210 211 (fontified t) 211 212 (face font-lock-variable-name-face fontified t) 212 216 (face font-lock-variable-name-face fontified t) 216 219 (fontified t) 219 222 (face font-lock-builtin-face fontified t) 222 223 (fontified t) 223 228 (face font-lock-builtin-face fontified t) 228 229 (fontified t) 229 258 (face font-lock-string-face fontified t) 258 259 (fontified t rear-nonsticky t) 259 261 (fontified t) 261 276 (face font-lock-variable-name-face fontified t) 276 279 (fontified t) 279 284 (face font-lock-builtin-face fontified t) 284 285 (fontified t) 285 290 (face font-lock-builtin-face fontified t) 290 291 (fontified t) 291 328 (face font-lock-string-face fontified t) 328 329 (fontified t) 329 331 (fontified t) 331 332 (fontified t) 332 351 (fontified t) 351 354 (fontified t) 354 359 (face font-lock-builtin-face fontified t) 359 361 (fontified t) 361 365 (fontified t) 365 366 (fontified t) 366 375 (fontified t) 375 389 (fontified t) 389 402 (fontified t) 402 417 (fontified t) 417 418 (fontified t) 418 423 (fontified t)) "Escreva um programa que leia o código de um aluno e suas três notas. Calcule a
+média ponderada do aluno, considerando que o peso para a maior nota seja 4 e para as
+duas restantes, 3. Mostre o código do aluno, suas três notas, a média calculada e uma
+mensagem ”APROVADO” se a média for maior ou igual a 5 e ”REPROVADO” se a média
+for menor que 5." #("#!/usr/bin/env python3
 # coding=utf8
 # ----------------------------------------------------------------------------
 # Created By  : Anderson José de Souza Inácio
-# Created Date: 2024-03-09
+# Created Date: 2024-03-13
 # version ='1.0'
 # ---------------------------------------------------------------------------
 \"\"\" Curso Estatística 2024 UFPR
 Disciplina CI182 Fundamentos de Programacao de Computadores
-Aula 3 Exercício 3.5 - 1 media
+Aula 4 Exercício 6.7 - 1 calcnota
+
+Escrever um programa que le o numero de identificacao, as 3 notas obtidas por
+um aluno em 3 provas e a media dos exercıcios (ME) que fazem parte da
+avaliacao. Calcular a media de aproveitamento, usando a formula:
+
+   MA = (Nota1 + Nota2 × 2 + Nota3 × 3 + ME)/7
+
+A atribuicao de conceitos obedece a tabela abaixo:
+
+Media de Aproveitamento     Conceito
+   media > 90                  A
+      75 < media ⩽ 90          B
+      60 < media ⩽ 75          C
+      40 < media ⩽ 60          D
+   media ⩽ 40                  E
+
+O programa deve escrever o numero do aluno, suas notas, a media dos exercıcios,
+a media de aproveitamento, o conceito correspondente e a mensagem: APROVADO
+se o conceito for A,B ou C e REPROVADO se o conceito for D ou E.
 \"\"\"
 # ---------------------------------------------------------------------------
 # Import
 # ---------------------------------------------------------------------------
 # from string import *
-# from math import *
-" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face fontified t syntax-table (15)) 287 376 (face font-lock-doc-face fontified t) 376 407 (face font-lock-doc-face fontified t) 407 408 (face font-lock-doc-face fontified t syntax-table (15)) 408 410 (face font-lock-doc-face fontified t) 410 411 (fontified t) 411 413 (face font-lock-comment-delimiter-face fontified t) 413 489 (face font-lock-comment-face fontified t) 489 491 (face font-lock-comment-delimiter-face fontified t) 491 498 (face font-lock-comment-face fontified t) 498 500 (face font-lock-comment-delimiter-face fontified t) 500 576 (face font-lock-comment-face fontified t) 576 578 (face font-lock-comment-delimiter-face fontified t) 578 599 (face font-lock-comment-face fontified t) 599 601 (face font-lock-comment-delimiter-face fontified t) 601 619 (face font-lock-comment-face fontified t) 619 620 (face font-lock-comment-face fontified t rear-nonsticky t)) #("float(" 0 5 (face font-lock-builtin-face fontified t) 5 6 (fontified t)) #("valor1 = input('Informe o primeiro valor: ')" 0 6 (face font-lock-variable-name-face fontified t) 6 9 (fontified t) 9 14 (face font-lock-builtin-face fontified t) 14 15 (fontified t) 15 43 (face font-lock-string-face fontified t) 43 44 (fontified t)) "" "
-#!/usr/bin/env python3
+# import math
+" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 410 (face font-lock-doc-face fontified t) 410 411 (face font-lock-doc-face fontified t) 411 489 (face font-lock-doc-face fontified t) 489 491 (face font-lock-doc-face fontified t) 491 492 (face font-lock-doc-face fontified t) 492 559 (face font-lock-doc-face fontified t) 559 570 (face font-lock-doc-face fontified t) 570 573 (face font-lock-doc-face fontified t) 573 583 (face font-lock-doc-face fontified t) 583 624 (face font-lock-doc-face fontified t) 624 625 (face font-lock-doc-face fontified t) 625 628 (face font-lock-doc-face fontified t) 628 672 (face font-lock-doc-face fontified t) 672 673 (face font-lock-doc-face fontified t) 673 724 (face font-lock-doc-face fontified t) 724 725 (face font-lock-doc-face fontified t) 725 762 (face font-lock-doc-face fontified t) 762 765 (face font-lock-doc-face fontified t) 765 795 (face font-lock-doc-face fontified t) 795 801 (face font-lock-doc-face fontified t) 801 828 (face font-lock-doc-face fontified t) 828 834 (face font-lock-doc-face fontified t) 834 861 (face font-lock-doc-face fontified t) 861 867 (face font-lock-doc-face fontified t) 867 894 (face font-lock-doc-face fontified t) 894 897 (face font-lock-doc-face fontified t) 897 927 (face font-lock-doc-face fontified t) 927 928 (face font-lock-doc-face fontified t) 928 1008 (face font-lock-doc-face fontified t) 1008 1016 (face font-lock-doc-face fontified t) 1016 1084 (face font-lock-doc-face fontified t) 1084 1098 (face font-lock-doc-face fontified t) 1098 1147 (face font-lock-doc-face fontified t) 1147 1148 (face font-lock-doc-face fontified t rear-nonsticky t) 1148 1149 (face font-lock-doc-face fontified t) 1149 1150 (face font-lock-doc-face fontified t syntax-table (15)) 1150 1152 (face font-lock-doc-face fontified t) 1152 1153 (fontified t) 1153 1155 (face font-lock-comment-delimiter-face fontified t) 1155 1231 (face font-lock-comment-face fontified t) 1231 1233 (face font-lock-comment-delimiter-face fontified t) 1233 1240 (face font-lock-comment-face fontified t) 1240 1242 (face font-lock-comment-delimiter-face fontified t) 1242 1318 (face font-lock-comment-face fontified t) 1318 1320 (face font-lock-comment-delimiter-face fontified t) 1320 1341 (face font-lock-comment-face fontified t) 1341 1343 (face font-lock-comment-delimiter-face fontified t) 1343 1354 (face font-lock-comment-face fontified t) 1354 1355 (face font-lock-comment-face fontified t rear-nonsticky t)) #("float(" 0 5 (face font-lock-builtin-face fontified t) 5 6 (fontified t)) #("elif (mediaAproveitamento <= 90 and mediaAproveitamento > 75):
+    conceito = 'B'
+    " 0 4 (face font-lock-keyword-face fontified t) 4 6 (fontified t) 6 32 (fontified t) 32 35 (face font-lock-keyword-face fontified t) 35 36 (fontified t) 36 60 (fontified t) 60 63 (fontified t) 63 67 (fontified t) 67 75 (face font-lock-variable-name-face fontified t) 75 78 (fontified t) 78 81 (face font-lock-string-face fontified t) 81 86 (fontified t)) #("    print('O aluno id {0} obteve conceito A, com a média de aproveitamento'
+          ' em {1}'.format(identificacao, mediaAproveitamento))" 0 4 (fontified t) 4 9 (face font-lock-builtin-face fontified t) 9 10 (fontified t) 10 75 (face font-lock-string-face fontified t) 75 76 (fontified t) 76 86 (fontified t) 86 88 (face font-lock-string-face fontified t) 88 94 (face font-lock-string-face fontified t) 94 95 (face font-lock-string-face fontified t) 95 96 (fontified t) 96 102 (face font-lock-builtin-face fontified t) 102 103 (fontified t) 103 118 (fontified t) 118 137 (fontified t) 137 138 (fontified t) 138 139 (fontified t)) #("nota1 = input('Informe o valor da nota 1:' )" 0 5 (face font-lock-variable-name-face fontified t) 5 8 (fontified t) 8 13 (face font-lock-builtin-face fontified t) 13 14 (fontified t) 14 42 (face font-lock-string-face fontified t) 42 43 (fontified t) 43 44 (fontified t)) "Escrever um programa que lê o número de identificação, as 3 notas obtidas por
+um aluno em 3 provas e a média dos exercı́cios (M E) que fazem parte da avaliação. Cal-
+cular a média de aproveitamento, usando a fórmula:
+M A = (N ota1 + N ota2 × 2 + N ota3 × 3 + M E)/7
+A atribuição de conceitos obedece a tabela abaixo:
+Média de Aproveitamento
+media > 90
+75 < media ⩽ 90
+60 < media ⩽ 75
+40 < media ⩽ 60
+media ⩽ 40
+Conceito
+A
+B
+C
+D
+E
+O programa deve escrever o número do aluno, suas notas, a média dos exercı́cios, a média
+de aproveitamento, o conceito correspondente e a mensagem: APROVADO se o conceito
+for A,B ou C e REPROVADO se o conceito for D ou E." #("#!/usr/bin/env python3
 # coding=utf8
 # ----------------------------------------------------------------------------
 # Created By  : Anderson José de Souza Inácio
-# Created Date: 2024-03-09
+# Created Date: 2024-03-13
 # version ='1.0'
 # ---------------------------------------------------------------------------
 \"\"\" Curso Estatística 2024 UFPR
 Disciplina CI182 Fundamentos de Programacao de Computadores
-Aula 3 Exercício 3.6 - 3 eqSist
-Código que realiza o calculo de sistemas de primeiro Grau, utilizando o
-método de substituição, mais informações em
-https://www.todamateria.com.br/sistemas-de-equacoes-do-1-grau-exercicios/\"\"\"
-# ---------------------------------------------------------------------------
-# Import
-# ---------------------------------------------------------------------------
-# from string import *
-# from math import *
-" #("#!/usr/bin/env python3
-# coding=utf8
-# ----------------------------------------------------------------------------
-# Created By  : Anderson José de Souza Inácio
-# Created Date: 2024-03-09
-# version ='1.0'
-# ---------------------------------------------------------------------------
-\"\"\" Curso Estatística 2024 UFPR
-Disciplina CI182 Fundamentos de Programacao de Computadores
-Aula 3 Exercício 3.6 - 3 eqSist
+Aula 4 Exercício 5.4 - 5 ultimoStr
 
-Código que realiza o calculo de sistemas de primeiro Grau, utilizando o
-método de substituição, mais informações em
-https://www.todamateria.com.br/sistemas-de-equacoes-do-1-grau-exercicios/\"\"\"
+Solicitar do usuario dois textos separados e em seguida mostrar o ındice da
+ultima ocorrencia do segundo texto t no primeiro, ou -1, se o segundo texto
+nao ocorre no primeiro.
+\"\"\"
 # ---------------------------------------------------------------------------
 # Import
 # ---------------------------------------------------------------------------
 # from string import *
-# from math import *" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 22 (face font-lock-comment-face fontified t) 22 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 316 (face font-lock-doc-face fontified t) 316 376 (face font-lock-doc-face fontified t) 376 408 (face font-lock-doc-face fontified t) 408 409 (face font-lock-doc-face fontified t) 409 481 (face font-lock-doc-face fontified t) 481 525 (face font-lock-doc-face fontified t) 525 597 (face font-lock-doc-face fontified t) 597 598 (face font-lock-doc-face fontified t rear-nonsticky t) 598 599 (face font-lock-doc-face fontified t syntax-table (15)) 599 601 (face font-lock-doc-face fontified t) 601 602 (fontified t) 602 604 (face font-lock-comment-delimiter-face fontified t) 604 680 (face font-lock-comment-face fontified t) 680 682 (face font-lock-comment-delimiter-face fontified t) 682 688 (face font-lock-comment-face fontified t) 688 689 (face font-lock-comment-face fontified t) 689 691 (face font-lock-comment-delimiter-face fontified t) 691 765 (face font-lock-comment-face fontified t) 765 766 (face font-lock-comment-face fontified t rear-nonsticky t) 766 767 (face font-lock-comment-face fontified t) 767 769 (face font-lock-comment-delimiter-face fontified t) 769 773 (face font-lock-comment-face fontified t) 773 781 (face font-lock-comment-face fontified t) 781 787 (face font-lock-comment-face fontified t) 787 790 (face font-lock-comment-face fontified t) 790 792 (face font-lock-comment-delimiter-face fontified t) 792 796 (face font-lock-comment-face fontified t) 796 802 (face font-lock-comment-face fontified t) 802 808 (face font-lock-comment-face fontified t) 808 809 (face font-lock-comment-face fontified t) 809 810 (face font-lock-comment-face fontified t rear-nonsticky t)) "from string import *
-from math import *" #("https://www.todamateria.com.br/sistemas-de-equacoes-do-1-grau-exercicios/" 0 72 (face font-lock-comment-face fontified t) 72 73 (face font-lock-comment-face fontified t rear-nonsticky t)) "" "# ----------------------------------------------------------------------------
-# Created By  : name_of_the_creator   Line 3
-# Created Date: date/month/time ..etc
+# import math
+" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 411 (face font-lock-doc-face fontified t) 411 412 (face font-lock-doc-face fontified t) 412 488 (face font-lock-doc-face fontified t) 488 564 (face font-lock-doc-face fontified t) 564 575 (face font-lock-doc-face fontified t) 575 586 (face font-lock-doc-face fontified t) 586 587 (face font-lock-doc-face fontified t rear-nonsticky t) 587 588 (face font-lock-doc-face fontified t) 588 589 (face font-lock-doc-face fontified t syntax-table (15)) 589 591 (face font-lock-doc-face fontified t) 591 592 (fontified t) 592 594 (face font-lock-comment-delimiter-face fontified t) 594 670 (face font-lock-comment-face fontified t) 670 672 (face font-lock-comment-delimiter-face fontified t) 672 679 (face font-lock-comment-face fontified t) 679 681 (face font-lock-comment-delimiter-face fontified t) 681 757 (face font-lock-comment-face fontified t) 757 759 (face font-lock-comment-delimiter-face fontified t) 759 780 (face font-lock-comment-face fontified t) 780 782 (face font-lock-comment-delimiter-face fontified t) 782 794 (face font-lock-comment-face fontified t)) #("pessego passeia a noite com pessego, so que pessego tem medo do escuro, pes" 0 75 (help-echo "mouse-2: insert after prompt as new input" mouse-face highlight fontified t)) "Solicitar do usuário dois textos separados e em seguida mostrar o ı́ndice da
+última ocorrência do segundo texto t no primeiro, ou -1, se o segundo texto não ocorre
+no primeiro." #("#!/usr/bin/env python3
+# coding=utf8
+# ----------------------------------------------------------------------------
+# Created By  : Anderson José de Souza Inácio
+# Created Date: 2024-03-13
 # version ='1.0'
 # ---------------------------------------------------------------------------
-\"\"\" Details about the module and for what purpose it was built for\"\"\"  # Line 4
+\"\"\" Curso Estatística 2024 UFPR
+Disciplina CI182 Fundamentos de Programacao de Computadores
+Aula 4 Exercício 5.4 - 4 primaStr
+
+Solicitar do usuario um texto qualquer e depois um caracter c qualquer. O
+programa entao deve mostrar o ındice no texto da primeira ocorrencia de c no
+texto, ou -1, se c nao ocorre no texto.
+\"\"\"
 # ---------------------------------------------------------------------------
-# Imports Line 5
-# ---------------------------------------------------------------------------"))
+# Import
+# ---------------------------------------------------------------------------
+# from string import *
+# import math
+" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 410 (face font-lock-doc-face fontified t) 410 411 (face font-lock-doc-face fontified t) 411 485 (face font-lock-doc-face fontified t) 485 562 (face font-lock-doc-face fontified t) 562 572 (face font-lock-doc-face fontified t) 572 600 (face font-lock-doc-face fontified t) 600 601 (face font-lock-doc-face fontified t rear-nonsticky t) 601 602 (face font-lock-doc-face fontified t) 602 603 (face font-lock-doc-face fontified t syntax-table (15)) 603 605 (face font-lock-doc-face fontified t) 605 606 (fontified t) 606 608 (face font-lock-comment-delimiter-face fontified t) 608 684 (face font-lock-comment-face fontified t) 684 686 (face font-lock-comment-delimiter-face fontified t) 686 693 (face font-lock-comment-face fontified t) 693 695 (face font-lock-comment-delimiter-face fontified t) 695 771 (face font-lock-comment-face fontified t) 771 773 (face font-lock-comment-delimiter-face fontified t) 773 794 (face font-lock-comment-face fontified t) 794 796 (face font-lock-comment-delimiter-face fontified t) 796 808 (face font-lock-comment-face fontified t)) "Solicitar do usuário um texto qualquer e depois um caracter c qualquer. O
+programa então deve mostrar o ı́ndice no texto da primeira ocorrência de c no texto, ou
+-1, se c não ocorre no texto." #("#!/usr/bin/env python3
+# coding=utf8
+# ----------------------------------------------------------------------------
+# Created By  : Anderson José de Souza Inácio
+# Created Date: 2024-03-13
+# version ='1.0'
+# ---------------------------------------------------------------------------
+\"\"\" Curso Estatística 2024 UFPR
+Disciplina CI182 Fundamentos de Programacao de Computadores
+Aula 4 Exercício 5.4 - 3 juntaStr
+
+Solicitar do usuario dois textos separados e mostra-los na tela concatenados,
+ isto e, os dois textos como um so, sem espaco entre eles.
+\"\"\"
+# ---------------------------------------------------------------------------
+# Import
+# ---------------------------------------------------------------------------
+# from string import *
+# import math
+" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 410 (face font-lock-doc-face fontified t) 410 411 (face font-lock-doc-face fontified t) 411 489 (face font-lock-doc-face fontified t) 489 495 (face font-lock-doc-face fontified t) 495 546 (face font-lock-doc-face fontified t) 546 547 (face font-lock-doc-face fontified t rear-nonsticky t) 547 548 (face font-lock-doc-face fontified t) 548 549 (face font-lock-doc-face fontified t syntax-table (15)) 549 551 (face font-lock-doc-face fontified t) 551 552 (fontified t) 552 554 (face font-lock-comment-delimiter-face fontified t) 554 630 (face font-lock-comment-face fontified t) 630 632 (face font-lock-comment-delimiter-face fontified t) 632 639 (face font-lock-comment-face fontified t) 639 641 (face font-lock-comment-delimiter-face fontified t) 641 717 (face font-lock-comment-face fontified t) 717 719 (face font-lock-comment-delimiter-face fontified t) 719 740 (face font-lock-comment-face fontified t) 740 742 (face font-lock-comment-delimiter-face fontified t) 742 754 (face font-lock-comment-face fontified t)) "Solicitar do usuário dois textos separados e mostrá-los na tela concatenados, isto
+é, os dois textos como um só, sem espaço entre eles." #("#!/usr/bin/env python3
+# coding=utf8
+# ----------------------------------------------------------------------------
+# Created By  : Anderson José de Souza Inácio
+# Created Date: 2024-03-13
+# version ='1.0'
+# ---------------------------------------------------------------------------
+\"\"\" Curso Estatística 2024 UFPR
+Disciplina CI182 Fundamentos de Programacao de Computadores
+Aula 4 Exercício 5.4 - 2 compStr
+
+Solicitar do usuario dois textos separados e indicar na tela se os textos sao
+ iguais, ou se o primeiro texto digitado esta antes do outro considerando
+ordem alfabetica.
+\"\"\"
+# ---------------------------------------------------------------------------
+# Import
+# ---------------------------------------------------------------------------
+# from string import *
+# import math
+" 0 1 (face font-lock-comment-delimiter-face fontified t) 1 23 (face font-lock-comment-face fontified t) 23 25 (face font-lock-comment-delimiter-face fontified t) 25 37 (face font-lock-comment-face fontified t) 37 39 (face font-lock-comment-delimiter-face fontified t) 39 116 (face font-lock-comment-face fontified t) 116 118 (face font-lock-comment-delimiter-face fontified t) 118 162 (face font-lock-comment-face fontified t) 162 164 (face font-lock-comment-delimiter-face fontified t) 164 189 (face font-lock-comment-face fontified t) 189 191 (face font-lock-comment-delimiter-face fontified t) 191 206 (face font-lock-comment-face fontified t) 206 208 (face font-lock-comment-delimiter-face fontified t) 208 284 (face font-lock-comment-face fontified t) 284 286 (face font-lock-doc-face fontified t) 286 287 (face font-lock-doc-face syntax-table (15) fontified t) 287 376 (face font-lock-doc-face fontified t) 376 409 (face font-lock-doc-face fontified t) 409 410 (face font-lock-doc-face fontified t) 410 488 (face font-lock-doc-face fontified t) 488 562 (face font-lock-doc-face fontified t) 562 578 (face font-lock-doc-face fontified t) 578 579 (face font-lock-doc-face fontified t rear-nonsticky t) 579 580 (face font-lock-doc-face fontified t) 580 581 (face font-lock-doc-face fontified t syntax-table (15)) 581 583 (face font-lock-doc-face fontified t) 583 584 (fontified t) 584 586 (face font-lock-comment-delimiter-face fontified t) 586 662 (face font-lock-comment-face fontified t) 662 664 (face font-lock-comment-delimiter-face fontified t) 664 671 (face font-lock-comment-face fontified t) 671 673 (face font-lock-comment-delimiter-face fontified t) 673 749 (face font-lock-comment-face fontified t) 749 751 (face font-lock-comment-delimiter-face fontified t) 751 772 (face font-lock-comment-face fontified t) 772 774 (face font-lock-comment-delimiter-face fontified t) 774 785 (face font-lock-comment-face fontified t) 785 786 (face font-lock-comment-face fontified t rear-nonsticky t)) #("        print('O primeiro texto informado está em primeiro, considerando a '
+              'ordem alfabética')" 0 8 (fontified t) 8 13 (face font-lock-builtin-face fontified t) 13 14 (fontified t) 14 76 (face font-lock-string-face fontified t) 76 77 (fontified t) 77 91 (fontified t) 91 92 (face font-lock-string-face fontified t) 92 97 (face font-lock-string-face fontified t) 97 98 (face font-lock-string-face fontified t) 98 108 (face font-lock-string-face fontified t) 108 109 (face font-lock-string-face fontified t) 109 110 (fontified t)) "Solicitar do usuário dois textos separados e indicar na tela se os textos são iguais,
+ou se o primeiro texto digitado está antes do outro considerando ordem alfabética."))
 (setq search-ring 'nil)
 (setq regexp-search-ring '("indent" "scheme\\[SchemeNorm]\\[ColB" "updatesys" "mai"))
