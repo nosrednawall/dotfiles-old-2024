@@ -25,4 +25,8 @@ else
     fi
 fi
 
-echo "$icon $battery_level󰏰 "
+if [ "$battery_level" -le 95 ]; then
+    echo " $icon $battery_level󰏰 "
+else
+    echo ""
+fi

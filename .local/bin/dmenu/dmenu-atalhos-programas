@@ -65,6 +65,6 @@ case $chosen in
 	 ;;
 	 $powerbi)
 		 SUDO_ASKPASS=/usr/bin/ssh-askpass sudo -A virsh net-list --all && sudo virsh net-start default
-		 virt-manager
+		 nvidia virt-manager
 	 ;;
 esac
