@@ -15,6 +15,7 @@ brmodelo=" brModelo"
 thunderbird=" Thunderbird"
 powerbi="󰍲 PowerBI"
 sql_power_architect="SQL Power Architect"
+# virtmanager="Virt-manager"
 
 # Variable passed to dmenu
 options="$chrome\n$thunar\n$emacs\n$thunderbird\n$spotify\n$spotube\n$telegram\n$discord\n$obsidian\n$openboard\n$rstudio\n$drawio\n$brmodelo\n$sql_power_architect\n$powerbi"
@@ -64,7 +65,13 @@ case $chosen in
 		 thunderbird
 	 ;;
 	 $powerbi)
-		 SUDO_ASKPASS=/usr/bin/ssh-askpass sudo -A virsh net-list --all && sudo virsh net-start default
-		 nvidia virt-manager
+	     SUDO_ASKPASS=/usr/bin/ssh-askpass sudo -A virsh net-list --all && sudo virsh net-start default
+	     nvidia virt-manager
 	 ;;
+#	 $virtmanager)
+#	     SUDO_ASKPASS=/usr/bin/ssh-askpass sudo -A systemctl start libvirtd.service
+#	 ;;
+#	 $docker)
+#	     SUDO_ASKPASS=/usr/bin/ssh-askpass sudo -A systemctl start docker.service && sudo systemctl start containerd.service
+#	 ;;
 esac

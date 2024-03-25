@@ -1,0 +1,6 @@
+#!/bin/bash
+
+brightnessctl set 5%+
+brilho=$(brightnessctl g)
+
+notify-send -t 3000 "Brilho aumentado em +5%" "Brilho total $brilho%" --icon="/usr/share/icons/ePapirus/16x16/actions/brightnesssettings.svg"
