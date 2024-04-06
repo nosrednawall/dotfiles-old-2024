@@ -15,5 +15,6 @@ pgrep -x mpd > /dev/null || mpd ~/.config/mpd/mpd.conf
 bash ~/.local/bin/if_monitor.sh
 # nitrogen --restore &
 # feh --recursive --bg-fill --randomize ~/.wallpapers/
-feh --recursive --bg-fill --randomize ~/.wallpapers/* &
+# feh --recursive --bg-fill --randomize ~/.wallpapers/* &
+feh --recursive --bg-fill ~/.wallpapers/Spaceman-gruvbox.png
 pgrep -x slstatus > /dev/null || slstatus &

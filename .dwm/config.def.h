@@ -59,8 +59,9 @@ static const Rule rules[] = {
 	{ "Gimp",			NULL,		NULL,		0,		1,		-1 },
 	{ "copyq",			NULL,		NULL,		0,		1,		-1 },
 	{ "mpv",			NULL,		NULL,		0,		1,		-1 },
-	{ "R_x11",			NULL,		NULL,		0,		1,		-1 },
-
+	{ "Emacs",			"emacs",	NULL,		1 << 1,		0,		-1 },
+	{ "R_x11",			NULL,		NULL,		1 << 1,		0,		-1 },
+	{ NULL,				NULL,		"R Data Editor",1 << 1,		0,		-1 },
 };
 
 /* layout(s) */

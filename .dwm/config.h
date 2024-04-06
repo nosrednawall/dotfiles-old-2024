@@ -48,19 +48,20 @@ static const char *tags[] = { "1", "2", "3", "4", "5" };
 static const unsigned int ulinepad      = 5;	/* horizontal padding between the underline and tag */
 static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
 static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the bar the line should appear */
-static const int ulineall				= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
+static const int ulineall		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class                       instance		title       tags mask     isfloating   monitor */
-	{ "Gimp",						NULL,		NULL,			0,				1,		-1 },
-	{ "copyq",						NULL,		NULL,			0,				1,		-1 },
-	{ "mpv",						NULL,		NULL,			0,				1,		-1 },
-	{ "R_x11",						NULL,		NULL,			0,				1,		-1 },
-
+	/* class                       instance		title       tags mask     isfloating		monitor */
+	{ "Gimp",			NULL,		NULL,		0,		1,		-1 },
+	{ "copyq",			NULL,		NULL,		0,		1,		-1 },
+	{ "mpv",			NULL,		NULL,		0,		1,		-1 },
+	{ "Emacs",			"emacs",	NULL,		1 << 1,		0,		-1 },
+	{ "R_x11",			NULL,		NULL,		1 << 1,		0,		-1 },
+	{ NULL,				NULL,		"R Data Editor",1 << 1,		0,		-1 },
 };
 
 /* layout(s) */
@@ -154,7 +155,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_z,      setlayout,      {.v = &layouts[9]} },
 	{ MODKEY,                       XK_z,      setlayout,      {.v = &layouts[10]} },
 
-	{ MODKEY|ControlMask,			XK_comma,  cyclelayout,    {.i = -1 } },
+	{ MODKEY|ControlMask,		XK_comma,  cyclelayout,    {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
@@ -177,7 +178,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY|ShiftMask,				XK_r,      quit,           {1} },
+	{ MODKEY|ShiftMask,		XK_r,      quit,           {1} },
 
 	/*Meus atalhos*/
 	{ MODKEY,                       XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-atalhos-programas") },
@@ -210,7 +211,7 @@ static const Key keys[] = {
 	//{ 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = brighter } },
 	{ MODKEY,                       XK_q,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-power" ) },
 	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
-	{ MODKEY,						XK_e,							spawn,			SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
+	{ MODKEY,			XK_e,				spawn,		SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
 	{ MODKEY,                       XK_w,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pulseaudio-sink") },
 	{ MODKEY,                       XK_k,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-teclados") }
 };

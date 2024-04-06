@@ -1,22 +1,29 @@
 #+STARTUP: overview
-
 #+PROPERTY: header-args :comments yes :results silent
 * Configurações Gerais
 ** Environment e Fonte padrão
 #+BEGIN_SRC emacs-lisp
-  ;; Set locale to Brazilian Portuguese
-  (set-locale-environment "pt_BR.UTF-8")
 
+;;  (set-default-coding-systems 'utf-8)
+  ;;Set locale to Brazilian Portuguese
+;;  (set-locale-environment "pt_BR.UTF-8")
+;;  (setenv "LANG" "pt_BR.UTF-8")
+;;  (set-clipboard-coding-system 'utf-8)
+  ;;(setq x-select-enable-clipboard t)
+;;  (setq x-select-enable-clipboard t)
+;;  (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+
+  ;; For Windows
+  ;;(set-clipboard-coding-system 'utf-16le-dos)
   ;; Add frame margins. This makes things more pleasant to read.
   ;; (setq default-frame-alist '((internal-border-width . 20)))
 
   ;; Starts the Emacs server for emacsclient only if it's not started already
   ;;  (load "server")
   ;;  (unless (server-running-p) (server-start))
-
+  (xclip-mode 1)
   ;; Clean whitespace before saving a file
   (add-hook 'before-save-hook 'whitespace-cleanup)
-
 
   (add-to-list 'default-frame-alist '(font . "Comic code-12"))
   (add-to-list 'default-frame-alist '(font . "Mononoki Nerd Font-12"))
@@ -45,11 +52,11 @@
 
   ;; Backspace
   (define-key global-map [backspace]
-  'delete-backward-char)
+    'delete-backward-char)
 
   ;; Delete
   (define-key global-map [delete]
-  'delete-char)
+    'delete-char)
 
 #+END_SRC
 ** Coletor de Lixo
@@ -134,7 +141,7 @@
 #+BEGIN_SRC emacs-lisp
 (setq browse-url-browser-display nil
 	  browse-url-browser-function 'browse-url-default-browser
-	  browse-url-firefox-program "firefox")
+	  browse-url-firefox-program "google-chrome-stable")
 #+END_SRC
 
 ** Buffers
@@ -151,23 +158,75 @@
 	(windmove-default-keybindings))
 
 #+END_SRC
+** ESS
+#+BEGIN_SRC
+
+(defvar rutils-show_plot_next_to_r_process t)
+
+(defun add-pdf-to-rcode(rcomm fname)
+  "add pdf(tmpfile) and dev.off() to R command"
+  (let*  (
+	  (newc (concat "pdf('" fname "')\n" rcomm  "\n dev.off()"))
+	  )
+    (eval newc)
+      )
+  )
+
+
+(defun rutils-plot-region-or-paragraph()
+  "execute region or paragraph and save tmp plot to pdf. Then open windows to show pdf"
+  (interactive)
+    (let*  (
+	  (fname (concat (make-temp-file "plot_") ".pdf"))
+	  )
+      (progn
+	(if (use-region-p)
+	    (ess-eval-linewise (add-pdf-to-rcode (buffer-substring (region-beginning) (region-end)) fname))
+	  (progn (ess-eval-linewise (add-pdf-to-rcode (thing-at-point 'paragraph) fname)))
+	  )
+	;; (with-help-window "*plots*"
+	;;   (find-ssfile-at-point)
+	;;   )
+	(if rutils-show_plot_next_to_r_process
+	    (ess-switch-to-end-of-ESS)
+	    )
+	(if (window-in-direction 'right)
+	    (progn
+	      (select-window (window-in-direction 'right))
+	      (find-file fname)
+	      )
+	  (progn
+	    (split-window-right)
+	    (select-window (window-in-direction 'right))
+	    (find-file fname)
+	    )
+	    )
+	;;(split-window-right)
+	;;(windmove-right)
+	)
+    )
+    )
+(define-key ess-mode-map (kbd "C-c g") 'rutils-plot-region-or-paragraph)
+
+#+END_SRC
 * Pacotes
 ** Dashboard
 #+BEGIN_SRC emacs-lisp
-    (use-package dashboard
-	:ensure t
-	:init
-	(setq dashboard-items '((recents . 15)
-				(projects . 5))
-	      dashboard-banner-logo-title "Hello!"
-	      dashboard-startup-banner 'logo
-	      dashboard-set-file-icons t
-	      dashboard-heading-icons t
-	      dashboard-set-init-info nil
-	      dashboard-center-content t)
-	:config
-	(dashboard-setup-startup-hook))
-      (provide 'dashboard-config)
+(setq projectile-indexing-method 'alien)
+  (use-package dashboard
+      :ensure t
+      :init
+      (setq dashboard-items '((recents . 15)
+			      (projects . 10))
+	    dashboard-banner-logo-title "Hello!"
+	    dashboard-startup-banner 'logo
+	    dashboard-set-file-icons t
+	    dashboard-heading-icons t
+	    dashboard-set-init-info nil
+	    dashboard-center-content t)
+      :config
+      (dashboard-setup-startup-hook))
+    (provide 'dashboard-config)
 #+END_SRC
 
 ** Rainbow colors
@@ -188,7 +247,7 @@
 #+BEGIN_SRC emacs-lisp
 (use-package gruvbox-theme
   :ensure t)
-(load-theme 'gruvbox-dark-medium t)
+(load-theme 'gruvbox-dark-hard t)
 #+END_SRC
 
 ** Help key combinations

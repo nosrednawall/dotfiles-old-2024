@@ -2,13 +2,14 @@
 
 casa="󰍹  Monitor Externo"
 notebook="  Notebook"
+so_monitor_externo="So monitor externo"
 noite="󱩍 Noite"
 dia="󰛨 Dia"
 tabletwaconhdmi="󰓶 Tablet Wacon HDMI"
 tabletwaconnotebook="󰓶 Tablet Wacon Notebook"
 
 # Variable passed to dmenu
-options="$casa\n$notebook\n$dia\n$noite\n$tabletwaconhdmi\n$tabletwaconnotebook"
+options="$casa\n$notebook\n$so_monitor_externo\n$dia\n$noite\n$tabletwaconhdmi\n$tabletwaconnotebook"
 
 chosen="$(echo -e "$options" | dmenu -p "Scripts de monitor " )"
 case $chosen in
@@ -19,6 +20,10 @@ case $chosen in
     $notebook)
 	xrandr --output HDMI-0 --off --output eDP-1-1 --primary --auto --rotate normal --dpi 96
 	notify-send -t 3000 "  Modo Laptop" "Alterado tela para modo Laptop" --icon="/usr/share/icons/ePapirus/16x16/devices/computer-laptop.svg"
+	;;
+    $so_monitor_externo)
+	xrandr --output HDMI-0 --primary --auto --rotate normal --dpi 96 --output eDP-1-1 --off
+	notify-send -t 3000 "󰡁 Só monitor externo" "Só monitor Externo" --icon="/usr/share/icons/ePapirus/16x16/devices/computer.svg"
 	;;
     $dia)
 	redshift -P -O 6500
