@@ -62,6 +62,7 @@ static const Rule rules[] = {
 	{ "Emacs",			"emacs",	NULL,		1 << 1,		0,		-1 },
 	{ "R_x11",			NULL,		NULL,		1 << 1,		0,		-1 },
 	{ NULL,				NULL,		"R Data Editor",1 << 1,		0,		-1 },
+	{ "rstudio",			 "rstudio",	NULL,		1 << 1,		0,		-1 },
 };
 
 /* layout(s) */

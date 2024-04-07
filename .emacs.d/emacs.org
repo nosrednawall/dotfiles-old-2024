@@ -4,59 +4,59 @@
 ** Environment e Fonte padrão
 #+BEGIN_SRC emacs-lisp
 
-;;  (set-default-coding-systems 'utf-8)
-  ;;Set locale to Brazilian Portuguese
-;;  (set-locale-environment "pt_BR.UTF-8")
-;;  (setenv "LANG" "pt_BR.UTF-8")
-;;  (set-clipboard-coding-system 'utf-8)
-  ;;(setq x-select-enable-clipboard t)
-;;  (setq x-select-enable-clipboard t)
-;;  (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+  ;;  (set-default-coding-systems 'utf-8)
+    ;;Set locale to Brazilian Portuguese
+  ;;  (set-locale-environment "pt_BR.UTF-8")
+  ;;  (setenv "LANG" "pt_BR.UTF-8")
+  ;;  (set-clipboard-coding-system 'utf-8)
+    ;;(setq x-select-enable-clipboard t)
+  ;;  (setq x-select-enable-clipboard t)
+  ;;  (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
-  ;; For Windows
-  ;;(set-clipboard-coding-system 'utf-16le-dos)
-  ;; Add frame margins. This makes things more pleasant to read.
-  ;; (setq default-frame-alist '((internal-border-width . 20)))
+    ;; For Windows
+    ;;(set-clipboard-coding-system 'utf-16le-dos)
+    ;; Add frame margins. This makes things more pleasant to read.
+    ;; (setq default-frame-alist '((internal-border-width . 20)))
 
-  ;; Starts the Emacs server for emacsclient only if it's not started already
-  ;;  (load "server")
-  ;;  (unless (server-running-p) (server-start))
-  (xclip-mode 1)
-  ;; Clean whitespace before saving a file
-  (add-hook 'before-save-hook 'whitespace-cleanup)
+    ;; Starts the Emacs server for emacsclient only if it's not started already
+    ;;  (load "server")
+    ;;  (unless (server-running-p) (server-start))
+    (xclip-mode 1)
+    ;; Clean whitespace before saving a file
+    (add-hook 'before-save-hook 'whitespace-cleanup)
 
-  (add-to-list 'default-frame-alist '(font . "Comic code-12"))
-  (add-to-list 'default-frame-alist '(font . "Mononoki Nerd Font-12"))
+    (add-to-list 'default-frame-alist '(font . "Comic code-12"))
+    (add-to-list 'default-frame-alist '(font . "Mononoki Nerd Font-12"))
 
-  (setq org-babel-sh-command "/bin/bash")
+    (setq org-babel-sh-command "/bin/bash")
 
 
-  ;; Seleções Visíveis
-  (setq transient-mark-mode t)
+    ;; Seleções Visíveis
+    (setq transient-mark-mode t)
 
-  ;; Sobrescrevendo seleções automaticamente
-  (require 'delsel)
-  (delete-selection-mode 1)
+    ;; Sobrescrevendo seleções automaticamente
+    (require 'delsel)
+    (delete-selection-mode 1)
 
-  ;; End vai para o fim da linha
-  (define-key global-map [end] 'end-of-line)
+    ;; End vai para o fim da linha
+    (define-key global-map [end] 'end-of-line)
 
-  ;; Home vai para o comeco da linha
-  (define-key global-map [home] 'beginning-of-line)
+    ;; Home vai para o comeco da linha
+    (define-key global-map [home] 'beginning-of-line)
 
-  ;; CTRL-End vai para o fim do documento
-  (define-key global-map [C-end] 'end-of-buffer)
+    ;; CTRL-End vai para o fim do documento
+    (define-key global-map [C-end] 'end-of-buffer)
 
-  ;; CTRL-Home vai para o comeco do documento
-  (define-key global-map [C-home] 'beginning-of-buffer)
+    ;; CTRL-Home vai para o comeco do documento
+    (define-key global-map [C-home] 'beginning-of-buffer)
 
-  ;; Backspace
-  (define-key global-map [backspace]
-    'delete-backward-char)
+    ;; Backspace
+    (define-key global-map [backspace]
+      'delete-backward-char)
 
-  ;; Delete
-  (define-key global-map [delete]
-    'delete-char)
+    ;; Delete
+    (define-key global-map [delete]
+      'delete-char)
 
 #+END_SRC
 ** Coletor de Lixo
@@ -247,7 +247,7 @@
 #+BEGIN_SRC emacs-lisp
 (use-package gruvbox-theme
   :ensure t)
-(load-theme 'gruvbox-dark-hard t)
+(load-theme 'gruvbox-dark-medium t)
 #+END_SRC
 
 ** Help key combinations
@@ -300,24 +300,34 @@ Aplica um Alt Tab Entre os Buffers e Buffers com Tabs
 
 ** Neotree, All the Icons e SpaceLine
 #+BEGIN_SRC emacs-lisp
-  (use-package all-the-icons
-	:ensure t)
+      (use-package all-the-icons
+	    :ensure t)
 
-;;  (use-package spaceline
-;;	:ensure t)
+    ;;  (use-package spaceline
+    ;;	:ensure t)
 
 
-;;(use-package spaceline-config
-;;	:config (spaceline-emacs-theme))
+    ;;(use-package spaceline-config
+    ;;	:config (spaceline-emacs-theme))
 
-  ;; neotree
-  (use-package neotree
-	:ensure t
-	:config
-	(setq neo-theme (if (display-graphic-p) 'icons 'ascii))
-	:bind (("C-\\". 'neotree-toggle))
-  )
+      ;; neotree
+      (use-package neotree
+	    :ensure t
+	    :config
+	    (setq neo-theme (if (display-graphic-p) 'icons 'ascii))
+	    :bind (("C-\\". 'neotree-toggle))
+      )
 
+  (use-package ace-window
+    :ensure t
+    :init
+    (progn
+      (global-set-key [remap other-window] 'ace-window)
+      (custom-set-faces
+       '(aw-leading-char-face
+	 ((t (:inherit ace-jump-face-foreground :height 3.0)))))
+  ))
+(winner-mode 1)
 #+END_SRC
 
 ** Swiper
