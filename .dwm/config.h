@@ -7,7 +7,7 @@
 #include "fibonacci.c"
 
 /* appearance */
-static const unsigned int borderpx         = 5;        /* border pixel of windows */
+static const unsigned int borderpx         = 4;        /* border pixel of windows */
 static const unsigned int gappx            = 10;       /* gaps between windows */
 static const unsigned int snap             = 32;       /* snap pixel */
 static const unsigned int systraypinning   = 0;        /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -59,10 +59,11 @@ static const Rule rules[] = {
 	{ "Gimp",			NULL,		NULL,		0,		1,		-1 },
 	{ "copyq",			NULL,		NULL,		0,		1,		-1 },
 	{ "mpv",			NULL,		NULL,		0,		1,		-1 },
-	{ "Emacs",			"emacs",	NULL,		1 << 1,		0,		-1 },
-	{ "R_x11",			NULL,		NULL,		1 << 1,		0,		-1 },
-	{ NULL,				NULL,		"R Data Editor",1 << 1,		0,		-1 },
-	{ "rstudio",			 "rstudio",	NULL,		1 << 1,		0,		-1 },
+	//	{ "Emacs",			"emacs",	NULL,		1 << 1,		0,		-1 },
+	//	{ "R_x11",			NULL,		NULL,		1 << 1,		0,		-1 },
+	//	{ NULL,				NULL,		"R Data Editor",1 << 1,		0,		-1 },
+	//	{ "rstudio",			"rstudio",	NULL,		1 << 1,		0,		-1 },
+	//	{ "Soffice",			"soffice",	NULL,           0,		0,		 2 },
 };
 
 /* layout(s) */
