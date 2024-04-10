@@ -109,10 +109,6 @@ static const char *termcmd[]   = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
-/* brilho da tela */
-//static const char *brighter[] = { "brightnessctl", "set", "10%+", NULL };
-//static const char *dimmer[]   = { "brightnessctl", "set", "10%-", NULL };
-
 /* atalhos teclado */
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -122,7 +118,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_s,      togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 
-	/*Padra
+	/*Padrao
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -132,6 +128,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	*/
+
 	/*minhas alterações*/
 	{ MODKEY|ShiftMask,             XK_Right,  rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_Left,   rotatestack,    {.i = -1 } },
@@ -209,8 +206,7 @@ static const Key keys[] = {
 	{ 0,                            XK_Print,                       spawn,          SHCMD("~/.local/bin/print_copia") },
 	{ 0,				XF86XK_MonBrightnessUp,		spawn,          SHCMD("~/.local/bin/brilho_tela_aumenta") },
 	{ 0,				XF86XK_MonBrightnessDown,	spawn,          SHCMD("~/.local/bin/brilho_tela_diminui") },
-	//{ 0,                            XF86XK_MonBrightnessDown,       spawn,          {.v = dimmer } },
-	//{ 0,                            XF86XK_MonBrightnessUp,         spawn,          {.v = brighter } },
+
 	{ MODKEY,                       XK_q,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-power" ) },
 	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
 	{ MODKEY,			XK_e,				spawn,		SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
