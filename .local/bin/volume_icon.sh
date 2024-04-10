@@ -5,6 +5,7 @@ muteMic=$(pactl get-source-mute @DEFAULT_SOURCE@ | grep 'sim' -ic)
 volume=$(pactl get-sink-volume @DEFAULT_SINK@ | grep "Volume" | awk '{print$5}' | sed 's/%//')
 microfone=$(pactl get-source-volume @DEFAULT_SOURCE@ | grep "Volume" | awk '{print$5}' | sed 's/%//')
 camera=$(fuser /dev/video*)
+brilho=$(brightnessctl | awk '/%/ {print$4}' | cut -c 2-4 | sed 's/%//' | sed 's/)//')
 
 if [ "$muteVol" -eq 1 ]; then
     icon="󰸈 "
@@ -29,4 +30,7 @@ if [ -z "$camera" ]; then
 else
     iconCam=" ^b#282828^^c#fb4934^"
 fi
-echo "^b#282828^^c#89B482^$icon^b#282828^^c#ebdbb2^$volume󰏰 ^b#282828^^c#89B482^$iconMic^b#282828^^c#ebdbb2^$microfone󰏰$iconCam"
+
+brilhoIcone="^b#282828^^c#B8bb26^󰃠 "
+
+echo "$brilhoIcone^b#282828^^c#ebdbb2^$brilho% ^b#282828^^c#89B482^$icon^b#282828^^c#ebdbb2^$volume󰏰 ^b#282828^^c#89B482^$iconMic^b#282828^^c#ebdbb2^$microfone󰏰$iconCam"
