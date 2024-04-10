@@ -64,6 +64,30 @@ static const char unknown_str[] = "";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 
+
+static const struct arg args[] = {
+	/* function                     format						argument */
+	{ run_command,		"^b#282828^^c#89B482^ %s",				"bash ~/.local/bin/music_status_bar.sh"},
+	{ run_command,		"^b#282828^^c#89B482^ %s",				"bash ~/.local/bin/sl-wttr.sh"},
+	{ run_command,		"^b#282828^^c#89B482^ %s",				"bash ~/.local/bin/cpu_status.sh"},
+	//{ cpu_perc,		"^b#282828^^c#89B482^ ^b#282828^^c#dfbf8e^%s󰏰 ",	NULL},
+	//{ run_command,	"^b#282828^^c#89B482^%s",				"sensors | awk '/edge/ {print$2}' | sed 's/+//'"},
+	{ ram_perc,		"^b#282828^^c#89B482^  ^b#282828^^c#dfbf8e^%s󰏰 ",	NULL},
+	{ disk_perc,		"^b#282828^^c#89B482^ 󰋊 ^b#282828^^c#dfbf8e^%s󰏰 ",	"/" },
+	{ wifi_essid,		"^b#282828^^c#89B482^  ^b#282828^^c#dfbf8e^%s",	"wlan0" },
+	{ wifi_perc,		"^b#282828^^c#dfbf8e^ %s󰏰 ",				"wlan0" },
+	//{ netspeed_rx,	"^b#282828^^c#89B482^  ^b#282828^^c#dfbf8e^%s",	"wlan0" },
+	//{ netspeed_tx,	"^b#282828^^c#89B482^  ^b#282828^^c#dfbf8e^%s",	"wlan0" },
+	//{ battery_perc,	"^b#282828^^c#89B482^  ^b#282828^^c#dfbf8e^%s󰏰 ",	"BAT1" },
+	{ run_command,		"%s",							"bash ~/.local/bin/battery_status.sh" },
+	{ run_command,		"^b#282828^^c#89B482^ %s",				"bash ~/.local/bin/volume_icon.sh" },
+	{ run_command,		"^b#282828^^c#89B482^ 󰌌 ^b#282828^^c#dfbf8e^%s",	"setxkbmap -query | grep layout | awk '{print$2}'"},
+	{ run_command,		"^b#282828^^c#89B482^  ^b#282828^^c#dfbf8e^%s",	"date +'%a %d %b %Y'" },
+	{ run_command,		"^b#282828^^c#89B482^ 󰥔 ^b#282828^^c#dfbf8e^%s ",	"date +'%H:%M'"},
+};
+
+/*
+
 static const char c_bg[]          = "#222121";
 static const char c_fg[]          = "#dfbf8e";
 static const char c_white[]       = "#fbf1c7";
@@ -77,8 +101,10 @@ static const char c_gray[]        = "#a89984";
 static const char c_orange[]      = "#d65d0e";
 static const char c_aqua2[]       = "#427b58";
 
+static const char icone_color[] = "^b#282828^^c#629464^";
+static const char texto_color[] = "^b#282828^^c^#dfbf8e";
+
 static const struct arg args[] = {
-	/* function                     format					argument */
 	{ run_command,		"^b#282828^^c#629464^ %s",			"bash ~/.local/bin/music_status_bar.sh"},
 	{ run_command,		"^b#282828^^c#b16286^ %s",			"bash ~/.local/bin/sl-wttr.sh"},
 	{ run_command,		"^b#282828^^c#fb4934^ %s",			"bash ~/.local/bin/cpu_status.sh"},
@@ -97,3 +123,6 @@ static const struct arg args[] = {
 	{ run_command,		"^b#282828^^c#d65d0e^  %s",			"date +'%a %d %b %Y'" },
 	{ run_command,		"^b#282828^^c#689d6a^ 󰥔 %s ",			"date +'%H:%M'"},
 };
+
+
+ */

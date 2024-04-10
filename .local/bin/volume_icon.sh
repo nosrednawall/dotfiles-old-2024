@@ -29,4 +29,4 @@ if [ -z "$camera" ]; then
 else
     iconCam="^b#282828^^c#fb4934^ "
 fi
-echo "$icon$volume󰏰 $iconMic$microfone󰏰 $iconCam"
+echo "^b#282828^^c#89B482^$icon^b#282828^^c#dfbf8e^$volume󰏰 ^b#282828^^c#89B482^$iconMic^b#282828^^c#dfbf8e^$microfone󰏰 $iconCam"

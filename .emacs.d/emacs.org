@@ -440,6 +440,10 @@ Trechos de códigos pré-prontos
     (use-package jupyter
       :ensure t)
 #+END_SRC
+*** REALGUD pdb - Debug python
+#+BEGIN_SRC emacs-lisp
+;;  (customize-variable 'realgud:pdb-command-name)
+#+END_SRC
 *** Web-Mode
 #+BEGIN_SRC emacs-lisp
 

@@ -153,6 +153,7 @@ export PATH="$HOME/.local/emacs/bin:$PATH"
 export SUDO_ASKPASS="/usr/bin/ssh-askpass"
 
 alias em="emacs -nw"
+alias python="python3"
 alias nvidia="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
 #alias rm='echo "rm is disabled, use trash"'
 #alias trash='mv -i -t ~/.local/share/Trash/files/ $@'
