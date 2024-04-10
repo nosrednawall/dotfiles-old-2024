@@ -67,23 +67,23 @@ static const char unknown_str[] = "";
 
 static const struct arg args[] = {
 	/* function                     format						argument */
-	{ run_command,		"^b#282828^^c#89B482^ %s",				"bash ~/.local/bin/music_status_bar.sh"},
-	{ run_command,		"^b#282828^^c#89B482^ %s",				"bash ~/.local/bin/sl-wttr.sh"},
-	{ run_command,		"^b#282828^^c#89B482^ %s",				"bash ~/.local/bin/cpu_status.sh"},
-	//{ cpu_perc,		"^b#282828^^c#89B482^ ^b#282828^^c#dfbf8e^%s󰏰 ",	NULL},
+	{ run_command,		"^b#282828^^c#89B482^%s ",				"bash ~/.local/bin/music_status_bar.sh"},
+	//	{ run_command,		"^b#282828^^c#89B482^%s ",				"bash ~/.local/bin/sl-wttr.sh"},
+	{ run_command,		"^b#282828^^c#89B482^%s ",				"bash ~/.local/bin/cpu_status.sh"},
+	//{ cpu_perc,		"^b#282828^^c#89B482^ ^b#282828^^c#ebdbb2^%s󰏰 ",	NULL},
 	//{ run_command,	"^b#282828^^c#89B482^%s",				"sensors | awk '/edge/ {print$2}' | sed 's/+//'"},
-	{ ram_perc,		"^b#282828^^c#B8bb26^  ^b#282828^^c#dfbf8e^%s󰏰 ",	NULL},
-	{ disk_perc,		"^b#282828^^c#45858B^ 󰋊 ^b#282828^^c#dfbf8e^%s󰏰 ",	"/" },
-	{ wifi_essid,		"^b#282828^^c#fabd2f^  ^b#282828^^c#dfbf8e^%s",	"wlan0" },
-	{ wifi_perc,		"^b#282828^^c#dfbf8e^ %s󰏰 ",				"wlan0" },
-	//{ netspeed_rx,	"^b#282828^^c#fabd2f^  ^b#282828^^c#dfbf8e^%s",	"wlan0" },
-	//{ netspeed_tx,	"^b#282828^^c#fabd2f^  ^b#282828^^c#dfbf8e^%s",	"wlan0" },
-	//{ battery_perc,	"^b#282828^^c#b16286^  ^b#282828^^c#dfbf8e^%s󰏰 ",	"BAT1" },
+	{ ram_perc,		"^b#282828^^c#B8bb26^ ^b#282828^^c#ebdbb2^%s󰏰 ",	NULL},
+	{ disk_perc,		"^b#282828^^c#45858B^󰋊 ^b#282828^^c#ebdbb2^%s󰏰 ",	"/" },
+	{ wifi_essid,		"^b#282828^^c#fabd2f^ ^b#282828^^c#ebdbb2^%s",	"wlan0" },
+	{ wifi_perc,		"^b#282828^^c#ebdbb2^%s󰏰 ",				"wlan0" },
+	//{ netspeed_rx,	"^b#282828^^c#fabd2f^  ^b#282828^^c#ebdbb2^%s",	"wlan0" },
+	//{ netspeed_tx,	"^b#282828^^c#fabd2f^  ^b#282828^^c#ebdbb2^%s",	"wlan0" },
+	//{ battery_perc,	"^b#282828^^c#b16286^  ^b#282828^^c#ebdbb2^%s󰏰 ",	"BAT1" },
 	{ run_command,		"%s",							"bash ~/.local/bin/battery_status.sh" },
-	{ run_command,		"^b#282828^^c#89B482^ %s",				"bash ~/.local/bin/volume_icon.sh" },
-	{ run_command,		"^b#282828^^c#89B482^ 󰌌 ^b#282828^^c#dfbf8e^%s",	"setxkbmap -query | grep layout | awk '{print$2}'"},
-	{ run_command,		"^b#282828^^c#89B482^  ^b#282828^^c#dfbf8e^%s",	"date +'%a %d %b %Y'" },
-	{ run_command,		"^b#282828^^c#89B482^ 󰥔 ^b#282828^^c#dfbf8e^%s ",	"date +'%H:%M'"},
+	{ run_command,		"^b#282828^^c#89B482^%s ",				"bash ~/.local/bin/volume_icon.sh" },
+	{ run_command,		"^b#282828^^c#89B482^󰌌 ^b#282828^^c#ebdbb2^%s ",	"setxkbmap -query | grep layout | awk '{print$2}'"},
+	{ run_command,		"^b#282828^^c#89B482^ ^b#282828^^c#ebdbb2^%s ",	"date +'%a %d %b %Y'" },
+	{ run_command,		"^b#282828^^c#89B482^󰥔 ^b#282828^^c#ebdbb2^%s ",	"date +'%H:%M'"},
 };
 
 /*

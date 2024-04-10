@@ -8,5 +8,5 @@ else
 	artist=$(mpc -f %artist% current)
 	time=$(mpc -f %time% current)
 	title=$(mpc -f %title% current)
-	echo "^b#282828^^c#89B482^$icon ^b#282828^^c#dfbf8e^$title[$artist]"
+	echo "^b#282828^^c#89B482^$icon ^b#282828^^c#ebdbb2^$title[$artist]"
 fi

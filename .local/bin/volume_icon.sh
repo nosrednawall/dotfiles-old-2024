@@ -27,6 +27,6 @@ fi
 if [ -z "$camera" ]; then
     iconCam=""
 else
-    iconCam="^b#282828^^c#fb4934^ "
+    iconCam=" ^b#282828^^c#fb4934^"
 fi
-echo "^b#282828^^c#89B482^$icon^b#282828^^c#dfbf8e^$volume󰏰 ^b#282828^^c#89B482^$iconMic^b#282828^^c#dfbf8e^$microfone󰏰 $iconCam"
+echo "^b#282828^^c#89B482^$icon^b#282828^^c#ebdbb2^$volume󰏰 ^b#282828^^c#89B482^$iconMic^b#282828^^c#ebdbb2^$microfone󰏰$iconCam"
