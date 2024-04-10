@@ -33,4 +33,4 @@ fi
 
 brilhoIcone="^b#282828^^c#B8bb26^󰃠 "
 
-echo "$brilhoIcone^b#282828^^c#ebdbb2^$brilho% ^b#282828^^c#89B482^$icon^b#282828^^c#ebdbb2^$volume󰏰 ^b#282828^^c#89B482^$iconMic^b#282828^^c#ebdbb2^$microfone󰏰$iconCam"
+echo "$brilhoIcone^b#282828^^c#ebdbb2^$brilho󰏰 ^b#282828^^c#89B482^$icon^b#282828^^c#ebdbb2^$volume󰏰 ^b#282828^^c#89B482^$iconMic^b#282828^^c#ebdbb2^$microfone󰏰$iconCam"
