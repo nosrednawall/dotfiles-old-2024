@@ -56,10 +56,12 @@ case $chosen in
 		 flatpak run com.jgraph.drawio.desktop
 	 ;;
 	 $brmodelo)
-		 java -jar ~/.programas/brmodelo/brModelo.jar
+	     export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true"
+	     java -jar ~/.programas/brmodelo/brModelo.jar
 	 ;;
 	 $sql_power_architect)
-		 java -jar /home/anderson/.programas/SQL-Power-Architect/architect-1.0.9/architect.jar
+	     export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true"
+	     java -jar /home/anderson/.programas/SQL-Power-Architect/architect-1.0.9/architect.jar
 	 ;;
 	 $thunderbird)
 		 thunderbird

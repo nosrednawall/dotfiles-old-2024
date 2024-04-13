@@ -3,13 +3,14 @@
 casa="󰍹  Monitor Externo"
 notebook="  Notebook"
 so_monitor_externo="So monitor externo"
+duplica="Duplica a mesma visualização"
 noite="󱩍 Noite"
 dia="󰛨 Dia"
 tabletwaconhdmi="󰓶 Tablet Wacon HDMI"
 tabletwaconnotebook="󰓶 Tablet Wacon Notebook"
 
 # Variable passed to dmenu
-options="$casa\n$notebook\n$so_monitor_externo\n$dia\n$noite\n$tabletwaconhdmi\n$tabletwaconnotebook"
+options="$casa\n$notebook\n$so_monitor_externo\n$duplica\n$dia\n$noite\n$tabletwaconhdmi\n$tabletwaconnotebook"
 
 chosen="$(echo -e "$options" | dmenu -p "Scripts de monitor " )"
 case $chosen in
@@ -24,6 +25,10 @@ case $chosen in
     $so_monitor_externo)
 	xrandr --output HDMI-0 --primary --auto --rotate normal --dpi 96 --output eDP-1-1 --off
 	notify-send -t 3000 "󰡁 Só monitor externo" "Só monitor Externo" --icon="/usr/share/icons/ePapirus/16x16/devices/computer.svg"
+	;;
+    $duplica)
+	xrandr --output HDMI-0 --primary --auto --rotate normal --dpi 96 --output eDP-1-1 --same-as HDMI-0
+	notify-send -t 3000 "󰡁 Duplica visualização" "Ambos monitores estão com a mesma visualização" --icon="/usr/share/icons/ePapirus/16x16/devices/computer.svg"
 	;;
     $dia)
 	redshift -P -O 6500

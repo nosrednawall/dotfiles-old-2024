@@ -68,7 +68,7 @@
  ;; If there is more than one, they won't work right.
  '(doc-view-continuous t)
  '(package-selected-packages
-   '(realgud xclip simpleclip jupyter eink-theme ein tree-sitter-ispell tree-sitter-langs tree-sitter rainbow-mode web-mode ggtags yasnippet auto-complete org-bullets neotree all-the-icons centaur-tabs buffer-flip which-key gruvbox-theme use-package smex magit eglot dap-mode counsel try projectile dashboard autothemer))
+   '(multiple-cursors realgud xclip simpleclip jupyter eink-theme ein tree-sitter-ispell tree-sitter-langs tree-sitter rainbow-mode web-mode ggtags yasnippet auto-complete org-bullets neotree all-the-icons centaur-tabs buffer-flip which-key gruvbox-theme use-package smex magit eglot dap-mode counsel try projectile dashboard autothemer))
  '(realgud:pdb-command-name "python3 -m pdb"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

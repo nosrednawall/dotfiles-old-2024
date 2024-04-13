@@ -6,23 +6,25 @@ volume=$(pactl get-sink-volume @DEFAULT_SINK@ | grep "Volume" | awk '{print$5}' 
 microfone=$(pactl get-source-volume @DEFAULT_SOURCE@ | grep "Volume" | awk '{print$5}' | sed 's/%//')
 camera=$(fuser /dev/video*)
 brilho=$(brightnessctl | awk '/%/ {print$4}' | cut -c 2-4 | sed 's/%//' | sed 's/)//')
+microfoneOn=$(cat /proc/asound/card0/pcm3p/sub0/status | grep "RUNNING")
+
 
 if [ "$muteVol" -eq 1 ]; then
-    icon="󰸈 "
+    iconVolume="^b#282828^^c#4A5947^󰸈 $volume󰏰"
 else
     if [ "$volume" -le 30 ]; then
-	icon="󰕿 "
+	iconVolume="^b#282828^^c#B8bb26^󰕿^b#282828^^c#ebdbb2^$volume󰏰"
     elif [ "$volume" -le 60 ]; then
-	icon="󰖀 "
+	iconVolume="^b#282828^^c#B8bb26^󰖀^b#282828^^c#ebdbb2^$volume󰏰"
     elif [ "$volume" -ge 61 ]; then
-	icon="󰕾 "
+	iconVolume="^b#282828^^c#B8bb26^󰕾 ^b#282828^^c#ebdbb2^$volume󰏰"
     fi
 fi
 
 if [ "$muteMic" -eq 1 ]; then
-    iconMic=" "
+    iconMic="^b#282828^^c#4A5947^ $microfone󰏰"
 else
-    iconMic=" "
+    iconMic="^b#282828^^c#B8bb26^ ^b#282828^^c#ebdbb2^$microfone󰏰"
 fi
 
 if [ -z "$camera" ]; then
@@ -31,6 +33,6 @@ else
     iconCam=" ^b#282828^^c#fb4934^"
 fi
 
-brilhoIcone="^b#282828^^c#B8bb26^󰃠 "
+brilhoIcone="^b#282828^^c#B8bb26^󰃠 ^b#282828^^c#ebdbb2^$brilho󰏰"
 
-echo "$brilhoIcone^b#282828^^c#ebdbb2^$brilho󰏰 ^b#282828^^c#89B482^$icon^b#282828^^c#ebdbb2^$volume󰏰 ^b#282828^^c#89B482^$iconMic^b#282828^^c#ebdbb2^$microfone󰏰$iconCam"
+echo "$brilhoIcone $iconVolume $iconMic$iconCam"

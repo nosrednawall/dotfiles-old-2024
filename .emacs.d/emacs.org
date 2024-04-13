@@ -159,57 +159,65 @@
 
 #+END_SRC
 ** ESS
-#+BEGIN_SRC
+#+BEGIN_SRC emacs-lisp
+  ;;======================================================================
+  ;; R configs.
+  ;;======================================================================
 
-(defvar rutils-show_plot_next_to_r_process t)
+  ;; ESS
+  (use-package ess
+    :ensure t)
+  (setq-default ess-dialect "R")
+  (setq-default inferior-R-args "--no-restore-history --no-save ")
 
-(defun add-pdf-to-rcode(rcomm fname)
-  "add pdf(tmpfile) and dev.off() to R command"
-  (let*  (
-	  (newc (concat "pdf('" fname "')\n" rcomm  "\n dev.off()"))
-	  )
-    (eval newc)
-      )
-  )
+  ;; Down below is a workaround to solve
+  ;; the damn problem with fancy R comments in ESS mode.
+  ;; https://github.com/emacs-ess/ESS/issues/1175
+  ;; (setq ess-indent-with-fancy-comments nil)
+  (setf (cdr (assoc 'ess-indent-with-fancy-comments ess-own-style-list)) nil)
 
-
-(defun rutils-plot-region-or-paragraph()
-  "execute region or paragraph and save tmp plot to pdf. Then open windows to show pdf"
-  (interactive)
-    (let*  (
-	  (fname (concat (make-temp-file "plot_") ".pdf"))
-	  )
-      (progn
-	(if (use-region-p)
-	    (ess-eval-linewise (add-pdf-to-rcode (buffer-substring (region-beginning) (region-end)) fname))
-	  (progn (ess-eval-linewise (add-pdf-to-rcode (thing-at-point 'paragraph) fname)))
-	  )
-	;; (with-help-window "*plots*"
-	;;   (find-ssfile-at-point)
-	;;   )
-	(if rutils-show_plot_next_to_r_process
-	    (ess-switch-to-end-of-ESS)
-	    )
-	(if (window-in-direction 'right)
-	    (progn
-	      (select-window (window-in-direction 'right))
-	      (find-file fname)
-	      )
-	  (progn
-	    (split-window-right)
-	    (select-window (window-in-direction 'right))
-	    (find-file fname)
-	    )
-	    )
-	;;(split-window-right)
-	;;(windmove-right)
-	)
-    )
-    )
-(define-key ess-mode-map (kbd "C-c g") 'rutils-plot-region-or-paragraph)
+  ;; Script and console highlight
+  (setq ess-R-font-lock-keywords
+	'((ess-R-fl-keyword:modifiers . t)
+	  (ess-R-fl-keyword:fun-defs . t)
+	  (ess-R-fl-keyword:keywords . t)
+	  (ess-R-fl-keyword:assign-ops . t)
+	  (ess-R-fl-keyword:constants . t)
+	  (ess-fl-keyword:fun-calls . t)
+	  (ess-fl-keyword:numbers . t)
+	  (ess-fl-keyword:operators . t)
+	  (ess-fl-keyword:delimiters . t)
+	  (ess-fl-keyword:= . t)
+	  (ess-R-fl-keyword:F&T . t)))
+  (setq inferior-R-font-lock-keywords
+	'((ess-S-fl-keyword:prompt . t)
+	  (ess-R-fl-keyword:messages . t)
+	  (ess-R-fl-keyword:modifiers . t)
+	  (ess-R-fl-keyword:fun-defs . t)
+	  (ess-R-fl-keyword:keywords . t)
+	  (ess-R-fl-keyword:assign-ops . t)
+	  (ess-R-fl-keyword:constants . t)
+	  (ess-fl-keyword:matrix-labels . t)
+	  (ess-fl-keyword:fun-calls . t)
+	  (ess-fl-keyword:numbers . t)
+	  (ess-fl-keyword:operators . t)
+	  (ess-fl-keyword:delimiters . t)
+	  (ess-fl-keyword:= . t)
+	  (ess-R-fl-keyword:F&T . t)))
 
 #+END_SRC
 * Pacotes
+** Multiplos Cursores
+#+BEGIN_SRC emacs-lisp
+  ;; M-x package-install multiple-cursors
+
+    (require 'multiple-cursors)
+      (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+      (global-set-key (kbd "C->") 'mc/mark-next-like-this)
+    (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+    (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+#+END_SRC
 ** Dashboard
 #+BEGIN_SRC emacs-lisp
   (setq projectile-indexing-method 'alien)
@@ -248,7 +256,7 @@
 #+BEGIN_SRC emacs-lisp
 (use-package gruvbox-theme
   :ensure t)
-(load-theme 'gruvbox-dark-soft t)
+(load-theme 'gruvbox-dark-medium t)
 #+END_SRC
 
 ** Help key combinations

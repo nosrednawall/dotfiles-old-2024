@@ -26,8 +26,8 @@ static const struct arg args[] = {
 	{ run_command,		"%s",							"bash ~/.local/bin/battery_status.sh" },
 	{ run_command,		"^b#282828^^c#89B482^%s ",				"bash ~/.local/bin/volume_icon.sh" },
 	{ run_command,		"^b#282828^^c#89B482^󰌌 ^b#282828^^c#ebdbb2^%s ",	"setxkbmap -query | grep layout | awk '{print$2}'"},
-	{ run_command,		"^b#282828^^c#89B482^ ^b#282828^^c#ebdbb2^%s ",	"date +'%a %d %b %Y'" },
-	{ run_command,		"^b#282828^^c#89B482^󰥔 ^b#282828^^c#ebdbb2^%s ",	"date +'%H:%M'"},
+	{ run_command,		"^b#282828^^c#89B482^ ^b#282828^^c#ebdbb2^%s ",	"date +'%d/%m/%Y'" },
+	{ run_command,		"^b#282828^^c#89B482^󰥔 ^b#282828^^c#ebdbb2^%s",	"date +'%H:%M'"},
 };
 
 /*
