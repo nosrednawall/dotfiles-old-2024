@@ -5,6 +5,7 @@ xfce4-power-manager --daemon
 pgrep -x xautolock > /dev/null || xautolock -time 16 -locker ~/.local/bin/slock_personalizado &
 redshift -P -O 4000 &
 picom -b
+pgrep -x xcompmgr > /dev/null || xcompmgr &
 pgrep -x dunst > /dev/null || dunst &
 pgrep -x nm-applet > /dev/null || nm-applet &
 copyq &
