@@ -1,0 +1,5 @@
+# Dependencias para o dwm funcionar
+sudo apt install make gcc libx11-dev libxft-dev libxinerama-dev xorg
+
+# O resto dos programas
+sudo apt install feh rofi pulseaudio lxappearance network-manager network-manager-gnome redshift xautolock picom dunst copyq solaar blueman pasystray
