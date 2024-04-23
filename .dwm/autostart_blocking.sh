@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# para a nvidia
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
 # JAVA Bug
 if which wmname; then
   wmname LG3D
