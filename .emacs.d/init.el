@@ -57,19 +57,18 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
-
 ;; Carrega os pacotes que estão no arquivo ORG - Não uso mais
 (org-babel-load-file (expand-file-name "~/.emacs.d/emacs.org"))
+
+;; Depois de formatar o debian em 21/04/2024
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(doc-view-continuous t)
  '(package-selected-packages
-   '(multiple-cursors realgud xclip simpleclip jupyter eink-theme ein tree-sitter-ispell tree-sitter-langs tree-sitter rainbow-mode web-mode ggtags yasnippet auto-complete org-bullets neotree all-the-icons centaur-tabs buffer-flip which-key gruvbox-theme use-package smex magit eglot dap-mode counsel try projectile dashboard autothemer))
- '(realgud:pdb-command-name "python3 -m pdb"))
+   '(web-mode jupyter ggtags yasnippet auto-complete org-bullets counsel ace-window neotree all-the-icons centaur-tabs buffer-flip which-key gruvbox-theme try dashboard projectile use-package multiple-cursors ess)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

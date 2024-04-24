@@ -21,7 +21,7 @@
     ;; Starts the Emacs server for emacsclient only if it's not started already
     ;;  (load "server")
     ;;  (unless (server-running-p) (server-start))
-    (xclip-mode 1)
+;;    (xclip-mode 1)
     ;; Clean whitespace before saving a file
     (add-hook 'before-save-hook 'whitespace-cleanup)
 
@@ -60,7 +60,7 @@
 
 #+END_SRC
 ** Coletor de Lixo
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC
   (defvar file-name-handler-alist-old file-name-handler-alist)
 
 ;; https://lists.gnu.org/archive/html/bug-gnu-emacs/2017-12/msg01088.html
