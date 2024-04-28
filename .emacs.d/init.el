@@ -68,7 +68,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(web-mode jupyter ggtags yasnippet auto-complete org-bullets counsel ace-window neotree all-the-icons centaur-tabs buffer-flip which-key gruvbox-theme try dashboard projectile use-package multiple-cursors ess)))
+   '(zone-rainbow web-mode jupyter ggtags yasnippet auto-complete org-bullets counsel ace-window neotree all-the-icons centaur-tabs buffer-flip which-key gruvbox-theme try dashboard projectile use-package multiple-cursors ess)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

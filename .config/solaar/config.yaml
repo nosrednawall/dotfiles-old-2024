@@ -21,7 +21,9 @@
   _battery: 4100
   _modelId: B03000000000
   _sensitive: {change-host: false, divert-keys: false, dpi: false, lowres-scroll-mode: false}
+  _serial: 27516F9B
   _unitId: 27516F9B
+  _wpid: B030
   change-host: null
   divert-keys: {82: 0, 264: 1}
   dpi: 1400
