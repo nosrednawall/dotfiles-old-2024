@@ -4,59 +4,59 @@
 ** Environment e Fonte padrão
 #+BEGIN_SRC emacs-lisp
 
-  ;;  (set-default-coding-systems 'utf-8)
-    ;;Set locale to Brazilian Portuguese
-  ;;  (set-locale-environment "pt_BR.UTF-8")
-  ;;  (setenv "LANG" "pt_BR.UTF-8")
-  ;;  (set-clipboard-coding-system 'utf-8)
-    ;;(setq x-select-enable-clipboard t)
-  ;;  (setq x-select-enable-clipboard t)
-  ;;  (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+    ;;  (set-default-coding-systems 'utf-8)
+      ;;Set locale to Brazilian Portuguese
+    ;;  (set-locale-environment "pt_BR.UTF-8")
+    ;;  (setenv "LANG" "pt_BR.UTF-8")
+    ;;  (set-clipboard-coding-system 'utf-8)
+      ;;(setq x-select-enable-clipboard t)
+    ;;  (setq x-select-enable-clipboard t)
+    ;;  (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
-    ;; For Windows
-    ;;(set-clipboard-coding-system 'utf-16le-dos)
-    ;; Add frame margins. This makes things more pleasant to read.
-    ;; (setq default-frame-alist '((internal-border-width . 20)))
+      ;; For Windows
+      ;;(set-clipboard-coding-system 'utf-16le-dos)
+      ;; Add frame margins. This makes things more pleasant to read.
+      ;; (setq default-frame-alist '((internal-border-width . 20)))
 
-    ;; Starts the Emacs server for emacsclient only if it's not started already
-    ;;  (load "server")
-    ;;  (unless (server-running-p) (server-start))
-;;    (xclip-mode 1)
-    ;; Clean whitespace before saving a file
-    (add-hook 'before-save-hook 'whitespace-cleanup)
+      ;; Starts the Emacs server for emacsclient only if it's not started already
+      ;;  (load "server")
+      ;;  (unless (server-running-p) (server-start))
+  ;;    (xclip-mode 1)
+      ;; Clean whitespace before saving a file
+      (add-hook 'before-save-hook 'whitespace-cleanup)
+  (add-to-list 'default-frame-alist '(font . "CaskaydiaCove Nerd Font Mono-12"))
+     ;; (add-to-list 'default-frame-alist '(font . "Comic code-12"))
+     ;; (add-to-list 'default-frame-alist '(font . "Mononoki Nerd Font-12"))
 
-    (add-to-list 'default-frame-alist '(font . "Comic code-12"))
-    (add-to-list 'default-frame-alist '(font . "Mononoki Nerd Font-12"))
-
-    (setq org-babel-sh-command "/bin/bash")
+      (setq org-babel-sh-command "/bin/bash")
 
 
-    ;; Seleções Visíveis
-    (setq transient-mark-mode t)
+      ;; Seleções Visíveis
+      (setq transient-mark-mode t)
 
-    ;; Sobrescrevendo seleções automaticamente
-    (require 'delsel)
-    (delete-selection-mode 1)
+      ;; Sobrescrevendo seleções automaticamente
+      (require 'delsel)
+      (delete-selection-mode 1)
 
-    ;; End vai para o fim da linha
-    (define-key global-map [end] 'end-of-line)
+      ;; End vai para o fim da linha
+      (define-key global-map [end] 'end-of-line)
 
-    ;; Home vai para o comeco da linha
-    (define-key global-map [home] 'beginning-of-line)
+      ;; Home vai para o comeco da linha
+      (define-key global-map [home] 'beginning-of-line)
 
-    ;; CTRL-End vai para o fim do documento
-    (define-key global-map [C-end] 'end-of-buffer)
+      ;; CTRL-End vai para o fim do documento
+      (define-key global-map [C-end] 'end-of-buffer)
 
-    ;; CTRL-Home vai para o comeco do documento
-    (define-key global-map [C-home] 'beginning-of-buffer)
+      ;; CTRL-Home vai para o comeco do documento
+      (define-key global-map [C-home] 'beginning-of-buffer)
 
-    ;; Backspace
-    (define-key global-map [backspace]
-      'delete-backward-char)
+      ;; Backspace
+      (define-key global-map [backspace]
+	'delete-backward-char)
 
-    ;; Delete
-    (define-key global-map [delete]
-      'delete-char)
+      ;; Delete
+      (define-key global-map [delete]
+	'delete-char)
 
 #+END_SRC
 ** Coletor de Lixo
@@ -207,6 +207,14 @@
 
 #+END_SRC
 * Pacotes
+** Pomodoro
+#+BEGIN_SRC emacs-lisp
+	(require 'org)
+
+  (use-package org-pomodoro
+    :ensure t)
+(setq org-clock-sound "/home/anderson/.dotfiles/.emacs.d/pomodoro/bell_pomodoro.wav")
+#+END_SRC
 ** Multiplos Cursores
 #+BEGIN_SRC emacs-lisp
   ;; M-x package-install multiple-cursors
