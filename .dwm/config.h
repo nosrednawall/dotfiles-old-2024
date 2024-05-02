@@ -7,9 +7,9 @@
 #include "fibonacci.c"
 
 /* appearance */
-static const unsigned int borderpx         = 5;        /* border pixel of windows */
-static const unsigned int gappx            = 10;       /* gaps between windows */
-static const unsigned int snap             = 32;       /* snap pixel */
+static const unsigned int borderpx         = 3;        /* border pixel of windows */
+static const unsigned int gappx            = 0;       /* gaps between windows */
+static const unsigned int snap             = 0;       /* snap pixel */
 static const unsigned int systraypinning   = 0;        /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft    = 0;        /* 0: systray in the right corner, >0: systray on left of status text */
 static const unsigned int systrayspacing   = 0;        /* systray spacing */
@@ -26,17 +26,17 @@ static const char *fonts[]                 = {
 static const char col_1[]       = "#282828";
 static const char col_2[]       = "#695F55";
 static const char col_3[]       = "#ebdbb2";
-static const char col_4[]       = "#dfbf8e";
+static const char col_4[]       = "#d65d0e";
 static const char col_5[]       = "#B8bb26";
-static const char col_6[]       = "#C42824";
+static const char col_6[]       = "#cc241d";
 static const char col_7[]       = "#689d68";
 
 static const char *colors[][3]      = {
 	/*                      fg      bg   border   */
 	[SchemeNorm]       = { col_3, col_1, col_1 },
-	[SchemeSel]        = { col_3, col_1, col_7 },
+	[SchemeSel]        = { col_3, col_1, col_5 },
 	[SchemeStatus]     = { col_1, col_1, col_1 }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]    = { col_1, col_7, col_5 }, // Tagbar left selected {text,background,not used but cannot be empty}
+	[SchemeTagsSel]    = { col_1, col_5, col_4 }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm]   = { col_3, col_1, col_1 }, // Tagbar left unselected {text,background,not used but cannot be empty}
 	[SchemeInfoSel]    = { col_3, col_1, col_1 }, // infobar middle  selected {text,background,not used but cannot be empty}
 	[SchemeInfoNorm]   = { col_3, col_1, col_1 }, // infobar middle  unselected {text,background,not used but cannot be empty}

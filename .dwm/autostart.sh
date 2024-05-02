@@ -11,5 +11,6 @@ pgrep -x pasystray > /dev/null || pasystray &
 pgrep -x solaar > /dev/null || solaar -w hide &
 # pgrep -x blueman-applet > /dev/null || blueman-applet &
 bash ~/.local/bin/if_monitor.sh
-feh --recursive --bg-fill --randomize ~/.wallpapers/* &
+#feh --recursive --bg-fill --randomize ~/.wallpapers/* &
+bash ~/.fehbg
 pgrep -x slstatus > /dev/null || slstatus &
