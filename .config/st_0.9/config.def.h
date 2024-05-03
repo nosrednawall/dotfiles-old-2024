@@ -173,8 +173,10 @@ static const ColorScheme schemes[] = {
 	  [256]="#3c3836", "#555555"}, 15, 0, 256, 257},
 };
 
+
 static const char * const * colorname;
 int colorscheme = 6;
+
 
 /*
  * Default colors (colorname index)
