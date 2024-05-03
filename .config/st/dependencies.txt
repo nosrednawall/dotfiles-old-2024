@@ -1,2 +1,19 @@
 # Depenciencias de build
 sudo apt install libharfbuzz-dev
+
+# Instalar o scroll https://tools.suckless.org/scroll/
+git clone https://git.suckless.org/scroll
+cd scroll
+nano config.def.h
+
+# descomente as linhas do mouse
+     14 	//{"\031",        SCROLL_UP,    1},	/* mouse wheel up */
+     15 	//{"\005",        SCROLL_DOWN,  1},	/* mouse wheel Down */
+     
+# para
+     14 	{"\031",        SCROLL_UP,    1},	/* mouse wheel up */
+     15 	{"\005",        SCROLL_DOWN,  1},	/* mouse wheel Down */
+     
+ # Salve, compile e instale
+ make
+ sudo make clean install

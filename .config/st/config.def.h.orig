@@ -5,9 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-//static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static char *font = "Comic code:size=12:antialias=true:autohint=true";
-static int borderpx = 0;
+static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static int borderpx = 2;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -20,7 +19,7 @@ static int borderpx = 0;
 static char *shell = "/bin/sh";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
-char *scroll = "scroll";
+char *scroll = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
@@ -96,35 +95,43 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-  /* 8 normal colors */
-  [0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-  [1] = "#ea6962", /* red     */
-  [2] = "#a9b665", /* green   */
-  [3] = "#d8a657", /* yellow  */
-  [4] = "#7daea3", /* blue    */
-  [5] = "#d3869b", /* magenta */
-  [6] = "#89b482", /* cyan    */
-  [7] = "#d4be98", /* white   */
+	/* 8 normal colors */
+	"black",
+	"red3",
+	"green3",
+	"yellow3",
+	"blue2",
+	"magenta3",
+	"cyan3",
+	"gray90",
 
-  /* 8 bright colors */
-  [8]  = "#928374", /* black   */
-  [9]  = "#ef938e", /* red     */
-  [10] = "#bbc585", /* green   */
-  [11] = "#e1bb7e", /* yellow  */
-  [12] = "#9dc2ba", /* blue    */
-  [13] = "#e1acbb", /* magenta */
-  [14] = "#a7c7a2", /* cyan    */
-  [15] = "#e2d3ba", /* white   */
+	/* 8 bright colors */
+	"gray50",
+	"red",
+	"green",
+	"yellow",
+	"#5c5cff",
+	"magenta",
+	"cyan",
+	"white",
+
+	[255] = 0,
+
+	/* more colors can be added after 255 to use with DefaultXX */
+	"#cccccc",
+	"#555555",
+	"gray90", /* default foreground colour */
+	"black", /* default background colour */
 };
+
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor
+ * foreground, background, cursor, reverse cursor
  */
-
-unsigned int defaultfg = 15;
-unsigned int defaultbg = 0;
-unsigned int defaultcs = 15;
+unsigned int defaultfg = 258;
+unsigned int defaultbg = 259;
+unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
 /*
@@ -134,7 +141,7 @@ static unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 6;
+static unsigned int cursorshape = 2;
 
 /*
  * Default columns and rows numbers

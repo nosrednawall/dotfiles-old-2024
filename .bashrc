@@ -20,7 +20,7 @@ alias betterdiscord-update="DISC_CONFIG=\"\$HOME/.var/app/com.discordapp.Discord
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-OSH_THEME="rr"
+OSH_THEME="minimal"
 
 # If you set OSH_THEME to "random", you can ignore themes you don't like.
 # OMB_THEME_RANDOM_IGNORED=("powerbash10k" "wanelo")
