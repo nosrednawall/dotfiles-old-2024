@@ -279,11 +279,11 @@ Aplica um Alt Tab Entre os Buffers e Buffers com Tabs
 #+BEGIN_SRC emacs-lisp
 	 (use-package buffer-flip
 	   :ensure t
-	   :bind  (("M-<tab>" . buffer-flip)
+	   :bind  (("C-<tab>" . buffer-flip)
 		   :map buffer-flip-map
-		   ( "M-<tab>" .   buffer-flip-forward)
-		   ( "M-S-<tab>" . buffer-flip-backward)
-		   ( "M-ESC" .     buffer-flip-abort))
+		   ( "C-<tab>" .   buffer-flip-forward)
+		   ( "C-S-<tab>" . buffer-flip-backward)
+		   ( "C-ESC" .     buffer-flip-abort))
 	   :config
 	   (setq buffer-flip-skip-patterns
 		 '("^\\*helm\\b"
