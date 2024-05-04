@@ -81,8 +81,8 @@ static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
-static const char *roficmd[]   = { "/bin/sh", "-c", "rofi -m -4 -modi 'window,drun,ssh,combi' -font 'Comic code 15' -show drun -icon-theme 'Gruvbox' -show-icons -theme 'gruvbox-dark' -sidebar-mode", NULL };
-static const char *rofialttabcmd[]   = { "/bin/sh", "-c", "rofi -m -4 -modi 'window' -font 'Comic code 15' -show window -icon-theme 'Gruvbox' -show-icons -theme 'gruvbox-dark' -sidebar-mode", NULL };
+static const char *roficmd[]   = { "/bin/sh", "-c", "rofi -m -4 -modi 'window,drun,ssh,combi' -font 'Comic code 12' -show drun -icon-theme 'Gruvbox' -show-icons -theme 'gruvbox-dark' -sidebar-mode", NULL };
+static const char *rofialttabcmd[]   = { "/bin/sh", "-c", "rofi -m -4 -modi 'window' -font 'Comic code 12' -show window -icon-theme 'Gruvbox' -show-icons -theme 'gruvbox-dark' -sidebar-mode", NULL };
 
 /* atalhos teclado */
 static const Key keys[] = {

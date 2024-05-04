@@ -13,18 +13,18 @@ if [ "$muteVol" -eq 1 ]; then
     iconVolume="^b#282828^^c#4A5947^󰸈 $volume󰏰"
 else
     if [ "$volume" -le 30 ]; then
-	iconVolume="^b#282828^^c#B8bb26^󰕿^b#282828^^c#ebdbb2^$volume󰏰"
+	iconVolume="^b#282828^^c#B8bb26^󰕿^b#282828^^c#d4be98^$volume󰏰"
     elif [ "$volume" -le 60 ]; then
-	iconVolume="^b#282828^^c#B8bb26^󰖀^b#282828^^c#ebdbb2^$volume󰏰"
+	iconVolume="^b#282828^^c#B8bb26^󰖀^b#282828^^c#d4be98^$volume󰏰"
     elif [ "$volume" -ge 61 ]; then
-	iconVolume="^b#282828^^c#B8bb26^󰕾 ^b#282828^^c#ebdbb2^$volume󰏰"
+	iconVolume="^b#282828^^c#B8bb26^󰕾 ^b#282828^^c#d4be98^$volume󰏰"
     fi
 fi
 
 if [ "$muteMic" -eq 1 ]; then
     iconMic="^b#282828^^c#4A5947^ $microfone󰏰"
 else
-    iconMic="^b#282828^^c#B8bb26^ ^b#282828^^c#ebdbb2^$microfone󰏰"
+    iconMic="^b#282828^^c#B8bb26^ ^b#282828^^c#d4be98^$microfone󰏰"
 fi
 
 if [ -z "$camera" ]; then
@@ -33,6 +33,6 @@ else
     iconCam=" ^b#282828^^c#fb4934^"
 fi
 
-brilhoIcone="^b#282828^^c#B8bb26^󰃠 ^b#282828^^c#ebdbb2^$brilho󰏰"
+brilhoIcone="^b#282828^^c#B8bb26^󰃠 ^b#282828^^c#d4be98^$brilho󰏰"
 
 echo "$brilhoIcone $iconVolume $iconMic$iconCam"
