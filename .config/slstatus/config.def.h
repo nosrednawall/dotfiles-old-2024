@@ -19,7 +19,7 @@ static const struct arg args[] = {
 	{ ram_perc,			"^b#282828^^c#B8bb26^ ^b#282828^^c#d4be98^%s󰏰 ",	NULL},
 	{ disk_perc,		"^b#282828^^c#45858B^󰋊 ^b#282828^^c#d4be98^%s󰏰 ",	"/" },
 	{ wifi_essid,		"^b#282828^^c#fabd2f^ ^b#282828^^c#d4be98^%s",		"wlp5s0" },
-	{ wifi_perc,		"^b#282828^^c#ebdbb2^%s󰏰 ",				"wlp5s0" },
+	{ wifi_perc,		"^b#282828^^c#d4be98^%s󰏰 ",				"wlp5s0" },
 	//{ netspeed_rx,	"^b#282828^^c#fabd2f^  ^b#282828^^c#d4be98^%s",	"wlp5s0" },
 	//{ netspeed_tx,	"^b#282828^^c#fabd2f^  ^b#282828^^c#d4be98^%s",	"wlp5s0" },
 	//{ battery_perc,	"^b#282828^^c#b16286^  ^b#282828^^c#d4be98^%s󰏰 ",	"BAT1" },

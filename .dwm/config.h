@@ -13,8 +13,8 @@ static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 11;        /* 2 is the default spacing around the bar's font */
-static const char *fonts[]          = {	"Comic code:size=10:antialias=true:pixelsize=14",
-					"Mononoki Nerd Font:style=Bold:size=10:antialias=true:pixelsize=14"};
+static const char *fonts[]          = {	"Comic code:style=Regular:size=10:antialias=true:pixelsize=14",
+					"Mononoki Nerd Font:style=Regular:size=10:antialias=true:pixelsize=14"};
 /*gruvbox material*/
 static const char col_1[]       = "#282828";
 static const char col_2[]       = "#d4be98";
