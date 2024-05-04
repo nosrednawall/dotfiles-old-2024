@@ -12,32 +12,28 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = {	"Comic code:size=10:antialias=true:autohint=true:pixelsize=16",
-					"Mononoki Nerd Font:style=Bold:size=10:antialias=true:autohint=true:pixelsize=16"};
-static const char dmenufont[]       = "Comic code:size=10:antialias=true:autohint=true";
-
-/*gruvbox*/
+static const int user_bh            = 11;        /* 2 is the default spacing around the bar's font */
+static const char *fonts[]          = {	"Comic code:size=10:antialias=true:pixelsize=14",
+					"Mononoki Nerd Font:style=Bold:size=10:antialias=true:pixelsize=14"};
+/*gruvbox material*/
 static const char col_1[]       = "#282828";
-static const char col_2[]       = "#695F55";
-static const char col_3[]       = "#ebdbb2";
-static const char col_4[]       = "#d65d0e";
-static const char col_5[]       = "#B8bb26";
-static const char col_6[]       = "#cc241d";
-static const char col_7[]       = "#689d68";
+static const char col_2[]       = "#d4be98";
+static const char col_3[]       = "#ea6962";
+static const char col_4[]       = "#e78a4e";
+static const char col_5[]       = "#a9b665";
 
 static const char *colors[][3]      = {
 	/*                      fg      bg   border   */
-	[SchemeNorm]       = { col_3, col_1, col_1 },
-	[SchemeSel]        = { col_3, col_1, col_5 },
+	[SchemeNorm]       = { col_2, col_1, col_1 },
+	[SchemeSel]        = { col_2, col_1, col_5 },
 	[SchemeStatus]     = { col_1, col_1, col_1 }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]    = { col_1, col_5, col_4 }, // Tagbar left selected {text,background,not used but cannot be empty}
-	[SchemeTagsNorm]   = { col_3, col_1, col_1 }, // Tagbar left unselected {text,background,not used but cannot be empty}
-	[SchemeInfoSel]    = { col_3, col_1, col_1 }, // infobar middle  selected {text,background,not used but cannot be empty}
-	[SchemeInfoNorm]   = { col_3, col_1, col_1 }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	[SchemeTagsSel]    = { col_1, col_5, col_3 }, // Tagbar left selected {text,background,not used but cannot be empty}
+	[SchemeTagsNorm]   = { col_2, col_1, col_1 }, // Tagbar left unselected {text,background,not used but cannot be empty}
+	[SchemeInfoSel]    = { col_2, col_1, col_1 }, // infobar middle  selected {text,background,not used but cannot be empty}
+	[SchemeInfoNorm]   = { col_2, col_1, col_1 }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5" };
-
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -87,31 +83,18 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 static const char *roficmd[]   = { "/bin/sh", "-c", "rofi -m -4 -modi 'window,drun,ssh,combi' -font 'Comic code 15' -show drun -icon-theme 'Gruvbox' -show-icons -theme 'gruvbox-dark' -sidebar-mode", NULL };
 static const char *rofialttabcmd[]   = { "/bin/sh", "-c", "rofi -m -4 -modi 'window' -font 'Comic code 15' -show window -icon-theme 'Gruvbox' -show-icons -theme 'gruvbox-dark' -sidebar-mode", NULL };
+
 /* atalhos teclado */
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,			XK_d,	   spawn,          {.v = roficmd } },
-	{ Mod1Mask,			XK_Tab,	   spawn,          {.v = rofialttabcmd } },
+	{ MODKEY,						XK_d,	   spawn,          {.v = roficmd } },
+	{ Mod1Mask,						XK_Tab,	   spawn,          {.v = rofialttabcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_s,      togglescratch,  {.v = scratchpadcmd } },
-
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 
-	/*Padrao
-	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	*/
-
 	/*minhas alterações*/
-	//	{ MODKEY|ShiftMask,             XK_Right,  rotatestack,    {.i = +1 } },
-	//	{ MODKEY|ShiftMask,             XK_Left,   rotatestack,    {.i = -1 } },
 	{ MODKEY,                       XK_Right,  focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_Left,   focusstack,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_Up,     incnmaster,     {.i = +1 } },
@@ -143,13 +126,10 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY|ShiftMask,		XK_r,      quit,           {1} },
+	{ MODKEY|ShiftMask,             XK_q,      						quit,           {0} },
+	{ MODKEY|ShiftMask,				XK_r,      						quit,           {1} },
 
 	/*Meus atalhos*/
-	{ MODKEY,                       XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-atalhos-programas") },
-	{ MODKEY|ShiftMask,             XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-docker-images") },
-	{ MODKEY|ControlMask,           XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-docker-lista-funcionando") },
 	{ ControlMask|Mod1Mask,         XK_l,                           spawn,          SHCMD("~/.local/bin/slock_personalizado") },
 	/*volume pulseaudio*/
 	{ 0,                            XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume") },
@@ -160,23 +140,34 @@ static const Key keys[] = {
 	{ ControlMask,                  XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/aumenta_volume_microfone") },
 	{ ControlMask,                  XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume_microfone") },
 	{ ControlMask,                  XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/muta_microfone") },
+
+	/*Player de musica*/
 	{ 0,                            XF86XK_AudioPlay,               spawn,          SHCMD("~/.local/bin/playerctl_play") },
 	{ 0,                            XF86XK_AudioStop,               spawn,          SHCMD("~/.local/bin/playerctl_stop") },
 	{ 0,                            XF86XK_AudioPrev,               spawn,          SHCMD("~/.local/bin/playerctl_prev") },
 	{ 0,                            XF86XK_AudioNext,               spawn,          SHCMD("~/.local/bin/playerctl_next") },
+
+	/*Outros atalhos teclado*/
 	{ 0,                            XF86XK_HomePage,                spawn,          SHCMD("~/.local/bin/homepage_program") },
 	{ 0,                            XF86XK_Mail,                    spawn,          SHCMD("~/.local/bin/mail_program") },
 	{ 0,                            XF86XK_Search,                  spawn,          SHCMD("~/.local/bin/search_program") },
 	{ 0,                            XF86XK_Calculator,              spawn,          SHCMD("~/.local/bin/calculator_program") },
 
+	/*Printscreen*/
 	{ MODKEY|ShiftMask,             XK_s,                           spawn,          SHCMD("~/.local/bin/print_edita") },
 	{ 0,                            XK_Print,                       spawn,          SHCMD("~/.local/bin/print_copia") },
-	{ 0,				XF86XK_MonBrightnessUp,		spawn,          SHCMD("~/.local/bin/brilho_tela_aumenta") },
-	{ 0,				XF86XK_MonBrightnessDown,	spawn,          SHCMD("~/.local/bin/brilho_tela_diminui") },
 
+	/*Brilho tela*/
+	{ 0,							XF86XK_MonBrightnessUp,			spawn,          SHCMD("~/.local/bin/brilho_tela_aumenta") },
+	{ 0,							XF86XK_MonBrightnessDown,		spawn,          SHCMD("~/.local/bin/brilho_tela_diminui") },
+
+	/*Dmenus*/
+	{ MODKEY,                       XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-atalhos-programas") },
+	{ MODKEY|ShiftMask,             XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-docker-images") },
+	{ MODKEY|ControlMask,           XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-docker-lista-funcionando") },
 	{ MODKEY,                       XK_q,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-power" ) },
 	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
-	{ MODKEY,			XK_e,				spawn,		SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
+	{ MODKEY,						XK_e,							spawn,			SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
 	{ MODKEY,                       XK_w,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pulseaudio-sink") },
 	{ MODKEY,                       XK_k,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-teclados") }
 };

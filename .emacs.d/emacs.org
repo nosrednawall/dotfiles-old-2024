@@ -265,6 +265,7 @@
 (use-package gruvbox-theme
   :ensure t)
 (load-theme 'gruvbox-dark-medium t)
+
 #+END_SRC
 
 ** Help key combinations

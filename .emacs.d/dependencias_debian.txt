@@ -1,2 +1,0 @@
-# Dependencias emacs 28.2
-sudo apt install elpa-ess elpa-projectile
