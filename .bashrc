@@ -5,7 +5,7 @@ case $- in
 esac
 
 unset MAILCHECK
-
+#sss
 export OSH='/home/anderson/.oh-my-bash'
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"

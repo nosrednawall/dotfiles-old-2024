@@ -23,3 +23,11 @@ _darcs
 
 # Arquivo antigo do meu emacs
 \.emacs.d
+
+# arquivos da build do suckless
+dwm
+st
+slstatus
+dmenu
+slock
+nixos-config
