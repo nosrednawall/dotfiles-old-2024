@@ -26,8 +26,11 @@
 ;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
 
-(setq doom-font (font-spec :family "Comic Code" :size 13 :weight 'regular)
-      doom-variable-pitch-font (font-spec :family "Comic Code" :size 13))
+;; (setq doom-font (font-spec :family "Comic Code" :size 13 :weight 'regular)
+;;      doom-variable-pitch-font (font-spec :family "Comic Code" :size 13))
+
+(setq doom-font (font-spec :family "Iosevka" :size 16 :weight 'regular)
+      doom-variable-pitch-font (font-spec :family "Iosevka" :size 16))
 
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -37,18 +40,18 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;; (setq doom-theme 'doom-gruvbox-material)
+ (setq doom-theme 'doom-solarized-dark)
 
 ;; `gruvbox-material' contrast and palette options
-(setq doom-gruvbox-material-background  "medium"  ; or hard (defaults to soft)
-     doom-gruvbox-material-palette     "material") ; or original (defaults to material)
+;;(setq doom-gruvbox-material-background  "medium"  ; or hard (defaults to soft)
+  ;;   doom-gruvbox-material-palette     "material") ; or original (defaults to material)
 
 ;; `gruvbox-material-light' contrast and palette options
-(setq doom-gruvbox-material-light-background  "medium" ; or hard (defaults to soft)
-      doom-gruvbox-material-light-palette     "mix") ; or original (defaults to material)
+;;(setq doom-gruvbox-material-light-background  "medium" ; or hard (defaults to soft)
+  ;;    doom-gruvbox-material-light-palette     "mix") ; or original (defaults to material)
 
 ;; set `doom-theme'
-(setq doom-theme 'doom-gruvbox-material) ; dark variant
+;;(setq doom-theme 'doom-gruvbox-solarized-light) ; dark variant
 ;;(setq doom-theme 'doom-gruvbox-material-light) ; light variant
 
 
