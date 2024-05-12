@@ -11,23 +11,20 @@ static const char unknown_str[] = "";
 
 static const struct arg args[] = {
 	/* function                     format						argument */
-	{ run_command,		" ^b#002b36^^c#2aa198^%s ",				"bash ~/.dotfiles/.config/suckless/slstatus_solarized/scripts/music_status_bar.sh"},
-	//{ run_command,	" ^b#002b36^^c#2aa198^%s",				"bash ~/.local/bin/sl-wttr.sh"},
-	{ run_command,		" ^b#002b36^^c#2aa198^%s ",				"bash ~/.dotfiles/.config/suckless/slstatus_solarized/scripts/cpu_status.sh"},
-	//{ cpu_perc,		" ^b#002b36^^c#2aa198^ ^b#002b36^^c#93a1a1^%s󰏰 ",	NULL},
-	//{ run_command,	" ^b#002b36^^c#2aa198^%s",				"sensors | awk '/edge/ {print$2}' | sed 's/+//'"},
-	{ ram_perc,			" ^b#002b36^^c#859900^ ^b#002b36^^c#93a1a1^%s󰏰 ",	NULL},
-	{ disk_perc,		" ^b#002b36^^c#45858B^󰋊 ^b#002b36^^c#93a1a1^%s󰏰 ",	"/" },
-	{ wifi_essid,		" ^b#002b36^^c#b58900^ ^b#002b36^^c#93a1a1^%s",		"wlp5s0" },
+	{ run_command,	    "^b#002b36^^c#2aa198^%s ",				"bash ~/.dotfiles/.config/suckless/slstatus_solarized/scripts/music_status_bar.sh"},
+	{ run_command,		"^b#002b36^^c#2aa198^%s ",				"bash ~/.dotfiles/.config/suckless/slstatus_solarized/scripts/cpu_status.sh"},
+	{ ram_perc,			"^b#002b36^^c#eee8d5^| ^b#002b36^^c#859900^ ^b#002b36^^c#93a1a1^%s󰏰 ",	NULL},
+	{ disk_perc,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#45858B^󰋊 ^b#002b36^^c#93a1a1^%s󰏰 ",	"/" },
+	{ wifi_essid,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#b58900^ ^b#002b36^^c#93a1a1^%s",		"wlp5s0" },
 	{ wifi_perc,		"^b#002b36^^c#93a1a1^%s󰏰 ",				"wlp5s0" },
 	//{ netspeed_rx,	" ^b#002b36^^c#b58900^  ^b#002b36^^c#93a1a1^%s",	"wlp5s0" },
 	//{ netspeed_tx,	" ^b#002b36^^c#b58900^  ^b#002b36^^c#93a1a1^%s",	"wlp5s0" },
 	//{ battery_perc,	" ^b#002b36^^c#d33682^  ^b#002b36^^c#93a1a1^%s󰏰 ",	"BAT1" },
-	{ run_command,		" %s",									"bash ~/.dotfiles/.config/suckless/slstatus_solarized/scripts/battery_status.sh" },
-	{ run_command,		" ^b#002b36^^c#2aa198^%s",				"bash ~/.dotfiles/.config/suckless/slstatus_solarized/scripts/volume_icon.sh" },
-	{ run_command,		" ^b#002b36^^c#2aa198^󰌌 ^b#002b36^^c#93a1a1^%s ",	"setxkbmap -query | grep layout | awk '{print$2}'"},
-	{ run_command,		" ^b#002b36^^c#2aa198^ ^b#002b36^^c#93a1a1^%s ",	"date +'%d/%m/%Y'" },
-	{ run_command,		" ^b#002b36^^c#2aa198^󰥔 ^b#002b36^^c#93a1a1^%s ",	"date +'%H:%M'"},
+	{ run_command,		"%s",									"bash ~/.dotfiles/.config/suckless/slstatus_solarized/scripts/battery_status.sh" },
+	{ run_command,		"^b#002b36^^c#2aa198^%s",				"bash ~/.dotfiles/.config/suckless/slstatus_solarized/scripts/volume_icon.sh" },
+	{ run_command,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#2aa198^󰌌 ^b#002b36^^c#93a1a1^%s ",	"setxkbmap -query | grep layout | awk '{print$2}'"},
+	{ run_command,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#2aa198^ ^b#002b36^^c#93a1a1^%s ",	"date +'%d/%m/%Y'" },
+	{ run_command,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#2aa198^󰥔 ^b#002b36^^c#93a1a1^%s ^b#002b36^^c#eee8d5^|",	"date +'%H:%M'"},
 };
 
 /*
