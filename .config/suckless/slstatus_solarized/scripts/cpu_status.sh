@@ -27,4 +27,4 @@ else
     icon="^b#002b36^^c#2aa198^"
 
 fi
-echo "$icon ^b#002b36^^c#93a1a1^$usageCpu󰏰 $tempCpu"
+echo "$icon  ^b#002b36^^c#93a1a1^$usageCpu󰏰 $tempCpu"
