@@ -40,7 +40,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
- (setq doom-theme 'doom-solarized-dark)
+ (setq doom-theme 'doom-solarized-dark-high-contrast)
 
 ;; `gruvbox-material' contrast and palette options
 ;;(setq doom-gruvbox-material-background  "medium"  ; or hard (defaults to soft)

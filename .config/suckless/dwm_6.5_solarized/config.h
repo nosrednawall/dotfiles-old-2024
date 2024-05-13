@@ -128,6 +128,10 @@ static const Key keys[] = {
 
 	/*Meus atalhos*/
 	{ ControlMask|Mod1Mask,         XK_l,                           spawn,          SHCMD("~/.local/bin/slock_personalizado") },
+	{ 0,					        XK_Caps_Lock,                   spawn,          SHCMD("~/.local/bin/som_capslock_numlock") },
+	{ 0,					        XK_Num_Lock,                    spawn,          SHCMD("~/.local/bin/som_capslock_numlock") },
+	{ 0,					        XK_Scroll_Lock,                 spawn,          SHCMD("~/.local/bin/som_capslock_numlock") },
+
 	/*volume pulseaudio*/
 	{ 0,                            XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/diminui_volume") },
 	{ 0,                            XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/aumenta_volume") },
