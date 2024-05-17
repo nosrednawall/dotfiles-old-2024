@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=NumixSolarizedLightCyan
+Comment=A themable modern flat theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=NumixSolarizedLightCyan
+IconTheme=Numix
+MetacityTheme=NumixSolarizedLightCyan
+ButtonLayout=:minimize,maximize,close
