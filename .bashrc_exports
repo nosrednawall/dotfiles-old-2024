@@ -1,0 +1,9 @@
+#!/bin/sh
+
+export PATH="$HOME/.config/emacs/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin/dmenu:$PATH"
+
+
+# Funcoes diversas
+unset MAILCHECK

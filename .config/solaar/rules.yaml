@@ -23,6 +23,6 @@
 - Rule:
   - Key: [Open Emoji Panel, pressed]
   - KeyPress:
-    - [Super_L, k]
+    - [Super_L, Shift_L, k]
     - click
 ...

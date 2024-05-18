@@ -6,7 +6,7 @@ static int centered = 1;                    /* -c option; centers dmenu on scree
 static int min_width = 500;                    /* minimum width when centered */
 
 /* -fn option overrides fonts[0]; default X11 font or font set */
-static const char *fonts[]          = {	"CaskaydiaMono Nerd Font Mono=20:style=Regular:antialias=true"};
+static const char *fonts[]          = {	"CaskaydiaMono Nerd Font Mono=20:style=Regular"};
 
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
