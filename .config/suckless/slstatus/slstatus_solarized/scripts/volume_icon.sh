@@ -33,6 +33,6 @@ else
     iconCam=" $separador ^b#002b36^^c#dc322f^ ^b#002b36^^c#93a1a1^ On"
 fi
 
-brilhoIcone="^b#002b36^^c#268bd2^󰃠 ^b#002b36^^c#93a1a1^ $brilho󰏰"
+brilhoIcone="^b#002b36^^c#268bd2^󰃠 ^b#002b36^^c#93a1a1^$brilho󰏰"
 
 echo "$separador $brilhoIcone $separador $iconVolume $separador $iconMic$iconCam"

@@ -13,7 +13,7 @@ static const struct arg args[] = {
 	/* function                     format						argument */
 	{ run_command,	    "^b#002b36^^c#2aa198^%s ",				"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/music_status_bar.sh"},
 	{ run_command,		"^b#002b36^^c#2aa198^%s ",				"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/cpu_status.sh"},
-	{ ram_perc,			"^b#002b36^^c#eee8d5^| ^b#002b36^^c#859900^ ^b#002b36^^c#93a1a1^ %s󰏰 ",	NULL},
+	{ ram_perc,			"^b#002b36^^c#eee8d5^| ^b#002b36^^c#859900^ ^b#002b36^^c#93a1a1^%s󰏰 ",	NULL},
 	{ disk_perc,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#45858B^󰋊 ^b#002b36^^c#93a1a1^%s󰏰 ",	"/" },
 	{ wifi_essid,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#b58900^ ^b#002b36^^c#93a1a1^%s",		"wlp5s0" },
 	{ wifi_perc,		"^b#002b36^^c#93a1a1^%s󰏰 ",				"wlp5s0" },
