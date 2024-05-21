@@ -1,0 +1,2 @@
+#!/bin/bash
+rofi -m -4 -modi 'window,drun,ssh,combi' -font 'CaskaydiaMono Nerd Font 14' -show drun -icon-theme 'Papirus-Dark' -show-icons -theme 'solarized' -sidebar-mode

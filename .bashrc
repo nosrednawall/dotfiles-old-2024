@@ -124,6 +124,7 @@ plugins=(
 source "$OSH"/oh-my-bash.sh
 source "$HOME/.bashrc_alias"
 source "$HOME/.bashrc_exports"
+source "$HOME/.bashrc_environments"
 
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -153,4 +154,3 @@ source "$HOME/.bashrc_exports"
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 # Path to your oh-my-bash installation.
-
