@@ -25,9 +25,9 @@ _darcs
 \.emacs.d
 
 # arquivos da build do suckless
-dwm
-st
-slstatus
-dmenu
-slock
+#dwm
+#st
+#slstatus
+#dmenu
+#slock
 nixos-config

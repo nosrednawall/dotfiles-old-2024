@@ -99,11 +99,18 @@
 
 ;; Neotree
 
-
-;; (setq neo-theme (if (display-graphic-p) 'icons 'ascii))
-;;(with-eval-after-load 'doom-themes
-;;  (doom-themes-neotree-config))
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 ;; Adiciona navegação entre os buffers, com as teclas Alt+Setas
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
+
+;; Copy paste term emacs
+(defun my-term-mode-hook ()
+  (define-key term-raw-map (kbd "C-y") 'term-paste)
+  (define-key term-raw-map (kbd "C-k")
+    (lambda ()
+      (interactive)
+      (term-send-raw-string "\C-k")
+      (kill-line))))
+(add-hook 'term-mode-hook 'my-term-mode-hook)

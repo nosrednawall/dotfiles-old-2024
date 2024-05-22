@@ -16,7 +16,7 @@ static const struct arg args[] = {
 	{ ram_perc,			"^b#002b36^^c#eee8d5^| ^b#002b36^^c#859900^ ^b#002b36^^c#93a1a1^%s󰏰 ",	NULL},
 	{ disk_perc,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#45858B^󰋊 ^b#002b36^^c#93a1a1^%s󰏰 ",	"/" },
 	{ wifi_essid,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#b58900^ ^b#002b36^^c#93a1a1^%s",		"wlp5s0" },
-	{ wifi_perc,		"^b#002b36^^c#93a1a1^%s󰏰 ",				"wlp5s0" },
+	{ wifi_perc,		"^b#002b36^^c#93a1a1^ %s󰏰 ",				"wlp5s0" },
 //	{ netspeed_rx,	    "^b#002b36^^c#b58900^  ^b#002b36^^c#93a1a1^%s",	"wlp5s0" },
 //	{ netspeed_tx,	    "^b#002b36^^c#b58900^  ^b#002b36^^c#93a1a1^%s",	"wlp5s0" },
 	//{ battery_perc,	" ^b#002b36^^c#d33682^  ^b#002b36^^c#93a1a1^%s󰏰 ",	"BAT1" },
@@ -25,6 +25,7 @@ static const struct arg args[] = {
 	{ run_command,		"%s",									"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/keyboard_status.sh"},
 	{ run_command,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#2aa198^ ^b#002b36^^c#93a1a1^%s ",	"date +'%d/%m/%Y'" },
 	{ run_command,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#2aa198^󰥔 ^b#002b36^^c#93a1a1^%s ^b#002b36^^c#eee8d5^|",	"date +'%H:%M'"},
+
 };
 
 /*
