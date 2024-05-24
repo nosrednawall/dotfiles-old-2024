@@ -1,0 +1,20 @@
+#!/bin/sh
+# Wrapper script for controlling music across mpd and MPRIS.
+# It mimics the CLI arguments of mpc.
+
+args="-s --player=spotify,mpv,%any"
+# shellcheck disable=2086
+if status="$(playerctl $args status)" && [ "$status" != "Stopped" ]; then
+    case "$1" in
+        seek | volume)
+            [ "$1" = "seek" ] && subcmd="position"
+            set -- "${subcmd:-"$1"}" "${2#?}${2%%[[:digit:]]*}"
+            ;;
+        toggle) set -- play-pause ;;
+        prev) set -- previous ;;
+        current) set -- status ;;
+    esac
+    exec playerctl $args "$@"
+fi
+
+exec mpc -q "$@"

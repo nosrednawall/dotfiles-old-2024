@@ -1,7 +1,7 @@
 #!/bin/bash
 xrdb ~/.Xresources
 pgrep -x mate-power-manager > /dev/null || mate-power-manager &
-pgrep -x xautolock > /dev/null || xautolock -time 15 -locker ~/.local/bin/slock_personalizado -detectsleep &
+pgrep -x xautolock > /dev/null || xautolock -time 15 -locker ~/.local/bin/dwm/slock_personalizado -detectsleep &
 # redshift -P -O 4000 &
 picom -b
 pgrep -x dunst > /dev/null || dunst &

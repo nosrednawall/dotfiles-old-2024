@@ -4,7 +4,7 @@ layout_atual=$(setxkbmap -query | grep layout | awk '{print$2}' | grep 'br' -ic)
 
 if [ $layout_atual -eq 1 ];
 then
-    setxkbmap -model pc105 -layout us
+    setxkbmap -model pc105 -layout us -variant  altgr-intl
     notify-send -t 3000 "󰌌  Keyboard us" "Alterado o teclado para o layout americano" --icon="/usr/share/icons/ePapirus/16x16/devices/keyboard.svg"
 else
     setxkbmap -model pc105 -layout br -variant abnt2
