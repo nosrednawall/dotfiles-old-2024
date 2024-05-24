@@ -5,6 +5,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin/dmenu:$PATH"
 export PATH="$HOME/.local/bin/dwm:$PATH"
 export PATH="$HOME/.local/bin/mpd:$PATH"
-export PATH="$HOME/.local/bin/statusbar:$PATH"
+
 # Funcoes diversas
 unset MAILCHECK
