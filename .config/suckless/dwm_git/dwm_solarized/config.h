@@ -47,11 +47,19 @@ typedef struct {
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "144x41", "-e", "ranger", NULL };
 const char *spcmd3[] = {"bitwarden", NULL };
+const char *spcmd4[] = {"st", "-n", "sppulse", "-g", "100x34", "-e", "pulsemixer", NULL };
+const char *spcmd5[] = {"st", "-n", "sptop", "-g", "150x50", "-e", "btop", NULL };
+const char *spcmd6[] = {"st", "-n", "spnmtui", "-g", "100x34", "-e", "nmtui", NULL };
+const char *spcmd7[] = {"st", "-n", "spncmpcpp", "-g", "100x34", "-e", "ncmpcpp", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
 	{"spranger",    spcmd2},
 	{"bitwarden",   spcmd3},
+	{"sppulse",     spcmd4},
+	{"sptop",       spcmd5},
+	{"spnmtui",     spcmd6},
+	{"spncmpcpp",   spcmd7},
 };
 
 
@@ -74,7 +82,11 @@ static const Rule rules[] = {
 	{ "mpv",						NULL,		NULL,		0,				1,				-1 },
 	{ NULL,		  "spterm",		NULL,		SPTAG(0),		1,			 -1 },
 	{ NULL,		  "spfm",		NULL,		SPTAG(1),		1,			 -1 },
-	{ NULL,		  "keepassxc",	NULL,		SPTAG(2),		0,			 -1 },
+	{ NULL,		  "bitwarden",	NULL,		SPTAG(2),		1,			 -1 },
+	{ NULL,		  "sppulse",	NULL,		SPTAG(3),		1,			 -1 },
+	{ NULL,		  "sptop",		NULL,		SPTAG(4),		1,			 -1 },
+	{ NULL,		  "spnmtui",	NULL,		SPTAG(5),		1,			 -1 },
+	{ NULL,		  "spncmpcpp",	NULL,		SPTAG(6),		1,			 -1 },
 };
 
 /* layout(s) */
@@ -121,18 +133,20 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
-//static const char scratchpadname[] = "scratchpad";
-//static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
 /* atalhos teclado */
 static const Key keys[] = {
 	/* modifier                     key        		function        argument */
 	{ MODKEY,                       XK_p,      		spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, 		spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_b,      		togglebar,      {0} },
+	{ MODKEY|ShiftMask,             XK_b,      		togglebar,      {0} },
 	{ MODKEY,            			XK_s,  	   togglescratch,  {.ui = 0 } },
 	{ MODKEY,            			XK_r,	   togglescratch,  {.ui = 1 } },
-	{ MODKEY,            			XK_n,	   togglescratch,  {.ui = 2 } },
+	{ MODKEY,            			XK_b,	   togglescratch,  {.ui = 2 } },
+	{ MODKEY,            			XK_a,	   togglescratch,  {.ui = 3 } },
+	{ MODKEY,            			XK_h,	   togglescratch,  {.ui = 4 } },
+	{ MODKEY,            			XK_n,	   togglescratch,  {.ui = 5 } },
+	{ MODKEY,            			XK_m,	   togglescratch,  {.ui = 6 } },
 
 	/*Modimentacao das janelas*/
 	{ MODKEY,                       XK_Right,      	focusstack,     {.i = +1 } },
