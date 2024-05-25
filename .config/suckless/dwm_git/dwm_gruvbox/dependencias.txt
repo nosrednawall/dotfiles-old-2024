@@ -1,0 +1,22 @@
+
+# Dependencias para o dwm funcionar
+sudo apt install make gcc libx11-dev libxft-dev libxinerama-dev xorg
+
+# O resto dos programas
+sudo apt install feh rofi pulseaudio lxappearance network-manager network-manager-gnome redshift xautolock picom dunst copyq solaar blueman pasystray flameshot mate-power-manager
+
+# Suporte para extracao de arquivos
+sudo apt install arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip
+
+# Fontes microsoft
+sudo apt install cabextract curl fontconfig xfonts-utils
+sudo apt install ttf-mscorefonts-installer
+
+# Driver Nvidia
+sudo apt install dkms linux-headers-amd64 firmware-misc-nonfree
+sudo apt install nvidia-driver nvidia-xconfig
+sudo reboot
+sudo nvidia-xconfig --prime
+sudo reboot
+nvidia-cuda-dev nvidia-cuda-toolkit libnvidia-encode1
+
