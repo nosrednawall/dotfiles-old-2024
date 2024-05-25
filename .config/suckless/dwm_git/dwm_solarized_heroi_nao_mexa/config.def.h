@@ -3,7 +3,7 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int tabModKey = 0x40;
 static const unsigned int tabCycleKey = 0x17;
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -22,7 +22,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 28;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = {	"CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17"};
 
-/*gruvbox material*/
+/*Tema Solarized Dark*/
 static const char col_1[]       = "#002b36";
 static const char col_2[]       = "#93a1a1";
 static const char col_3[]       = "#ea6962";
@@ -54,13 +54,13 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class                       instance		title       tags mask     isfloating		monitor */
-	{ "Gimp",			NULL,		NULL,		0,		1,		-1 },
-	{ "copyq",			NULL,		NULL,		0,		1,		-1 },
-	{ "mpv",			NULL,		NULL,		0,		1,		-1 },
+	{ "Gimp",						NULL,		NULL,		0,				1,				-1 },
+	{ "copyq",						NULL,		NULL,		0,				1,				-1 },
+	{ "mpv",						NULL,		NULL,		0,				1,				-1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.65; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -70,8 +70,11 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
+	{ ">M>",      centeredfloatingmaster }, /* first entry is default */
+	{ "|M|",      centeredmaster },
+	{ "[]=",      tile },
 	{ "[M]",      monocle },
+
 	{ "[@]",      spiral },
 	{ "[\\]",     dwindle },
 	{ "H[]",      deck },
@@ -81,8 +84,6 @@ static const Layout layouts[] = {
 	{ "###",      nrowgrid },
 	{ "---",      horizgrid },
 	{ ":::",      gaplessgrid },
-	{ "|M|",      centeredmaster },
-	{ ">M>",      centeredfloatingmaster },
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
@@ -102,26 +103,28 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+//static const char scratchpadname[] = "scratchpad";
+//static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
 /* atalhos teclado */
 static const Key keys[] = {
 	/* modifier                     key        		function        argument */
 	{ MODKEY,                       XK_p,      		spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, 		spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_s,      		togglescratch,  {.v = scratchpadcmd } },
+	//{ MODKEY,                       XK_s,      		togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      		togglebar,      {0} },
-	{ MODKEY,                       XK_j,      		focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      		focusstack,     {.i = -1 } },
+
+	/*Modimentacao das janelas*/
 	{ MODKEY,                       XK_Right,      	focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_Left,      	focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_equal,      	incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_minus,      	incnmaster,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_minus,      	setmfact,       {.f = -0.05} },
-	{ MODKEY|ShiftMask,             XK_equal,      	setmfact,       {.f = +0.05} },
+	{ MODKEY|ShiftMask,             XK_Up,      	incnmaster,     {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_Down,      	incnmaster,     {.i = -1 } },
+	{ MODKEY,           			XK_Up,      	setmfact,       {.f = -0.05} },
+	{ MODKEY,             			XK_Down,      	setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, 		zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    		view,           {0} },
+
+
 	{ MODKEY|ShiftMask,             XK_c,      		killclient,     {0} },
 	{ MODKEY,                       XK_space,  		setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  		togglefloating, {0} },
@@ -136,10 +139,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
+
 	{ MODKEY|ShiftMask,             XK_q,      						quit,           {0} },
 	{ MODKEY|ShiftMask,				XK_r,      						quit,           {1} },
 
@@ -150,20 +150,20 @@ static const Key keys[] = {
 	/*minhas alterações*/
 
 	//Layouts
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} }, //master stack
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} }, //monocle
-	{ MODKEY|Mod1Mask,              XK_s,      setlayout,      {.v = &layouts[2]} }, //spiral
-	{ MODKEY|Mod1Mask,              XK_d,      setlayout,      {.v = &layouts[3]} }, //dwindle outra espiral
-	{ MODKEY|ShiftMask,             XK_d,      setlayout,      {.v = &layouts[4]} }, //deck
-	{ MODKEY|ShiftMask,             XK_b,      setlayout,      {.v = &layouts[5]} }, //bstack para baixo stack
-	{ MODKEY|Mod1Mask,              XK_b,      setlayout,      {.v = &layouts[6]} }, //bstckhoriz acho que horizontal para baixo
-	{ MODKEY|Mod1Mask,              XK_g,      setlayout,      {.v = &layouts[7]} }, //grid
-	{ MODKEY|ShiftMask,             XK_g,      setlayout,      {.v = &layouts[8]} }, //nrowgrid grid linha abaixo
-	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[9]} }, //horriz grid
-	{ MODKEY|ShiftMask,             XK_y,      setlayout,      {.v = &layouts[10]} }, //gapless grid
-	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[11]} }, //center master
-	{ MODKEY|Mod1Mask,              XK_m,      setlayout,      {.v = &layouts[12]} }, //centerfloating master
-	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[13]} }, //floating
+	{ MODKEY,                       	XK_F1,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       	XK_F2,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,              				XK_F3,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,              				XK_F4,      setlayout,      {.v = &layouts[3]} },
+	{ MODKEY,             				XK_F5,      setlayout,      {.v = &layouts[4]} },
+	{ MODKEY,             				XK_F6,      setlayout,      {.v = &layouts[5]} },
+	{ MODKEY,              				XK_F7,      setlayout,      {.v = &layouts[6]} },
+	{ MODKEY,              				XK_F8,      setlayout,      {.v = &layouts[7]} },
+	{ MODKEY,             				XK_F9,      setlayout,      {.v = &layouts[8]} },
+	{ MODKEY,                       	XK_F10,     setlayout,      {.v = &layouts[9]} },
+	{ MODKEY,             				XK_F11,     setlayout,      {.v = &layouts[10]} },
+	{ MODKEY,             				XK_F12,     setlayout,      {.v = &layouts[11]} },
+	{ MODKEY|ShiftMask,              	XK_F1,      setlayout,      {.v = &layouts[12]} },
+	{ MODKEY|ShiftMask,                 XK_F2,      setlayout,      {.v = &layouts[13]} },
 
 	//Gaps
 	{ MODKEY|ShiftMask,             XK_h,      setcfact,       {.f = +0.25} },
@@ -191,6 +191,7 @@ static const Key keys[] = {
 	{ 0,					        XK_Caps_Lock,                   spawn,          SHCMD("~/.local/bin/dwm/som_capslock_numlock") },
 	{ 0,					        XK_Num_Lock,                    spawn,          SHCMD("~/.local/bin/dwm/som_capslock_numlock") },
 	{ 0,					        XK_Scroll_Lock,                 spawn,          SHCMD("~/.local/bin/dwm/som_capslock_numlock") },
+	{ MODKEY|ShiftMask,             XK_k,                           spawn,          SHCMD("~/.local/bin/dwm/altera-layout-teclado") },
 
 	/*volume pulseaudio*/
 	{ 0,                            XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/dwm/diminui_volume") },
@@ -218,22 +219,22 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_s,                           spawn,          SHCMD("~/.local/bin/dwm/print_edita") },
 	{ 0,                            XK_Print,                       spawn,          SHCMD("~/.local/bin/dwm/print_copia") },
 
-	/*Brilho tela*/
+	/*Brilho tela notebook*/
 	{ 0,							XF86XK_MonBrightnessUp,			spawn,          SHCMD("~/.local/bin/dwm/brilho_tela_aumenta") },
 	{ 0,							XF86XK_MonBrightnessDown,		spawn,          SHCMD("~/.local/bin/dwm/brilho_tela_diminui") },
 
 	/*Dmenus*/
-	{ MODKEY,                       XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-atalhos-programas") },
-	{ MODKEY|ShiftMask,             XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-docker-images") },
-	{ MODKEY|ControlMask,           XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-docker-lista-funcionando") },
-	{ MODKEY,                       XK_q,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-power" ) },
+	{ MODKEY|ShiftMask,             XK_e,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-saida-sistema" ) },
 	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
-	{ MODKEY,						XK_e,							spawn,			SHCMD("~/.local/bin/dmenu/dmenu-monitor" ) },
-	{ MODKEY,                       XK_w,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pulseaudio-sink") },
-	{ MODKEY|ShiftMask,             XK_k,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-teclados") },
+	{ MODKEY|ShiftMask,				XK_w,							spawn,			SHCMD("~/.local/bin/dmenu/dmenu-controle-monitor" ) },
+	{ MODKEY|ShiftMask,             XK_v,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-controle-som") },
 
 	/*Rofi menus*/
-	{ MODKEY,						XK_d,	   						spawn,          SHCMD("~/.local/bin/dwm/roficmd") }
+	{ MODKEY,						XK_d,	   						spawn,          SHCMD("~/.local/bin/dwm/roficmd") },
+
+	/*Lancamento Programas*/
+	{ MODKEY,						XK_w,							spawn,			SHCMD("google-chrome" ) },
+	{ MODKEY,						XK_f,							spawn,			SHCMD("pcmanfm" ) }
 };
 
 /* button definitions */

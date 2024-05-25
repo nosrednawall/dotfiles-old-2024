@@ -103,15 +103,15 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+//static const char scratchpadname[] = "scratchpad";
+//static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
 /* atalhos teclado */
 static const Key keys[] = {
 	/* modifier                     key        		function        argument */
 	{ MODKEY,                       XK_p,      		spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, 		spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_s,      		togglescratch,  {.v = scratchpadcmd } },
+	//{ MODKEY,                       XK_s,      		togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      		togglebar,      {0} },
 
 	/*Modimentacao das janelas*/
