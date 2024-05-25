@@ -3,7 +3,7 @@
 sudo apt install make gcc libx11-dev libxft-dev libxinerama-dev xorg
 
 # O resto dos programas
-sudo apt install feh rofi pulseaudio lxappearance network-manager network-manager-gnome redshift xautolock picom dunst copyq solaar blueman pasystray flameshot mate-power-manager
+sudo apt install feh rofi pulseaudio lxappearance network-manager network-manager-gnome redshift xautolock picom dunst copyq solaar blueman pasystray flameshot mate-power-manager exa
 
 # Suporte para extracao de arquivos
 sudo apt install arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip

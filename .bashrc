@@ -126,7 +126,6 @@ source "$HOME/.bashrc_alias"
 source "$HOME/.bashrc_exports"
 source "$HOME/.bashrc_environments"
 
-neofetch
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 

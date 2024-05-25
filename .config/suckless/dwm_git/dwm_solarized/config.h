@@ -76,17 +76,17 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class                       instance		title       tags mask     isfloating		monitor */
-	{ "Gimp",						NULL,		NULL,		0,				1,				-1 },
-	{ "copyq",						NULL,		NULL,		0,				1,				-1 },
-	{ "mpv",						NULL,		NULL,		0,				1,				-1 },
-	{ NULL,		  "spterm",		NULL,		SPTAG(0),		1,			 -1 },
-	{ NULL,		  "spfm",		NULL,		SPTAG(1),		1,			 -1 },
-	{ NULL,		  "bitwarden",	NULL,		SPTAG(2),		1,			 -1 },
-	{ NULL,		  "sppulse",	NULL,		SPTAG(3),		1,			 -1 },
-	{ NULL,		  "sptop",		NULL,		SPTAG(4),		1,			 -1 },
-	{ NULL,		  "spnmtui",	NULL,		SPTAG(5),		1,			 -1 },
-	{ NULL,		  "spncmpcpp",	NULL,		SPTAG(6),		1,			 -1 },
+	/* class                       instance		title       tags mask     isfloating	monitor */
+	{ "Gimp",						NULL,		NULL,		0,				1,			 -1 },
+	{ "copyq",						NULL,		NULL,		0,				1,			 -1 },
+	{ "mpv",						NULL,		NULL,		0,				1,			 -1 },
+	{ NULL,		 				 "spterm",		NULL,		SPTAG(0),		1,			 -1 },
+	{ NULL,		 				 "spfm",		NULL,		SPTAG(1),		1,			 -1 },
+	{ NULL,		 				 "bitwarden",	NULL,		SPTAG(2),		1,			 -1 },
+	{ NULL,		 				 "sppulse", 	NULL,		SPTAG(3),		1,			 -1 },
+	{ NULL,		 				 "sptop",		NULL,		SPTAG(4),		1,			 -1 },
+	{ NULL,		  		 		 "spnmtui" ,	NULL,		SPTAG(5),		1,			 -1 },
+	{ NULL,		  		 		 "spncmpcpp",	NULL,		SPTAG(6),		1,			 -1 },
 };
 
 /* layout(s) */
