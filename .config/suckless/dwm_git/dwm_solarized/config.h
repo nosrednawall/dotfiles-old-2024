@@ -90,7 +90,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.65; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -100,11 +100,10 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ ">M>",      centeredfloatingmaster }, /* first entry is default */
+	{ "[]=",      tile }, /* first entry is default */
+	{ ">M>",      centeredfloatingmaster },
 	{ "|M|",      centeredmaster },
-	{ "[]=",      tile },
 	{ "[M]",      monocle },
-
 	{ "[@]",      spiral },
 	{ "[\\]",     dwindle },
 	{ "H[]",      deck },
@@ -225,7 +224,7 @@ static const Key keys[] = {
 	{ 0,					        XK_Caps_Lock,                   spawn,          SHCMD("~/.local/bin/dwm/som_capslock_numlock") },
 	{ 0,					        XK_Num_Lock,                    spawn,          SHCMD("~/.local/bin/dwm/som_capslock_numlock") },
 	{ 0,					        XK_Scroll_Lock,                 spawn,          SHCMD("~/.local/bin/dwm/som_capslock_numlock") },
-	{ MODKEY|ShiftMask,             XK_k,                           spawn,          SHCMD("~/.local/bin/dwm/altera-layout-teclado") },
+	{ MODKEY,			            XK_k,                           spawn,          SHCMD("~/.local/bin/dwm/altera-layout-teclado") },
 
 	/*volume pulseaudio*/
 	{ 0,                            XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/dwm/diminui_volume") },
