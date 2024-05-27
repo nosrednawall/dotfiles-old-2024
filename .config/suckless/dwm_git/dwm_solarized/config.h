@@ -262,6 +262,7 @@ static const Key keys[] = {
 	/*Dmenus*/
 	{ MODKEY|ShiftMask,             XK_e,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-saida-sistema" ) },
 	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
+	{ MODKEY|ShiftMask,             XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pomodoro" ) },
 	{ MODKEY|ShiftMask,				XK_w,							spawn,			SHCMD("~/.local/bin/dmenu/dmenu-controle-monitor" ) },
 	{ MODKEY|ShiftMask,             XK_v,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-controle-som") },
 
@@ -270,6 +271,7 @@ static const Key keys[] = {
 
 	/*Lancamento Programas*/
 	{ MODKEY,						XK_w,							spawn,			SHCMD("google-chrome" ) },
+	{ MODKEY,						XK_e,							spawn,			SHCMD("emacsclient -c -a 'emacs'" ) },
 	{ MODKEY,						XK_f,							spawn,			SHCMD("pcmanfm" ) }
 };
 
