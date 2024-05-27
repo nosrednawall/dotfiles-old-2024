@@ -7,17 +7,19 @@ const unsigned int interval = 1000;
 static const char unknown_str[] = "";
 
 /* maximum output string length */
-#define MAXLEN 2048
+#define MAXLEN 4049
 
 static const struct arg args[] = {
 	/* function                     format						argument */
 //	{ kernel_release,	"^b#002b36^^c#93a1a1^ %s ^b#002b36^^c#eee8d5^| ",				NULL },
 	{ run_command,	    "^b#002b36^^c#2aa198^%s ",				"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/music_status_bar.sh"},
+	//{ run_command, "%s", "[[ -z $(/home/anderson/.dotfiles/.local/bin/pomodoro status) ]] && echo '' || echo $(/home/anderson/.dotfiles/.local/bin/pomodoro status --format '⏱ %r 🍅%c')"},
+	{ run_command,		"%s",									"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/pomodoro_status.sh"},
 	{ run_command,		"^b#002b36^^c#2aa198^%s ",				"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/cpu_status.sh"},
 	{ ram_perc,			"^b#002b36^^c#eee8d5^| ^b#002b36^^c#859900^ ^b#002b36^^c#93a1a1^%s󰏰 ",	NULL},
 	{ disk_perc,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#45858B^󰋊 ^b#002b36^^c#93a1a1^%s󰏰 ",	"/" },
 	{ wifi_essid,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#b58900^ ^b#002b36^^c#93a1a1^ %s",		"wlp5s0" },
-	{ ipv4, " %s", "wlp5s0" },
+	//{ ipv4, " %s", "wlp5s0" },
 	//{ wifi_perc,		"^b#002b36^^c#93a1a1^ %s󰏰 ",				"wlp5s0" },
 //	{ netspeed_rx,	    "^b#002b36^^c#b58900^  ^b#002b36^^c#93a1a1^%s",	"wlp5s0" },
 //	{ netspeed_tx,	    "^b#002b36^^c#b58900^  ^b#002b36^^c#93a1a1^%s",	"wlp5s0" },

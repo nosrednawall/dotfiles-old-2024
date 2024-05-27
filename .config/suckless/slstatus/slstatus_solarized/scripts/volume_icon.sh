@@ -36,3 +36,4 @@ fi
 brilhoIcone="^b#002b36^^c#268bd2^󰃠 ^b#002b36^^c#93a1a1^$brilho󰏰"
 
 echo " $separador $brilhoIcone $separador $iconVolume $separador $iconMic$iconCam"
+#echo "^b#002b36^^c#268bd2^⏱ ^c#93a1a1^0:00 ^c#dc322f^🍅^c#93a1a1^1 ^b#002b36^^c#eee8d5^|"

@@ -90,7 +90,7 @@ static const Rule rules[] = {
 	{ NULL,		 				 "sptop",		NULL,		SPTAG(4),		1,			 -1 },
 	{ NULL,		  		 		 "spnmtui" ,	NULL,		SPTAG(5),		1,			 -1 },
 	{ NULL,		  		 		 "spncmpcpp",	NULL,		SPTAG(6),		1,			 -1 },
-	{ NULL,		  		 "crx_hnpfjngllnobngcgfapefoaidbinmjnm",	NULL,	SPTAG(7),		1,			 -1 },
+	{ NULL,		  		 "crx_hnpfjngllnobngcgfapefoaidbinmjnm",	NULL,	SPTAG(7),		1,			 0 },
 };
 
 /* layout(s) */
