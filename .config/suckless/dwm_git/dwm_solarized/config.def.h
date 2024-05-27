@@ -51,6 +51,8 @@ const char *spcmd4[] = {"st", "-n", "sppulse", "-g", "100x34", "-e", "pulsemixer
 const char *spcmd5[] = {"st", "-n", "sptop", "-g", "150x50", "-e", "btop", NULL };
 const char *spcmd6[] = {"st", "-n", "spnmtui", "-g", "100x34", "-e", "nmtui", NULL };
 const char *spcmd7[] = {"st", "-n", "spncmpcpp", "-g", "100x34", "-e", "ncmpcpp", NULL };
+const char *spcmd8[] = {"/opt/google/chrome/google-chrome", "--profile-directory=Default", "--app-id=hnpfjngllnobngcgfapefoaidbinmjnm", NULL };
+
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
@@ -60,6 +62,7 @@ static Sp scratchpads[] = {
 	{"sptop",       spcmd5},
 	{"spnmtui",     spcmd6},
 	{"spncmpcpp",   spcmd7},
+	{"whatsapp-chrome",   spcmd8},
 };
 
 
@@ -87,6 +90,7 @@ static const Rule rules[] = {
 	{ NULL,		 				 "sptop",		NULL,		SPTAG(4),		1,			 -1 },
 	{ NULL,		  		 		 "spnmtui" ,	NULL,		SPTAG(5),		1,			 -1 },
 	{ NULL,		  		 		 "spncmpcpp",	NULL,		SPTAG(6),		1,			 -1 },
+	{ NULL,		  		 "crx_hnpfjngllnobngcgfapefoaidbinmjnm",	NULL,	SPTAG(7),		1,			 -1 },
 };
 
 /* layout(s) */
@@ -146,6 +150,7 @@ static const Key keys[] = {
 	{ MODKEY,            			XK_h,	   togglescratch,  {.ui = 4 } },
 	{ MODKEY,            			XK_n,	   togglescratch,  {.ui = 5 } },
 	{ MODKEY,            			XK_m,	   togglescratch,  {.ui = 6 } },
+	{ MODKEY,            			XK_c,	   togglescratch,  {.ui = 7 } },
 
 	/*Modimentacao das janelas*/
 	{ MODKEY,                       XK_Right,      	focusstack,     {.i = +1 } },
@@ -179,8 +184,6 @@ static const Key keys[] = {
 	// Alt tab
 	{ MODKEY|ShiftMask,             XK_w,      winview,        {0} },
 	{ Mod1Mask,                     XK_Tab,    alttab,         {0} },
-
-	/*minhas alterações*/
 
 	//Layouts
 	{ MODKEY,                       	XK_F1,      setlayout,      {.v = &layouts[0]} },

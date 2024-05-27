@@ -1,4 +1,5 @@
 #!/bin/sh
+killall redshift
 xrdb ~/.Xresources
 pgrep -x mate-power-manager > /dev/null || mate-power-manager &
 pgrep -x xautolock > /dev/null || xautolock -time 15 -locker ~/.local/bin/dwm/slock_personalizado -detectsleep &
