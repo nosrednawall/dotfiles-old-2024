@@ -5,7 +5,7 @@
 
 # alias dwm
 alias compila="rm config.h; make; sudo make clean install"
-alias edwm="cd /home/anderson/.dotfiles/.config/suckless/dwm/dwm_solarized/"
+alias edwm="cd /home/anderson/.dotfiles/.config/suckless/dwm_git/dwm_solarized/"
 
 alias ..='cd ..'
 alias ...='cd ../..'

@@ -13,7 +13,6 @@ static const struct arg args[] = {
 	/* function                     format						argument */
 //	{ kernel_release,	"^b#002b36^^c#93a1a1^ %s ^b#002b36^^c#eee8d5^| ",				NULL },
 	{ run_command,	    "^b#002b36^^c#2aa198^%s ",				"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/music_status_bar.sh"},
-
 	//{ run_command, "%s", "[[ -z $(/home/anderson/.dotfiles/.local/bin/pomodoro status) ]] && echo '' || echo $(/home/anderson/.dotfiles/.local/bin/pomodoro status --format '⏱ %r 🍅%c')"},
 	{ run_command,		"%s",									"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/pomodoro_status.sh"},
 	{ run_command,		"^b#002b36^^c#2aa198^%s ",				"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/cpu_status.sh"},
@@ -27,7 +26,6 @@ static const struct arg args[] = {
 	//{ battery_perc,	" ^b#002b36^^c#d33682^  ^b#002b36^^c#93a1a1^%s󰏰 ",	"BAT1" },
 	{ run_command,		"%s",									"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/ethernet_status.sh" },
 	{ ipv4, "%s", "enp4s0" },
-
 	{ run_command,		"%s",									"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/battery_status.sh" },
 	{ run_command,		"^b#002b36^^c#2aa198^%s",				"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/volume_icon.sh" },
 	{ run_command,		"%s",									"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/keyboard_status.sh"},

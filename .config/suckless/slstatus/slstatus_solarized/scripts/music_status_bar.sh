@@ -19,5 +19,5 @@ else
 	time=$(mpc -f %time% current)
 	#title=$(mpc -f %title% current  | cut -c 1-30)
 	title=$(mpc -f %title% current)
-	echo "^b#002b36^^c#2aa198^$icon ^b#002b36^^c#93a1a1^$title $artist $separador"
+	printf "^b#002b36^^c#2aa198^$icon ^b#002b36^^c#93a1a1^$title $artist $separador"
 fi
