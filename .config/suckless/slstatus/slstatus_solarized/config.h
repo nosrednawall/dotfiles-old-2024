@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details. */
-
+#define SCRIPTS(name)                      "/home/anderson/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/"name
 /* interval between updates (in ms) */
 const unsigned int interval = 1000;
 
@@ -7,30 +7,30 @@ const unsigned int interval = 1000;
 static const char unknown_str[] = "";
 
 /* maximum output string length */
-#define MAXLEN 4049
+#define MAXLEN 1000
 
 static const struct arg args[] = {
 	/* function                     format						argument */
-//	{ kernel_release,	"^b#002b36^^c#93a1a1^ %s ^b#002b36^^c#eee8d5^| ",				NULL },
-	{ run_command,	    "^b#002b36^^c#2aa198^%s ",				"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/music_status_bar.sh"},
-	//{ run_command, "%s", "[[ -z $(/home/anderson/.dotfiles/.local/bin/pomodoro status) ]] && echo '' || echo $(/home/anderson/.dotfiles/.local/bin/pomodoro status --format '⏱ %r 🍅%c')"},
-	{ run_command,		"%s",									"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/pomodoro_status.sh"},
-	{ run_command,		"^b#002b36^^c#2aa198^%s ",				"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/cpu_status.sh"},
-	{ ram_perc,			"^b#002b36^^c#eee8d5^| ^b#002b36^^c#859900^ ^b#002b36^^c#93a1a1^%s󰏰 ",	NULL},
-	{ disk_perc,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#45858B^󰋊 ^b#002b36^^c#93a1a1^%s󰏰 ",	"/" },
-	{ wifi_essid,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#b58900^ ^b#002b36^^c#93a1a1^ %s",		"wlp5s0" },
-	//{ ipv4, " %s", "wlp5s0" },
-	//{ wifi_perc,		"^b#002b36^^c#93a1a1^ %s󰏰 ",				"wlp5s0" },
-//	{ netspeed_rx,	    "^b#002b36^^c#b58900^  ^b#002b36^^c#93a1a1^%s",	"wlp5s0" },
-//	{ netspeed_tx,	    "^b#002b36^^c#b58900^  ^b#002b36^^c#93a1a1^%s",	"wlp5s0" },
-	//{ battery_perc,	" ^b#002b36^^c#d33682^  ^b#002b36^^c#93a1a1^%s󰏰 ",	"BAT1" },
-	{ run_command,		"%s",									"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/ethernet_status.sh" },
-	{ ipv4, "%s", "enp4s0" },
-	{ run_command,		"%s",									"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/battery_status.sh" },
-	{ run_command,		"^b#002b36^^c#2aa198^%s",				"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/volume_icon.sh" },
-	{ run_command,		"%s",									"bash ~/.dotfiles/.config/suckless/slstatus/slstatus_solarized/scripts/keyboard_status.sh"},
-	{ run_command,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#2aa198^ ^b#002b36^^c#93a1a1^%s ",	"date +'%d/%m/%Y'" },
-	{ run_command,		"^b#002b36^^c#eee8d5^| ^b#002b36^^c#2aa198^󰥔 ^b#002b36^^c#93a1a1^%s ^b#002b36^^c#eee8d5^|",	"date +'%H:%M'"},
+	{ run_command,	    			"%s",				SCRIPTS("music_status_bar.sh") },
+	{ run_command,					"%s",			  	SCRIPTS("pomodoro_status.sh") },
+	{ run_command,					"%s  ",				SCRIPTS("cpu_status.sh") },
+	{ ram_perc,			"^c#859900^ ^c#93a1a1^%s󰏰  ",NULL},
+	{ disk_perc,		"^c#45858B^󰋊 ^c#93a1a1^%s󰏰  ","/" },
+
+	//{ wifi_essid,		"^c#b58900^ ^c#93a1a1^%s",  "wlp5s0" },
+	//{ ipv4, " %s  ", "wlp5s0" },
+	//{ wifi_perc,		"^c#93a1a1^ %s󰏰 ",				"wlp5s0" },
+//	{ \netspeed_rx,	    "^c#b58900^  ^c#93a1a1^%s",	"wlp5s0" },
+//	{ netspeed_tx,	    "^c#b58900^  ^c#93a1a1^%s",	"wlp5s0" },
+	//{ battery_perc,	"^c#d33682^  ^c#93a1a1^%s󰏰 ", "BAT1" },
+	{ run_command,		"%s",							 SCRIPTS("wifi_status.sh") },
+	{ run_command,		"%s",							 SCRIPTS("ethernet_status.sh") },
+	//{ ipv4, 			"%s", 							"enp4s0" },
+	{ run_command,					"%s",				SCRIPTS("battery_status.sh") },
+	{ run_command,					"%s  ",				SCRIPTS("volume_icon.sh") },
+	{ run_command,					"%s  ",				SCRIPTS("keyboard_status.sh")},
+	{ run_command,		"^c#2aa198^ ^c#93a1a1^%s  ",	"date +'%d/%m/%Y'" },
+	{ run_command,		"^c#2aa198^󰥔 ^c#93a1a1^%s ",	"date +'%H:%M'"},
 
 };
 

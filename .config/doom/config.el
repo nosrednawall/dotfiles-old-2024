@@ -114,3 +114,5 @@
       (term-send-raw-string "\C-k")
       (kill-line))))
 (add-hook 'term-mode-hook 'my-term-mode-hook)
+
+(when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
