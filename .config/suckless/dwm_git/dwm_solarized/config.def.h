@@ -52,19 +52,19 @@ const char *spcmd5[] = {"st", "-n", "sptop", "-g", "150x50", "-e", "btop", NULL 
 const char *spcmd6[] = {"st", "-n", "spnmtui", "-g", "100x34", "-e", "nmtui", NULL };
 const char *spcmd7[] = {"st", "-n", "spncmpcpp", "-g", "100x34", "-e", "ncmpcpp", NULL };
 const char *spcmd8[] = {"/opt/google/chrome/google-chrome", "--profile-directory=Default", "--app-id=hnpfjngllnobngcgfapefoaidbinmjnm", NULL };
-//const char *spcmd9[] = {"pcmanfm", "--class=sppcmanfm", "--name=sppcmanfm", NULL };
+const char *spcmd9[] = {"st", "-n", "spytfzf", "-g", "100x34", "-e", "ytfzf", NULL };
 
 static Sp scratchpads[] = {
-	/* name          cmd  */
-	{"spterm",      spcmd1},
-	{"spranger",    spcmd2},
-	{"bitwarden",   spcmd3},
-	{"sppulse",     spcmd4},
-	{"sptop",       spcmd5},
-	{"spnmtui",     spcmd6},
-	{"spncmpcpp",   spcmd7},
-	{"whatsapp-chrome",   spcmd8},
-//	{"sppcmanfm",   spcmd9},
+	/* name          		cmd  */
+	{"spterm",      		spcmd1},
+	{"spranger",    		spcmd2},
+	{"bitwarden",   		spcmd3},
+	{"sppulse",     		spcmd4},
+	{"sptop",       		spcmd5},
+	{"spnmtui",     		spcmd6},
+	{"spncmpcpp",   		spcmd7},
+	{"whatsapp-chrome",   	spcmd8},
+	{"spytfzf",		   		spcmd9},
 };
 
 
@@ -93,7 +93,7 @@ static const Rule rules[] = {
 	{ NULL,		  		 		 "spnmtui" ,	NULL,		SPTAG(5),		1,			 -1 },
 	{ NULL,		  		 		 "spncmpcpp",	NULL,		SPTAG(6),		1,			 -1 },
 	{ NULL,	"crx_hnpfjngllnobngcgfapefoaidbinmjnm",	NULL,	SPTAG(7),		1,			 0 },
-	//{ "sppcmanfm",		  		 "sppcmanfm",	NULL,		SPTAG(8),		1,			 -1 },
+	{ NULL,		  		 		  "spytfzf",	NULL,		SPTAG(8),		1,			 -1 },
 };
 
 /* layout(s) */
@@ -156,7 +156,7 @@ static const Key keys[] = {
 	{ MODKEY,            			XK_n,	   togglescratch,  {.ui = 5 } },
 	{ MODKEY,            			XK_m,	   togglescratch,  {.ui = 6 } },
 	{ MODKEY,            			XK_c,	   togglescratch,  {.ui = 7 } },
-	//{ MODKEY,            			XK_f,	   togglescratch,  {.ui = 8 } },
+	{ MODKEY,            			XK_y,	   togglescratch,  {.ui = 8 } },
 
 	/*Modimentacao das janelas*/
 	{ MODKEY,                       XK_Right,      	focusstack,     {.i = +1 } },
@@ -271,14 +271,14 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pomodoro" ) },
 	{ MODKEY|ShiftMask,				XK_w,							spawn,			SHCMD("~/.local/bin/dmenu/dmenu-controle-monitor" ) },
 	{ MODKEY|ShiftMask,             XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-controle-som") },
-
+	{ MODKEY|ShiftMask,             XK_y,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-youtube") },
 	/*Rofi menus*/
 	{ MODKEY,						XK_d,	   						spawn,          SHCMD("~/.local/bin/dwm/roficmd") },
 
 	/*Lancamento Programas*/
 	{ MODKEY,						XK_w,							spawn,			SHCMD("google-chrome" ) },
 	{ MODKEY,						XK_e,							spawn,			SHCMD("emacsclient -c -a 'emacs'" ) },
-	{ MODKEY,				XK_f,							spawn,			SHCMD("pcmanfm" ) }
+	{ MODKEY,						XK_f,							spawn,			SHCMD("pcmanfm" ) }
 };
 
 /* button definitions */
