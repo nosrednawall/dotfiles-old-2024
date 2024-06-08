@@ -12,7 +12,8 @@ static const char unknown_str[] = "";
 static const struct arg args[] = {
 	/* function                     format						argument */
 	{ run_command,	    			"%s",				SCRIPTS("music_status_bar.sh") },
-	{ run_command,					"%s",			  	SCRIPTS("pomodoro_status.sh") },
+	//{ run_command,					"%s",			  	SCRIPTS("pomodoro_status.sh") },
+	//{ run_command,					"%s  ",				SCRIPTS("update_status.sh") },
 	{ run_command,					"%s  ",				SCRIPTS("cpu_status.sh") },
 	{ ram_perc,			"^c#859900^ ^c#93a1a1^%s󰏰  ",NULL},
 	{ disk_perc,		"^c#45858B^󰋊 ^c#93a1a1^%s󰏰  ","/" },

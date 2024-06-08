@@ -15,7 +15,7 @@ is_running() {
 is_running "xautolock" || xautolock -time 15 -locker ~/.local/bin/dwm/slock_personalizado -detectsleep &
 
 # Inicia o picom em modo background
-# picom -b
+picom -b
 
 # Inicia o dunst se não estiver rodando
 is_running "dunst" || dunst &
@@ -30,7 +30,7 @@ feh --recursive --bg-fill --randomize ~/.wallpapers/Solarized/Dark/* &
 copyq &
 
 # Inicia o slstatus se não estiver rodando
-is_running "slstatus" || slstatus &
+# is_running "slstatus" || slstatus &
 
 # Inicia o daemon do emacs se não estiver rodando
 is_running "emacs --daemon" || emacs --daemon &
