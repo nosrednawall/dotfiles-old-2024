@@ -15,3 +15,6 @@ then
 else
     playerctl play-pause
 fi
+
+# Atualiza dwmblocks
+kill -35 $(pidof dwmblocks)

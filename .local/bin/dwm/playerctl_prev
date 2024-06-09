@@ -10,3 +10,6 @@ else
     mpc prev
 	~/.local/bin/mpd/songinfo
 fi
+
+# Atualiza dwmblocks
+kill -35 $(pidof dwmblocks)

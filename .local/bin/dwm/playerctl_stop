@@ -9,3 +9,6 @@ then
 else
     mpc stop 
 fi
+
+# Atualiza dwmblocks
+kill -35 $(pidof dwmblocks)

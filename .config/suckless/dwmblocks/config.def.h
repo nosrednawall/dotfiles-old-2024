@@ -2,22 +2,22 @@
 
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
-	/*Icon*/	/*Command*/											/*Update Interval*/	/*Update Signal*/
-	{"", PATH("sb-music"), 		1, 					1},
-	{"", PATH("sb-update"), 		1, 					1},
-	{"", PATH("sb-loadavg"), 		1, 					1},
-	{"", PATH("sb-memory"), 		1, 					1},
-	{"", PATH("sb-disk"), 			1, 					1},
-	{"", PATH("sb-wifi"), 			1, 					1},
-	{"", PATH("sb-ethernet"), 		1, 					1},
-    {"", PATH("sb-brightness"), 	1, 					1},
-    {"", PATH("sb-volume"), 		1, 					2},
-    {"", PATH("sb-mic"), 			1, 					3},
-    {"", PATH("sb-record"), 		1, 					4},
-    {"", PATH("sb-keyboard"), 		1, 					5},
-    {"", PATH("sb-battery"), 		1, 					6},
-    {"", PATH("sb-date"), 			1, 					7},
-    {"", PATH("sb-hour"), 			1, 					8},
+	/*Icon*/	/*Command*/ /*Update Interval*/	/*Update Signal*/
+	{"", PATH("sb-music"), 		10, 					1},
+	{"", PATH("sb-update"), 		360, 					2},
+	{"", PATH("sb-loadavg"), 		10, 					3},
+	{"", PATH("sb-memory"), 		10, 					4},
+	{"", PATH("sb-disk"), 			10, 					5},
+	{"", PATH("sb-wifi"), 			10, 					6},
+	{"", PATH("sb-ethernet"), 		10, 					7},
+    {"", PATH("sb-brightness"), 	0, 					8},
+    {"", PATH("sb-volume"), 		0, 					9},
+    {"", PATH("sb-mic"), 			0, 					10},
+    {"", PATH("sb-record"), 		30, 					11},
+    {"", PATH("sb-keyboard"), 		0, 					12},
+    {"", PATH("sb-battery"), 		30, 					13},
+    {"", PATH("sb-date"), 			3600, 					14},
+    {"", PATH("sb-hour"), 			30, 					15},
 };
 
 //sets delimiter between status commands. NULL character ('\0') means no delimiter.
