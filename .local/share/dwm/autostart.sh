@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Carrega configuracoes do tema
+source $HOME/.theme_selected
+
 # Carrega as configurações do Xresources
 xrdb ~/.Xresources
 
@@ -18,7 +21,7 @@ is_running "xautolock" || xautolock -time 15 -locker ~/.local/bin/dwm/slock_pers
 picom -b
 
 # Inicia o dunst se não estiver rodando
-is_running "dunst" || dunst &
+is_running "dunst" || dunst -conf "$HOME/.config/dunst/dunstrc_${THEME_MODE}_${COLOR_MODE}" &
 
 # Executa o script para verificar se o segundo monitor está ativo
 bash ~/.local/bin/check_second_monitor_is_active.sh

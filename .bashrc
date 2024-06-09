@@ -122,6 +122,7 @@ plugins=(
 #  fi
 
 source "$OSH"/oh-my-bash.sh
+source "$HOME/.theme_selected"
 source "$HOME/.bashrc_alias"
 source "$HOME/.bashrc_exports"
 source "$HOME/.bashrc_environments"

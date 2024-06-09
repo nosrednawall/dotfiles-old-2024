@@ -23,17 +23,8 @@ static const unsigned int alphas[][3]      = {
 	[SchemeNormHighlight] = { OPAQUE, baralpha, borderalpha },
 };
 
-static
-const
-char *colors[][2] = {
-	/*               				fg         bg       */
-	[SchemeNorm] = { 			"#bbbbbb", "#073642" },
-	[SchemeSel] = { 			"#073642", "#2aa198" },
-	[SchemeBorder] = { 			"#000000", "#005577" },
-	[SchemeSelHighlight] = { 	"#073642", "#2aa198" },
-	[SchemeNormHighlight] = { 	"#2aa198", "#073642" },
-	[SchemeOut] = { 			"#000000", "#00ffff" },
-};
+#include "themes/solarized_light.h"
+
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 30;
 
