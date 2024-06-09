@@ -13,7 +13,7 @@ static const Block blocks[] = {
     {"", PATH("sb-brightness"), 	0, 					8},
     {"", PATH("sb-volume"), 		0, 					9},
     {"", PATH("sb-mic"), 			0, 					10},
-    {"", PATH("sb-record"), 		30, 					11},
+    {"", PATH("sb-record"), 		10, 					11},
     {"", PATH("sb-keyboard"), 		0, 					12},
     {"", PATH("sb-battery"), 		30, 					13},
     {"", PATH("sb-date"), 			3600, 					14},

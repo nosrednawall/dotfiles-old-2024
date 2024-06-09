@@ -1,2 +1,0 @@
-# Depenciencias de build
-sudo apt install libharfbuzz-dev
