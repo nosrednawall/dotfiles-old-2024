@@ -24,13 +24,13 @@ is_running "dunst" || dunst &
 bash ~/.local/bin/check_second_monitor_is_active.sh
 
 # Define o papel de parede usando feh
-feh --recursive --bg-fill --randomize ~/.wallpapers/Solarized/Dark/* &
+feh --recursive --bg-fill --randomize ~/.wallpapers/Solarized/Light/* &
 
 # Inicia o copyq se não estiver rodando
 copyq &
 
-# Inicia o slstatus se não estiver rodando
-# is_running "slstatus" || slstatus &
+# Inicia o dwmblocks se não estiver rodando
+is_running "dwmblocks" || dwmblocks &
 
 # Inicia o daemon do emacs se não estiver rodando
 is_running "emacs --daemon" || emacs --daemon &
