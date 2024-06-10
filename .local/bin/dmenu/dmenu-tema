@@ -24,7 +24,10 @@ case $chosen in
 
     # Emacs Doom
         sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'doom-solarized-dark)|' ~/.dotfiles/.config/doom/config.el
-	;;
+
+    # Btop
+        sed -i 's|^color_theme =.*|color_theme = "solarized_dark"|' ~/.dotfiles/.config/btop/btop.conf
+    ;;
     $solarized_light)
     # Arquivo variavel
     	sed -i 's|^export THEME_MODE=.*|export THEME_MODE="Solarized"|' ~/.dotfiles/.theme_selected
@@ -41,46 +44,53 @@ case $chosen in
 
     # Emacs Doom
         sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'doom-solarized-light)|' ~/.dotfiles/.config/doom/config.el
+
+    # Btop
+        sed -i 's|^color_theme =.*|color_theme = "solarized_light"|' ~/.dotfiles/.config/btop/btop.conf
 	;;
 esac
 
-# Abre o dunst com o tema certo
-source $HOME/.dotfiles/.theme_selected
-killall dunst
-dunst -conf "$HOME/.dotfiles/.config/dunst/themes/${THEME_MODE}_${COLOR_MODE}" &
-dunstify "Aplicando tema" "Aguarde..." -h int:value:10  -i /usr/share/icons/ePapirus/16x16/status/package-reinstall.svg
+if [[ -z $chosen ]]; then
+    exit 0
+else
+   # Abre o dunst com o tema certo
+    source $HOME/.dotfiles/.theme_selected
+    killall dunst
+    dunst -conf "$HOME/.dotfiles/.config/dunst/themes/${THEME_MODE}_${COLOR_MODE}" &
+    dunstify "Aplicando tema" "Aguarde..." -h int:value:10  -i /usr/share/icons/ePapirus/16x16/status/package-reinstall.svg
 
-# Compila dwm
-cd $HOME/.dotfiles/.config/suckless/dwm
-rm config.h
-make
-SUDO_ASKPASS=/usr/bin/ssh-askpass sudo make clean install
+    # Compila dwm
+    cd $HOME/.dotfiles/.config/suckless/dwm
+    rm config.h
+    make
+    SUDO_ASKPASS=/usr/bin/ssh-askpass sudo make clean install
 
-dunstify "Aplicando tema" "Aguarde..." -h int:value:40 -i /usr/share/icons/ePapirus/16x16/status/package-reinstall.svg
+    dunstify "Aplicando tema" "Aguarde..." -h int:value:40 -i /usr/share/icons/ePapirus/16x16/status/package-reinstall.svg
 
-# Compila st
-cd $HOME/.dotfiles/.config/suckless/st
-rm config.h
-make
-SUDO_ASKPASS=/usr/bin/ssh-askpass sudo make clean install
+    # Compila st
+    cd $HOME/.dotfiles/.config/suckless/st
+    rm config.h
+    make
+    SUDO_ASKPASS=/usr/bin/ssh-askpass sudo make clean install
 
-dunstify "Aplicando tema" "Aguarde..." -h int:value:60 -i /usr/share/icons/ePapirus/16x16/status/package-reinstall.svg
+    dunstify "Aplicando tema" "Aguarde..." -h int:value:60 -i /usr/share/icons/ePapirus/16x16/status/package-reinstall.svg
 
-# Compila dmenu
-cd $HOME/.dotfiles/.config/suckless/dmenu
-rm config.h
-make
-SUDO_ASKPASS=/usr/bin/ssh-askpass sudo make clean install
+    # Compila dmenu
+    cd $HOME/.dotfiles/.config/suckless/dmenu
+    rm config.h
+    make
+    SUDO_ASKPASS=/usr/bin/ssh-askpass sudo make clean install
 
-dunstify "Aplicando tema" "Aguarde..." -h int:value:80 -i /usr/share/icons/ePapirus/16x16/status/package-reinstall.svg
+    dunstify "Aplicando tema" "Aguarde..." -h int:value:80 -i /usr/share/icons/ePapirus/16x16/status/package-reinstall.svg
 
-# Faz sincronizacao do doom
-$HOME/.config/emacs/bin/doom sync
+    # Faz sincronizacao do doom
+    $HOME/.config/emacs/bin/doom sync
 
-dunstify "Aplicando tema" "Aguarde..." -h int:value:99 -i /usr/share/icons/ePapirus/16x16/status/package-reinstall.svg
+    dunstify "Aplicando tema" "Aguarde..." -h int:value:99 -i /usr/share/icons/ePapirus/16x16/status/package-reinstall.svg
 
-# Restart dwm
-xdotool key Super_L+shift+r
+    # Restart dwm
+    xdotool key Super_L+shift+r
 
-dunstify "Pronto" "Aplicação do tema finalizado!!!" -h int:value:100 -i /usr/share/icons/ePapirus/16x16/status/package-install.svg
-exit
+    dunstify "Pronto" "Aplicação do tema finalizado!!!" -h int:value:100 -i /usr/share/icons/ePapirus/16x16/status/package-install.svg
+    exit 0
+fi
