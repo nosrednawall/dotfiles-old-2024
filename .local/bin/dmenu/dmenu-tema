@@ -21,6 +21,9 @@ case $chosen in
         sed -i 's|^#include "themes/.*|#include "themes/solarized_dark.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/solarized_dark.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/solarized_dark.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+
+    # Emacs Doom
+        sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'doom-solarized-dark)|' ~/.dotfiles/.config/doom/config.el
 	;;
     $solarized_light)
     # Arquivo variavel
@@ -35,8 +38,21 @@ case $chosen in
         sed -i 's|^#include "themes/.*|#include "themes/solarized_light.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/solarized_light.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/solarized_light.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+
+    # Emacs Doom
+        sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'doom-solarized-light)|' ~/.dotfiles/.config/doom/config.el
 	;;
 esac
+
+# Abre o dunst com o tema certo
+source $HOME/.dotfiles/.theme_selected
+killall dunst
+dunst -conf "$HOME/.dotfiles/.config/dunst/themes/${THEME_MODE}_${COLOR_MODE}" &
+sleep 2
+
+# Mostra mensagem de processamento
+BACKGROUND_TASK_PID=$$
+bash $HOME/.dotfiles/.local/bin/processamento.sh $BACKGROUND_TASK_PID > /dev/null 2>&1 &
 
 # Compila dwm
 cd $HOME/.dotfiles/.config/suckless/dwm
@@ -56,9 +72,10 @@ rm config.h
 make
 SUDO_ASKPASS=/usr/bin/ssh-askpass sudo make clean install
 
-# Opcionalmente reinicie as aplicações para aplicar o novo tema
-# pkill -USR1 dwm
-pkill -USR1 dunst
+# Faz sincronizacao do doom
+$HOME/.config/emacs/bin/doom sync
 
 # Restart dwm
 xdotool key Super_L+shift+r
+
+exit

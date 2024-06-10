@@ -21,13 +21,14 @@ is_running "xautolock" || xautolock -time 15 -locker ~/.local/bin/dwm/slock_pers
 picom -b
 
 # Inicia o dunst se não estiver rodando
-is_running "dunst" || dunst -conf "$HOME/.config/dunst/dunstrc_${THEME_MODE}_${COLOR_MODE}" &
+is_running "dunst" || dunst -conf "$HOME/.config/dunst/themes/${THEME_MODE}_${COLOR_MODE}" &
+#is_running "dunst" || dunst &
 
 # Executa o script para verificar se o segundo monitor está ativo
 bash ~/.local/bin/check_second_monitor_is_active.sh
 
 # Define o papel de parede usando feh
-feh --recursive --bg-fill --randomize ~/.wallpapers/Solarized/Light/* &
+feh --recursive --bg-fill --randomize ~/.wallpapers/${THEME_MODE}/${COLOR_MODE}/* &
 
 # Inicia o copyq se não estiver rodando
 copyq &
@@ -37,3 +38,5 @@ is_running "dwmblocks" || dwmblocks &
 
 # Inicia o daemon do emacs se não estiver rodando
 is_running "emacs --daemon" || emacs --daemon &
+
+exit

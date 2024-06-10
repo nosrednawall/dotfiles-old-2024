@@ -23,7 +23,7 @@ static const unsigned int alphas[][3]      = {
 	[SchemeNormHighlight] = { OPAQUE, baralpha, borderalpha },
 };
 
-#include "themes/solarized_light.h"
+#include "themes/solarized_dark.h"
 
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 30;
