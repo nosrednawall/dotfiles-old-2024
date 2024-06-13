@@ -34,7 +34,7 @@ static const char *fonts[]          	 = {	"CaskaydiaMono Nerd Font:size=15:style
 static const char dmenufont[]            = "CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
 
 static char c000000[]                    = "#000000"; // placeholder value
-#include "themes/solarized_light.h"
+#include "themes/solarized_dark.h"
 
 /*
 static char normfgcolor[]                = "#bbbbbb";
@@ -362,7 +362,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_grave,      togglescratch,          {.ui = 0 } },
 
 	{ MODKEY,            			XK_s,  	   togglescratch,  {.ui = 0 } },
-	{ MODKEY,            			XK_r,	   togglescratch,  {.ui = 1 } },
+	{ MODKEY|ShiftMask,            	XK_f,	   togglescratch,  {.ui = 1 } },
 	{ MODKEY,            			XK_b,	   togglescratch,  {.ui = 2 } },
 	{ MODKEY,            			XK_a,	   togglescratch,  {.ui = 3 } },
 	{ MODKEY,            			XK_h,	   togglescratch,  {.ui = 4 } },
@@ -436,6 +436,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-controle-som") },
 	{ MODKEY|ShiftMask,             XK_y,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-youtube") },
 	{ MODKEY|ShiftMask,             XK_t,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-tema") },
+	{ MODKEY|ShiftMask,             XK_v,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-vpn") },
 	/*Rofi menus*/
 	{ MODKEY,						XK_d,	   						spawn,          SHCMD("~/.local/bin/dwm/roficmd") },
 
@@ -443,7 +444,9 @@ static const Key keys[] = {
 	{ MODKEY,						XK_w,							spawn,			SHCMD("google-chrome" ) },
 	{ MODKEY,						XK_e,							spawn,			SHCMD("emacsclient -c -a 'emacs'" ) },
 	{ MODKEY,						XK_o,							spawn,			SHCMD("obsidian" ) },
-	{ MODKEY|ShiftMask,				XK_d,							spawn,			SHCMD("discord" ) },
+	{ MODKEY|ShiftMask,				XK_d,							spawn,			SHCMD("/home/anderson/.programas/Discord/Discord" ) },
+	{ MODKEY,						XK_t,							spawn,			SHCMD("telegram-desktop" ) },
+	{ MODKEY,						XK_r,							spawn,			SHCMD("rstudio" ) },
 	{ MODKEY,						XK_f,							spawn,			SHCMD("thunar" ) }
 };
 

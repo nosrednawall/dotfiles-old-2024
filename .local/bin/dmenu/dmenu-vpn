@@ -1,0 +1,17 @@
+#!/bin/bash
+
+casa_ligar="Casa Ligar"
+casa_desligar="Casa Desligar"
+
+# Variable passed to dmenu
+options="$casa_ligar\n$casa_desligar"
+
+chosen="$(echo -e "$options" | dmenu -p "Liga e desliga VPN " )"
+case $chosen in
+    $casa_ligar)
+         SUDO_ASKPASS=/usr/bin/ssh-askpass sudo wg-quick up wg0
+    ;;
+        $casa_desligar)
+         SUDO_ASKPASS=/usr/bin/ssh-askpass sudo wg-quick down wg0
+    ;;
+esac

@@ -41,7 +41,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
- (setq doom-theme 'doom-solarized-light)
+ (setq doom-theme 'doom-solarized-dark)
 
 ;; `gruvbox-material' contrast and palette options
 ;;(setq doom-gruvbox-material-background  "medium"  ; or hard (defaults to soft)
@@ -52,8 +52,8 @@
   ;;    doom-gruvbox-material-light-palette     "mix") ; or original (defaults to material)
 
 ;; set `doom-theme'
-;;(setq doom-theme 'doom-solarized-light) ; dark variant
-;;(setq doom-theme 'doom-solarized-light) ; light variant
+;;(setq doom-theme 'doom-solarized-dark) ; dark variant
+;;(setq doom-theme 'doom-solarized-dark) ; light variant
 
 
 ;; This determines the style of line numbers in effect. If set to `nil', line

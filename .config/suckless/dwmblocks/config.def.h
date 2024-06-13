@@ -4,10 +4,11 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/ /*Update Interval*/	/*Update Signal*/
 	{"", PATH("sb-music"), 		10, 					1},
-	{"", PATH("sb-update"), 		360, 					2},
+	{"", PATH("sb-update"), 		60, 					2},
 	{"", PATH("sb-loadavg"), 		10, 					3},
 	{"", PATH("sb-memory"), 		10, 					4},
 	{"", PATH("sb-disk"), 			10, 					5},
+	{"", PATH("sb-vpn"), 			10, 					16},
 	{"", PATH("sb-wifi"), 			10, 					6},
 	{"", PATH("sb-ethernet"), 		10, 					7},
     {"", PATH("sb-brightness"), 	0, 					8},
