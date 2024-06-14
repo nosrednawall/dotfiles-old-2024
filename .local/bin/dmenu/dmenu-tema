@@ -2,9 +2,10 @@
 
 solarized_dark=" Solarized Dark"
 solarized_light=" Solarized Light"
-
+gruvbox_dark=" Gruvbox Dark"
+gruvbox_light=" Gruvbox Light"
 # Variable passed to dmenu
-options="$solarized_dark\n$solarized_light"
+options="$solarized_dark\n$solarized_light\n\n$gruvbox_dark\n$gruvbox_light"
 
 chosen="$(echo -e "$options" | dmenu -p "Tema menu " )"
 case $chosen in
@@ -51,6 +52,50 @@ case $chosen in
     # Btop
         sed -i 's|^color_theme =.*|color_theme = "solarized_light"|' ~/.dotfiles/.config/btop/btop.conf
 	;;
+    $gruvbox_dark)
+    # Arquivo variavel
+    	sed -i 's|^export THEME_MODE=.*|export THEME_MODE="Gruvbox"|' ~/.dotfiles/.theme_selected
+        sed -i 's|^export COLOR_MODE=.*|export COLOR_MODE="Dark"|' ~/.dotfiles/.theme_selected
+
+    # Altero as configuracoes do gtk
+    	sed -i 's/^gtk-theme-name=.*/gtk-theme-name=Gruvbox-Material-Dark/' ~/.dotfiles/.config/gtk-3.0/settings.ini
+        sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name= Numix-Circle/' ~/.dotfiles/.config/gtk-3.0/settings.ini
+        sed -i 's/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=1/' ~/.dotfiles/.config/gtk-3.0/settings.ini
+
+
+    # Suckless
+        sed -i 's|^#include "themes/.*|#include "themes/gruvbox_dark.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/gruvbox_dark.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/gruvbox_dark.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+
+    # Emacs Doom
+        sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'doom-gruvbox)|' ~/.dotfiles/.config/doom/config.el
+
+    # Btop
+        sed -i 's|^color_theme =.*|color_theme = "gruvbox_dark"|' ~/.dotfiles/.config/btop/btop.conf
+    ;;
+    $gruvbox_light)
+    # Arquivo variavel
+    	sed -i 's|^export THEME_MODE=.*|export THEME_MODE="Gruvbox"|' ~/.dotfiles/.theme_selected
+        sed -i 's|^export COLOR_MODE=.*|export COLOR_MODE="Light"|' ~/.dotfiles/.theme_selected
+
+    # Altero as configuraçoes do gtk
+    # gtk-theme-name = "SolarizedDark"
+    	sed -i 's/^gtk-theme-name=.*/gtk-theme-name="Gruvbox-Plus-Light"/' ~/.dotfiles/.config/gtk-2.0/gtkrc
+		sed -i 's/^gtk-theme-name=.*/gtk-theme-name=Gruvbox-Plus-Light/' ~/.dotfiles/.config/gtk-3.0/settings.ini
+        sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name=Numix-Circle-Light/' ~/.dotfiles/.config/gtk-3.0/settings.ini
+        sed -i 's/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=0/' ~/.dotfiles/.config/gtk-3.0/settings.ini
+
+    # Suckless
+        sed -i 's|^#include "themes/.*|#include "themes/gruvbox_light.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/gruvbox_light.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/gruvbox_light.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+
+    # Emacs Doom
+        sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'doom-gruvbox-light)|' ~/.dotfiles/.config/doom/config.el
+
+    # Btop
+        sed -i 's|^color_theme =.*|color_theme = "gruvbox_light"|' ~/.dotfiles/.config/btop/btop.conf
 esac
 
 if [[ -z $chosen ]]; then

@@ -17,3 +17,11 @@ static const char *colorname[] = {
 	"#586e75",  /* 14: brcyan   */
 	"#002b36",  /* 15: brwhite  */
 };
+/*
+ * Default colors (colorname index)
+ * foreground, background, cursor, reverse cursor
+ */
+unsigned int defaultfg = 12;
+unsigned int defaultbg = 8;
+unsigned int defaultcs = 14;
+unsigned int defaultrcs = 15;
