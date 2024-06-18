@@ -51,3 +51,5 @@
 
 (package! all-the-icons)
 (package! rainbow-mode)
+(package! rebecca-theme)
+(package! catppuccin-theme)
