@@ -94,7 +94,7 @@ static char *colors[][ColCount] = {
 
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "144x41", "-e", "ranger", NULL };
-const char *spcmd3[] = {"bitwarden", NULL };
+const char *spcmd3[] = {"/home/anderson/.appimage/bitwarden.appimage", NULL };
 const char *spcmd4[] = {"st", "-n", "sppulse", "-g", "100x34", "-e", "pulsemixer", NULL };
 const char *spcmd5[] = {"st", "-n", "sptop", "-g", "150x50", "-e", "btop", NULL };
 const char *spcmd6[] = {"st", "-n", "spnmtui", "-g", "100x34", "-e", "nmtui", NULL };
@@ -181,6 +181,7 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
 	RULE(.class = "Gimp", .tags = 1 << 4)
 	RULE(.class = "Firefox", .tags = 1 << 7)
+	RULE(.class = "mpv", .tags = 0, .isfloating = 1)
 	RULE(.instance = "spterm", .tags = SPTAG(0), .isfloating = 1)
 	RULE(.instance = "spfm",  .tags = SPTAG(1), .isfloating = 1)
 	RULE(.instance = "bitwarden",  .tags = SPTAG(2), .isfloating = 1)
@@ -443,10 +444,10 @@ static const Key keys[] = {
 	/*Lancamento Programas*/
 	{ MODKEY,						XK_w,							spawn,			SHCMD("google-chrome" ) },
 	{ MODKEY,						XK_e,							spawn,			SHCMD("emacsclient -c -a 'emacs'" ) },
-	{ MODKEY,						XK_o,							spawn,			SHCMD("obsidian" ) },
+	{ MODKEY,						XK_o,							spawn,			SHCMD("/home/anderson/.appimage/obsidian.appimage" ) },
 	{ MODKEY|ShiftMask,				XK_d,							spawn,			SHCMD("/home/anderson/.programas/Discord/Discord" ) },
 	{ MODKEY,						XK_t,							spawn,			SHCMD("telegram-desktop" ) },
-	{ MODKEY,						XK_r,							spawn,			SHCMD("rstudio" ) },
+	{ MODKEY,						XK_r,							spawn,			SHCMD("/home/anderson/.programas/rstudio/rstudio" ) },
 	{ MODKEY,						XK_f,							spawn,			SHCMD("thunar" ) }
 };
 
