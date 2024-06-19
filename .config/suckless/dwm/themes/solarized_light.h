@@ -15,7 +15,7 @@ static char titlenormbgcolor[]           = "#eee8d5";  // base2
 static char titlenormbordercolor[]       = "#eee8d5";  // base2
 static char titlenormfloatcolor[]        = "#268bd2";  // blue
 
-static char titleselfgcolor[]            = "#073642";  // base02
+static char titleselfgcolor[]            = "#657b83";  // base02
 static char titleselbgcolor[]            = "#eee8d5";  // base1
 static char titleselbordercolor[]        = "#eee8d5";  // base1
 static char titleselfloatcolor[]         = "#eee8d5";  // base1

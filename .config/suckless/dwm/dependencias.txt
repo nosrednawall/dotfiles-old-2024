@@ -4,7 +4,7 @@
 # O xorg será instalado com o driver da nvidia
 
 # Sistema
-apt install aptitude htop sudo pv
+apt install aptitude htop sudo pv lm-sensors
 
 # Criacao de pastas
 mkdir -p /home/$USER/{Desktop,Downloads,Documentos,git,Imagens/Screenshoots,Músicas,.lyrics,.programas,.appimage}
@@ -85,7 +85,7 @@ sudo apt install numix-icon-theme-circle papirus-icon-theme lxappearance
 # Stype Programas qt
 sudo apt install qt5ct qt5-style-plugins
 
-# Pass e qtpass
+# Pass, qtpass, pinentry e askpass
 sudo apt install pass qtpass pinentry-gnome3 ssh-askpass-gnome
 
 # O resto dos programas
@@ -110,3 +110,10 @@ sudo apt-get install fuse libfuse2
 sudo modprobe -v fuse
 sudo addgroup fuse
 sudo adduser $USER fuse
+
+# Rlang
+sudo apt install r-base r-base-dev
+
+# VPN Wireguard
+sudo apt install wireguard resolvconf
+# https://serverspace.io/support/help/how-to-install-wireguard-vpn-client-on-ubuntu-linux/

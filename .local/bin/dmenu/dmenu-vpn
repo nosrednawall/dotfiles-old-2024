@@ -10,8 +10,12 @@ chosen="$(echo -e "$options" | dmenu -p "Liga e desliga VPN " )"
 case $chosen in
     $casa_ligar)
          SUDO_ASKPASS=/usr/bin/ssh-askpass sudo wg-quick up wg0
+         notify-send -t 3000 "VPN" "VPN Ligada" --icon="/usr/share/icons/ePapirus/16x16/devices/network-vpn.svg"
+         kill -46 $(pidof dwmblocks)
     ;;
         $casa_desligar)
          SUDO_ASKPASS=/usr/bin/ssh-askpass sudo wg-quick down wg0
+         notify-send -t 3000 "VPN" "VPN Desligada" --icon="/usr/share/icons/ePapirus/16x16/devices/network-vpn.svg"
+         kill -46 $(pidof dwmblocks)
     ;;
 esac
