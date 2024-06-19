@@ -50,7 +50,7 @@ stow .
 sudo apt install thunar ranger thunar-archive-plugin thunar-media-tags-plugin
 
 # Som
-sudo apt install pipewire pipewire-pulse wireplumber pipewire-media-session
+sudo apt install pipewire pipewire-pulse wireplumber pipewire-media-session pulsemixer
 systemctl --user --now enable wireplumber.service
 
 # Music - MPD inicio pelo systemctl para o usuario
