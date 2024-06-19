@@ -3,6 +3,12 @@
 # Primeiro instalei o sistema base, e em seguida os drivers da nvidia
 # O xorg será instalado com o driver da nvidia
 
+# Sistema
+apt install aptitude htop sudo pv
+
+# Criacao de pastas
+mkdir -p /home/$USER/{Desktop,Downloads,Documentos,git,Imagens/Screenshoots,Músicas,.lyrics,.programas,.appimage}
+
 # Driver Nvidia
 sudo apt install dkms linux-headers-amd64 firmware-misc-nonfree
 sudo apt install nvidia-driver nvidia-xconfig xserver-xorg-video-amdgpu
@@ -73,6 +79,9 @@ sudo apt install emacs-gtk geany
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 ~/.config/emacs/bin/doom install  # Cuidado para nao sobreescrever os arquivos do dotfiles
 
+# Aparencia
+sudo apt install numix-icon-theme-circle papirus-icon-theme lxappearance
+
 # Stype Programas qt
 sudo apt install qt5ct qt5-style-plugins
 
@@ -80,7 +89,7 @@ sudo apt install qt5ct qt5-style-plugins
 sudo apt install pass qtpass pinentry-gnome3 ssh-askpass-gnome
 
 # O resto dos programas
-sudo apt install feh rofi lxappearance network-manager xautolock picom dunst xdotool copyq solaar blueman flameshot btop qalculate-gtk
+sudo apt install feh rofi network-manager xautolock picom dunst xdotool copyq solaar blueman flameshot btop qalculate-gtk libnotify-bin gpicview
 
 # Suporte para extracao de arquivos
 sudo apt install arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip

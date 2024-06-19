@@ -21,6 +21,7 @@ alias df='df -h'
 alias free='free -h'
 alias myip="ip -f inet address | grep inet | grep -v 'lo$' | cut -d ' ' -f 6,13 && curl ifconfig.me && echo ' external ip'"
 alias x="exit"
+alias copia_site="wget -r -erobots=off"
 
 # Git aliases
 alias gp="git push -u origin main"

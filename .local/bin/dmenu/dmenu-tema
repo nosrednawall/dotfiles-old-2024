@@ -20,7 +20,7 @@ case $chosen in
     # Altero as configuracoes do gtk
         # GTK2
         sed -i 's/^gtk-icon-theme-name =.*/gtk-icon-theme-name = "GNOME"/' ~/.dotfiles/.config/gtk-2.0/gtkrc
-        sed -i 's/^gtk-theme-name =.*/gtk-theme-name = "SolarizedDark"/' ~/.dotfiles/.config/gtk-2.0/gtkrc
+        sed -i 's/^gtk-theme-name =.*/gtk-theme-name = "NumixSolarizedDarkCyan"/' ~/.dotfiles/.config/gtk-2.0/gtkrc
 
         # GTK3
         sed -i 's/^gtk-theme-name=.*/gtk-theme-name=NumixSolarizedDarkCyan/' ~/.dotfiles/.config/gtk-3.0/settings.ini
@@ -44,7 +44,12 @@ case $chosen in
         sed -i 's|^export COLOR_MODE=.*|export COLOR_MODE="Light"|' ~/.dotfiles/.theme_selected
 
     # Altero as configuraçoes do gtk
-		sed -i 's/^gtk-theme-name=.*/gtk-theme-name=NumixSolarizedLightCyan/' ~/.dotfiles/.config/gtk-3.0/settings.ini
+        # gtk3
+        sed -i 's/^gtk-icon-theme-name =.*/gtk-icon-theme-name = "Numix-Circle-Light"/' ~/.dotfiles/.config/gtk-2.0/gtkrc
+        sed -i 's/^gtk-theme-name =.*/gtk-theme-name = "NumixSolarizedLightCyan"/' ~/.dotfiles/.config/gtk-2.0/gtkrc
+
+        # gtk3
+        sed -i 's/^gtk-theme-name=.*/gtk-theme-name=NumixSolarizedLightCyan/' ~/.dotfiles/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name=Numix-Circle-Light/' ~/.dotfiles/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=0/' ~/.dotfiles/.config/gtk-3.0/settings.ini
 
