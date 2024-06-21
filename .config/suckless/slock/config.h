@@ -30,7 +30,8 @@ static const char * message = "Suckless: Software that sucks less.";
 static const char * text_color = "#ffffff";
 
 /* text size (must be a valid size) */
-static const char * font_name = "6x10";
+//static const char * font_name = "CaskaydiaMono Nerd Font-15";
+static const char * font_name = "DejaVu Sans Mono-12";
 
 /*Enable blur*/
 #define BLUR
@@ -39,4 +40,4 @@ static const int blurRadius=5;
 /*Enable Pixelation*/
 //#define PIXELATION
 /*Set pixelation radius*/
-static const int pixelSize=0;
+static const int pixelSize=5;

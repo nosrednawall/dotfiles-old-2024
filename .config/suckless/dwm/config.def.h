@@ -34,7 +34,7 @@ static const char *fonts[]          	 = {	"CaskaydiaMono Nerd Font:size=15:style
 static const char dmenufont[]            = "CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
 
 static char c000000[]                    = "#000000"; // placeholder value
-#include "themes/solarized_light.h"
+#include "themes/solarized_dark.h"
 
 /*
 static char normfgcolor[]                = "#bbbbbb";
