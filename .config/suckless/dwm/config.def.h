@@ -34,7 +34,7 @@ static const char *fonts[]          	 = {	"CaskaydiaMono Nerd Font:size=15:style
 static const char dmenufont[]            = "CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
 
 static char c000000[]                    = "#000000"; // placeholder value
-#include "themes/solarized_dark.h"
+#include "themes/solarized_light.h"
 
 /*
 static char normfgcolor[]                = "#bbbbbb";
@@ -319,22 +319,22 @@ static const Key keys[] = {
 
 */
 
-	{ MODKEY|Mod4Mask,              XK_u,          incrgaps,               {.i = +1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_u,          incrgaps,               {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_i,          incrigaps,              {.i = +1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_i,          incrigaps,              {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_o,          incrogaps,              {.i = +1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_o,          incrogaps,              {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_6,          incrihgaps,             {.i = +1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_6,          incrihgaps,             {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_7,          incrivgaps,             {.i = +1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_7,          incrivgaps,             {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_8,          incrohgaps,             {.i = +1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_8,          incrohgaps,             {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_9,          incrovgaps,             {.i = +1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_9,          incrovgaps,             {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_0,          togglegaps,             {0} },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_0,          defaultgaps,            {0} },
+	{ MODKEY|Mod1Mask,              XK_u,          incrgaps,               {.i = +1 } },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_u,          incrgaps,               {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_i,          incrigaps,              {.i = +1 } },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_i,          incrigaps,              {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_o,          incrogaps,              {.i = +1 } },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_o,          incrogaps,              {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_6,          incrihgaps,             {.i = +1 } },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_6,          incrihgaps,             {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_7,          incrivgaps,             {.i = +1 } },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_7,          incrivgaps,             {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_8,          incrohgaps,             {.i = +1 } },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_8,          incrohgaps,             {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_9,          incrovgaps,             {.i = +1 } },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_9,          incrovgaps,             {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_0,          togglegaps,             {0} },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_0,          defaultgaps,            {0} },
 
 	{ MODKEY,                       XK_Tab,        view,                   {0} },
 	{ MODKEY|ShiftMask,             XK_c,          killclient,             {0} },
@@ -438,6 +438,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_y,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-youtube") },
 	{ MODKEY|ShiftMask,             XK_t,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-tema") },
 	{ MODKEY|ShiftMask,             XK_v,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-vpn") },
+	{ MODKEY|ShiftMask,	            XK_m,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-powertop") },
+
 	/*Rofi menus*/
 	{ MODKEY,						XK_d,	   						spawn,          SHCMD("~/.local/bin/dwm/roficmd") },
 
