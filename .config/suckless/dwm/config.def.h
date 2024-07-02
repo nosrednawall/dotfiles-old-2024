@@ -34,7 +34,7 @@ static const char *fonts[]          	 = {	"CaskaydiaMono Nerd Font:size=15:style
 static const char dmenufont[]            = "CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
 
 static char c000000[]                    = "#000000"; // placeholder value
-#include "themes/solarized_light.h"
+#include "themes/solarized_dark.h"
 
 /*
 static char normfgcolor[]                = "#bbbbbb";
@@ -94,7 +94,7 @@ static char *colors[][ColCount] = {
 
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "144x41", "-e", "ranger", NULL };
-const char *spcmd3[] = {"/home/anderson/.appimage/bitwarden.appimage", NULL };
+const char *spcmd3[] = {"flatpak run com.bitwarden.desktop", NULL };
 const char *spcmd4[] = {"st", "-n", "sppulse", "-g", "100x34", "-e", "pulsemixer", NULL };
 const char *spcmd5[] = {"st", "-n", "sptop", "-g", "150x50", "-e", "btop", NULL };
 const char *spcmd6[] = {"st", "-n", "spnmtui", "-g", "100x34", "-e", "nmtui", NULL };
@@ -446,10 +446,10 @@ static const Key keys[] = {
 	/*Lancamento Programas*/
 	{ MODKEY,						XK_w,							spawn,			SHCMD("google-chrome" ) },
 	{ MODKEY,						XK_e,							spawn,			SHCMD("emacsclient -c -a 'emacs'" ) },
-	{ MODKEY,						XK_o,							spawn,			SHCMD("/home/anderson/.appimage/obsidian.appimage" ) },
-	{ MODKEY|ShiftMask,				XK_d,							spawn,			SHCMD("/home/anderson/.programas/Discord/Discord" ) },
-	{ MODKEY,						XK_t,							spawn,			SHCMD("telegram-desktop" ) },
-	{ MODKEY,						XK_r,							spawn,			SHCMD("/home/anderson/.programas/rstudio/rstudio" ) },
+	{ MODKEY,						XK_o,							spawn,			SHCMD("flatpak run md.obsidian.Obsidian" ) },
+	{ MODKEY|ShiftMask,				XK_d,							spawn,			SHCMD("flatpak run so.libdb.dissent" ) },
+	{ MODKEY,						XK_t,							spawn,			SHCMD("flatpak run org.telegram.desktop" ) },
+	{ MODKEY,						XK_r,							spawn,			SHCMD("rstudio" ) },
 	{ MODKEY,						XK_f,							spawn,			SHCMD("thunar" ) }
 };
 
