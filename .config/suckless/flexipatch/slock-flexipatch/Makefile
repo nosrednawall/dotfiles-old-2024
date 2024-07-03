@@ -11,10 +11,13 @@ all: slock
 .c.o:
 	${CC} -c ${CFLAGS} $<
 
-${OBJ}: config.h config.mk arg.h util.h
+${OBJ}: config.h config.mk arg.h util.h patches.h
 
 config.h:
 	cp config.def.h $@
+
+patches.h:
+	cp patches.def.h $@
 
 slock: ${OBJ}
 	${CC} -o $@ ${OBJ} ${LDFLAGS}

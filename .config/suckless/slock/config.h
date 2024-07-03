@@ -1,43 +1,23 @@
 /* user and group to drop privileges to */
-static const char *user  = "anderson";
-static const char *group = "anderson";
+static const char *user  = "nobody";
+static const char *group = "nogroup"; // use "nobody" for arch
 
 static const char *colorname[NUMCOLS] = {
 	[INIT] =   "black",     /* after initialization */
 	[INPUT] =  "#005577",   /* during input */
 	[FAILED] = "#CC3333",   /* wrong password */
-//[CAPS] = "red",         /* CapsLock on */
-
-};
-
-/*
- * Xresources preferences to load at startup
- */
-ResourcePref resources[] = {
-               { "color0",       STRING,  &colorname[INIT] },
-               { "color4",       STRING,  &colorname[INPUT] },
-               { "color1",       STRING,  &colorname[FAILED] },
-              // { "color3",       STRING,  &colorname[CAPS] },
+	[CAPS] =   "red",       /* CapsLock on */
 };
 
 /* treat a cleared input like a wrong password (color) */
 static const int failonclear = 1;
 
-/* default message */
-static const char * message = "Suckless: Software that sucks less.";
-
-/* text color */
-static const char * text_color = "#ffffff";
-
-/* text size (must be a valid size) */
-//static const char * font_name = "CaskaydiaMono Nerd Font-15";
-static const char * font_name = "DejaVu Sans Mono-12";
-
-/*Enable blur*/
+/* Enable blur */
 #define BLUR
-/*Set blur radius*/
-static const int blurRadius=5;
-/*Enable Pixelation*/
+/* Set blur radius */
+static const int blurRadius = 5;
+/* Enable Pixelation */
 //#define PIXELATION
-/*Set pixelation radius*/
-static const int pixelSize=5;
+/* Set pixelation radius */
+static const int pixelSize = 10;
+
