@@ -116,3 +116,12 @@
 (add-hook 'term-mode-hook 'my-term-mode-hook)
 
 (when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
+
+;;Anaconda support
+(require 'conda)
+
+(setq conda-env-home-directory "/home/anderson/miniconda3")
+;;get current environment--from environment variable CONDA_DEFAULT_ENV
+;;(conda-env-activate 'getenv "CONDA_DEFAULT_ENV")
+(conda-env-autoactivate-mode t)
+(setq-default mode-line-format (cons mode-line-format '(:exec python-emacs)))
