@@ -39,4 +39,6 @@ is_running "dwmblocks" || dwmblocks &
 # Inicia o daemon do emacs se não estiver rodando
 is_running "emacs --daemon" || emacs --daemon &
 
+#is_running "redshift" || /usr/bin/redshift -l -25.54354018313095:-49.16561321065291 -t 5700:3600 -g 0.8 -m randr &
+
 exit

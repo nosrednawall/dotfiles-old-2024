@@ -15,7 +15,7 @@ options="$casa\n$notebook\n$so_monitor_externo\n$duplica\n$dia\n$noite\n$tabletw
 chosen="$(echo -e "$options" | dmenu -p "Scripts de monitor " )"
 case $chosen in
     $casa)
-	xrandr --output HDMI-0 --auto --rotate normal --dpi 96 --output eDP-1-1 --primary --auto --rotate normal --dpi 96 --left-of HDMI-0
+	xrandr --output HDMI-0 --auto --rotate normal --dpi 96 --rate 100 --output eDP-1-1 --primary --auto --rotate normal --dpi 96 --left-of HDMI-0
 	notify-send -t 3000 "󰡁 HDMI Inserido" "Adicionado tela via HDMI" --icon="/usr/share/icons/ePapirus/16x16/devices/computer.svg"
 	feh --recursive --bg-fill --randomize ~/.wallpapers/Solarized/* &
 	;;
