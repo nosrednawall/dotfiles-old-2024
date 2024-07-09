@@ -30,11 +30,11 @@ static int tagindicatortype              = INDICATOR_TOP_LEFT_SQUARE;
 static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 //static const char *fonts[]               = { "monospace:size=10" };
-static const char *fonts[]          	 = {	"CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17"};
+static const char *fonts[]          	 = {"CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17"};
 static const char dmenufont[]            = "CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
 
 static char c000000[]                    = "#000000"; // placeholder value
-#include "themes/solarized_light.h"
+#include "themes/gruvbox_dark.h"
 
 /*
 static char normfgcolor[]                = "#bbbbbb";
@@ -442,12 +442,13 @@ static const Key keys[] = {
 
 	/*Rofi menus*/
 	{ MODKEY,						XK_d,	   						spawn,          SHCMD("~/.local/bin/dwm/roficmd") },
+	{ MODKEY|ShiftMask,				XK_d,	   						spawn,          SHCMD("~/.local/bin/dwm/roficmd_askpass") },
 
 	/*Lancamento Programas*/
 	{ MODKEY,						XK_w,							spawn,			SHCMD("google-chrome" ) },
 	{ MODKEY,						XK_e,							spawn,			SHCMD("emacsclient -c -a 'emacs'" ) },
 	{ MODKEY,						XK_o,							spawn,			SHCMD("flatpak run md.obsidian.Obsidian" ) },
-	{ MODKEY|ShiftMask,				XK_d,							spawn,			SHCMD("flatpak run so.libdb.dissent" ) },
+//	{ MODKEY|ShiftMask,				XK_d,							spawn,			SHCMD("flatpak run so.libdb.dissent" ) },
 	{ MODKEY,						XK_t,							spawn,			SHCMD("flatpak run org.telegram.desktop" ) },
 	{ MODKEY,						XK_r,							spawn,			SHCMD("rstudio" ) },
 	{ MODKEY,						XK_f,							spawn,			SHCMD("thunar" ) }
