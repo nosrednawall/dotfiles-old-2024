@@ -2,6 +2,7 @@
 
 casa="󰍹  Monitor Externo"
 notebook="  Notebook"
+modo_game="Modo Game"
 so_monitor_externo="So monitor externo"
 duplica="Duplica a mesma visualização"
 noite="󱩍 Noite"
@@ -10,7 +11,7 @@ tabletwaconhdmi="󰓶 Tablet Wacon HDMI"
 tabletwaconnotebook="󰓶 Tablet Wacon Notebook"
 
 # Variable passed to dmenu
-options="$casa\n$notebook\n$so_monitor_externo\n$duplica\n$dia\n$noite\n$tabletwaconhdmi\n$tabletwaconnotebook"
+options="$casa\n$notebook\n$modo_game\n$so_monitor_externo\n$duplica\n$dia\n$noite\n$tabletwaconhdmi\n$tabletwaconnotebook"
 
 chosen="$(echo -e "$options" | dmenu -p "Scripts de monitor " )"
 case $chosen in
@@ -24,6 +25,11 @@ case $chosen in
 	notify-send -t 3000 "  Modo Laptop" "Alterado tela para modo Laptop" --icon="/usr/share/icons/ePapirus/16x16/devices/computer-laptop.svg"
 	feh --recursive --bg-fill --randomize ~/.wallpapers/Solarized/* &
 	;;
+    $modo_game)
+    xrandr --output HDMI-0 --mode 1920x1080 --rate 120 --pos 1920x0 --rotate normal --output eDP-1-1 --primary --mode 1920x1080 --rate 144 --pos 0x0 --rotate normal
+    notify-send -t 3000 "󰡁 HDMI Inserido" "Adicionado tela via HDMI" --icon="/usr/share/icons/ePapirus/16x16/devices/computer.svg"
+	feh --recursive --bg-fill --randomize ~/.wallpapers/Solarized/* &
+    ;;
     $so_monitor_externo)
 	xrandr --output HDMI-0 --primary --auto --rotate normal --dpi 96 --output eDP-1-1 --off
 	feh --recursive --bg-fill --randomize ~/.wallpapers/Solarized/* &

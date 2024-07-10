@@ -12,7 +12,7 @@ is_running() {
 }
 
 # Inicia o mate-power-manager se não estiver rodando
-# is_running "mate-power-manager" || mate-power-manager &
+is_running "xfce4-power-manager" || xfce4-power-manager &
 
 # Inicia o xautolock com as configurações personalizadas se não estiver rodando
 is_running "xautolock" || xautolock -time 15 -locker ~/.local/bin/dwm/slock_personalizado -detectsleep &

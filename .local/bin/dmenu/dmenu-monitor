@@ -4,7 +4,7 @@ source $HOME/.dotfiles/.theme_selected
 
 casa="󰍹  Monitor Externo"
 notebook="  Notebook"
-so_monitor_externo="So monitor externo"
+modo_game="Modo Gamer"
 duplica="Duplica a mesma visualização"
 noite="󱩍 Noite"
 dia="󰛨 Dia"
@@ -12,12 +12,12 @@ tabletwaconhdmi="󰓶 Tablet Wacon HDMI"
 tabletwaconnotebook="󰓶 Tablet Wacon Notebook"
 
 # Variable passed to dmenu
-options="$casa\n$notebook\n$so_monitor_externo\n$duplica\n$dia\n$noite\n$tabletwaconhdmi\n$tabletwaconnotebook"
+options="$casa\n$notebook\n$modo_game\n$duplica\n$dia\n$noite\n$tabletwaconhdmi\n$tabletwaconnotebook"
 
 chosen="$(echo -e "$options" | dmenu -p "Scripts de monitor " )"
 case $chosen in
     $casa)
-		xrandr --output HDMI-0 --auto --rotate normal --dpi 96 --output eDP-1-1 --primary --auto --rotate normal --dpi 96 --left-of HDMI-0
+		xrandr --output HDMI-0 --auto --rotate normal --dpi 96 --rate 100 --output eDP-1-1 --primary --auto --rotate normal --dpi 96 --left-of HDMI-0
 		notify-send -t 3000 "󰡁 HDMI Inserido" "Adicionado tela via HDMI" --icon="/usr/share/icons/ePapirus/16x16/devices/computer.svg"
         echo "$HOME/.wallpapers/${THEME_MODE}/${COLOR_MODE}/"
         feh --bg-fill --randomize "$HOME/.wallpapers/${THEME_MODE}/${COLOR_MODE}/"
@@ -29,8 +29,8 @@ case $chosen in
         feh --bg-fill --randomize "$HOME/.wallpapers/${THEME_MODE}/${COLOR_MODE}/" &
 	    ;;
 
-    $so_monitor_externo)
-		xrandr --output HDMI-0 --primary --auto --rotate normal --dpi 96 --output eDP-1-1 --off
+    $modo_game)
+        xrandr --output HDMI-0 --mode 1920x1080 --pos 1920x0 --rate 120 --rotate normal --output eDP-1-1 --primary --mode 1920x1080 --pos 0x0 --rate 144 --rotate normal
         feh --bg-fill --randomize "$HOME/.wallpapers/${THEME_MODE}/${COLOR_MODE}/" &
 	    notify-send -t 3000 "󰡁 Só monitor externo" "Só monitor Externo" --icon="/usr/share/icons/ePapirus/16x16/devices/computer.svg"
 	    ;;
