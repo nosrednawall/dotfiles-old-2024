@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Desabilita o aplicativo de notificacao do xfce4
+systemctl --user stop xfce4-notifyd
+
 # Carrega configuracoes do tema
 source $HOME/.theme_selected
 
@@ -39,6 +42,6 @@ is_running "dwmblocks" || dwmblocks &
 # Inicia o daemon do emacs se não estiver rodando
 is_running "emacs --daemon" || emacs --daemon &
 
-#is_running "redshift" || /usr/bin/redshift -l -25.54354018313095:-49.16561321065291 -t 5700:3600 -g 0.8 -m randr &
+is_running "solaar" || /usr/bin/solaar -w hide
 
 exit

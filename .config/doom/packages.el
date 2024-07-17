@@ -54,3 +54,4 @@
 (package! rebecca-theme)
 (package! catppuccin-theme)
 (package! conda)
+(package! lsp-pyright)

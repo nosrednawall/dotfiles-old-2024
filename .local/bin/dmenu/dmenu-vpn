@@ -3,8 +3,11 @@
 casa_ligar="Casa Ligar"
 casa_desligar="Casa Desligar"
 
+universidade_ligar="Universidade Ligar"
+universidade_desligar="Universidade Desligar"
+
 # Variable passed to dmenu
-options="$casa_ligar\n$casa_desligar"
+options="$casa_ligar\n$casa_desligar\n$universidade_ligar\n$universidade_desligar"
 
 chosen="$(echo -e "$options" | dmenu -p "Liga e desliga VPN " )"
 case $chosen in
@@ -13,8 +16,18 @@ case $chosen in
          notify-send -t 3000 "VPN" "VPN Ligada" --icon="/usr/share/icons/ePapirus/16x16/devices/network-vpn.svg"
          kill -46 $(pidof dwmblocks)
     ;;
-        $casa_desligar)
+    $casa_desligar)
          SUDO_ASKPASS=/usr/bin/ssh-askpass sudo wg-quick down wg0
+         notify-send -t 3000 "VPN" "VPN Desligada" --icon="/usr/share/icons/ePapirus/16x16/devices/network-vpn.svg"
+         kill -46 $(pidof dwmblocks)
+    ;;
+    $universidade_ligar)
+         SUDO_ASKPASS=/usr/bin/ssh-askpass sudo wg-quick up wg1
+         notify-send -t 3000 "VPN" "VPN Ligada" --icon="/usr/share/icons/ePapirus/16x16/devices/network-vpn.svg"
+         kill -46 $(pidof dwmblocks)
+    ;;
+    $universidade_desligar)
+         SUDO_ASKPASS=/usr/bin/ssh-askpass sudo wg-quick down wg1
          notify-send -t 3000 "VPN" "VPN Desligada" --icon="/usr/share/icons/ePapirus/16x16/devices/network-vpn.svg"
          kill -46 $(pidof dwmblocks)
     ;;
