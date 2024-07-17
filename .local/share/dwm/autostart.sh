@@ -1,4 +1,4 @@
-#!/bin/bash
+c#!/bin/bash
 
 # Desabilita o aplicativo de notificacao do xfce4
 systemctl --user stop xfce4-notifyd
