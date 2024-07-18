@@ -171,6 +171,10 @@ else
 
     dunstify "Aplicando tema" "Aguarde..." -h int:value:99 -i /usr/share/icons/ePapirus/16x16/status/package-reinstall.svg
 
+    # Fecha programas systray
+    killall copyq
+    killall solaar
+
     # Restart dwm
     xdotool key Super_L+shift+r
 
