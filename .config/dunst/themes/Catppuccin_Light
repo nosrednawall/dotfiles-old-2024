@@ -305,13 +305,14 @@
     per_monitor_dpi = false
 
 [urgency_low]
-	background = "#24273a"
-	foreground = "#cad3f5"
+	background = "#eff1f5"
+	foreground = "#4c4f69"
 
 [urgency_normal]
-	background = "#1e2030"
-	foreground = "#b8c0e0"
+	background = "#dce0e8"
+	foreground = "#4c4f69"
 
 [urgency_critical]
-	background = "#ed8796"
-	foreground = "#f4dbd6"
+	background = "#f4b8e4"
+	foreground = "#4c4f69"
+

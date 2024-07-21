@@ -41,19 +41,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'rebecca)
-;;(setq doom-theme 'catppucin)
-;; `gruvbox-material' contrast and palette options
-;;(setq doom-gruvbox-material-background  "medium"  ; or hard (defaults to soft)
-  ;;   doom-gruvbox-material-palette     "material") ; or original (defaults to material)
-
-;; `gruvbox-material-light' contrast and palette options
-;;(setq doom-gruvbox-material-light-background  "medium" ; or hard (defaults to soft)
-  ;;    doom-gruvbox-material-light-palette     "mix") ; or original (defaults to material)
-
-;; set `doom-theme'
-;;(setq doom-theme 'doom-gruvbox ; dark variant
-;;(setq doom-theme 'doom-gruvbox ; light variant
+(setq doom-theme 'catppuccin) (setq catppuccin-flavor 'frappe)
 
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
