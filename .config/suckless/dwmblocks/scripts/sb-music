@@ -17,4 +17,6 @@ fi
 
 [ -z "$song" ] && exit
 
+song="${song:0:30}"
+
 echo "$icon ^d^$song  "
