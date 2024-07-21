@@ -17,7 +17,7 @@ static const char dwmdir[]               = "dwm";
 static const char localshare[]           = ".local/share";
 static const int showbar                 = 1;   /* 0 means no bar */
 static const int topbar                  = 1;   /* 0 means bottom bar */
-static const int bar_height              = 28;   /* 0 means derive from font, >= 1 explicit height */
+static const int bar_height              = 40;   /* 0 means derive from font, >= 1 explicit height */
 static const int vertpad                 = 10;  /* vertical padding of bar */
 static const int sidepad                 = 10;  /* horizontal padding of bar */
 /* Status is to be shown on: -1 (all monitors), 0 (a specific monitor by index), 'A' (active monitor) */
@@ -34,7 +34,7 @@ static const char *fonts[]          	 = {"CaskaydiaMono Nerd Font:size=15:style=
 static const char dmenufont[]            = "CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
 
 static char c000000[]                    = "#000000"; // placeholder value
-#include "themes/gruvbox_light.h"
+#include "themes/catppuccin_frappe.h"
 
 /*
 static char normfgcolor[]                = "#bbbbbb";

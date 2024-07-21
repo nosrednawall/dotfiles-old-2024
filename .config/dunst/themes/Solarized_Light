@@ -308,13 +308,13 @@
 # Insere o tema Solarized Claro
 
 [urgency_low]
-background = "#eee8d5"
-foreground = "#657b83"
+	background = "#eff1f5"
+	foreground = "#6c6f93"
 
 [urgency_normal]
-background = "#eee8d5"
-foreground = "#657b83"
+	background = "#e6e9ef"
+	foreground = "#4c4f69"
 
 [urgency_critical]
-background = "#dc322f"
-foreground = "#fdf6e3"
+	background = "#d20f39"
+	foreground = "#f5e0dc"

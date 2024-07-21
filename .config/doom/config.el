@@ -41,8 +41,8 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
- (setq doom-theme 'doom-gruvbox-light)
-
+(setq doom-theme 'rebecca)
+;;(setq doom-theme 'catppucin)
 ;; `gruvbox-material' contrast and palette options
 ;;(setq doom-gruvbox-material-background  "medium"  ; or hard (defaults to soft)
   ;;   doom-gruvbox-material-palette     "material") ; or original (defaults to material)
@@ -117,11 +117,3 @@
 
 (when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
 
-;;Anaconda support
-(require 'conda)
-
-(setq conda-env-home-directory "/home/anderson/miniconda3")
-;;get current environment--from environment variable CONDA_DEFAULT_ENV
-;;(conda-env-activate 'getenv "CONDA_DEFAULT_ENV")
-(conda-env-autoactivate-mode t)
-(setq-default mode-line-format (cons mode-line-format '(:exec python-emacs)))

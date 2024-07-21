@@ -119,7 +119,6 @@ case $chosen in
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name= Numix-Circle/' ~/.dotfiles/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=1/' ~/.dotfiles/.config/gtk-3.0/settings.ini
 
-
     # Suckless
         sed -i 's|^#include "themes/.*|#include "themes/catppuccin_frappe.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/frappe.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
