@@ -34,7 +34,7 @@ static const char *fonts[]          	 = {"CaskaydiaMono Nerd Font:size=15:style=
 static const char dmenufont[]            = "CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
 
 static char c000000[]                    = "#000000"; // placeholder value
-#include "themes/catppuccin_frappe.h"
+#include "themes/solarized_light.h"
 
 /*
 static char normfgcolor[]                = "#bbbbbb";
@@ -366,7 +366,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,            	XK_f,	   togglescratch,  {.ui = 1 } },
 	{ MODKEY,            			XK_b,	   togglescratch,  {.ui = 2 } },
 	{ MODKEY,            			XK_a,	   togglescratch,  {.ui = 3 } },
-	{ MODKEY,            			XK_h,	   togglescratch,  {.ui = 4 } },
+	{ MODKEY|ShiftMask,            	XK_h,	   togglescratch,  {.ui = 4 } },
 	{ MODKEY,            			XK_n,	   togglescratch,  {.ui = 5 } },
 	{ MODKEY,            			XK_m,	   togglescratch,  {.ui = 6 } },
 	{ MODKEY,            			XK_c,	   togglescratch,  {.ui = 7 } },

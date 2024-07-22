@@ -7,13 +7,13 @@ static char normfloatcolor[]             = "#268bd2";  // blue
 
 static char selfgcolor[]                 = "#073642";  // base02
 static char selbgcolor[]                 = "#93a1a1";  // base1
-static char selbordercolor[]             = "#586e75";  // base1
-static char selfloatcolor[]              = "#586e75";  // base1
+static char selbordercolor[]             = "#2aa198";  // base1
+static char selfloatcolor[]              = "#2aa198";  // base1
 
 static char titlenormfgcolor[]           = "#657b83";  // base00
 static char titlenormbgcolor[]           = "#eee8d5";  // base2
 static char titlenormbordercolor[]       = "#eee8d5";  // base2
-static char titlenormfloatcolor[]        = "#268bd2";  // blue
+static char titlenormfloatcolor[]        = "#eee8d5";  // blue
 
 static char titleselfgcolor[]            = "#657b83";  // base02
 static char titleselbgcolor[]            = "#eee8d5";  // base1

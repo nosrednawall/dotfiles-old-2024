@@ -25,4 +25,19 @@
   - KeyPress:
     - [Super_L, k]
     - click
+- Rule:
+  - Key: [Voice Dictation, pressed]
+  - KeyPress:
+    - [Super_L, q]
+    - click
+- Rule:
+  - Key: [Mute Microphone, pressed]
+  - KeyPress:
+    - [Control_L, XF86_AudioMute]
+    - click
+- Rule:
+  - Key: [Show Desktop, pressed]
+  - KeyPress:
+    - [Meta_L, 0]
+    - click
 ...
