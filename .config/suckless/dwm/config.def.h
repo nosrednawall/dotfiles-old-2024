@@ -182,6 +182,7 @@ static const Rule rules[] = {
 	RULE(.class = "Gimp", .tags = 1 << 4)
 	RULE(.class = "Firefox", .tags = 1 << 7)
 	RULE(.class = "mpv", .tags = 0, .isfloating = 1)
+	RULE(.class = "copyq", .tags = 0, .isfloating = 1)
 	RULE(.instance = "spterm", .tags = SPTAG(0), .isfloating = 1)
 	RULE(.instance = "spfm",  .tags = SPTAG(1), .isfloating = 1)
 	RULE(.instance = "bitwarden",  .tags = SPTAG(2), .isfloating = 1)
@@ -432,10 +433,10 @@ static const Key keys[] = {
 	/*Dmenus*/
 	{ MODKEY|ShiftMask,             XK_e,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-saida-sistema" ) },
 	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
-	{ MODKEY|ShiftMask,             XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pomodoro" ) },
+//	{ MODKEY|ShiftMask,             XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pomodoro" ) },
 	{ MODKEY|ShiftMask,				XK_w,							spawn,			SHCMD("~/.local/bin/dmenu/dmenu-controle-monitor" ) },
 	{ MODKEY|ShiftMask,             XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-controle-som") },
-	{ MODKEY|ShiftMask,             XK_y,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-youtube") },
+//	{ MODKEY|ShiftMask,             XK_y,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-youtube") },
 	{ MODKEY|ShiftMask,             XK_t,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-tema") },
 	{ MODKEY|ShiftMask,             XK_v,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-vpn") },
 	{ MODKEY|ShiftMask,	            XK_m,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-powertop") },
@@ -447,10 +448,10 @@ static const Key keys[] = {
 	/*Lancamento Programas*/
 	{ MODKEY,						XK_w,							spawn,			SHCMD("google-chrome" ) },
 	{ MODKEY,						XK_e,							spawn,			SHCMD("emacsclient -c -a 'emacs'" ) },
-	{ MODKEY,						XK_o,							spawn,			SHCMD("flatpak run md.obsidian.Obsidian" ) },
+//	{ MODKEY,						XK_o,							spawn,			SHCMD("flatpak run md.obsidian.Obsidian" ) },
 //	{ MODKEY|ShiftMask,				XK_d,							spawn,			SHCMD("flatpak run so.libdb.dissent" ) },
-	{ MODKEY,						XK_t,							spawn,			SHCMD("flatpak run org.telegram.desktop" ) },
-	{ MODKEY,						XK_r,							spawn,			SHCMD("rstudio" ) },
+//	{ MODKEY,						XK_t,							spawn,			SHCMD("flatpak run org.telegram.desktop" ) },
+//	{ MODKEY,						XK_r,							spawn,			SHCMD("rstudio" ) },
 	{ MODKEY,						XK_f,							spawn,			SHCMD("thunar" ) }
 };
 

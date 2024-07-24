@@ -28,7 +28,7 @@
 - Rule:
   - Key: [Voice Dictation, pressed]
   - KeyPress:
-    - [Super_L, q]
+    - [Super_L, m]
     - click
 - Rule:
   - Key: [Mute Microphone, pressed]
@@ -38,6 +38,6 @@
 - Rule:
   - Key: [Show Desktop, pressed]
   - KeyPress:
-    - [Meta_L, 0]
+    - [Super_L, Shift_L, W]
     - click
 ...
