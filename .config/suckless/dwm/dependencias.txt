@@ -46,6 +46,32 @@ git clone git@github.com:nosrednawall/dotfiles.git .dotfiles --depth 1
 cd .dotfiles
 stow .
 
+# Depois disso entro em cada pasta dos softwares do suckless, e compilo os programas
+# DWM
+cd ~/.dotfiles/.config/suckless/dwm
+make
+sudo make clean install
+
+# st
+cd ~/.dotfiles/.config/suckless/st
+make
+sudo make clean install
+
+# dwmblocks
+cd ~/.dotfiles/.config/suckless/dwmblocks
+make
+sudo make clean install
+
+# slock
+cd ~/.dotfiles/.config/suckless/slock
+make
+sudo make clean install
+
+# dmenu
+cd ~/.dotfiles/.config/suckless/dmenu
+make
+sudo make clean install
+
 # Gerenciador de arquivos
 sudo apt install thunar ranger thunar-archive-plugin thunar-media-tags-plugin
 
@@ -89,7 +115,7 @@ sudo apt install qt5ct qt5-style-plugins
 sudo apt install pass qtpass pinentry-gnome3 ssh-askpass-gnome
 
 # O resto dos programas
-sudo apt install feh rofi network-manager xautolock picom dunst xdotool copyq solaar blueman flameshot btop qalculate-gtk libnotify-bin gpicview
+sudo apt install feh rofi network-manager xautolock picom dunst xdotool copyq solaar blueman flameshot btop qalculate-gtk libnotify-bin gpicview fonts-bebas-neue yt-dlp gpm aria2
 
 # Suporte para extracao de arquivos
 sudo apt install arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip
@@ -117,3 +143,6 @@ sudo apt install r-base r-base-dev
 # VPN Wireguard
 sudo apt install wireguard resolvconf
 # https://serverspace.io/support/help/how-to-install-wireguard-vpn-client-on-ubuntu-linux/
+
+# Jogos
+flatpak install com.valvesoftware.Steam com.valvesoftware.Steam.Utility.MangoHud com.valvesoftware.Steam.Utility.vkBasalt com.valvesoftware.Steam.VulkanLayer.MangoHud com.heroicgameslauncher.hgl

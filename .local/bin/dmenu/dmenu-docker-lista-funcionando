@@ -1,3 +1,0 @@
-#!/bin/bash
-
-docker container list -s -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Networks}}\t{{.Size}}" |dmenu

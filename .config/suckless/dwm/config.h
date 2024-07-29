@@ -34,7 +34,7 @@ static const char *fonts[]          	 = {"CaskaydiaMono Nerd Font:size=15:style=
 static const char dmenufont[]            = "CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
 
 static char c000000[]                    = "#000000"; // placeholder value
-#include "themes/solarized_light.h"
+#include "themes/solarized_dark.h"
 
 /*
 static char normfgcolor[]                = "#bbbbbb";
@@ -433,7 +433,7 @@ static const Key keys[] = {
 	/*Dmenus*/
 	{ MODKEY|ShiftMask,             XK_e,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-saida-sistema" ) },
 	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
-//	{ MODKEY|ShiftMask,             XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pomodoro" ) },
+	{ MODKEY|ShiftMask,             XK_d,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-docker" ) },
 	{ MODKEY|ShiftMask,				XK_w,							spawn,			SHCMD("~/.local/bin/dmenu/dmenu-controle-monitor" ) },
 	{ MODKEY|ShiftMask,             XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-controle-som") },
 //	{ MODKEY|ShiftMask,             XK_y,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-youtube") },
@@ -443,7 +443,6 @@ static const Key keys[] = {
 
 	/*Rofi menus*/
 	{ MODKEY,						XK_d,	   						spawn,          SHCMD("~/.local/bin/dwm/roficmd") },
-	{ MODKEY|ShiftMask,				XK_d,	   						spawn,          SHCMD("~/.local/bin/dwm/roficmd_askpass") },
 
 	/*Lancamento Programas*/
 	{ MODKEY,						XK_w,							spawn,			SHCMD("google-chrome" ) },
