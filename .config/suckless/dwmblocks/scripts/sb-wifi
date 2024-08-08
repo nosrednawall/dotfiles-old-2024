@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# funcoes cliclaveis
+case $BUTTON in
+   # 1) bash ~/.dotfiles/.local/bin/dwm/toggle_wifi.sh ;;
+    1) setsid -f st -e nmtui ;;
+    3) bash ~/.dotfiles/.local/bin/dmenu/dmenu-vpn ;;
+	6) setsid -f st -e emacs -nw "$0" ;;
+esac
+
+
 status=$(cat /sys/class/net/wlp5s0/operstate | grep "up" -ic)
 
 if [ $status -eq 1 ]; then

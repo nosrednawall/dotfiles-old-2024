@@ -3,9 +3,10 @@
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/ /*Update Interval*/	/*Update Signal*/
-	{"", PATH("sb-music"), 		10, 					1},
+	{"", PATH("sb-mpd"), 		10, 					1},
+    {"", "echo ' '", 		0, 					0},
 	{"", PATH("sb-update"), 		60, 					2},
-	{"", PATH("sb-loadavg"), 		10, 					3},
+	{"", PATH("sb-loadavg"), 		30, 					3},
 	{"", PATH("sb-memory"), 		10, 					4},
 	{"", PATH("sb-disk"), 			10, 					5},
 	{"", PATH("sb-vpn"), 			10, 					16},
@@ -17,7 +18,7 @@ static const Block blocks[] = {
     {"", PATH("sb-record"), 		10, 					11},
     {"", PATH("sb-keyboard"), 		0, 					12},
     {"", PATH("sb-battery"), 		30, 					13},
-    {"", PATH("sb-date"), 			3600, 					14},
+//    {"", PATH("sb-date"), 			3600, 					14},
     {"", PATH("sb-hour"), 			30, 					15},
 };
 

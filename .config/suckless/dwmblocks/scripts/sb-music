@@ -1,7 +1,7 @@
 #!/bin/bash
-# Display currently playing music.
 
-set -- --player=spotify,mpv,%any
+# Display currently playing music.
+set --player=spotify,mpv,%any
 icon="^c#2aa198^󰝚"
 paused_icon="^c#b58900^"
 if status="$(playerctl "$@" status 2>&1)" && [ "$status" != "Stopped" ]; then
