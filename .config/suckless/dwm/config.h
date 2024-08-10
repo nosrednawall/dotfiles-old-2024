@@ -48,7 +48,7 @@ static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 static const char *fonts[]          	 = {"CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17"};
 static const char dmenufont[]            = "CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
-#include "themes/gruvbox_dark.h"
+#include "themes/solarized_light.h"
 
 
 static char c000000[]                    = "#000000"; // placeholder value
