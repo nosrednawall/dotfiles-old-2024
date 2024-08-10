@@ -1,12 +1,13 @@
 /* See LICENSE file for copyright and license details. */
 
-/*imports*/
-#include <X11/XF86keysym.h>
+/* Helper macros for spawning commands */
+#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
+#define CMD(...)   { .v = (const char*[]){ __VA_ARGS__, NULL } }
 
 /* appearance */
 #if ROUNDED_CORNERS_PATCH
 static const unsigned int borderpx       = 0;   /* border pixel of windows */
-static const int corner_radius           = 10;
+static const int corner_radius           = 5;
 #else
 static const unsigned int borderpx       = 4;   /* border pixel of windows */
 #endif // ROUNDED_CORNERS_PATCH
@@ -163,12 +164,11 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #endif // MONOCLE_LAYOUT
 #endif // BAR_TABGROUPS_PATCH
 #if BAR_PANGO_PATCH
-static const char font[]                 = "monospace 10";
+static const char font[]                 = "monospace 15";
 #else
-//static const char *fonts[]               = { "monospace:size=10" };
-static const char *fonts[]          	 = {	"CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17"};
+static const char *fonts[]               = { "monospace:size=15" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "monospace:size=10";
+static const char dmenufont[]            = "monospace:size=15";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
@@ -403,6 +403,13 @@ static char *statuscolors[][ColCount] = {
 static const char *layoutmenu_cmd = "layoutmenu.sh";
 #endif
 
+#if BAR_LAUNCHER_PATCH
+static const Launcher launchers[] = {
+	/* icon to display      command        */
+	{ "surf",               CMD("surf", "duckduckgo.com") },
+};
+#endif // BAR_LAUNCHER_PATCH
+
 #if COOL_AUTOSTART_PATCH
 static const char *const autostart[] = {
 	"st", NULL,
@@ -412,11 +419,10 @@ static const char *const autostart[] = {
 
 #if RENAMED_SCRATCHPADS_PATCH
 static const char *scratchpadcmd[] = {"s", "st", "-n", "spterm", NULL};
-
 #elif SCRATCHPADS_PATCH
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "144x41", "-e", "ranger", NULL };
-const char *spcmd3[] = {"bitwarden", NULL };
+const char *spcmd3[] = {"flatpak", "run", "com.bitwarden.desktop", NULL };
 const char *spcmd4[] = {"st", "-n", "sppulse", "-g", "100x34", "-e", "pulsemixer", NULL };
 const char *spcmd5[] = {"st", "-n", "sptop", "-g", "150x50", "-e", "btop", NULL };
 const char *spcmd6[] = {"st", "-n", "spnmtui", "-g", "100x34", "-e", "nmtui", NULL };
@@ -437,6 +443,7 @@ static Sp scratchpads[] = {
 	{"spytfzf",		   		spcmd9},
 	{"qalculate-gtk",		spcmd10},
 };
+
 #endif // SCRATCHPADS_PATCH
 
 /* Tags
@@ -526,17 +533,6 @@ static const Rule rules[] = {
 	RULE(.instance = "spterm", .scratchkey = 's', .isfloating = 1)
 	#elif SCRATCHPADS_PATCH
 	RULE(.instance = "spterm", .tags = SPTAG(0), .isfloating = 1)
-	RULE(.instance = "spterm",  .tags = SPTAG(1), .isfloating = 1)
-	RULE(.instance = "spfm",  .tags = SPTAG(2), .isfloating = 1)
-	RULE(.instance = "bitwarden",  .tags = SPTAG(3), .isfloating = 1)
-	RULE(.instance = "sppulse",  .tags = SPTAG(4), .isfloating = 1)
-	RULE(.instance = "sptop",  .tags = SPTAG(5), .isfloating = 1)
-	RULE(.instance = "spnmtui" ,  .tags = SPTAG(6), .isfloating = 1)
-	RULE(.instance = "spncmpcpp",  .tags = SPTAG(7), .isfloating = 1)
-	RULE(.instance = "crx_hnpfjngllnobngcgfapefoaidbinmjnm",  .tags = SPTAG(8), .isfloating = 1)
-	RULE(.instance = "spytfzf",	 .tags = SPTAG(9), .isfloating = 1)
-	RULE(.instance = "qalculate-gtk",  .tags = SPTAG(10), .isfloating = 1)
-
 	#endif // SCRATCHPADS_PATCH
 };
 
@@ -582,6 +578,9 @@ static const BarRule barrules[] = {
 	#if BAR_STATUSBUTTON_PATCH
 	{ -1,        0,     BAR_ALIGN_LEFT,   width_stbutton,           draw_stbutton,          click_stbutton,          NULL,                    "statusbutton" },
 	#endif // BAR_STATUSBUTTON_PATCH
+	#if BAR_LAUNCHER_PATCH
+	{ -1,        0,     BAR_ALIGN_LEFT,   width_launcher,           draw_launcher,          click_launcher,          NULL,                    "launcher" },
+	#endif // BAR_LAUNCHER_PATCH
 	#if BAR_POWERLINE_TAGS_PATCH
 	{  0,        0,     BAR_ALIGN_LEFT,   width_pwrl_tags,          draw_pwrl_tags,         click_pwrl_tags,         hover_pwrl_tags,         "powerline_tags" },
 	#endif // BAR_POWERLINE_TAGS_PATCH
@@ -803,7 +802,7 @@ static const char *xkb_layouts[]  = {
 #endif // XKB_PATCH
 
 /* key definitions */
-#define MODKEY Mod4Mask
+#define MODKEY Mod1Mask
 #if COMBO_PATCH && SWAPTAGS_PATCH && TAGOTHERMONITOR_PATCH
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      comboview,      {.ui = 1 << TAG} }, \
@@ -880,9 +879,6 @@ static const char *xkb_layouts[]  = {
 #if BAR_HOLDBAR_PATCH
 #define HOLDKEY 0 // replace 0 with the keysym to activate holdbar
 #endif // BAR_HOLDBAR_PATCH
-
-/* helper for spawning shell commands in the pre dwm-5.0 fashion */
-#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
 #if !NODMENU_PATCH
@@ -1145,17 +1141,6 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_grave,      removescratch,          {.v = scratchpadcmd } },
 	#elif SCRATCHPADS_PATCH
 	{ MODKEY,                       XK_grave,      togglescratch,          {.ui = 0 } },
-	{ MODKEY,            			XK_s,  	   togglescratch,  {.ui = 0 } },
-	{ MODKEY,            			XK_r,	   togglescratch,  {.ui = 1 } },
-	{ MODKEY,            			XK_b,	   togglescratch,  {.ui = 2 } },
-	{ MODKEY,            			XK_a,	   togglescratch,  {.ui = 3 } },
-	{ MODKEY,            			XK_h,	   togglescratch,  {.ui = 4 } },
-	{ MODKEY,            			XK_n,	   togglescratch,  {.ui = 5 } },
-	{ MODKEY,            			XK_m,	   togglescratch,  {.ui = 6 } },
-	{ MODKEY,            			XK_c,	   togglescratch,  {.ui = 7 } },
-	{ MODKEY,            			XK_y,	   togglescratch,  {.ui = 8 } },
-	{ MODKEY,           			XK_q,	   togglescratch,  {.ui = 9 } },
-
 	{ MODKEY|ControlMask,           XK_grave,      setscratch,             {.ui = 0 } },
 	{ MODKEY|ShiftMask,             XK_grave,      removescratch,          {.ui = 0 } },
 	#endif // SCRATCHPADS_PATCH | RENAMED_SCRATCHPADS_PATCH
@@ -1346,59 +1331,6 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                                  6)
 	TAGKEYS(                        XK_8,                                  7)
 	TAGKEYS(                        XK_9,                                  8)
-	/*Meus atalhos*/
-	{ ControlMask|Mod1Mask,         XK_l,                           spawn,          SHCMD("~/.local/bin/dwm/slock_personalizado") },
-	{ 0,					        XK_Caps_Lock,                   spawn,          SHCMD("~/.local/bin/dwm/som_capslock_numlock") },
-	{ 0,					        XK_Num_Lock,                    spawn,          SHCMD("~/.local/bin/dwm/som_capslock_numlock") },
-	{ 0,					        XK_Scroll_Lock,                 spawn,          SHCMD("~/.local/bin/dwm/som_capslock_numlock") },
-	{ MODKEY,			            XK_k,                           spawn,          SHCMD("~/.local/bin/dwm/altera-layout-teclado") },
-
-	/*volume pulseaudio*/
-	{ 0,                            XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/dwm/diminui_volume") },
-	{ 0,                            XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/dwm/aumenta_volume") },
-	{ 0,                            XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/dwm/muta_volume") },
-
-	/*Volume Microfone Pulseaudio*/
-	{ ControlMask,                  XF86XK_AudioRaiseVolume,        spawn,          SHCMD("~/.local/bin/dwm/aumenta_volume_microfone") },
-	{ ControlMask,                  XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/dwm/diminui_volume_microfone") },
-	{ ControlMask,                  XF86XK_AudioMute,               spawn,          SHCMD("~/.local/bin/dwm/muta_microfone") },
-
-	/*Player de musica*/
-	{ 0,                            XF86XK_AudioPlay,               spawn,          SHCMD("~/.local/bin/dwm/playerctl_play") },
-	{ 0,                            XF86XK_AudioStop,               spawn,          SHCMD("~/.local/bin/dwm/playerctl_stop") },
-	{ 0,                            XF86XK_AudioPrev,               spawn,          SHCMD("~/.local/bin/dwm/playerctl_prev") },
-	{ 0,                            XF86XK_AudioNext,               spawn,          SHCMD("~/.local/bin/dwm/playerctl_next") },
-
-	/*Outros atalhos teclado*/
-	{ 0,                            XF86XK_HomePage,                spawn,          SHCMD("~/.local/bin/dwm/homepage_program") },
-	{ 0,                            XF86XK_Mail,                    spawn,          SHCMD("~/.local/bin/dwm/mail_program") },
-	{ 0,                            XF86XK_Search,                  spawn,          SHCMD("~/.local/bin/dwm/search_program") },
-	{ 0,                            XF86XK_Calculator,              spawn,          SHCMD("~/.local/bin/dwm/calculator_program") },
-
-	/*Printscreen*/
-	{ MODKEY|ShiftMask,             XK_s,                           spawn,          SHCMD("~/.local/bin/dwm/print_edita") },
-	{ 0,                            XK_Print,                       spawn,          SHCMD("~/.local/bin/dwm/print_copia") },
-
-	/*Brilho tela notebook*/
-	{ 0,							XF86XK_MonBrightnessUp,			spawn,          SHCMD("~/.local/bin/dwm/brilho_tela_aumenta") },
-	{ 0,							XF86XK_MonBrightnessDown,		spawn,          SHCMD("~/.local/bin/dwm/brilho_tela_diminui") },
-
-	/*Dmenus*/
-	{ MODKEY|ShiftMask,             XK_e,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-saida-sistema" ) },
-	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
-	{ MODKEY|ShiftMask,             XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pomodoro" ) },
-	{ MODKEY|ShiftMask,				XK_w,							spawn,			SHCMD("~/.local/bin/dmenu/dmenu-controle-monitor" ) },
-	{ MODKEY|ShiftMask,             XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-controle-som") },
-	{ MODKEY|ShiftMask,             XK_y,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-youtube") },
-	/*Rofi menus*/
-	{ MODKEY,						XK_d,	   						spawn,          SHCMD("~/.local/bin/dwm/roficmd") },
-
-	/*Lancamento Programas*/
-	{ MODKEY,						XK_w,							spawn,			SHCMD("google-chrome" ) },
-	{ MODKEY,						XK_e,							spawn,			SHCMD("emacsclient -c -a 'emacs'" ) },
-	{ MODKEY,						XK_o,							spawn,			SHCMD("obsidian" ) },
-	{ MODKEY|ShiftMask,				XK_d,							spawn,			SHCMD("discord" ) },
-	{ MODKEY,						XK_f,							spawn,			SHCMD("thunar" ) }
 };
 
 #if KEYMODES_PATCH
@@ -1453,12 +1385,6 @@ static const Button buttons[] = {
 	{ ClkStatusText,        0,                   Button1,        sigstatusbar,   {.i = 1 } },
 	{ ClkStatusText,        0,                   Button2,        sigstatusbar,   {.i = 2 } },
 	{ ClkStatusText,        0,                   Button3,        sigstatusbar,   {.i = 3 } },
-	{ ClkStatusText,        0,                   Button4,        sigstatusbar,   {.i = 4 } },
-	{ ClkStatusText,        0,                   Button5,        sigstatusbar,   {.i = 5 } },
-	{ ClkStatusText,        ShiftMask,           Button1,        sigstatusbar,   {.i = 6 } },
-	{ ClkStatusText,        ShiftMask,           Button2,        sigstatusbar,   {.i = 7 } },
-	{ ClkStatusText,        ShiftMask,           Button3,        sigstatusbar,   {.i = 8 } },
-
 	#elif BAR_STATUSCMD_PATCH
 	{ ClkStatusText,        0,                   Button1,        spawn,          {.v = statuscmd } },
 	{ ClkStatusText,        0,                   Button2,        spawn,          {.v = statuscmd } },

@@ -5,7 +5,9 @@ case "$BUTTON" in
     1) mpc toggle
        ~/.local/bin/mpd/songinfo
        ;;
-    2) mpc prev ;;
+    2) mpc prev
+        ~/.local/bin/mpd/songinfo
+    ;;
     3) mpc next ;;
     4) mpc seek +5 ;;
     5) mpc seek -5 ;;

@@ -1,4 +1,4 @@
-This dwm 6.5 (061e9fe, 2024-03-19) side project has a different take on dwm patching. It uses preprocessor directives to decide whether or not to include a patch during build time. Essentially this means that this build, for better or worse, contains both the patched _and_ the original code. The aim being that you can select which patches to include and the build will contain that code and nothing more. Due to the complexity of some of the patches dwm-flexipatch has diverged from mainstream dwm by making some core patches non-optional for maintenance reasons. For the classic dwm-flexipatch build refer to branch [dwm-flexipatch-1.0](https://github.com/bakkeby/dwm-flexipatch/tree/dwm-flexipatch-1.0).
+This dwm 6.5 (5687f46, 2024-06-08) side project has a different take on dwm patching. It uses preprocessor directives to decide whether or not to include a patch during build time. Essentially this means that this build, for better or worse, contains both the patched _and_ the original code. The aim being that you can select which patches to include and the build will contain that code and nothing more. Due to the complexity of some of the patches dwm-flexipatch has diverged from mainstream dwm by making some core patches non-optional for maintenance reasons. For the classic dwm-flexipatch build refer to branch [dwm-flexipatch-1.0](https://github.com/bakkeby/dwm-flexipatch/tree/dwm-flexipatch-1.0).
 
 For example to include the `alpha` patch then you would only need to flip this setting from 0 to 1 in [patches.h](https://github.com/bakkeby/dwm-flexipatch/blob/master/patches.def.h):
 ```c
@@ -18,6 +18,8 @@ Browsing patches? There is a [map of patches](https://coggle.it/diagram/X9IiSSM6
 ---
 
 ### Changelog:
+
+2024-07-11 - Added variant of the launcher patch
 
 2024-01-31 - Added the placedir patch
 
@@ -521,6 +523,9 @@ Browsing patches? There is a [map of patches](https://coggle.it/diagram/X9IiSSM6
 
    - [killunsel](https://dwm.suckless.org/patches/killunsel/)
       - kills all visible clients that are not selected (only the selected client will remain)
+
+   - [launcher](https://dwm.suckless.org/patches/launcher/)
+      - adds buttons to the bar that can be used to launch applications
 
    - [~leftlayout~](http://dwm.suckless.org/patches/leftlayout/)
       - ~moves the layout symbol in the status bar to the left hand side~
