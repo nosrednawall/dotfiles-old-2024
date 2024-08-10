@@ -27,6 +27,7 @@ static const int sidepad                 = 10;  /* horizontal padding of bar */
 #define ICONSPACING 5  /* space between icon and title */
 /* Status is to be shown on: -1 (all monitors), 0 (a specific monitor by index), 'A' (active monitor) */
 static const int statusmon               = -1;
+static const char buttonbar[]            = "  ";
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int showsystray             = 1;   /* 0 means no systray */
 static const unsigned int ulinepad = 5;         /* horizontal padding between the underline and tag */
@@ -49,7 +50,6 @@ static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 static const char *fonts[]          	 = {"CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17"};
 static const char dmenufont[]            = "CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
 #include "themes/gruvbox_dark.h"
-
 
 static char c000000[]                    = "#000000"; // placeholder value
 
@@ -155,7 +155,9 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
 	RULE(.class = "Gimp", .tags = 1 << 4)
 	RULE(.class = "Firefox", .tags = 1 << 7)
+
 	RULE(.class = "copyq", .tags = 0, .isfloating = 1)
+	RULE(.class = "Xfce4-appfinder", .tags = 0, .isfloating = 1)
 	RULE(.instance = "spterm", .tags = SPTAG(0), .isfloating = 1)
 	RULE(.instance = "spfm",  .tags = SPTAG(1), .isfloating = 1)
 	RULE(.instance = "bitwarden",  .tags = SPTAG(2), .isfloating = 1)
@@ -182,6 +184,7 @@ static const Rule rules[] = {
  */
 static const BarRule barrules[] = {
 	/* monitor   bar    alignment         widthfunc                 drawfunc                clickfunc                hoverfunc                name */
+	{ -1,        0,     BAR_ALIGN_LEFT,   width_stbutton,           draw_stbutton,          click_stbutton,          NULL,                    "statusbutton" },
 	{ -1,        0,     BAR_ALIGN_LEFT,   width_tags,               draw_tags,              click_tags,              hover_tags,              "tags" },
 	{  0,        0,     BAR_ALIGN_RIGHT,  width_systray,            draw_systray,           click_systray,           NULL,                    "systray" },
 	{ -1,        0,     BAR_ALIGN_LEFT,   width_ltsymbol,           draw_ltsymbol,          click_ltsymbol,          NULL,                    "layout" },
@@ -237,14 +240,16 @@ static const char *dmenucmd[] = {
 	NULL
 };
 static const char *termcmd[]  = { "st", NULL };
-
+static const char *menucmd[]  = { "sh", "-c", "xfce4-appfinder", "--disable-server", NULL };
 /* This defines the name of the executable that handles the bar (used for signalling purposes) */
 #define STATUSBAR "dwmblocks"
 #include "keys.h"
+
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static const Button buttons[] = {
 	/* click                event mask           button          function        argument */
+	{ ClkButton,            0,                   Button1,        spawn,          {.v = menucmd } },
 	{ ClkLtSymbol,          0,                   Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,                   Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,                   Button1,        togglewin,      {0} },
@@ -253,11 +258,6 @@ static const Button buttons[] = {
 	{ ClkStatusText,        0,                   Button1,        sigstatusbar,   {.i = 1 } },
 	{ ClkStatusText,        0,                   Button2,        sigstatusbar,   {.i = 2 } },
 	{ ClkStatusText,        0,                   Button3,        sigstatusbar,   {.i = 3 } },
-	{ ClkStatusText,        0,                   Button4,        sigstatusbar,   {.i = 4 } },
-	{ ClkStatusText,        0,                   Button5,        sigstatusbar,   {.i = 5 } },
-	{ ClkStatusText,        ShiftMask,           Button1,        sigstatusbar,   {.i = 6 } },
-	{ ClkStatusText,        ShiftMask,           Button2,        sigstatusbar,   {.i = 7 } },
-	{ ClkStatusText,        ShiftMask,           Button3,        sigstatusbar,   {.i = 8 } },
 	/* placemouse options, choose which feels more natural:
 	 *    0 - tiled position is relative to mouse cursor
 	 *    1 - tiled postiion is relative to window center
@@ -321,3 +321,4 @@ static const Signal signals[] = {
 	{ "setlayout",               setlayout },
 	{ "setlayoutex",             setlayoutex },
 };
+

@@ -117,6 +117,7 @@ enum {
 }; /* dwm client atoms */
 
 enum {
+	ClkButton,
 	ClkTagBar,
 	ClkLtSymbol,
 	ClkStatusText,

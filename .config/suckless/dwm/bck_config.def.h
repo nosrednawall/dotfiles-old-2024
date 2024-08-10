@@ -50,7 +50,6 @@ static const char *fonts[]          	 = {"CaskaydiaMono Nerd Font:size=15:style=
 static const char dmenufont[]            = "CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
 #include "themes/gruvbox_dark.h"
 
-
 static char c000000[]                    = "#000000"; // placeholder value
 
 static char *colors[][ColCount] = {
