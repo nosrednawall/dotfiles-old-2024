@@ -26,6 +26,10 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Down,        setcfact,               {.f = -0.25} },
 	{ MODKEY|ShiftMask,             XK_o,          setcfact,               {0} },
 
+	/*Move a janela de posicao na stack*/ //new
+	{ MODKEY,                       XK_Up,          movestack,              {.i = -1 } },
+	{ MODKEY,                       XK_Down,        movestack,              {.i = +1 } },
+
     /*Altera tamanho da janela em modo floating, sem usar mouse*/
 	{ MODKEY|ControlMask|ShiftMask, XK_e,          aspectresize,           {.i = +24} },
 	{ MODKEY|ControlMask|ShiftMask, XK_r,          aspectresize,           {.i = -24} },
@@ -100,9 +104,12 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period,     focusmon,               {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,      tagmon,                 {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,     tagmon,                 {.i = +1 } },
-    { ControlMask|Mod1Mask,    XK_comma,      tagallmon,              {.i = +1 } }, //new
-	{ ControlMask|Mod1Mask,    XK_period,     tagallmon,              {.i = -1 } }, //new
-    
+    { ControlMask|Mod1Mask,         XK_comma,      tagallmon,              {.i = +1 } }, //new
+	{ ControlMask|Mod1Mask,         XK_period,     tagallmon,              {.i = -1 } }, //new
+
+	{ MODKEY,          				XK_minus,      cyclelayout,            {.i = -1 } }, //new
+	{ MODKEY,                       XK_equal,      cyclelayout,            {.i = +1 } }, //new
+
 	TAGKEYS(                        XK_1,                                  0)
 	TAGKEYS(                        XK_2,                                  1)
 	TAGKEYS(                        XK_3,                                  2)
