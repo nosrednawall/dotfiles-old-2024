@@ -1,31 +1,29 @@
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#51576D",
-	"#E78284",
-	"#A6D189",
-	"#E5C890",
-	"#8CAAEE",
-	"#F4B8E4",
-	"#81C8BE",
-	"#B5BFE2",
+	"#51576D", // Cinza escuro
+	"#E78284", // Vermelho suave
+	"#A6D189", // Verde suave
+	"#E5C890", // Amarelo suave
+	"#8CAAEE", // Azul suave
+	"#F4B8E4", // Rosa suave
+	"#81C8BE", // Ciano suave
+	"#B5BFE2", // Azul acinzentado
 
 	/* 8 bright colors */
-	"#626880",
-	"#E78284",
-	"#A6D189",
-	"#E5C890",
-	"#8CAAEE",
-	"#F4B8E4",
-	"#81C8BE",
-	"#A5ADCE",
+	"#626880", // Cinza médio
+	"#E78284", // Vermelho suave
+	"#A6D189", // Verde suave
+	"#E5C890", // Amarelo suave
+	"#8CAAEE", // Azul suave
+	"#F4B8E4", // Rosa suave
+	"#81C8BE", // Ciano suave
+	"#A5ADCE", // Azul claro
 
-[256] = "#C6D0F5", /* default foreground colour */
-[257] = "#303446", /* default background colour */
-[258] = "#F2D5CF", /*575268*/
-
+	[256] = "#CDD6F4", /* default foreground colour */
+	[257] = "#303446", /* default background colour */
+	[258] = "#F2D5CF", /* Cursor color */
 };
-
 
 /*
  * foreground, background, cursor, reverse cursor

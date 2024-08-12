@@ -44,3 +44,5 @@ static char urgfgcolor[]         = "#fbf1c7";  // Foreground color (texto)
 static char urgbgcolor[]         = "#cc241d";  // Background color (fundo)
 static char urgbordercolor[]     = "#cc241d";  // Border color (bordas)
 static char urgfloatcolor[]      = "#d3869b";  // Float color (janelas flutuantes)
+
+static char c000000[]                    = "#000000"; // Placeholder value

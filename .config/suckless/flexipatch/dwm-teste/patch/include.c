@@ -31,6 +31,7 @@
 #include "restartsig.c"
 #include "scratchpad.c"
 #include "swallow.c"
+#include "swaptags.c"
 #include "tagallmon.c"
 #include "vanitygaps.c"
 #include "winview.c"

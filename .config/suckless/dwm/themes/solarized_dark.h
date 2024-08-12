@@ -40,4 +40,5 @@ static char urgbgcolor[]                 = "#002b36";
 static char urgbordercolor[]             = "#dc322f";
 static char urgfloatcolor[]              = "#268bd2";
 
+static char c000000[]                    = "#000000"; // Placeholder value
 #endif // SOLARIZED_DARK_H_

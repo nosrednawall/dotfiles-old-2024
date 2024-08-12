@@ -1,0 +1,52 @@
+conky.config = {
+    alignment = 'middle_right',
+    background = false,
+    double_buffer = true,
+    font = 'DejaVu Sans Mono:size=10',
+    minimum_width = 200,
+    minimum_height = 500,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'override',
+    own_window_transparent = false,
+    own_window_argb_visual = true,  -- Enable ARGB for transparency
+    own_window_argb_value = 220,    -- 0-255, 0 is fully transparent, 255 is fully opaque
+    border_inner_margin = 5,        -- Inner margin for the content
+    border_outer_margin = 5,        -- Outer margin around the window
+    border_width = 5,               -- Border thickness
+    own_window_colour = '#151515',  -- Background color
+    update_interval = 1.0,
+    use_xft = true,
+    xftalpha = 0.8,
+    gap_x = 1500,  -- Horizontal gap from the right edge
+    gap_y = 0,    -- Vertical gap to center vertically
+}
+conky.text = [[
+${alignc}${font DejaVu Sans Mono:bold:size=18}${color #ffffff}dwm${font}${color}
+${voffset 5}${hr 2}${voffset 5}
+${alignc}${font DejaVu Sans Mono:bold:size=12}${color #ffffff}Atalhos de teclado${font}${color}
+${font DejaVu Sans Mono:size=10}${color}
+${color #c94c16}Scratchpads ${color}
+W + s     - Terminal
+W + S + f - Ranger
+W + b     - Bitwarden
+W + a     - Pulsemixer
+W + S + h - Btop
+W + n     - Nmtui - Redes wifi
+W + m     - Music ncmpcpp
+W + c     - Chat
+W + y     - Youtube ytfzf
+W + q     - Calculadora
+
+${color #e0af68}Programas${color}
+W + w - Google Chrome
+W + e - Emacs
+W + f - File Manager
+]]
+

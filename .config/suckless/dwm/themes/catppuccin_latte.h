@@ -40,4 +40,5 @@ static char urgbgcolor[]                 = "#EFF1F5"; // Fundo urgente
 static char urgbordercolor[]             = "#D20F39"; // Borda urgente
 static char urgfloatcolor[]              = "#7287FD"; // Float urgente
 
+static char c000000[]                    = "#000000"; // Placeholder value
 #endif // CATPPUCIN_LATTE_H_

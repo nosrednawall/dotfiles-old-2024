@@ -80,8 +80,10 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_F4,      setlayout,      {.v = &layouts[15]} },
 
     /*Scratpads*/
+	{ MODKEY|ControlMask,           XK_grave,  setscratch,     {.ui = 0 } }, //nao uso
+	{ MODKEY|ShiftMask,             XK_grave,  removescratch,  {.ui = 0 } }, //nao uso
 	{ MODKEY,                       XK_s,      togglescratch,  {.ui = 0 } },
-	{ MODKEY|ShiftMask,             XK_f,      togglescratch,  {.ui = 1 } },  //desabilitei para testar o fullscreen
+	{ MODKEY|ShiftMask,             XK_f,      togglescratch,  {.ui = 1 } },
 	{ MODKEY,                       XK_b,      togglescratch,  {.ui = 2 } },
 	{ MODKEY,                       XK_a,      togglescratch,  {.ui = 3 } },
 	{ MODKEY|ShiftMask,             XK_h,      togglescratch,  {.ui = 4 } },
@@ -96,8 +98,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating,         {0} },
 
     /*Mudar de monitor*/
-	{ MODKEY|ControlMask,           XK_grave,      setscratch,             {.ui = 0 } },
-	{ MODKEY|ShiftMask,             XK_grave,      removescratch,          {.ui = 0 } },
+
 	{ MODKEY,                       XK_0,          view,                   {.ui = ~SPTAGMASK } },
 	{ MODKEY|ShiftMask,             XK_0,          tag,                    {.ui = ~SPTAGMASK } },
 	{ MODKEY,                       XK_comma,      focusmon,               {.i = -1 } },
@@ -126,6 +127,7 @@ static const Key keys[] = {
 	{ 0,					        XK_Num_Lock,                    spawn,          SHCMD("~/.local/bin/dwm/som_capslock_numlock") },
 	{ 0,					        XK_Scroll_Lock,                 spawn,          SHCMD("~/.local/bin/dwm/som_capslock_numlock") },
 	{ MODKEY,			            XK_k,                           spawn,          SHCMD("~/.local/bin/dwm/altera-layout-teclado") },
+	{ MODKEY,			            XK_l,                           spawn,          SHCMD("~/.local/bin/dwm/conky_toggle") },
 
 	/*volume pulseaudio*/
 	{ 0,                            XF86XK_AudioLowerVolume,        spawn,          SHCMD("~/.local/bin/dwm/diminui_volume") },

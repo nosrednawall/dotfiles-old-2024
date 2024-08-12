@@ -32,6 +32,7 @@
 #include "scratchpad.h"
 #include "seamless_restart.h"
 #include "swallow.h"
+#include "swaptags.h"
 #include "tagallmon.h"
 #include "vanitygaps.h"
 #include "winview.h"

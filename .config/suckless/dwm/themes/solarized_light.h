@@ -39,3 +39,5 @@ static char urgfgcolor[]                 = "#657b83";  // base00
 static char urgbgcolor[]                 = "#eee8d5";  // base2
 static char urgbordercolor[]             = "#dc322f";  // red
 static char urgfloatcolor[]              = "#268bd2";  // blue
+
+static char c000000[]                    = "#000000"; // Placeholder value

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Verifica se o Conky está rodando
+if pgrep -x "conky" > /dev/null
+then
+    # Se estiver rodando, mata o processo
+    pkill conky
+else
+    # Se não estiver rodando, inicia o Conky
+    conky -c ~/.dotfiles/.config/conky/conky_atalhos_principais &> /dev/null &
+    conky -c ~/.dotfiles/.config/conky/Kurhah/Kurhah.conf &> /dev/null &
+fi
