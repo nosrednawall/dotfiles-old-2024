@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#source ~/.theme_selected
+
 # Verifica se o Conky está rodando
 if pgrep -x "conky" > /dev/null
 then
@@ -7,6 +9,11 @@ then
     pkill conky
 else
     # Se não estiver rodando, inicia o Conky
-    conky -c ~/.dotfiles/.config/conky/conky_atalhos_principais &> /dev/null &
-    conky -c ~/.dotfiles/.config/conky/Kurhah/Kurhah.conf &> /dev/null &
+    #if [ $COLOR_MODE == "Dark" ]; then
+        conky -c ~/.dotfiles/.config/conky/conky_atalhos_principais.conf &> /dev/null &
+        conky -c ~/.dotfiles/.config/conky/Kurhah/Kurhah.conf &> /dev/null &
+    #else
+    #    conky -c ~/.dotfiles/.config/conky/conky_atalhos_principais.conf &> /dev/null &
+    #    conky -c ~/.dotfiles/.config/conky/Kurhah/Kurhah-light.conf &> /dev/null &
+    #fi
 fi
