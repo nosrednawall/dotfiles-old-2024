@@ -3,6 +3,7 @@
 #include "bar_tagicons.h"
 #include "bar.h"
 
+#include "bar_alternativetags.h"
 #include "bar_dwmblocks.h"
 #include "bar_ltsymbol.h"
 #include "bar_status.h"
@@ -31,6 +32,8 @@
 #include "restartsig.h"
 #include "scratchpad.h"
 #include "seamless_restart.h"
+#include "shift.h"
+#include "shiftview.h"
 #include "swallow.h"
 #include "tagallmon.h"
 #include "vanitygaps.h"

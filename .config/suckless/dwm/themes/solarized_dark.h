@@ -15,10 +15,10 @@ static char titlenormbgcolor[]           = "#002b36";
 static char titlenormbordercolor[]       = "#073642";
 static char titlenormfloatcolor[]        = "#268bd2";
 
-static char titleselfgcolor[]            = "#839496";
-static char titleselbgcolor[]            = "#002b36";
-static char titleselbordercolor[]        = "#002b36";
-static char titleselfloatcolor[]         = "#002b36";
+static char titleselfgcolor[]            = "#002b36";
+static char titleselbgcolor[]            = "#2aa198";
+static char titleselbordercolor[]        = "#2aa198";
+static char titleselfloatcolor[]         = "#2aa198";
 
 static char tagsnormfgcolor[]            = "#839496";
 static char tagsnormbgcolor[]            = "#002b36";

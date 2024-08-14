@@ -30,6 +30,10 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Up,          movestack,              {.i = -1 } },
 	{ MODKEY,                       XK_Down,        movestack,              {.i = +1 } },
 
+	/*Troca de tag*/
+	{ ControlMask|Mod1Mask,         XK_Right,      shiftview,              { .i = +1 } },  //new
+	{ ControlMask|Mod1Mask,         XK_Left,       shiftview,              { .i = -1 } },  //new
+
     /*Altera tamanho da janela em modo floating, sem usar mouse*/
 	{ MODKEY|ControlMask|ShiftMask, XK_e,          aspectresize,           {.i = +24} },
 	{ MODKEY|ControlMask|ShiftMask, XK_r,          aspectresize,           {.i = -24} },
@@ -37,7 +41,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Return,    zoom,                    {0} },
 	{ Mod1Mask,                     XK_Tab,        alttabstart,            {0} },
 
-    /*Gaps*/
+	/*Muda as tags*/
+	{ MODKEY,                       XK_t,          togglealttag,           {0} },
+	/*Gaps*/
 	{ ControlMask|Mod1Mask,              XK_1,          incrgaps,               {.i = +1 } },
 	{ ControlMask|Mod1Mask|ShiftMask,    XK_1,          incrgaps,               {.i = -1 } },
 	{ ControlMask|Mod1Mask,              XK_2,          incrigaps,              {.i = +1 } },

@@ -260,7 +260,7 @@
  * sole purpose of providing visual aid.
  * https://dwm.suckless.org/patches/alternativetags/
  */
-#define BAR_ALTERNATIVE_TAGS_PATCH 0
+#define BAR_ALTERNATIVE_TAGS_PATCH 1
 
 /* This patches provides the ability to use alternative text for tags which contain at
  * least one window.
@@ -1104,7 +1104,7 @@
 /* This patch adds keybindings for left and right circular shift through tags.
  * https://github.com/chau-bao-long/dotfiles/blob/master/suckless/dwm/shiftview.diff
  */
-#define SHIFTVIEW_PATCH 0
+#define SHIFTVIEW_PATCH 1
 
 /* This variant of the shiftview patch adds left and right circular shift through tags,
  * but skips tags where there are no clients.
@@ -1208,7 +1208,7 @@
  * keyboard shortcuts.
  * https://dwm.suckless.org/patches/swaptags/
  */
-#define SWAPTAGS_PATCH 1
+#define SWAPTAGS_PATCH 0
 
 /* Switch focus between the master and stack columns using a single keybinding.
  * https://dwm.suckless.org/patches/switchcol/

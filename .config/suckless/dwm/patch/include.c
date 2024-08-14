@@ -3,6 +3,7 @@
 #include "bar_tagicons.c"
 #include "bar.c"
 
+#include "bar_alternativetags.c"
 #include "bar_dwmblocks.c"
 #include "bar_ltsymbol.c"
 #include "bar_status.c"
@@ -30,6 +31,8 @@
 #include "placemouse.c"
 #include "restartsig.c"
 #include "scratchpad.c"
+#include "shift.c"
+#include "shiftview.c"
 #include "swallow.c"
 #include "tagallmon.c"
 #include "vanitygaps.c"

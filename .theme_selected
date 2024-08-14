@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export THEME_MODE="Solarized"
+export THEME_MODE="Nord"
 export COLOR_MODE="Dark"
 # Vou testar alterar os arquivos ini antes
 # export GTK_THEME="NumixSolarizedDarkCyan"
