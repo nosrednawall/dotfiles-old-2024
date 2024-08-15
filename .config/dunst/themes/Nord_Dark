@@ -304,44 +304,6 @@
     # where there are multiple screens with very different dpi values.
     per_monitor_dpi = false
 
-[urgency_low]
-    background = "#2E3440"
-    foreground = "#D8DEE9"
-
-[urgency_normal]
-
-Aqui está uma configuração de tema Nordic Dark para o dunst, o gerenciador de notificações:
-
-ini
-Copiar código
-[global]
-    font = Iosevka 10
-    frame_width = 2
-    separator_height = 2
-    padding = 10
-    horizontal_padding = 10
-    transparency = 10
-    corner_radius = 10
-    idle_threshold = 0
-    monitor = 0
-    follow = mouse
-    sticky_history = false
-    show_age_threshold = 60
-    alignment = left
-    bounce_freq = 0
-    indicate_hidden = true
-    shrink = false
-    line_height = 0
-    word_wrap = true
-    ignore_dnd = false
-    mouse_left_click = close_current
-    mouse_middle_click = do_action
-    mouse_right_click = close_all
-    progress_bar = true
-    progress_bar_max_height = 6
-    progress_bar_frame_width = 1
-    progress_bar_min_width = 60
-
 [frame]
     width = 2
     color = "#3B4252"
@@ -358,7 +320,11 @@ Copiar código
 [urgency_normal]
     background = "#3B4252"
     foreground = "#E5E9F0"
+    timeout = 6
+    frame_color = "#5E81AC"
 
 [urgency_critical]
     background = "#BF616A"
     foreground = "#ECEFF4"
+    timeout = 0
+    frame_color = "#BF616A"
