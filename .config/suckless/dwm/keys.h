@@ -169,12 +169,12 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_e,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-saida-sistema" ) },
 	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
 	{ MODKEY|ShiftMask,             XK_d,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-docker" ) },
-	{ MODKEY|ShiftMask,			XK_w,	     					spawn,		SHCMD("~/.local/bin/dmenu/dmenu-controle-monitor" ) },
+	{ MODKEY|ShiftMask,			    XK_w,	     					spawn,		SHCMD("~/.local/bin/dmenu/dmenu-controle-monitor" ) },
 	{ MODKEY|ShiftMask,             XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-controle-som") },
 //	{ MODKEY|ShiftMask,             XK_y,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-youtube") },
 	{ MODKEY|ShiftMask,             XK_t,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-tema") },
 	{ MODKEY|ShiftMask,             XK_v,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-vpn") },
-	{ MODKEY|ShiftMask,	        XK_m,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-powertop") },
+	{ MODKEY|ShiftMask,	            XK_m,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-powertop") },
 
 	/*Rofi menus*/
 	{ MODKEY,						XK_d,	  						spawn,          SHCMD("~/.local/bin/dwm/roficmd") },
