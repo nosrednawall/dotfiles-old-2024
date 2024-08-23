@@ -68,8 +68,8 @@ static const Key keys[] = {
     { MODKEY,                       XK_o,          winview,                {0} },
 
     //Layouts
-	{ MODKEY,                       XK_F1,         setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_F2,         setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_F1,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       XK_F2,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_F3,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_F4,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_F5,      setlayout,      {.v = &layouts[4]} },
@@ -169,9 +169,9 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_e,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-saida-sistema" ) },
 	{ ControlMask|Mod1Mask,         XK_p,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-pass" ) },
 	{ MODKEY|ShiftMask,             XK_d,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-docker" ) },
-	{ MODKEY|ShiftMask,			    XK_w,	     					spawn,		SHCMD("~/.local/bin/dmenu/dmenu-controle-monitor" ) },
+	{ MODKEY|ShiftMask,			    XK_w,	     					spawn,			SHCMD("~/.local/bin/dmenu/dmenu-controle-monitor" ) },
 	{ MODKEY|ShiftMask,             XK_a,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-controle-som") },
-//	{ MODKEY|ShiftMask,             XK_y,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-youtube") },
+	{ MODKEY|ShiftMask,             XK_l,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-layouts-dwm") },
 	{ MODKEY|ShiftMask,             XK_t,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-tema") },
 	{ MODKEY|ShiftMask,             XK_v,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-vpn") },
 	{ MODKEY|ShiftMask,	            XK_m,                           spawn,          SHCMD("~/.local/bin/dmenu/dmenu-powertop") },

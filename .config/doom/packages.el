@@ -55,3 +55,4 @@
 (package! catppuccin-theme)
 (package! conda)
 (package! lsp-pyright)
+(package! multiple-cursors)

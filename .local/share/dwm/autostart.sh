@@ -43,4 +43,7 @@ is_running "emacs --daemon" || emacs --daemon &
 
 is_running "solaar" || /usr/bin/solaar -w hide
 
+# Nem sei se preciso disso instalando o xfce primeiro
+# is_running "polkit-gnome-authentication-agent-1" || /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
 exit
