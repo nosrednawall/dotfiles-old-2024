@@ -56,3 +56,6 @@
 (package! conda)
 (package! lsp-pyright)
 (package! multiple-cursors)
+(package! ox-reveal)
+(package! org-tree-slide
+  :recipe (:host github :repo "takaxp/org-tree-slide"))

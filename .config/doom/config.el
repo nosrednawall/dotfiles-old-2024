@@ -41,7 +41,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-gruvbox)
+(setq doom-theme 'catppuccin) (setq catppuccin-flavor 'frappe)
 
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -110,3 +110,18 @@
          ("C->" . mc/mark-next-like-this)
          ("C-<" . mc/mark-previous-like-this)
          ("C-c C-<" . mc/mark-all-like-this)))
+
+(use-package! ox-reveal
+  :config
+  (setq org-reveal-root "https://cdn.jsdelivr.net/npm/reveal.js@4/")
+  ;; Outras configurações opcionais podem ser adicionadas aqui
+  )
+
+(use-package! org-tree-slide
+  :commands (org-tree-slide-mode)
+  :config
+  (setq org-tree-slide-slide-in-effect t)   ; Ativa o efeito de entrada
+  (setq org-tree-slide-header t)            ; Exibe o cabeçalho do slide
+  (setq org-tree-slide-breadcrumbs t)       ; Exibe breadcrumbs
+  ;; Outras configurações podem ser adicionadas aqui
+  )
