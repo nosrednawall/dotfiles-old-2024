@@ -40,6 +40,7 @@ case $chosen in
         sed -i 's|^#include "themes/.*|#include "themes/solarized_dark.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/solarized_dark.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/solarized_dark.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/solarized_dark.h"|' ~/.dotfiles/.config/suckless/slock/config.def.h
 
     # Emacs Doom
         sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'doom-solarized-dark)|' ~/.dotfiles/.config/doom/config.el
@@ -70,6 +71,7 @@ case $chosen in
         sed -i 's|^#include "themes/.*|#include "themes/solarized_light.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/solarized_light.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/solarized_light.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/solarized_light.h"|' ~/.dotfiles/.config/suckless/slock/config.def.h
 
     # Emacs Doom
         sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'doom-solarized-light)|' ~/.dotfiles/.config/doom/config.el
@@ -99,6 +101,7 @@ case $chosen in
         sed -i 's|^#include "themes/.*|#include "themes/gruvbox_dark.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/gruvbox_dark.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/gruvbox_dark.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/gruvbox_dark.h"|' ~/.dotfiles/.config/suckless/slock/config.def.h
 
     # Emacs Doom
         sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'doom-gruvbox)|' ~/.dotfiles/.config/doom/config.el
@@ -128,6 +131,7 @@ case $chosen in
         sed -i 's|^#include "themes/.*|#include "themes/gruvbox_light.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/gruvbox_light.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/gruvbox_light.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/gruvbox_light.h"|' ~/.dotfiles/.config/suckless/slock/config.def.h
 
     # Emacs Doom
         sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'doom-gruvbox-light)|' ~/.dotfiles/.config/doom/config.el
@@ -155,8 +159,9 @@ case $chosen in
 
     # Suckless
         sed -i 's|^#include "themes/.*|#include "themes/catppuccin_frappe.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
-        sed -i 's|^#include "themes/.*|#include "themes/frappe.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
-        sed -i 's|^#include "themes/.*|#include "themes/frappe.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/catppuccin_frappe.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/catppuccin_frappe.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/catppuccin_frappe.h"|' ~/.dotfiles/.config/suckless/slock/config.def.h
 
     # Emacs Doom
         # sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'rebecca)|' ~/.dotfiles/.config/doom/config.el
@@ -185,8 +190,9 @@ case $chosen in
 
     # Suckless
         sed -i 's|^#include "themes/.*|#include "themes/catppuccin_latte.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
-        sed -i 's|^#include "themes/.*|#include "themes/latte.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
-        sed -i 's|^#include "themes/.*|#include "themes/latte.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/catppuccin_latte.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/catppuccin_latte.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/catppuccin_latte.h"|' ~/.dotfiles/.config/suckless/slock/config.def.h
 
     # Emacs Doom
         sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'catppuccin) (setq catppuccin-flavor '"'"'latte)|' ~/.dotfiles/.config/doom/config.el
@@ -217,6 +223,7 @@ case $chosen in
         sed -i 's|^#include "themes/.*|#include "themes/nord_dark.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/nord_dark.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/nord_dark.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/nord_dark.h"|' ~/.dotfiles/.config/suckless/slock/config.def.h
 
     # Emacs Doom
         sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'doom-nord)|' ~/.dotfiles/.config/doom/config.el
@@ -247,6 +254,7 @@ case $chosen in
         sed -i 's|^#include "themes/.*|#include "themes/nord_light.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/nord_light.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/nord_light.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/nord_light.h"|' ~/.dotfiles/.config/suckless/slock/config.def.h
 
     # Emacs Doom
         sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'doom-nord-light)|' ~/.dotfiles/.config/doom/config.el
@@ -277,6 +285,7 @@ case $chosen in
         sed -i 's|^#include "themes/.*|#include "themes/dracula_dark.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/dracula_dark.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/dracula_dark.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/dracula_dark.h"|' ~/.dotfiles/.config/suckless/slock/config.def.h
 
     # Emacs Doom
         sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'doom-dracula)|' ~/.dotfiles/.config/doom/config.el
@@ -307,6 +316,7 @@ case $chosen in
         sed -i 's|^#include "themes/.*|#include "themes/dracula_light.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/dracula_light.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/dracula_light.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/dracula_light.h"|' ~/.dotfiles/.config/suckless/slock/config.def.h
 
     # Emacs Doom
         sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'doom-one-light)|' ~/.dotfiles/.config/doom/config.el
@@ -336,6 +346,7 @@ case $chosen in
         sed -i 's|^#include "themes/.*|#include "themes/vaporwave_dark.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/vaporwave_dark.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/vaporwave_dark.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/vaporwave_dark.h"|' ~/.dotfiles/.config/suckless/slock/config.def.h
 
     # Emacs Doom
         sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'rebecca)|' ~/.dotfiles/.config/doom/config.el
@@ -366,6 +377,7 @@ case $chosen in
         sed -i 's|^#include "themes/.*|#include "themes/vaporwave_light.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/vaporwave_light.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/vaporwave_light.h"|' ~/.dotfiles/.config/suckless/dmenu/config.def.h
+        sed -i 's|^#include "themes/.*|#include "themes/vaporwave_light.h"|' ~/.dotfiles/.config/suckless/slock/config.def.h
 
     # Emacs Doom
         sed -i 's|(setq doom-theme .*)|(setq doom-theme '"'"'rebecca)|' ~/.dotfiles/.config/doom/config.el
@@ -389,6 +401,11 @@ else
     dunst -conf "$HOME/.dotfiles/.config/dunst/themes/${THEME_MODE}_${COLOR_MODE}" &
     dunstify "Aplicando tema" "Aguarde..." -h int:value:10  -i /usr/share/icons/ePapirus/16x16/status/package-reinstall.svg
 
+    # Fecha programas systray
+    killall copyq
+    killall solaar
+    killall slock
+
     # Compila dwm
     cd $HOME/.dotfiles/.config/suckless/dwm
     rm config.h
@@ -411,16 +428,19 @@ else
     make
     SUDO_ASKPASS=/usr/bin/ssh-askpass sudo make clean install
 
+    # Compila slock
+    cd $HOME/.dotfiles/.config/suckless/slock
+    rm config.h
+    make
+    SUDO_ASKPASS=/usr/bin/ssh-askpass sudo make clean install
+
+
     dunstify "Aplicando tema" "Aguarde..." -h int:value:80 -i /usr/share/icons/ePapirus/16x16/status/package-reinstall.svg
 
     # Faz sincronizacao do doom
     $HOME/.config/emacs/bin/doom sync
 
     dunstify "Aplicando tema" "Aguarde..." -h int:value:99 -i /usr/share/icons/ePapirus/16x16/status/package-reinstall.svg
-
-    # Fecha programas systray
-    killall copyq
-    killall solaar
 
     # Restart dwm
     xdotool key Super_L+shift+r

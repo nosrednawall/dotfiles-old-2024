@@ -50,7 +50,7 @@ static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 
 static const char *fonts[]          	 = {"CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17"};
 static const char dmenufont[]            = "CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
-#include "themes/catppuccin_frappe.h"
+#include "themes/gruvbox_dark.h"
 
 static char *colors[][ColCount] = {
 	/*                       fg                bg                border                float */
@@ -246,47 +246,10 @@ static const char *dmenucmd[] = {
 	NULL
 };
 static const char *termcmd[]  = { "st", NULL };
-
+//static const char *roficmd[]  = { "/home/$USER/.local/bin/dwm/roficmd", NULL };
 /* This defines the name of the executable that handles the bar (used for signalling purposes) */
 #define STATUSBAR "dwmblocks"
 #include "keys.h"
-
-/* button definitions */
-/* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
-static const Button buttons[] = {
-	/* click                event mask           button          function        argument */
-	{ ClkButton,            0,                   Button1,        spawn,          {.v = dmenucmd } },
-	{ ClkLtSymbol,          0,                   Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,                   Button3,        setlayout,      {.v = &layouts[2]} },
-	{ ClkWinTitle,          0,                   Button1,        togglewin,      {0} },
-	{ ClkWinTitle,          0,                   Button3,        showhideclient, {0} },
-	{ ClkWinTitle,          0,                   Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,                   Button1,        sigstatusbar,   {.i = 1 } },
-	{ ClkStatusText,        0,                   Button2,        sigstatusbar,   {.i = 2 } },
-	{ ClkStatusText,        0,                   Button3,        sigstatusbar,   {.i = 3 } },
-	{ ClkStatusText,        0,                   Button4,        sigstatusbar,   {.i = 4 } },
-	{ ClkStatusText,        0,                   Button5,        sigstatusbar,   {.i = 5 } },
-	{ ClkStatusText,        ShiftMask,           Button1,        sigstatusbar,   {.i = 6 } },
-	{ ClkStatusText,        ShiftMask,           Button2,        sigstatusbar,   {.i = 7 } },
-	{ ClkStatusText,        ShiftMask,           Button3,        sigstatusbar,   {.i = 8 } },
-	/* placemouse options, choose which feels more natural:
-	 *    0 - tiled position is relative to mouse cursor
-	 *    1 - tiled postiion is relative to window center
-	 *    2 - mouse pointer warps to window center
-	 *
-	 * The moveorplace uses movemouse or placemouse depending on the floating state
-	 * of the selected client. Set up individual keybindings for the two if you want
-	 * to control these separately (i.e. to retain the feature to move a tiled window
-	 * into a floating position).
-	 */
-	{ ClkClientWin,         MODKEY,              Button1,        moveorplace,    {.i = 1} },
-	{ ClkClientWin,         MODKEY,              Button2,        togglefloating, {0} },
-	{ ClkClientWin,         MODKEY,              Button3,        resizemouse,    {0} },
-	{ ClkTagBar,            0,                   Button1,        view,           {0} },
-	{ ClkTagBar,            0,                   Button3,        toggleview,     {0} },
-	{ ClkTagBar,            MODKEY,              Button1,        tag,            {0} },
-	{ ClkTagBar,            MODKEY,              Button3,        toggletag,      {0} },
-};
 
 /* signal definitions */
 /* signum must be greater than 0 */

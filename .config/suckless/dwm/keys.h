@@ -22,8 +22,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Left,       setmfact,                {.f = -0.05} },
 
     /*altera tamanho janelas na vertical*/
-    { MODKEY|ShiftMask,             XK_Up,          setcfact,               {.f = +0.25} },
-	{ MODKEY|ShiftMask,             XK_Down,        setcfact,               {.f = -0.25} },
+    { MODKEY|ShiftMask,             XK_Up,         setcfact,               {.f = +0.25} },
+	{ MODKEY|ShiftMask,             XK_Down,       setcfact,               {.f = -0.25} },
 	{ MODKEY|ShiftMask,             XK_o,          setcfact,               {0} },
 
 	/*Move a janela de posicao na stack*/ //new
@@ -38,7 +38,7 @@ static const Key keys[] = {
 	{ MODKEY|ControlMask|ShiftMask, XK_e,          aspectresize,           {.i = +24} },
 	{ MODKEY|ControlMask|ShiftMask, XK_r,          aspectresize,           {.i = -24} },
 
-	{ MODKEY,                       XK_Return,    zoom,                    {0} },
+	{ MODKEY,                       XK_Return,     zoom,                    {0} },
 	{ Mod1Mask,                     XK_Tab,        alttabstart,            {0} },
 
 	/*Muda as tags*/
@@ -162,7 +162,7 @@ static const Key keys[] = {
 	{ 0,                            XK_Print,                       spawn,          SHCMD("~/.local/bin/dwm/print_copia") },
 
 	/*Brilho tela notebook*/
-	{ 0,							XF86XK_MonBrightnessUp,		spawn,          SHCMD("~/.local/bin/dwm/brilho_tela_aumenta") },
+	{ 0,							XF86XK_MonBrightnessUp,		    spawn,          SHCMD("~/.local/bin/dwm/brilho_tela_aumenta") },
 	{ 0,							XF86XK_MonBrightnessDown,		spawn,          SHCMD("~/.local/bin/dwm/brilho_tela_diminui") },
 
 	/*Dmenus*/
@@ -184,5 +184,56 @@ static const Key keys[] = {
 	{ MODKEY,						XK_e,							spawn,			SHCMD("emacsclient -c -a 'emacs'" ) },
 	{ MODKEY,						XK_f,							spawn,			SHCMD("thunar" ) }
 };
+
+
+/* button definitions */
+/* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
+static const Button buttons[] = {
+	/* click                event mask           button          function        argument */
+	{ ClkButton,            0,                   Button1,        spawn,          SHCMD("~/.local/bin/dwm/roficmd") },  //abre rofi
+	{ ClkButton,            0,                   Button3,        spawn,          SHCMD("~/.local/bin/dwm/timeshiftcmd") },  //abre timeshift
+
+	{ ClkLtSymbol,          0,                   Button1,        spawn,          SHCMD("~/.local/bin/dmenu/dmenu-layouts-dwm")},  //abre dmenu de layouts
+	{ ClkLtSymbol,          0,                   Button3,        setlayout,      {.v = &layouts[0]} },  //retorna ao layout padrao
+	{ ClkLtSymbol,          0,                   Button4,        cyclelayout,    {.i = +1 } },  //avanca para o proximo layout
+	{ ClkLtSymbol,          0,                   Button5,        cyclelayout,    {.i = -1 } },  //retorna para o layout anterior
+
+	{ ClkWinTitle,          0,                   Button1,        togglewin,      {0} },
+	{ ClkWinTitle,          0,                   Button3,        showhideclient, {0} },
+	{ ClkWinTitle,          0,                   Button2,        zoom,           {0} },
+	{ ClkWinTitle,          0,                   Button4,        focusstack,     {.i = +1 } },  //avanca o foco para a proxima janela
+	{ ClkWinTitle,          0,                   Button5,        focusstack,     {.i = -1 } },  //o foco retona para a janela anterior
+
+
+	{ ClkStatusText,        0,                   Button1,        sigstatusbar,   {.i = 1 } },
+	{ ClkStatusText,        0,                   Button2,        sigstatusbar,   {.i = 2 } },
+	{ ClkStatusText,        0,                   Button3,        sigstatusbar,   {.i = 3 } },
+	{ ClkStatusText,        0,                   Button4,        sigstatusbar,   {.i = 4 } },
+	{ ClkStatusText,        0,                   Button5,        sigstatusbar,   {.i = 5 } },
+	{ ClkStatusText,        ShiftMask,           Button1,        sigstatusbar,   {.i = 6 } },
+	{ ClkStatusText,        ShiftMask,           Button2,        sigstatusbar,   {.i = 7 } },
+	{ ClkStatusText,        ShiftMask,           Button3,        sigstatusbar,   {.i = 8 } },
+	/* placemouse options, choose which feels more natural:
+	 *    0 - tiled position is relative to mouse cursor
+	 *    1 - tiled postiion is relative to window center
+	 *    2 - mouse pointer warps to window center
+	 *
+	 * The moveorplace uses movemouse or placemouse depending on the floating state
+	 * of the selected client. Set up individual keybindings for the two if you want
+	 * to control these separately (i.e. to retain the feature to move a tiled window
+	 * into a floating position).
+	 */
+	{ ClkClientWin,         MODKEY,              Button1,        moveorplace,    {.i = 1} },
+	{ ClkClientWin,         MODKEY,              Button2,        togglefloating, {0} },
+	{ ClkClientWin,         MODKEY,              Button3,        resizemouse,    {0} },
+
+	{ ClkTagBar,            0,                   Button1,        view,           {0} },
+	{ ClkTagBar,            0,                   Button3,        toggleview,     {0} },
+	{ ClkTagBar,            MODKEY,              Button1,        tag,            {0} },
+	{ ClkTagBar,            MODKEY,              Button3,        toggletag,      {0} },
+	{ ClkTagBar,          ShiftMask,           Button4,        shiftview,     {.i = +1 } },  //avanca para a proxima tag
+	{ ClkTagBar,          ShiftMask,           Button5,        shiftview,     {.i = -1 } },  //retorna para a tag anterior
+};
+
 
 #endif // KEYS_H_
