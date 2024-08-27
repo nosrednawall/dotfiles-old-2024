@@ -36,6 +36,11 @@ case $chosen in
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name= Numix-Circle/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=1/' ~/.dotfiles/.config/gtk-3.0/settings.ini
 
+        #Flatpak
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --filesystem=$HOME/.themes
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --env=GTK_THEME=NumixSolarizedDarkCyan
+
+
     # Suckless
         sed -i 's|^#include "themes/.*|#include "themes/solarized_dark.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/solarized_dark.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
@@ -67,6 +72,11 @@ case $chosen in
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name=Numix-Circle-Light/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=0/' ~/.config/gtk-3.0/settings.ini
 
+        #Flatpak
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --filesystem=$HOME/.themes
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --env=GTK_THEME=NumixSolarizedLightCyan
+
+
     # Suckless
         sed -i 's|^#include "themes/.*|#include "themes/solarized_light.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/solarized_light.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
@@ -96,6 +106,10 @@ case $chosen in
         sed -i 's/^gtk-theme-name=.*/gtk-theme-name=Gruvbox-Material-Dark/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name=Numix-Circle/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=1/' ~/.config/gtk-3.0/settings.ini
+
+        #Flatpak
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --filesystem=$HOME/.themes
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --env=GTK_THEME=Gruvbox-Material-Dark
 
     # Suckless
         sed -i 's|^#include "themes/.*|#include "themes/gruvbox_dark.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
@@ -127,6 +141,10 @@ case $chosen in
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name=Numix-Circle-Light/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=0/' ~/.config/gtk-3.0/settings.ini
 
+        #Flatpak
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --filesystem=$HOME/.themes
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --env=GTK_THEME=Gruvbox-Plus-Light
+
     # Suckless
         sed -i 's|^#include "themes/.*|#include "themes/gruvbox_light.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/gruvbox_light.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
@@ -156,6 +174,10 @@ case $chosen in
     	sed -i 's/^gtk-theme-name=.*/gtk-theme-name=Catppuccin-Frappe-Standard-Pink-Dark/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name= Numix-Circle/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=1/' ~/.config/gtk-3.0/settings.ini
+
+        #Flatpak
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --filesystem=$HOME/.themes
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --env=GTK_THEME=Catppuccin-Frappe-Standard-Pink-Dark
 
     # Suckless
         sed -i 's|^#include "themes/.*|#include "themes/catppuccin_frappe.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
@@ -188,6 +210,10 @@ case $chosen in
         sed -i 's|^gtk-icon-theme-name=.*/gtk-icon-theme-name= Numix-Circle-Light|' ~/.config/gtk-3.0/settings.ini
         sed -i 's|^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=0|' ~/.config/gtk-3.0/settings.ini
 
+        #Flatpak
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --filesystem=$HOME/.themes
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --env=GTK_THEME=Catppuccin-Latte-Standard-Sapphire-Light
+
     # Suckless
         sed -i 's|^#include "themes/.*|#include "themes/catppuccin_latte.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/catppuccin_latte.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
@@ -219,6 +245,11 @@ case $chosen in
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name= Numix-Circle/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=1/' ~/.dotfiles/.config/gtk-3.0/settings.ini
 
+
+        #Flatpak
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --filesystem=$HOME/.themes
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --env=GTK_THEME=Nordic-darker-v40
+
     # Suckless
         sed -i 's|^#include "themes/.*|#include "themes/nord_dark.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/nord_dark.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
@@ -244,11 +275,14 @@ case $chosen in
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name="Numix-Circle-Light"/' ~/.gtkrc-2.0
         sed -i 's/^gtk-theme-name=.*/gtk-theme-name="Nordic-Polar-v40"/' ~/.gtkrc-2.0
 
-
         # gtk3
         sed -i 's/^gtk-theme-name=.*/gtk-theme-name=Nordic-Polar-v40/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name=Numix-Circle-Light/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=0/' ~/.config/gtk-3.0/settings.ini
+
+        #Flatpak
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --filesystem=$HOME/.themes
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --env=GTK_THEME=Nordic-Polar-v40
 
     # Suckless
         sed -i 's|^#include "themes/.*|#include "themes/nord_light.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
@@ -281,6 +315,10 @@ case $chosen in
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name= Numix-Circle/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=1/' ~/.dotfiles/.config/gtk-3.0/settings.ini
 
+        #Flatpak
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --filesystem=$HOME/.themes
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --env=GTK_THEME=Dracula
+
     # Suckless
         sed -i 's|^#include "themes/.*|#include "themes/dracula_dark.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/dracula_dark.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
@@ -306,11 +344,14 @@ case $chosen in
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name="Numix-Circle-Light"/' ~/.gtkrc-2.0
         sed -i 's/^gtk-theme-name=.*/gtk-theme-name="Yaru-Pink-light"/' ~/.gtkrc-2.0
 
-
         # gtk3
         sed -i 's/^gtk-theme-name=.*/gtk-theme-name=Yaru-Pink-light/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name=Numix-Circle-Light/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=0/' ~/.config/gtk-3.0/settings.ini
+
+        #Flatpak
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --filesystem=$HOME/.themes
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --env=GTK_THEME=Yaru-Pink-light
 
     # Suckless
         sed -i 's|^#include "themes/.*|#include "themes/dracula_light.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
@@ -342,6 +383,10 @@ case $chosen in
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name= candy-icons/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=1/' ~/.dotfiles/.config/gtk-3.0/settings.ini
 
+        #Flatpak
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --filesystem=$HOME/.themes
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --env=GTK_THEME=retrowave-glow
+
     # Suckless
         sed -i 's|^#include "themes/.*|#include "themes/vaporwave_dark.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
         sed -i 's|^#include "themes/.*|#include "themes/vaporwave_dark.h"|' ~/.dotfiles/.config/suckless/st/config.def.h
@@ -367,11 +412,15 @@ case $chosen in
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name="Numix-Circle-Light"/' ~/.gtkrc-2.0
         sed -i 's/^gtk-theme-name=.*/gtk-theme-name="Lavanda-Light"/' ~/.gtkrc-2.0
 
-
         # gtk3
         sed -i 's/^gtk-theme-name=.*/gtk-theme-name=Lavanda-Light/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-icon-theme-name=.*/gtk-icon-theme-name=Numix-Circle-Light/' ~/.config/gtk-3.0/settings.ini
         sed -i 's/^gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=0/' ~/.config/gtk-3.0/settings.ini
+
+        #Flatpak
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --filesystem=$HOME/.themes
+        SUDO_ASKPASS=/usr/bin/ssh-askpass sudo flatpak override --env=GTK_THEME=Lavanda-Light
+
 
     # Suckless
         sed -i 's|^#include "themes/.*|#include "themes/vaporwave_light.h"|' ~/.dotfiles/.config/suckless/dwm/config.def.h
