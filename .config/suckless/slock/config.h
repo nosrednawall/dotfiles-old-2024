@@ -1,5 +1,5 @@
 /* user and group to drop privileges to */
-static const char *user  = "nobody";
+static const char *user  = "anderson";
 static const char *group = "nogroup"; // use "nobody" for arch
 
 #include "themes/dracula_dark.h"
@@ -29,8 +29,9 @@ static const int failonclear = 1;
 #define BLUR
 /* Set blur radius */
 static const int blurRadius = 5;
-/* Enable Pixelation */
-//#define PIXELATION
-/* Set pixelation radius */
-static const int pixelSize = 10;
 
+/* Enable Pixelation */
+#define PIXELATION
+
+/* Set pixelation radius */
+static const int pixelSize = 1;

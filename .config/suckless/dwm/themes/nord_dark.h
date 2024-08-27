@@ -43,5 +43,4 @@ static char urgfloatcolor[]              = "#81A1C1";
 
 static char c000000[]                    = "#000000"; // Placeholder value
 
-
 #endif // NORDIC_DARK_H_

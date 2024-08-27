@@ -43,5 +43,4 @@ static char urgfloatcolor[]              = "#FF79C6"; // cor da borda de janelas
 
 static char c000000[]                    = "#000000"; // Placeholder value
 
-
 #endif // DRACULA_LIGHT_H_

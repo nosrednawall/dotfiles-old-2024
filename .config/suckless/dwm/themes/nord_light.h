@@ -43,6 +43,4 @@ static char urgfloatcolor[]              = "#88C0D0";
 
 static char c000000[]                    = "#000000"; // Placeholder value
 
-
-
 #endif // NORDIC_LIGHT_H_

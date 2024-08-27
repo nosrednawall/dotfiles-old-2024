@@ -185,7 +185,6 @@ static const Key keys[] = {
 	{ MODKEY,						XK_f,							spawn,			SHCMD("thunar" ) }
 };
 
-
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static const Button buttons[] = {
@@ -203,7 +202,6 @@ static const Button buttons[] = {
 	{ ClkWinTitle,          0,                   Button2,        zoom,           {0} },
 	{ ClkWinTitle,          0,                   Button4,        focusstack,     {.i = +1 } },  //avanca o foco para a proxima janela
 	{ ClkWinTitle,          0,                   Button5,        focusstack,     {.i = -1 } },  //o foco retona para a janela anterior
-
 
 	{ ClkStatusText,        0,                   Button1,        sigstatusbar,   {.i = 1 } },
 	{ ClkStatusText,        0,                   Button2,        sigstatusbar,   {.i = 2 } },
@@ -234,6 +232,5 @@ static const Button buttons[] = {
 	{ ClkTagBar,          ShiftMask,           Button4,        shiftview,     {.i = +1 } },  //avanca para a proxima tag
 	{ ClkTagBar,          ShiftMask,           Button5,        shiftview,     {.i = -1 } },  //retorna para a tag anterior
 };
-
 
 #endif // KEYS_H_
