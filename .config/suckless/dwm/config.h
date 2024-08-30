@@ -36,7 +36,7 @@ static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int showsystray             = 1;   /* 0 means no systray */
 static const unsigned int ulinepad = 5;         /* horizontal padding between the underline and tag */
 static const unsigned int ulinestroke  = 2;     /* thickness / height of the underline */
-static const unsigned int ulinevoffset = 0;     /* how far above the bottom of the bar the line should appear */
+static const unsigned int ulinevoffset = 1;     /* how far above the bottom of the bar the line should appear */
 static const int ulineall = 1;                  /* 1 to show underline on all tags, 0 for just the active ones */
 
 #define NAMETAG_FORMAT "%s"
@@ -132,7 +132,7 @@ static char tagicons[][NUMTAGS][MAX_TAGLEN] =
 {
 	[DEFAULT_TAGS]        = { " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7" , " 8 " , " 9 " },
 //	[ALTERNATIVE_TAGS]    = { " 󱍢 ", "  ", "  ", "  ", "  ", "  ", "  ", "  ","  " },
-	[ALTERNATIVE_TAGS]    = { " Dev ", " Web ", " Code ", " Sys ", " Chat ", " Media ", " Files ", " Mail ", " Misc "  },
+	[ALTERNATIVE_TAGS]    = { " Term ", " Web ", " Code ", " Sys ", " Chat ", " Media ", " Files ", " Mail ", " Misc "  },
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
 };
 
@@ -203,7 +203,7 @@ static const BarRule barrules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -212,7 +212,6 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 /* mouse scroll resize */
 static const int scrollsensetivity = 30; /* 1 means resize window by 1 pixel for each scroll event */
-
 /* resizemousescroll direction argument list */
 static const int scrollargs[][2] = {
 	/* width change         height change */

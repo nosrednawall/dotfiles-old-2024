@@ -14,17 +14,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_r,          rioresize,              {0} },
 
     /*Modimentacao das janelas*/
-	{ MODKEY|Mod1Mask,              XK_Right,     focusstack,              {.i = +1 } },
-	{ MODKEY|Mod1Mask,              XK_Left,      focusstack,              {.i = -1 } },
-
-	{ MODKEY,                       XK_Left,       focusdir,               {.i = 0 } }, // left
-	{ MODKEY,                       XK_Right,      focusdir,               {.i = 1 } }, // right
-	{ MODKEY,                       XK_Up,         focusdir,               {.i = 2 } }, // up
-	{ MODKEY,                       XK_Down,       focusdir,               {.i = 3 } }, // down
-	{ MODKEY|ControlMask,           XK_Left,       placedir,               {.i = 0 } }, // left
-	{ MODKEY|ControlMask,           XK_Right,      placedir,               {.i = 1 } }, // right
-	{ MODKEY|ControlMask,           XK_Up,         placedir,               {.i = 2 } }, // up
-	{ MODKEY|ControlMask,           XK_Down,       placedir,               {.i = 3 } }, // down
+	{ MODKEY,              XK_Right,     focusstack,              {.i = +1 } },
+	{ MODKEY,              XK_Left,      focusstack,              {.i = -1 } },
 
     /*Adiciona e remove janelas da mastes para a lateral*/
 	{ MODKEY|ShiftMask,             XK_equal,     incnmaster,              {.i = +1 } },
@@ -40,8 +31,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_o,          setcfact,               {0} },
 
 	/*Move a janela de posicao na stack*/ //new
-	{ MODKEY|Mod1Mask,             XK_Up,          movestack,              {.i = -1 } },
-	{ MODKEY|Mod1Mask,             XK_Down,        movestack,              {.i = +1 } },
+	{ MODKEY,             XK_Up,          movestack,              {.i = -1 } },
+	{ MODKEY,             XK_Down,        movestack,              {.i = +1 } },
 
 	/*Troca de tag*/
 	{ ControlMask|Mod1Mask,         XK_Right,      shiftview,              { .i = +1 } },  //new
