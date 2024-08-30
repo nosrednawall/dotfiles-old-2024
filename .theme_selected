@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export THEME_MODE="Dracula"
+export THEME_MODE="Solarized"
 export COLOR_MODE="Dark"
 # Vou testar alterar os arquivos ini antes
 # export GTK_THEME="NumixSolarizedDarkCyan"

@@ -25,12 +25,13 @@ static const int vertpad                 = 10;  /* vertical padding of bar */
 static const int sidepad                 = 10;  /* horizontal padding of bar */
 #define ICONSIZE 20    /* icon size */
 #define ICONSPACING 5  /* space between icon and title */
+
 /* Status is to be shown on: -1 (all monitors), 0 (a specific monitor by index), 'A' (active monitor) */
 static const int statusmon               = -1;
 static const char buttonbar[]            = " 󰣚 Debian";
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int showsystray             = 1;   /* 0 means no systray */
-static const unsigned int ulinepad = 5;         /* horizontal padding between the underline and tag */
+static const unsigned int ulinepad = 2;         /* horizontal padding between the underline and tag */
 static const unsigned int ulinestroke  = 2;     /* thickness / height of the underline */
 static const unsigned int ulinevoffset = 0;     /* how far above the bottom of the bar the line should appear */
 static const int ulineall = 0;                  /* 1 to show underline on all tags, 0 for just the active ones */
@@ -44,13 +45,13 @@ static const unsigned int maxwtab          = 600;  /* tab menu width */
 static const unsigned int maxhtab          = 200;  /* tab menu height */
 
 /* Indicators: see patch/bar_indicators.h for options */
-static int tagindicatortype              = INDICATOR_TOP_LEFT_SQUARE;
+static int tagindicatortype              = INDICATOR_NONE;
 static int tiledindicatortype            = INDICATOR_NONE;
-static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
+static int floatindicatortype            = INDICATOR_NONE;
 
 static const char *fonts[]          	 = {"CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17"};
 static const char dmenufont[]            = "CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
-#include "themes/dracula_dark.h"
+#include "themes/solarized_dark.h"
 
 static char *colors[][ColCount] = {
 	/*                       fg                bg                border                float */
@@ -119,16 +120,8 @@ static Sp scratchpads[] = {
 static char *tagicons[][NUMTAGS] =
 {
 	[DEFAULT_TAGS]        = { " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7" , " 8 " , " 9 " },
-	[ALTERNATIVE_TAGS]    = { " 󱍢 ", "  ", "  ", "  ", "  ", "  ", "  ", "  ","  " },
-//
-//	[ALTERNATIVE_TAGS]    = { " ", " ", " ", " ", " ", "󰭻 ", " ", " ", " " },
-//	[ALTERNATIVE_TAGS]    = { "   ", "   ", "   ", "   ", " 📁 ", " 📧 ", " 📊 ", " 🛠 ", " 📝 " },
-//	[ALTERNATIVE_TAGS]    = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " },
-//	[ALTERNATIVE_TAGS]    = { " Dev ", " Web ", " Code ", " Sys ", " Chat ", " Media ", " Files ", " Mail ", " Misc "  },
-//	[ALTERNATIVE_TAGS]    = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", " ☕ " },
-//	[ALTERNATIVE_TAGS]    = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "  },
-//	[ALTERNATIVE_TAGS]    = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "  },
-//	[ALTERNATIVE_TAGS]    = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " },
+//	[ALTERNATIVE_TAGS]    = { " 󱍢 ", "  ", "  ", "  ", "  ", "  ", "  ", "  ","  " },
+	[ALTERNATIVE_TAGS]    = { " Dev ", " Web ", " Code ", " Sys ", " Chat ", " Media ", " Files ", " Mail ", " Misc "  },
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
 };
 
@@ -246,7 +239,7 @@ static const char *dmenucmd[] = {
 	NULL
 };
 static const char *termcmd[]  = { "st", NULL };
-//static const char *roficmd[]  = { "/home/$USER/.local/bin/dwm/roficmd", NULL };
+
 /* This defines the name of the executable that handles the bar (used for signalling purposes) */
 #define STATUSBAR "dwmblocks"
 #include "keys.h"

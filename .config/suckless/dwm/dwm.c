@@ -74,6 +74,9 @@
 
 /* enums */
 enum {
+	CurResizeHorzArrow,
+	CurResizeVertArrow,
+	CurIronCross,
 	CurNormal,
 	CurResize,
 	CurMove,
@@ -205,6 +208,7 @@ struct Client {
 	unsigned int tags;
 	unsigned int switchtag;
 	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen;
+	int ispermanent;
 	int beingmoved;
 	int isterminal, noswallow;
 	pid_t pid;
@@ -241,6 +245,7 @@ struct Monitor {
 	int gappiv;           /* vertical gap between windows */
 	int gappoh;           /* horizontal outer gaps */
 	int gappov;           /* vertical outer gaps */
+	int enablegaps;       /* whether gaps are enabled  */
 	unsigned int seltags;
 	unsigned int sellt;
 	unsigned int tagset[2];
@@ -266,6 +271,7 @@ typedef struct {
 	unsigned int tags;
 	int switchtag;
 	int isfloating;
+	int ispermanent;
 	int isterminal;
 	int noswallow;
 	int monitor;
@@ -276,7 +282,7 @@ typedef struct {
 /* Cross patch compatibility rule macro helper macros */
 #define FLOATING , .isfloating = 1
 #define CENTERED
-#define PERMANENT
+#define PERMANENT , .ispermanent = 1
 #define FAKEFULLSCREEN
 #define NOSWALLOW , .noswallow = 1
 #define TERMINAL , .isterminal = 1
@@ -347,6 +353,7 @@ static void setup(void);
 static void seturgent(Client *c, int urg);
 static void showhide(Client *c);
 static void spawn(const Arg *arg);
+static pid_t spawncmd(const Arg *arg);
 static void tag(const Arg *arg);
 static void tagmon(const Arg *arg);
 static void togglebar(const Arg *arg);
@@ -393,6 +400,8 @@ static int lrpad;            /* sum of left and right padding for text */
 static int ignoreconfigurerequests = 0;
 static int (*xerrorxlib)(Display *, XErrorEvent *);
 static unsigned int numlockmask = 0;
+static int riodimensions[4] = { -1, -1, -1, -1 };
+static pid_t riopid = 0;
 static void (*handler[LASTEvent]) (XEvent *) = {
 	[ButtonPress] = buttonpress,
 	[ClientMessage] = clientmessage,
@@ -457,6 +466,7 @@ applyrules(Client *c)
 		&& (!r->instance || strstr(instance, r->instance))
 		&& (!r->wintype || wintype == XInternAtom(dpy, r->wintype, False)))
 		{
+			c->ispermanent = r->ispermanent;
 			c->isterminal = r->isterminal;
 			c->noswallow = r->noswallow;
 			c->isfloating = r->isfloating;
@@ -984,7 +994,12 @@ createmon(void)
 		m->pertag->ltidxs[i][1] = m->lt[1];
 		m->pertag->sellts[i] = m->sellt;
 
+		m->pertag->enablegaps[i] = 1;
+		m->pertag->gaps[i] =
+			((gappoh & 0xFF) << 0) | ((gappov & 0xFF) << 8) | ((gappih & 0xFF) << 16) | ((gappiv & 0xFF) << 24);
 	}
+
+	m->enablegaps = 1;
 
 	restoremonitorstate(m);
 
@@ -1460,7 +1475,7 @@ keypress(XEvent *e)
 void
 killclient(const Arg *arg)
 {
-	if (!selmon->sel)
+	if (!selmon->sel || selmon->sel->ispermanent)
 		return;
 	if (!sendevent(selmon->sel->win, wmatom[WMDelete], NoEventMask, wmatom[WMDelete], CurrentTime, 0, 0, 0))
 	{
@@ -1558,6 +1573,14 @@ manage(Window w, XWindowAttributes *wa)
 		unfocus(selmon->sel, 0, c);
 	c->mon->sel = c;
 	if (!(term && swallow(term, c))) {
+		if (riopid && (!riodraw_matchpid || isdescprocess(riopid, c->pid))) {
+			if (riodimensions[3] != -1)
+				rioposition(c, riodimensions[0], riodimensions[1], riodimensions[2], riodimensions[3]);
+			else {
+				killclient(&((Arg) { .v = c }));
+				return;
+			}
+		}
 		arrange(c->mon);
 		if (!HIDDEN(c))
 			XMapWindow(dpy, c->win);
@@ -2061,11 +2084,9 @@ setfullscreen(Client *c, int fullscreen)
 void
 setlayout(const Arg *arg)
 {
-	if (!arg || !arg->v || arg->v != selmon->lt[selmon->sellt]) {
 		selmon->pertag->sellts[selmon->pertag->curtag] ^= 1;
 		selmon->sellt = selmon->pertag->sellts[selmon->pertag->curtag];
-	}
-	if (arg && arg->v)
+	if (arg && arg->v && arg->v != selmon->lt[selmon->sellt ^ 1])
 		selmon->pertag->ltidxs[selmon->pertag->curtag][selmon->sellt] = (Layout *)arg->v;
 	selmon->lt[selmon->sellt] = selmon->pertag->ltidxs[selmon->pertag->curtag][selmon->sellt];
 
@@ -2154,6 +2175,9 @@ setup(void)
 	/* init cursors */
 	cursor[CurNormal] = drw_cur_create(drw, XC_left_ptr);
 	cursor[CurResize] = drw_cur_create(drw, XC_sizing);
+	cursor[CurResizeHorzArrow] = drw_cur_create(drw, XC_sb_h_double_arrow);
+	cursor[CurResizeVertArrow] = drw_cur_create(drw, XC_sb_v_double_arrow);
+	cursor[CurIronCross] = drw_cur_create(drw, XC_iron_cross);
 	cursor[CurMove] = drw_cur_create(drw, XC_fleur);
 	/* init appearance */
 	scheme = ecalloc(LENGTH(colors) + 1, sizeof(Clr *));
@@ -2228,12 +2252,19 @@ showhide(Client *c)
 void
 spawn(const Arg *arg)
 {
+	spawncmd(arg);
+}
+
+pid_t
+spawncmd(const Arg *arg)
+{
 	struct sigaction sa;
 
+	pid_t pid;
 	if (arg->v == dmenucmd)
 		dmenumon[0] = '0' + selmon->num;
 
-	if (fork() == 0)
+	if ((pid = fork()) == 0)
 	{
 		if (dpy)
 			close(ConnectionNumber(dpy));
@@ -2248,6 +2279,7 @@ spawn(const Arg *arg)
 		execvp(((char **)arg->v)[0], (char **)arg->v);
 		die("dwm: execvp '%s' failed:", ((char **)arg->v)[0]);
 	}
+	return pid;
 }
 
 void
@@ -2260,6 +2292,8 @@ tag(const Arg *arg)
 			selmon->sel->switchtag = 0;
 		arrange(selmon);
 		focus(NULL);
+		if ((arg->ui & TAGMASK) != selmon->tagset[selmon->seltags])
+			view(arg);
 	}
 }
 
@@ -2271,7 +2305,14 @@ tagmon(const Arg *arg)
 	if (!c || !mons->next)
 		return;
 	dest = dirtomon(arg->i);
-	sendmon(c, dest);
+	if (c->isfullscreen) {
+		c->isfullscreen = 0;
+		sendmon(c, dest);
+		c->isfullscreen = 1;
+		resizeclient(c, c->mon->mx, c->mon->my, c->mon->mw, c->mon->mh);
+		XRaiseWindow(dpy, c->win);
+	} else
+		sendmon(c, dest);
 }
 
 void
@@ -2478,7 +2519,7 @@ updatebarpos(Monitor *m)
 	Bar *bar;
 	int y_pad = 0;
 	int x_pad = 0;
-	if (enablegaps)
+	if (!selmon || selmon->pertag->enablegaps[selmon->pertag->curtag])
 	{
 		y_pad = gappoh;
 		x_pad = gappov;

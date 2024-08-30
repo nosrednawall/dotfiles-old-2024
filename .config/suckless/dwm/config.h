@@ -25,6 +25,10 @@ static const int vertpad                 = 10;  /* vertical padding of bar */
 static const int sidepad                 = 10;  /* horizontal padding of bar */
 #define ICONSIZE 20    /* icon size */
 #define ICONSPACING 5  /* space between icon and title */
+static const char slopspawnstyle[]       = "-t 0 -c 0.92,0.85,0.69,0.3 -o"; /* do NOT define -f (format) here */
+static const char slopresizestyle[]      = "-t 0 -c 0.92,0.85,0.69,0.3"; /* do NOT define -f (format) here */
+static const int riodraw_borders         = 0;  /* 0 or 1, indicates whether the area drawn using slop includes the window borders */
+static const int riodraw_matchpid        = 1;  /* 0 or 1, indicates whether to match the PID of the client that was spawned with riospawn */
 /* Status is to be shown on: -1 (all monitors), 0 (a specific monitor by index), 'A' (active monitor) */
 static const int statusmon               = -1;
 static const char buttonbar[]            = " 󰣚 Debian";
@@ -33,7 +37,15 @@ static const int showsystray             = 1;   /* 0 means no systray */
 static const unsigned int ulinepad = 5;         /* horizontal padding between the underline and tag */
 static const unsigned int ulinestroke  = 2;     /* thickness / height of the underline */
 static const unsigned int ulinevoffset = 0;     /* how far above the bottom of the bar the line should appear */
-static const int ulineall = 0;                  /* 1 to show underline on all tags, 0 for just the active ones */
+static const int ulineall = 1;                  /* 1 to show underline on all tags, 0 for just the active ones */
+
+#define NAMETAG_FORMAT "%s"
+/* The maximum amount of bytes reserved for each tag text. */
+#define MAX_TAGLEN 16
+/* The command to run (via popen). This can be tailored by adding a prompt, passing other command
+ * line arguments or providing name options. Optionally you can use other dmenu like alternatives
+ * like rofi -dmenu. */
+#define NAMETAG_COMMAND "dmenu < /dev/null"
 
 /* alt-tab configuration */
 static const unsigned int tabmodkey        = 0x40; /* (Alt) when this key is held down the alt-tab functionality stays active. Must be the same modifier as used to run alttabstart */
@@ -50,7 +62,7 @@ static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 
 static const char *fonts[]          	 = {"CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17"};
 static const char dmenufont[]            = "CaskaydiaMono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
-#include "themes/dracula_dark.h"
+#include "themes/solarized_dark.h"
 
 static char *colors[][ColCount] = {
 	/*                       fg                bg                border                float */
@@ -116,19 +128,11 @@ static Sp scratchpads[] = {
  * until it an icon matches. Similarly if there are two tag icons then it would alternate between
  * them. This works seamlessly with alternative tags and alttagsdecoration patches.
  */
-static char *tagicons[][NUMTAGS] =
+static char tagicons[][NUMTAGS][MAX_TAGLEN] =
 {
 	[DEFAULT_TAGS]        = { " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7" , " 8 " , " 9 " },
-	[ALTERNATIVE_TAGS]    = { " 󱍢 ", "  ", "  ", "  ", "  ", "  ", "  ", "  ","  " },
-//
-//	[ALTERNATIVE_TAGS]    = { " ", " ", " ", " ", " ", "󰭻 ", " ", " ", " " },
-//	[ALTERNATIVE_TAGS]    = { "   ", "   ", "   ", "   ", " 📁 ", " 📧 ", " 📊 ", " 🛠 ", " 📝 " },
-//	[ALTERNATIVE_TAGS]    = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " },
-//	[ALTERNATIVE_TAGS]    = { " Dev ", " Web ", " Code ", " Sys ", " Chat ", " Media ", " Files ", " Mail ", " Misc "  },
-//	[ALTERNATIVE_TAGS]    = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", " ☕ " },
-//	[ALTERNATIVE_TAGS]    = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "  },
-//	[ALTERNATIVE_TAGS]    = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "  },
-//	[ALTERNATIVE_TAGS]    = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " },
+//	[ALTERNATIVE_TAGS]    = { " 󱍢 ", "  ", "  ", "  ", "  ", "  ", "  ", "  ","  " },
+	[ALTERNATIVE_TAGS]    = { " Dev ", " Web ", " Code ", " Sys ", " Chat ", " Media ", " Files ", " Mail ", " Misc "  },
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
 };
 
@@ -199,12 +203,24 @@ static const BarRule barrules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 #define FORCE_VSPLIT 1
+
+/* mouse scroll resize */
+static const int scrollsensetivity = 30; /* 1 means resize window by 1 pixel for each scroll event */
+
+/* resizemousescroll direction argument list */
+static const int scrollargs[][2] = {
+	/* width change         height change */
+	{ +scrollsensetivity,	0 },
+	{ -scrollsensetivity,	0 },
+	{ 0, 				  	+scrollsensetivity },
+	{ 0, 					-scrollsensetivity },
+};
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -246,7 +262,7 @@ static const char *dmenucmd[] = {
 	NULL
 };
 static const char *termcmd[]  = { "st", NULL };
-//static const char *roficmd[]  = { "/home/$USER/.local/bin/dwm/roficmd", NULL };
+
 /* This defines the name of the executable that handles the bar (used for signalling purposes) */
 #define STATUSBAR "dwmblocks"
 #include "keys.h"
@@ -259,10 +275,12 @@ static const Signal signals[] = {
 	{ "focusstack",              focusstack },
 	{ "setmfact",                setmfact },
 	{ "togglebar",               togglebar },
+	{ "toggletopbar",            toggletopbar },
 	{ "incnmaster",              incnmaster },
 	{ "togglefloating",          togglefloating },
 	{ "focusmon",                focusmon },
 	{ "setcfact",                setcfact },
+	{ "nametag",                 nametag },
 	{ "tagmon",                  tagmon },
 	{ "zoom",                    zoom },
 	{ "incrgaps",                incrgaps },
@@ -290,6 +308,7 @@ static const Signal signals[] = {
 	{ "toggletagex",             toggletagex },
 	{ "tagallmon",               tagallmon },
 	{ "togglealttag",            togglealttag },
+	{ "fullscreen",              fullscreen },
 	{ "togglescratch",           togglescratch },
 	{ "killclient",              killclient },
 	{ "winview",                 winview },
@@ -297,3 +316,4 @@ static const Signal signals[] = {
 	{ "setlayout",               setlayout },
 	{ "setlayoutex",             setlayoutex },
 };
+

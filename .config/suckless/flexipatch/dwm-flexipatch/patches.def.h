@@ -598,14 +598,14 @@
 /* Similarly to the dragmfact patch this allows you to click and drag clients to change the
  * cfact to adjust the client's size in the stack. This patch depends on the cfacts patch.
  */
-#define DRAGCFACT_PATCH 0
+#define DRAGCFACT_PATCH 1
 
 /* This patch lets you resize the split in the tile layout (i.e. modify mfact) by holding
  * the modkey and dragging the mouse.
  * This patch can be a bit wonky with other layouts, but generally works.
  * https://dwm.suckless.org/patches/dragmfact/
  */
-#define DRAGMFACT_PATCH 0
+#define DRAGMFACT_PATCH 1
 
 /* Simple dwmc client using a fork of fsignal to communicate with dwm.
  * To use this either copy the patch/dwmc shell script to somewhere in your path or
@@ -667,7 +667,7 @@
 /* Allows focusing on clients based on direction (up, down, left, right) instead of client order.
  * https://github.com/bakkeby/patches/wiki/focusdir/
  */
-#define FOCUSDIR_PATCH 0
+#define FOCUSDIR_PATCH 1
 
 /* When changing tags, closing windows or moving clients out of view then focus will revert to the
  * client window that remains under the mouse cursor rather than the most recently focused window.
@@ -715,7 +715,7 @@
  * again it shows the bar and restores the layout that was active before going fullscreen.
  * https://dwm.suckless.org/patches/fullscreen/
  */
-#define FULLSCREEN_PATCH 0
+#define FULLSCREEN_PATCH 1
 
 /* This patch provides a keybinding to rotate all clients in the currently selected
  * area (master or stack) without affecting the other area.
@@ -746,7 +746,7 @@
 /* Adds rule option for clients to avoid accidental termination by killclient for sticky windows.
  * https://dwm.suckless.org/patches/ispermanent/
  */
-#define ISPERMANENT_PATCH 0
+#define ISPERMANENT_PATCH 1
 
 /* This patch adds key modes (like in vim or emacs) where chains of keyboard shortcuts
  * can be performed.
@@ -840,7 +840,7 @@
  *
  * https://dwm.suckless.org/patches/nametag/
  */
-#define NAMETAG_PATCH 0
+#define NAMETAG_PATCH 1
 
 /* Variant of the above which prepends the tag number to the given string.
  * The toggle does nothing on its own and need to be enabled in combination with the above. */
@@ -912,12 +912,12 @@
 /* Option to enable gaps on a per tag basis rather than globally.
  * Depends on both pertag and vanitygaps patches being enabled.
  */
-#define PERTAG_VANITYGAPS_PATCH 0
+#define PERTAG_VANITYGAPS_PATCH 1
 
 /* This patch allows configuring vanity gaps on a per-monitor basis rather than
  * all monitors (default).
  */
-#define PERMON_VANITYGAPS_PATCH 0
+#define PERMON_VANITYGAPS_PATCH 1
 
 /* This controls whether or not to also store bar position on a per
  * tag basis, or leave it as one bar per monitor.
@@ -928,7 +928,7 @@
  * in the tiled stack (up, down, left, right).
  * https://github.com/bakkeby/patches/wiki/placedir
  */
-#define PLACEDIR_PATCH 0
+#define PLACEDIR_PATCH 1
 
 /* This patch lets you change the position of a client in the stack using the mouse.
  * https://github.com/bakkeby/patches/wiki/placemouse
@@ -995,7 +995,7 @@
  * This patch was backported from instantWM.
  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-riodraw-6.2.diff
  */
-#define RIODRAW_PATCH 0
+#define RIODRAW_PATCH 1
 
 /* This patch let's you rotate through the stack using keyboard shortcuts.
  * https://dwm.suckless.org/patches/rotatestack/
@@ -1273,7 +1273,7 @@
  * while remaining in fullscreen.
  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-tagmonfixfs-6.2.diff
  */
-#define TAGMONFIXFS_PATCH 0
+#define TAGMONFIXFS_PATCH 1
 
 /* Add functions and keybindings to tag a window to a desired tag on the next (right)
  * or previous (left) monitor from the currently selected monitor.
@@ -1299,7 +1299,7 @@
  * two-finger scrolling is configured in libinput.
  * https://dwm.suckless.org/patches/tapresize/
  */
-#define TAPRESIZE_PATCH 0
+#define TAPRESIZE_PATCH 1
 
 /* This patch allows you to toggle fullscreen on and off using a single shortcut key.
  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-togglefullscreen-6.2.diff
@@ -1309,7 +1309,7 @@
 /* This patch allows for the bar position (top or bottom) to be toggled during runtime.
  * https://dwm.suckless.org/patches/toggletopbar/
  */
-#define TOGGLETOPBAR_PATCH 0
+#define TOGGLETOPBAR_PATCH 1
 
 /* Minor patch that lets you use the same keyboard shortcut to toggle to the previous layout if the
  * designated layout is already active.
@@ -1321,7 +1321,7 @@
  * https://github.com/bakkeby/patches/wiki/togglelayout
  */
 
-#define TOGGLELAYOUT_PATCH 0
+#define TOGGLELAYOUT_PATCH 1
 
 /* Minor patch that lets you use the same keyboard shortcut to toggle to the previous tag if the
  * designated tag is already active.
@@ -1387,7 +1387,7 @@
 /* Follow a window to the tag it is being moved to.
  * https://dwm.suckless.org/patches/viewontag/
  */
-#define VIEWONTAG_PATCH 0
+#define VIEWONTAG_PATCH 1
 
 /* This patch warps the mouse cursor to the center of the currently focused window or screen
  * when the mouse cursor is (a) on a different screen or (b) on top of a different window.

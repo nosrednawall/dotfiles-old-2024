@@ -9,9 +9,22 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_b,          togglebar,              {0} },
 
+	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
+	{ MODKEY|ControlMask,           XK_Return,     riospawn,               {.v = termcmd } },
+	{ MODKEY,                       XK_r,          rioresize,              {0} },
+
     /*Modimentacao das janelas*/
-	{ MODKEY,                       XK_Right,     focusstack,              {.i = +1 } },
-	{ MODKEY,                       XK_Left,      focusstack,              {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_Right,     focusstack,              {.i = +1 } },
+	{ MODKEY|Mod1Mask,              XK_Left,      focusstack,              {.i = -1 } },
+
+	{ MODKEY,                       XK_Left,       focusdir,               {.i = 0 } }, // left
+	{ MODKEY,                       XK_Right,      focusdir,               {.i = 1 } }, // right
+	{ MODKEY,                       XK_Up,         focusdir,               {.i = 2 } }, // up
+	{ MODKEY,                       XK_Down,       focusdir,               {.i = 3 } }, // down
+	{ MODKEY|ControlMask,           XK_Left,       placedir,               {.i = 0 } }, // left
+	{ MODKEY|ControlMask,           XK_Right,      placedir,               {.i = 1 } }, // right
+	{ MODKEY|ControlMask,           XK_Up,         placedir,               {.i = 2 } }, // up
+	{ MODKEY|ControlMask,           XK_Down,       placedir,               {.i = 3 } }, // down
 
     /*Adiciona e remove janelas da mastes para a lateral*/
 	{ MODKEY|ShiftMask,             XK_equal,     incnmaster,              {.i = +1 } },
@@ -27,8 +40,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_o,          setcfact,               {0} },
 
 	/*Move a janela de posicao na stack*/ //new
-	{ MODKEY,                       XK_Up,          movestack,              {.i = -1 } },
-	{ MODKEY,                       XK_Down,        movestack,              {.i = +1 } },
+	{ MODKEY|Mod1Mask,             XK_Up,          movestack,              {.i = -1 } },
+	{ MODKEY|Mod1Mask,             XK_Down,        movestack,              {.i = +1 } },
 
 	/*Troca de tag*/
 	{ ControlMask|Mod1Mask,         XK_Right,      shiftview,              { .i = +1 } },  //new
@@ -43,6 +56,10 @@ static const Key keys[] = {
 
 	/*Muda as tags*/
 	{ MODKEY,                       XK_t,          togglealttag,           {0} },
+
+	/*Renomeia a tag*/
+	{ MODKEY|ShiftMask,             XK_n,          nametag,                {0} },
+
 	/*Gaps*/
 	{ ControlMask|Mod1Mask,              XK_1,          incrgaps,               {.i = +1 } },
 	{ ControlMask|Mod1Mask|ShiftMask,    XK_1,          incrgaps,               {.i = -1 } },
@@ -104,7 +121,6 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating,         {0} },
 
     /*Mudar de monitor*/
-
 	{ MODKEY,                       XK_0,          view,                   {.ui = ~SPTAGMASK } },
 	{ MODKEY|ShiftMask,             XK_0,          tag,                    {.ui = ~SPTAGMASK } },
 	{ MODKEY,                       XK_comma,      focusmon,               {.i = -1 } },
@@ -114,8 +130,12 @@ static const Key keys[] = {
     { ControlMask|Mod1Mask,         XK_comma,      tagallmon,              {.i = +1 } }, //new
 	{ ControlMask|Mod1Mask,         XK_period,     tagallmon,              {.i = -1 } }, //new
 
+	/*Layout ciclico*/
 	{ MODKEY,          				XK_minus,      cyclelayout,            {.i = -1 } }, //new
 	{ MODKEY,                       XK_equal,      cyclelayout,            {.i = +1 } }, //new
+
+	/*Full screen falso*/
+//	{ MODKEY,                       XK_y,          togglefullscreen,       {0} },
 
 	TAGKEYS(                        XK_1,                                  0)
 	TAGKEYS(                        XK_2,                                  1)
@@ -224,6 +244,13 @@ static const Button buttons[] = {
 	{ ClkClientWin,         MODKEY,              Button1,        moveorplace,    {.i = 1} },
 	{ ClkClientWin,         MODKEY,              Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,              Button3,        resizemouse,    {0} },
+
+	{ ClkClientWin,         MODKEY,              Button4,        resizemousescroll, {.v = &scrollargs[0]} },
+	{ ClkClientWin,         MODKEY,              Button5,        resizemousescroll, {.v = &scrollargs[1]} },
+	{ ClkClientWin,         MODKEY,              Button6,        resizemousescroll, {.v = &scrollargs[2]} },
+	{ ClkClientWin,         MODKEY,              Button7,        resizemousescroll, {.v = &scrollargs[3]} },
+	{ ClkClientWin,         MODKEY|ShiftMask,    Button3,        dragcfact,      {0} },
+	{ ClkClientWin,         MODKEY|ShiftMask,    Button1,        dragmfact,      {0} },
 
 	{ ClkTagBar,            0,                   Button1,        view,           {0} },
 	{ ClkTagBar,            0,                   Button3,        toggleview,     {0} },
