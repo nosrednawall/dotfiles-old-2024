@@ -8,7 +8,6 @@
 #include "bar_ltsymbol.c"
 #include "bar_status.c"
 #include "bar_status2d.c"
-#include "bar_statusbutton.c"
 #include "bar_statuscmd.c"
 #include "bar_winicon.c"
 #include "bar_tagpreview.c"

@@ -1,5 +1,5 @@
 /* Settings */
-//static int enablegaps = 1;
+static int enablegaps = 1;
 
 static void
 setgaps(int oh, int ov, int ih, int iv)
@@ -13,9 +13,6 @@ setgaps(int oh, int ov, int ih, int iv)
 	selmon->gappov = ov;
 	selmon->gappih = ih;
 	selmon->gappiv = iv;
-
-	selmon->pertag->gaps[selmon->pertag->curtag] =
-		((oh & 0xFF) << 0) | ((ov & 0xFF) << 8) | ((ih & 0xFF) << 16) | ((iv & 0xFF) << 24);
 
 	arrange(selmon);
 }
@@ -61,8 +58,8 @@ setgapsex(const Arg *arg)
 		iv = (arg->i & 0x7f);
 
 	/* Auto enable gaps if disabled */
-	if (!selmon->pertag->enablegaps[selmon->pertag->curtag])
-		selmon->pertag->enablegaps[selmon->pertag->curtag] = 1;
+	if (!enablegaps)
+		enablegaps = 1;
 
 	setgaps(oh, ov, ih, iv);
 }
@@ -70,15 +67,17 @@ setgapsex(const Arg *arg)
 static void
 togglegaps(const Arg *arg)
 {
-	selmon->pertag->enablegaps[selmon->pertag->curtag] = !selmon->pertag->enablegaps[selmon->pertag->curtag];
+	enablegaps = !enablegaps;
 
-	updatebarpos(selmon);
-	for (Bar *bar = selmon->bar; bar; bar = bar->next)
-		XMoveResizeWindow(dpy, bar->win, bar->bx, bar->by, bar->bw, bar->bh);
+	for (Monitor *m = mons; m; m = m->next) {
+		updatebarpos(m);
+		for (Bar *bar = m->bar; bar; bar = bar->next)
+			XMoveResizeWindow(dpy, bar->win, bar->bx, bar->by, bar->bw, bar->bh);
+	}
 
 	drawbarwin(systray->bar);
 
-	arrange(selmon);
+	arrange(NULL);
 }
 
 static void
@@ -168,7 +167,7 @@ static void
 getgaps(Monitor *m, int *oh, int *ov, int *ih, int *iv, unsigned int *nc)
 {
 	unsigned int n, oe, ie;
-	oe = ie = m->pertag->enablegaps[m->pertag->curtag];
+	oe = ie = enablegaps;
 	Client *c;
 
 	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);

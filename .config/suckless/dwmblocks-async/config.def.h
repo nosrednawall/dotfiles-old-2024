@@ -5,7 +5,7 @@
 #define DELIMITER ""
 
 // Maximum number of Unicode characters that a block can output.
-#define MAX_BLOCK_OUTPUT_LENGTH 45
+#define MAX_BLOCK_OUTPUT_LENGTH 90
 
 // Control whether blocks are clickable.
 #define CLICKABLE_BLOCKS 1
@@ -20,8 +20,8 @@
 
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
 #define BLOCKS(X)             \
-    X("", PATH("sb-mpd"), 		600, 1)     \
-/*    X("", PATH("sb-update"), 	600, 2) */  \
+    X("", PATH("sb-mpd"), 		600, 1)  \
+    X("", PATH("sb-update"), 	600, 2)  \
     X("", PATH("sb-loadavg"), 	 10, 3)  \
     X("", PATH("sb-memory"), 	 30, 4)  \
     X("", PATH("sb-disk"), 	600, 5)  \

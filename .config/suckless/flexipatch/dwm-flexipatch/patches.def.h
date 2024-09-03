@@ -143,7 +143,7 @@
 /* This patch adds a clickable button to the left hand side of the statusbar.
  * https://dwm.suckless.org/patches/statusbutton/
  */
-#define BAR_STATUSBUTTON_PATCH 1
+#define BAR_STATUSBUTTON_PATCH 0
 
 /* This patch adds the ability to execute shell commands based on the mouse button and position
  * when clicking the status bar. Refer to the website for usage.
@@ -912,12 +912,12 @@
 /* Option to enable gaps on a per tag basis rather than globally.
  * Depends on both pertag and vanitygaps patches being enabled.
  */
-#define PERTAG_VANITYGAPS_PATCH 1
+#define PERTAG_VANITYGAPS_PATCH 0
 
 /* This patch allows configuring vanity gaps on a per-monitor basis rather than
  * all monitors (default).
  */
-#define PERMON_VANITYGAPS_PATCH 1
+#define PERMON_VANITYGAPS_PATCH 0
 
 /* This controls whether or not to also store bar position on a per
  * tag basis, or leave it as one bar per monitor.

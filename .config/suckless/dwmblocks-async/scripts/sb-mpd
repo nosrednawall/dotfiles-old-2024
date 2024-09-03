@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 case "$BUTTON" in
     1) mpc -q toggle
        ~/.local/bin/mpd/songinfo
@@ -37,7 +36,7 @@ fi
 [ -z "$song" ] && exit
 
 # Limita o título da música a 30 caracteres
-song="${song:0:30}"
+# song="${song:0:300}"
 
 # Exibe o ícone e a música
 echo "$icon ^d^$song  "

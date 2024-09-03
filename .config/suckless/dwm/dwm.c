@@ -120,7 +120,6 @@ enum {
 }; /* dwm client atoms */
 
 enum {
-	ClkButton,
 	ClkTagBar,
 	ClkLtSymbol,
 	ClkStatusText,
@@ -245,7 +244,6 @@ struct Monitor {
 	int gappiv;           /* vertical gap between windows */
 	int gappoh;           /* horizontal outer gaps */
 	int gappov;           /* vertical outer gaps */
-	int enablegaps;       /* whether gaps are enabled  */
 	unsigned int seltags;
 	unsigned int sellt;
 	unsigned int tagset[2];
@@ -994,12 +992,7 @@ createmon(void)
 		m->pertag->ltidxs[i][1] = m->lt[1];
 		m->pertag->sellts[i] = m->sellt;
 
-		m->pertag->enablegaps[i] = 1;
-		m->pertag->gaps[i] =
-			((gappoh & 0xFF) << 0) | ((gappov & 0xFF) << 8) | ((gappih & 0xFF) << 16) | ((gappiv & 0xFF) << 24);
 	}
-
-	m->enablegaps = 1;
 
 	restoremonitorstate(m);
 
@@ -2519,7 +2512,7 @@ updatebarpos(Monitor *m)
 	Bar *bar;
 	int y_pad = 0;
 	int x_pad = 0;
-	if (!selmon || selmon->pertag->enablegaps[selmon->pertag->curtag])
+	if (enablegaps)
 	{
 		y_pad = gappoh;
 		x_pad = gappov;

@@ -8,6 +8,7 @@
 ;; clients, file templates and snippets. It is optional.
 ;; (setq user-full-name "John Doe"
 ;;       user-mail-address "john@doe.com")
+
 (setq user-full-name "Anderson Inácio"
       user-mail-address "anderson.inacio.dev@gmail.com")
 
@@ -26,13 +27,9 @@
 ;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
 
-;; (setq doom-font (font-spec :family "Comic Code" :size 13 :weight 'regular)
-;;      doom-variable-pitch-font (font-spec :family "Comic Code" :size 13))
-
 (setq doom-font (font-spec :family "CaskaydiaMono Nerd Font" :size 16 :weight 'regular)
       doom-variable-pitch-font (font-spec :family "CaskaydiaMono Nerd Font" :size 16))
 
-;;static const char *fonts[]          = {	"CaskaydiaMono Nerd Font Mono=20:style=Regular:antialias=true:pixelsize=18"};
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
 ;; refresh your font settings. If Emacs still can't find your font, it likely
@@ -45,7 +42,6 @@
 
 (setq fancy-splash-image
       (concat doom-user-dir "doom-banners/splashes/doom/doom-emacs-color2.png"))
-
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -99,31 +95,8 @@
 (defun my-term-mode-hook ()
   (define-key term-raw-map (kbd "C-y") 'term-paste)
   (define-key term-raw-map (kbd "C-k")
-    (lambda ()
-      (interactive)
-      (term-send-raw-string "\C-k")
-      (kill-line))))
+              (lambda ()
+                (interactive)
+                (term-send-raw-string "\C-k")
+                (kill-line))))
 (add-hook 'term-mode-hook 'my-term-mode-hook)
-
-(when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
-
-(use-package! multiple-cursors
-  :bind (("C-S-c C-S-c" . mc/edit-lines)
-         ("C->" . mc/mark-next-like-this)
-         ("C-<" . mc/mark-previous-like-this)
-         ("C-c C-<" . mc/mark-all-like-this)))
-
-(use-package! ox-reveal
-  :config
-  (setq org-reveal-root "https://cdn.jsdelivr.net/npm/reveal.js@4/")
-  ;; Outras configurações opcionais podem ser adicionadas aqui
-  )
-
-(use-package! org-tree-slide
-  :commands (org-tree-slide-mode)
-  :config
-  (setq org-tree-slide-slide-in-effect t)   ; Ativa o efeito de entrada
-  (setq org-tree-slide-header t)            ; Exibe o cabeçalho do slide
-  (setq org-tree-slide-breadcrumbs t)       ; Exibe breadcrumbs
-  ;; Outras configurações podem ser adicionadas aqui
-  )
