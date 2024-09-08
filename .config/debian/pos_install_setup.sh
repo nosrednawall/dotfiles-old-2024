@@ -6,7 +6,7 @@ mkdir -p /home/$USER/{Desktop,Downloads,Documentos,git,Imagens/Screenshoots,Mús
 
 # instala o git
 echo "instalando git"
-sudo apt install -y git aptitude htop pv lm-sensosr stow x11xserver-utils curl
+sudo apt install -y git aptitude htop pv lm-sensors stow x11xserver-utils curl
 
 # Instala o Oh My Bash
 cd ~
