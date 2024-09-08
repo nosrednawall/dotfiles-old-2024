@@ -9,13 +9,13 @@ echo "instalando git"
 sudo apt install -y git aptitude htop pv lm-sensors stow xserver-xorg curl
 
 # Instala o Oh My Bash
-cd ~
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
-rm .bashrc
+#cd ~
+#bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+#rm .bashrc
 
 # busca os dotfiles
-echo "Baixando os dotfiles - Lembrese de ativar o ssh depois"
-git clone https://github.com/nosrednawall/dotfiles.git ~/.dotfiles
+#echo "Baixando os dotfiles - Lembrese de ativar o ssh depois"
+#git clone https://github.com/nosrednawall/dotfiles.git ~/.dotfiles
 
 
 # Drivers nvidia
