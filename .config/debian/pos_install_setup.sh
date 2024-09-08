@@ -114,6 +114,25 @@ install_programs_laptop() {
     bash ~/.dotfiles/.config/debian/laptop_battery.sh
 }
 
-install_programs_laptop
+# Funcao para o usuario escolher se vai instalar programas para notebook
+escolha_notebook() {
+    local wm_name="$1"
+    echo "$wm_name Instalação"
+    echo "1. Instalar $wm_name com programas para notebook"
+    echo "Ou ENTER para pular"
+    read -r choice
 
+   case "$choice" in
+        1)
+            install_programs_laptop
+            ;;
+        *)
+            echo "Pulando essa etapa, e instalando o resto..."
+            ;;
+    esac
+
+    # Adding a couple of line returns
+    echo -e "\n\n"
+}
+escolha_notebook
 echo "All installations completed."
