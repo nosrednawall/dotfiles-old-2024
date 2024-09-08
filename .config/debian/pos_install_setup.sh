@@ -100,9 +100,13 @@ bash ~/.dotfiles/.config/debian/laptop_brightness.sh
 echo "Instalando customizadores de aparencia"
 bash ~/.dotfiles/.config/debian/appearance_managers.sh
 
+# IDE
+echo "IDE"
+bash ~/.dotfiles/.config/debian/ide_programs.sh
+
 # Demais programas
 echo "Demais programas"
-bash ~/.dotfiles/.config/debian/resto_programas.sh
+bash ~/.dotfiles/.config/debian/misc_programs.sh
 
 # Programas para notebook
 install_programs_laptop() {
