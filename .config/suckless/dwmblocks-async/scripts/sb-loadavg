@@ -9,7 +9,7 @@ esac
 
 
 # Captura a temperatura do CPU
-#tempCpu=$(sensors | awk '/edge/ {print $2}' | sed 's/+//')
+tempCpu=$(sensors | awk '/edge/ {print $2}' | sed 's/+//')
 
 # Lê o estado atual do CPU
 read cpu a b c previdle rest < /proc/stat
@@ -43,7 +43,5 @@ else
 fi
 
 # Exibe o resultado
-#echo "$icon^d^$usageCpu󰏰 $tempCpu  "
-echo "$icon^d^$usageCpu󰏰  "
-
-
+echo "$icon^d^$usageCpu󰏰 $tempCpu  "
+#echo "$icon^d^$usageCpu󰏰  "
