@@ -63,7 +63,7 @@ static const unsigned int maxhtab          = 200;  /* tab menu height */
 static int tagindicatortype              = INDICATOR_TOP_LEFT_SQUARE;
 static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
-static const int quit_empty_window_count = 0;   /* only allow dwm to quit if no (<= count) windows are open */
+static const int quit_empty_window_count = 5;   /* only allow dwm to quit if no (<= count) windows are open */
 
 static const char *fonts[]          	 = {"Caskaydia Mono Nerd Font:style=Bold:antialias=true:pixelsize=17"};
 static const char dmenufont[]            = "Caskaydia Mono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
@@ -140,9 +140,9 @@ static Sp scratchpads[] = {
  */
 static char tagicons[][NUMTAGS][MAX_TAGLEN] =
 {
-[DEFAULT_TAGS]        = { " 1 ", " 2 ", " 3 ", " 4 ", " 5 " } , //"6", "7", "8", "9" },
-[ALTERNATIVE_TAGS]    = { "A", "B", "C", "D", "E" }, // "F", "G", "H", "I" },
-[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>" }, // "<6>", "<7>", "<8>", "<9>" },
+[DEFAULT_TAGS]        = { " 1 ", " 2 ", " 3 ", " 4 ", " 5 " , " 6 ", " 7 ", " 8 ", " 9 " },
+[ALTERNATIVE_TAGS]    = { "A", "B", "C", "D", "E" , "F", "G", "H", "I" },
+[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>" ,  "<6>", "<7>", "<8>", "<9>" },
 };
 
 /* There are two options when it comes to per-client rules:

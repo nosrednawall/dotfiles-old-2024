@@ -1,13 +1,17 @@
 #!/bin/bash
 
-# Desabilita o aplicativo de notificacao do xfce4
-systemctl --user stop xfce4-notifyd
-
 # Carrega configuracoes do tema
 source $HOME/.theme_selected
 
 # Carrega as configurações do Xresources
 xrdb ~/.Xresources
+
+# Executa o script para verificar se o segundo monitor está ativo
+bash ~/.local/bin/check_second_monitor_is_active.sh
+
+# Define o papel de parede usando feh
+feh --recursive --bg-fill --randomize ~/.wallpapers/${THEME_MODE}/${COLOR_MODE}/ &
+
 
 # Função para verificar se um processo está rodando
 is_running() {
@@ -26,12 +30,6 @@ is_running "picom" || picom -b
 # Inicia o dunst se não estiver rodando
 is_running "dunst" || dunst -conf "$HOME/.config/dunst/themes/${THEME_MODE}_${COLOR_MODE}" &
 
-# Executa o script para verificar se o segundo monitor está ativo
-bash ~/.local/bin/check_second_monitor_is_active.sh
-
-# Define o papel de parede usando feh
-feh --recursive --bg-fill --randomize ~/.wallpapers/${THEME_MODE}/${COLOR_MODE}/ &
-
 # Inicia o copyq se não estiver rodando
 is_running "copyq" || copyq &
 
@@ -42,6 +40,9 @@ is_running "dwmblocks" || dwmblocks &
 is_running "emacs --daemon" || emacs --daemon &
 
 is_running "solaar" || /usr/bin/solaar -w hide
+
+# Desabilita o aplicativo de notificacao do xfce4
+systemctl --user stop xfce4-notifyd
 
 # Nem sei se preciso disso instalando o xfce primeiro
 # is_running "polkit-gnome-authentication-agent-1" || /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
