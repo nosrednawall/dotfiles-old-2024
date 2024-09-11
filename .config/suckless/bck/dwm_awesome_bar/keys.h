@@ -8,6 +8,7 @@ static const Key keys[] = {
     { MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_b,          togglebar,              {0} },
+	{ MODKEY|ShiftMask,             XK_b,          toggletopbar,           {0} },
 
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return,     riospawn,               {.v = termcmd } },

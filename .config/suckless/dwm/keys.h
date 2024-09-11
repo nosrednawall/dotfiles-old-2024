@@ -8,6 +8,7 @@ static const Key keys[] = {
     { MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_b,          togglebar,              {0} },
+	{ MODKEY|ControlMask,           XK_b,          toggletopbar,           {0} },
 
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return,     riospawn,               {.v = termcmd } },
@@ -200,8 +201,8 @@ static const Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static const Button buttons[] = {
 	/* click                event mask           button          function        argument */
-//	{ ClkButton,            0,                   Button1,        spawn,          SHCMD("~/.local/bin/dwm/roficmd") },  //abre rofi
-//	{ ClkButton,            0,                   Button3,        spawn,          SHCMD("~/.local/bin/dwm/timeshiftcmd") },  //abre timeshift
+	{ ClkButton,            0,                   Button1,        spawn,          SHCMD("~/.local/bin/dwm/roficmd") },  //abre rofi
+	{ ClkButton,            0,                   Button3,        spawn,          SHCMD("~/.local/bin/dwm/timeshiftcmd") },  //abre timeshift
 
 	{ ClkLtSymbol,          0,                   Button1,        spawn,          SHCMD("~/.local/bin/dmenu/dmenu-layouts-dwm")},  //abre dmenu de layouts
 	{ ClkLtSymbol,          0,                   Button3,        setlayout,      {.v = &layouts[0]} },  //retorna ao layout padrao

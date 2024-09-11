@@ -877,7 +877,7 @@ static const char *xkb_layouts[]  = {
 #endif // STACKER_PATCH
 
 #if BAR_HOLDBAR_PATCH
-#define HOLDKEY 0 // replace 0 with the keysym to activate holdbar
+#define HOLDKEY none; // replace 0 with the keysym to activate holdbar
 #endif // BAR_HOLDBAR_PATCH
 
 /* commands */

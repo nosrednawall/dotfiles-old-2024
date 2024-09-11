@@ -20,7 +20,7 @@ static const char dwmdir[]               = "dwm";
 static const char localshare[]           = ".local/share";
 static const int showbar                 = 1;   /* 0 means no bar */
 static const int topbar                  = 1;   /* 0 means bottom bar */
-static const int bar_height              = 30;   /* 0 means derive from font, >= 1 explicit height */
+static const int bar_height              = 40;   /* 0 means derive from font, >= 1 explicit height */
 static const int vertpad                 = 10;  /* vertical padding of bar */
 static const int sidepad                 = 10;  /* horizontal padding of bar */
 #define ICONSIZE 20    /* icon size */
@@ -76,6 +76,7 @@ static char *colors[][ColCount] = {
 	[SchemeUrg]          = { urgfgcolor,       urgbgcolor,       urgbordercolor,       urgfloatcolor },
 };
 
+
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "144x41", "-e", "ranger", NULL };
 const char *spcmd3[] = {"flatpak", "run", "com.bitwarden.desktop", NULL };
@@ -129,7 +130,7 @@ static Sp scratchpads[] = {
  */
 static char tagicons[][NUMTAGS][MAX_TAGLEN] =
 {
-	[DEFAULT_TAGS]        = { "1", "2", "3","4", "5", "6", "7" , "8" , "9" },
+	[DEFAULT_TAGS]        = { " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7" , " 8 " , " 9 " },
 //	[ALTERNATIVE_TAGS]    = { " 󱍢 ", "  ", "  ", "  ", "  ", "  ", "  ", "  ","  " },
 	[ALTERNATIVE_TAGS]    = { " Term ", " Web ", " Code ", " Sys ", " Chat ", " Media ", " Files ", " Mail ", " Misc "  },
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },

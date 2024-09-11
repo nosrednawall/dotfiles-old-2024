@@ -35,5 +35,5 @@ fi
 if [ "$battery_level" -le 95 ]; then
     echo "$icon ^d^$battery_level󰏰  "
 else
-    echo ""
+    echo "^c#2aa198^ ^d^$battery_level󰏰  "
 fi
