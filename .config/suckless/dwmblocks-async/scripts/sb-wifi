@@ -13,11 +13,18 @@ case $BUTTON in
 esac
 
 
-status=$(cat /sys/class/net/wlp5s0/operstate | grep "up" -ic)
+status_wifi=$(cat /sys/class/net/wlp5s0/operstate | grep "up" -ic)
+status_ethernet=$(cat /sys/class/net/enp4s0/operstate | grep "up" -ic)
 
-if [ $status -eq 1 ]; then
+if [ $status_wifi -eq 1 ]; then
+    if [ $status_ethernet -eq 1 ]; then
+        # nesse caso eu preferi pular o primeiro resultado, e separar dois, depois pego o ultimo
+        wifiname=$(nmcli -t -f NAME connection show --active | grep -E "[^Conexão cabeada 1]" | head -2 | tail -1)
+    else
+        wifiname=$(nmcli -t -f NAME connection show --active | grep -E "[^Conexão cabeada 1]" | head -1)
+    fi
+
     ip=$(ip addr show wlp5s0  | grep 'inet' | awk '{print$2}' | sed 's/\/[0-9]*//' | head -1)
-    wifiname=$(nmcli -t -f NAME connection show --active | grep -E "[^Conexão cabeada 1]" | head -1)
     wifi="^c#b58900^ ^d^$wifiname  "
 else
     wifi=""
