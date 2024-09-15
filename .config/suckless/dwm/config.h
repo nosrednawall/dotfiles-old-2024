@@ -61,9 +61,9 @@ static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 static const int quit_empty_window_count = 0;   /* only allow dwm to quit if no (<= count) windows are open */
 static const char statussep              = ';'; /* separator between status bars */
-static const char *fonts[]          	 = {"Caskaydia Mono Nerd Font:style=Bold:antialias=true:pixelsize=17"};
+static const char *fonts[]          	 = {"monospace:size=12","Caskaydia Mono Nerd Font:style=Bold:antialias=true:pixelsize=17"};
 static const char dmenufont[]            = "Caskaydia Mono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
-#include "themes/gruvbox_dark.h"
+#include "themes/solarized_dark.h"
 
 static char *colors[][ColCount] = {
 	/*                       fg                bg                border                float */
@@ -132,7 +132,7 @@ static Sp scratchpads[] = {
 static char tagicons[][NUMTAGS][MAX_TAGLEN] =
 {
   [DEFAULT_TAGS]        = { "1","2", "3", "4", "5" },
-  [ALTERNATIVE_TAGS]    = { "A", "B", "C", "D", "E" } ,// "F", "G", "H", "I" },
+  [ALTERNATIVE_TAGS]    = { "一", "二", "三", "四", "五" } ,// "F", "G", "H", "I" },
   [ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>" },//  "<6>", "<7>", "<8>", "<9>" },
 };
 
@@ -199,7 +199,8 @@ static const BarRule barrules[] = {
 	{  0,        0,     BAR_ALIGN_RIGHT,  width_systray,            draw_systray,           click_systray,           NULL,                    "systray" },
 	{ -1,        0,     BAR_ALIGN_LEFT,   width_ltsymbol,           draw_ltsymbol,          click_ltsymbol,          NULL,                    "layout" },
 	{ statusmon, 0,     BAR_ALIGN_RIGHT,  width_status2d,           draw_status2d,          click_statuscmd,         NULL,                    "status2d" },
-	//{ -1,        1,     BAR_ALIGN_NONE,   width_awesomebar,         draw_awesomebar,        click_awesomebar,        NULL,                    "awesomebar" },
+	{ 1,         0,     BAR_ALIGN_NONE,   width_awesomebar,         draw_awesomebar,        click_awesomebar,        NULL,                    "awesomebar" },
+	{ 0,         1,     BAR_ALIGN_NONE,   width_awesomebar,         draw_awesomebar,        click_awesomebar,        NULL,                    "awesomebar2" },
     //{ statusmon, 1,     BAR_ALIGN_CENTER, width_status2d_es,        draw_status2d_es,       click_statuscmd_es,      NULL,                    "status2d_es" },
 };
 
