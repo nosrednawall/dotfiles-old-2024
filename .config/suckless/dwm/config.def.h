@@ -19,7 +19,7 @@ static const char autostartsh[]          = "autostart.sh";
 static const char dwmdir[]               = "dwm";
 static const char localshare[]           = ".local/share";
 static const int showbar                 = 1;   /* 0 means no bar */
-static const int topbar                  = 0;   /* 0 means bottom bar */
+static const int topbar                  = 1;   /* 0 means bottom bar */
 static const int bar_height              = 27;   /* 0 means derive from font, >= 1 explicit height */
 static const int vertpad                 = 5;  /* vertical padding of bar */
 static const int sidepad                 = 5;  /* horizontal padding of bar */
@@ -199,7 +199,7 @@ static const BarRule barrules[] = {
 	{  0,        0,     BAR_ALIGN_RIGHT,  width_systray,            draw_systray,           click_systray,           NULL,                    "systray" },
 	{ -1,        0,     BAR_ALIGN_LEFT,   width_ltsymbol,           draw_ltsymbol,          click_ltsymbol,          NULL,                    "layout" },
 	{ statusmon, 0,     BAR_ALIGN_RIGHT,  width_status2d,           draw_status2d,          click_statuscmd,         NULL,                    "status2d" },
-	{ -1,         0,     BAR_ALIGN_NONE,   width_awesomebar,         draw_awesomebar,        click_awesomebar,        NULL,                    "awesomebar" },
+	//{ -1,         0,     BAR_ALIGN_NONE,   width_awesomebar,         draw_awesomebar,        click_awesomebar,        NULL,                    "awesomebar" },
 //	{ 0,         1,     BAR_ALIGN_NONE,   width_awesomebar,         draw_awesomebar,        click_awesomebar,        NULL,                    "awesomebar2" },
     //{ statusmon, 1,     BAR_ALIGN_CENTER, width_status2d_es,        draw_status2d_es,       click_statuscmd_es,      NULL,                    "status2d_es" },
 };
