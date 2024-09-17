@@ -57,7 +57,7 @@ static const int quit_empty_window_count = 0;   /* only allow dwm to quit if no 
 static const char statussep              = ';'; /* separator between status bars */
 static const char *fonts[]          	 = {"monospace:size=12","Caskaydia Mono Nerd Font:style=Bold:antialias=true:pixelsize=17"};
 static const char dmenufont[]            = "Caskaydia Mono Nerd Font:size=15:style=Regular:antialias=true:pixelsize=17";
-#include "themes/solarized_dark.h"
+#include "themes/gruvbox_dark.h"
 
 static char *colors[][ColCount] = {
 	/*                       fg                bg                border                float */
@@ -76,7 +76,7 @@ const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "144x41", "-e", "ranger", NULL };
 const char *spcmd3[] = {"flatpak", "run", "com.bitwarden.desktop", NULL };
 const char *spcmd4[] = {"st", "-n", "sppulse", "-g", "100x34", "-e", "pulsemixer", NULL };
-const char *spcmd5[] = {"st", "-n", "sptop", "-g", "150x50", "-e", "btop", NULL };
+const char *spcmd5[] = {"st", "-n", "sptop", "-g", "150x50", "-e", "htop", NULL };
 const char *spcmd6[] = {"st", "-n", "spnmtui", "-g", "100x34", "-e", "nmtui", NULL };
 const char *spcmd7[] = {"st", "-n", "spncmpcpp", "-g", "100x34", "-e", "ncmpcpp", NULL };
 const char *spcmd8[] = {"/opt/google/chrome/google-chrome", "--profile-directory=Default", "--app-id=hnpfjngllnobngcgfapefoaidbinmjnm", NULL };
