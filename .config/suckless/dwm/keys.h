@@ -71,7 +71,7 @@ static const Key keys[] = {
 	{ ControlMask|Mod1Mask,              XK_0,          togglegaps,             {0} },
 	{ ControlMask|Mod1Mask|ShiftMask,    XK_0,          defaultgaps,            {0} },
 
-    { MODKEY|ControlMask,           XK_z,          showhideclient,         {0} },
+    //{ MODKEY|ControlMask,           XK_z,          showhideclient,         {0} },
 	{ MODKEY|ShiftMask,             XK_c,          killclient,             {0} },
 	{ MODKEY|ShiftMask,             XK_q,          quit,                   {0} }, //exit dwm
 	{ MODKEY|ShiftMask,             XK_r,          quit,                   {1} }, //restart dwm
@@ -210,8 +210,8 @@ static const Button buttons[] = {
 	{ ClkLtSymbol,          0,                   Button4,        cyclelayout,    {.i = +1 } },  //avanca para o proximo layout
 	{ ClkLtSymbol,          0,                   Button5,        cyclelayout,    {.i = -1 } },  //retorna para o layout anterior
 
-	{ ClkWinTitle,          0,                   Button1,        togglewin,      {0} },
-	{ ClkWinTitle,          0,                   Button3,        showhideclient, {0} },
+	//{ ClkWinTitle,          0,                   Button1,        togglewin,      {0} },
+	//{ ClkWinTitle,          0,                   Button3,        showhideclient, {0} },
 	{ ClkWinTitle,          0,                   Button2,        zoom,           {0} },
 	{ ClkWinTitle,          0,                   Button4,        focusstack,     {.i = +1 } },  //avanca o foco para a proxima janela
 	{ ClkWinTitle,          0,                   Button5,        focusstack,     {.i = -1 } },  //o foco retona para a janela anterior
